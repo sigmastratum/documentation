@@ -2,7 +2,7 @@
 title: Intellectual Property Policy
 description: IP rules covering contributions, rights retention, and open standard commitments.
 published: true
-date: 2025-11-30T10:42:33.960Z
+date: 2025-11-30T23:43:07.470Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:56:05.346Z
@@ -118,4 +118,4 @@ For IP questions, licensing clarification, or institutional agreements:
 
 **Eugene Tsaliev**  
 Email: eugene@sigmastratum.org  
-General inquiries: contact@sigmastratum.org
+General inquiries: legal@sigmastratum.org  
