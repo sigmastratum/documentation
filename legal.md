@@ -2,7 +2,7 @@
 title: Legal & Licensing
 description: Licensing framework, IP policy, and attribution rules for the Sigma Runtime Standard and associated documentation.
 published: true
-date: 2025-11-30T23:26:02.702Z
+date: 2025-11-30T23:27:25.441Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:54:15.817Z
@@ -36,7 +36,7 @@ This license allows anyone to:
   without prior written permission from the **Sigma Stratum Research Group (SSRG)**.
 
 For the full repository-wide licensing policy, see:  
-[`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/IP-Policy.md)
+[`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md)
 
 ---
 
