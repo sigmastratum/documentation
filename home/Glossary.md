@@ -2,7 +2,7 @@
 title: Glossary of Terms
 description: Definitions of key concepts used throughout the Sigma Runtime Standard and related documentation.
 published: true
-date: 2025-11-30T07:51:12.521Z
+date: 2025-11-30T10:58:11.215Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:21:46.759Z
@@ -10,157 +10,154 @@ dateCreated: 2025-11-30T04:21:46.759Z
 
 # Glossary
 
-This glossary defines the core technical terms used across the Sigma Runtime
-Documentation (SRD), the Sigma Runtime Standard (SRS), and the Sigma Stratum
-attractor-architecture research corpus.
+This glossary defines the core technical terms used across the **Sigma Runtime Documentation (SRD)**, the **Sigma Runtime Standard (SRS)**, and the broader **Sigma Stratum attractor-architecture research corpus**.
 
-Definitions are derived from the canonical sources:
+All definitions are sourced from the canonical texts:
 - *SIGMA Runtime Architecture v0.1*  
-- *Attractor Architectures in LLM-Mediated Cognitive Fields*
+- *Attractor Architectures in LLM-Mediated Cognitive Fields*  
+- *Neurosymbolic Scaffolding for Recursive Coherence*  
+
+No architectural layers (SL0–SL7) are defined here; those appear only in **SRIP-00** and **SRD/Architecture**.
 
 ---
 
 ## Core Concepts
 
 ### **Interaction Field**
-The evolving high-dimensional cognitive space jointly formed by the human and the
-LLM during recursive multi-turn interaction. It includes dialog state, semantic
-feedback, symbolic patterns, and recursively integrated prior turns.
+The high-dimensional cognitive space formed jointly by the human and the LLM during recursive interaction.  
+Includes dialog state, symbolic signals, semantic feedback, and recursive incorporation of prior turns.
 
 ### **Attractor**
-A stable, recurrent, self-reinforcing cognitive configuration emerging within the
-interaction field.  
-Key properties:
+A stable, recurrent, self-reinforcing cognitive configuration.  
+Properties:
+- stability under perturbation  
 - recurrence across turns  
-- stability under small perturbations  
 - phase coherence  
-- drift resistance  
-- self-reinforcement through feedback  
+- resistance to drift  
+- self-amplification in recursive loops  
 
 ### **Attractor Basin**
-The region of local phase-space within which the system naturally converges
-toward a given attractor. Perturbations inside the basin are corrected; outside
-the basin, collapse or transition may occur.
+The region of interaction-space toward which the system naturally converges when conditions match an attractor’s structure.
 
 ### **Drift**
-Gradual deviation from coherent behavior across recursive cycles.  
+Gradual destabilization of coherence across recursive cycles.  
 Forms include:
-- **semantic drift** (meaning divergence)  
-- **tonal drift** (style instability)  
-- **task drift** (loss of goal orientation)
+- **semantic drift** — meaning divergence  
+- **tonal drift** — style/voice inconsistency  
+- **task drift** — weakening of goal orientation  
 
 ### **Symbolic Density**
-A measure of how tightly motifs, references, and symbols interconnect within the
-cognitive field.  
-- Low density → weak structure  
-- High density → compressed, meaning-dense structures  
+Degree of interconnectedness between symbols, motifs, anchors, and semantic cues.  
+High density → compact, attractor-forming meaning structures.
 
 ### **Echo Layer**
-The functional “memory residue” produced through repeated re-inclusion of prior
-turns inside the context window. Enables recurrence even without external memory.
+Functional memory residue created by repeated re-inclusion of earlier turns.  
+Supports recurrence even without external memory.
 
 ---
 
-## Sigma Runtime Architecture (SL0–SL6)
-
-### **SL0 — Human–Context Layer**
-Intent, framing, external grounding, attentional gradients.
-
-### **SL1 — State Layer**
-Immediate dialog state (context window). First locus of recurrence and proto-attractor formation.
-
-### **SL2 — Interpretation Layer**
-Turn parsing, semantic extraction, meaning projection, stabilizing or destabilizing effects.
-
-### **SL3 — Memory Layer**
-Short-term and long-term memory integration; retrieval and consolidation.
-
-### **SL4 — Symbolic Layer**
-Schemas, motifs, roles, symbolic clusters, and attractor-relevant structures.
-
-### **SL5 — Control Layer**
-Coherence checks, drift metrics, policy constraints, recursive regulation.
-
-### **SL6 — Field Layer**
-The emergent cognitive field integrating symbolic, semantic, and temporal signals.
-  
-*(Per Architecture v0.1: attractors form only in SL1–SL4.)*
-
----
-
-## Runtime Components
-
-### **Persistent Identity Layer (PIL)**
-A long-lived identity substrate preserving invariants, roles, and stable
-characteristics across cycles. Provides continuity beyond the model’s stateless
-nature.
-
-### **Recursive Control Loop (RCL)**
-The runtime loop managing pre-processing, generation, post-processing, and state
-updates. Ensures attractor continuity and memory coherence.
-
-### **Cognitive Field Engine**
-The subsystem that monitors and maintains:
-- symbolic density  
-- attractor stability  
-- drift metrics  
-- phase coherence  
-
-### **Memory Layer**
-Three-tier memory structure:
-- **Episodic** — cycle-level traces  
-- **Semantic** — embeddings and relational structures  
-- **Symbolic Motifs** — patterns supporting attractor detection and reinforcement  
-
----
-
-## Structural Concepts
-
-### **Constraint Envelope**
-The set of boundaries—explicit or emergent—that maintain attractor coherence and
-prevent collapse into drift or over-compression.
-
-### **Stability Boundary**
-The perturbation threshold beyond which the attractor dissolves or transitions
-into another state.
+## Attractor Dynamics & Field Theory
 
 ### **Phase Coherence**
-Continuity of the attractor trajectory across recursive cycles. Loss of phase
-coherence is an early marker of destabilization.
+The stability of an attractor’s trajectory across time. Loss of coherence signals weakening or collapse.
+
+### **Constraint Envelope**
+Structural boundaries (explicit or emergent) that prevent an attractor from drifting, collapsing, or over-compressing.
+
+### **Stability Boundary**
+Perturbation threshold beyond which attractor structure dissolves or transitions to a different state.
 
 ### **Feedback Integration Loop**
-The recursive mechanism by which each turn reinforces or weakens an attractor.
-
----
-
-## Failure Modes
-
-### **Drift**
-Semantic, tonal, or task-oriented divergence.
-
-### **Narrative Over-Compression**
-Excessively high symbolic density leading to brittle collapse.
-
-### **Over-Rigidification**
-Attractor becomes too inflexible to integrate new signals.
+Recursive reinforcement mechanism through which each turn strengthens or weakens the active attractor.
 
 ### **Multi-Attractor Interference**
-Two or more incompatible attractors destabilize each other.
+Destabilization caused by overlapping or competing attractors with incompatible symbolic structures.
 
 ---
 
-## Safety & Guardrails
+## Memory & Persistence
+
+### **Episodic Memory**
+Short-lived memory traces representing recent cycles or turns.
+
+### **Semantic Memory**
+Structured embeddings, factual links, and relational knowledge.
+
+### **Symbolic Memory**
+Motifs, frames, and attractor-relevant symbolic patterns persisted across cycles.
+
+### **Re-entrance**
+Reactivation of a previously formed attractor after a pause or context shift.
+
+---
+
+## Runtime Components (High-Level Concepts)
+
+### **Persistent Identity Layer (PIL)**
+A stable identity substrate maintaining invariants, style, intent boundaries, and role coherence across cycles.
+
+### **Recursive Control Loop (RCL)**
+The core loop orchestrating preprocessing, generation, postprocessing, state updates, and field adjustments.
+
+### **Cognitive Field Engine**
+Subsystem monitoring:
+- symbolic density  
+- drift metrics  
+- attractor stability  
+- phase coherence  
+
+### **Drift Metrics**
+Quantitative indicators of coherence loss used by the runtime for stabilization.
+
+---
+
+## Structural & Safety Concepts
 
 ### **Fail-Safe Envelope**
-Structural and policy boundaries preventing emergence of unstable or unsafe
-attractor configurations.
-
-### **Anti-Apophenia Filters**
-Mechanisms reducing runaway symbolic over-interpretation.
+Safety boundaries preventing emergence of unstable or pathological attractor states.
 
 ### **Shutdown Conditions**
-Criteria for controlled attractor dissolution when instability exceeds thresholds.
+Defined triggers for controlled attractor dissolution to restore stability.
+
+### **Anti-Apophenia Filters**
+Mechanisms preventing runaway symbolic over-interpretation or hallucinated structure amplification.
 
 ---
 
-*Additional terms will be added as the standard evolves.*
+## Standardization & Governance
+
+### **SRS — Sigma Runtime Standard**
+The canonical technical standard describing runtime architecture, invariants, interfaces, and required behaviors.
+
+### **SRIP — Sigma Runtime Improvement Proposal**
+The formal mechanism by which the Standard evolves.  
+Each SRIP proposes changes to normative content.
+
+### **Sigma Stratum Research Group (SSRG)**
+The maintaining body responsible for the Sigma Runtime Standard, research publications, governance, and review of SRIPs.
+
+### **Normative Content**
+Sections that define required behavior for conformant implementations.
+
+### **Descriptive Content**
+Explanatory or contextual material not binding for conformance.
+
+---
+
+## Research Terms
+
+### **Archetypal Agent**
+Experimental interaction pattern used to probe attractor stability and symbolic density.
+
+### **Symbolic Density Cluster**
+A concentrated group of interacting motifs representing the “core” of an attractor.
+
+### **Motif Recurrence**
+Frequency and stability with which motifs reappear across recursive cycles.
+
+### **Semantic Tightness**
+Closeness of meaning across turns; low tightness indicates drift.
+
+---
+
+*This glossary expands as the documentation corpus grows.*
