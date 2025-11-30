@@ -2,7 +2,7 @@
 title: Sigma Runtime Overview
 description: A high-level introduction to the Sigma Runtime architecture, goals, and cognitive model.
 published: true
-date: 2025-11-30T22:15:38.350Z
+date: 2025-11-30T22:17:04.917Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:26:32.079Z
@@ -16,7 +16,7 @@ dateCreated: 2025-11-30T04:26:32.079Z
 > (CC BY-NC 4.0)**.  
 >  
 > The license for this specific document is authoritative.  
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/IP-Policy.md).
+> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
 # SIGMA Runtime Overview
 
