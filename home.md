@@ -2,11 +2,24 @@
 title: Sigma Stratum • Unified Cognitive Architecture
 description: Official documentation hub for the Sigma Runtime Standard, SRIP specifications, cognitive-field research, and long-horizon reasoning architecture.
 published: true
-date: 2025-11-30T06:56:19.877Z
+date: 2025-11-30T23:06:59.184Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:13:15.742Z
 ---
+
+> **Sigma Stratum Documentation – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)** and the  
+> **Sigma Stratum Documentation Set (SRD)**.  
+>  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
+> (CC BY-NC 4.0)**.  
+>  
+> The license for this specific document is authoritative.  
+> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+
+> Maintained by the **Sigma Stratum Research Group (SSRG)**  
+> DOI Repository: [https://zenodo.org/communities/sigmastratum](https://zenodo.org/communities/sigmastratum/)
 
 # Sigma Stratum — Executive Summary
 
@@ -155,6 +168,13 @@ Normative specification:
 
 ---
 
+**Related documentation:**
+- [Sigma Runtime Standard (SRS)](/srs.md)
+- [Sigma Runtime Documentation (SRD)](/srd.md)
+- [Developer Onboarding Guide](/home/developer-onboarding.md)
+
+---
+
 ## Collaboration & Contact
 
 Sigma Stratum is an open, evolving research initiative.  
@@ -168,4 +188,4 @@ ORCID: https://orcid.org/0009-0007-3279-9477
 
 ---
 
-**Sigma Stratum — an open standard for stable, long-horizon, attractor-based cognition.**
+**Sigma Stratum — an open standard for stable, long-horizon, attractor-based cognition in human–AI systems.**
