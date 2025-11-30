@@ -2,7 +2,7 @@
 title: Research Notes and Publications
 description: A collection of research materials, papers, notes, and ongoing studies supporting the Sigma Runtime architecture.
 published: true
-date: 2025-11-30T08:09:27.105Z
+date: 2025-11-30T08:18:48.715Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:22:30.902Z
@@ -10,8 +10,8 @@ dateCreated: 2025-11-30T04:22:30.902Z
 
 # Research Notes & Publications
 
-This section aggregates the research foundation that informs the **Sigma Runtime
-Standard (SRS)** and the broader Sigma Stratum project.  
+This section aggregates the research foundation that informs the 
+**Sigma Runtime Standard (SRS)** and the broader Sigma Stratum project.  
 It includes:
 
 - peer-reviewed and archived publications (Zenodo)  
