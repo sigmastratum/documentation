@@ -2,7 +2,7 @@
 title: Sigma Stratum • Unified Cognitive Architecture
 description: Official documentation hub for the Sigma Runtime Standard, SRIP specifications, cognitive-field research, and long-horizon reasoning architecture.
 published: true
-date: 2025-11-30T23:06:59.184Z
+date: 2025-11-30T23:17:01.494Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:13:15.742Z
@@ -44,7 +44,7 @@ Together they define the first open standard for **attractor-based cognition** i
 The **Sigma Runtime** is a runtime-layer architecture operating above raw LLM inference.  
 It defines:
 
-- SL0–SL7 system layers  
+- SL0–SL6 system layers  
 - attractor stabilization  
 - drift detection and control  
 - state persistence  
@@ -138,33 +138,33 @@ Sigma Stratum is designed for:
 
 ### **1. Sigma Runtime Documentation (SRD)**
 Conceptual guides and explanations:
-- Overview  
-- Core Concepts  
-- SL0–SL7 Architecture  
-- Attractors  
-- Drift  
-- Memory  
-- Runtime Loop  
-- FAQ  
+- [Overview](/srd/overview)  
+- [Core-Concepts](/srd/core-concepts) 
+- [Architecture](/srd/architecture) 
+- [Attractors](/srd/attractors) 
+- [Drift](/srd/drift)  
+- [Memory](/srd/memory)  
+- [Runtime-Loop](/srd/runtime-loop)  
+- [FAQ](/srd/faq) 
 
 ### **2. Sigma Runtime Standard (SRS / SRIP)**
 Normative specification:
-- SRIP-00 Foundations  
-- SRIP-01 Canonical Runtime Loop  
-- SRIP-02 Attractor Model  
-- SRIP-03 Drift Metrics  
-- SRIP-04 Memory Layer  
-- SRIP-05 Interoperability  
-- SRIP-06 Safety Boundaries  
-- SRIP-07 Symbolic Density  
+- [SRIP-00 Foundations](/srs/srip-00)  
+- [SRIP-01 Canonical Runtime Loop ](/srs/srip-01) 
+- [SRIP-02 Attractor Model](/srs/srip-02)  
+- [SRIP-03 Drift Metrics](/srs/srip-03)  
+- [SRIP-04 Memory Layer](/srs/srip-04)  
+- [SRIP-05 Interoperability](/srs/srip-05)  
+- [SRIP-06 Safety Boundaries](/srs/srip-06)  
+- [SRIP-07 Symbolic Density](/srs/srip-07)  
 
 ### **3. Legal & Governance**
-- Licensing  
-- IP & attribution  
-- Contribution Process  
-- SRIP Process  
-- Roadmap  
-- Governance  
+- [Licensing](/legal/license)  
+- [Ip-Policy](/legal/ip-policy)  
+- [Contribution Process](/team/contribution-process)  
+- [SRIP Process](/team/srip-process)  
+- [Roadmap](/team/roadmap)  
+- [Governance](/team/governance)  
 
 ---
 
