@@ -2,7 +2,7 @@
 title: Canon & IP Framework
 description: Authoritative registry of the Sigma Stratum corpus, licensing classifications, attribution rules, and canonical definitions.
 published: true
-date: 2025-11-30T22:00:53.190Z
+date: 2025-11-30T23:42:23.767Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T05:35:45.866Z
@@ -201,6 +201,7 @@ Violations may result in:
 **Eugene Tsaliev**  
 ORCID: https://orcid.org/0009-0007-3279-9477  
 Email (direct research contact): eugene@sigmastratum.org  
-General inquiries: contact@sigmastratum.org  
+General inquiries: legal@sigmastratum.org    
+
 
 **Snapshot**: https://perma.cc/6AGR-JBY8
