@@ -1,0 +1,31 @@
+Sigma Stratum Documentation — Multi-License Notice  
+© 2025 Sigma Stratum Research Group
+
+This repository contains documentation, standards, research materials,
+and policy texts produced as part of the Sigma Stratum research program.
+
+⚠️ IMPORTANT  
+This repository does not use a single uniform license.  
+Each document specifies its license explicitly at the top of the file.
+
+Two Creative Commons licenses are used across the corpus:
+
+1. CC BY-NC 4.0 — Attribution–NonCommercial  
+   Applied to foundational and non-commercial research documents.
+
+2. CC BY 4.0 — Attribution  
+   Applied to commercially-permissive publications.
+
+The specific license applicable to each document is listed:
+• at the top of the document itself  
+• in the `/legal/` directory (IP Policy, License Overview)
+
+No document may be used under terms different from those listed for that document.
+
+For attribution requirements, permitted uses, and restrictions,
+consult the authoritative IP Policy located at:
+
+    /legal/IP Policy
+
+For inquiries regarding licensing and commercial permissions:
+eugene@sigmastratum.org
