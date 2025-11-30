@@ -2,11 +2,21 @@
 title: About Sigma Stratum
 description: Overview of the mission, vision, and core principles behind the Sigma Stratum initiative.
 published: true
-date: 2025-11-30T07:03:49.457Z
+date: 2025-11-30T23:01:57.101Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:20:43.726Z
 ---
+
+> **Sigma Stratum Documentation – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)** and the  
+> **Sigma Stratum Documentation Set (SRD)**.  
+>  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
+> (CC BY-NC 4.0)**.  
+>  
+> The license for this specific document is authoritative.  
+> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
 # About Sigma Stratum
 
