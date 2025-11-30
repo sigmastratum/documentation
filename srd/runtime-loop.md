@@ -2,7 +2,7 @@
 title: Canonical Runtime Loop
 description: An explanatory guide to the Sigma Runtime execution cycle.
 published: true
-date: 2025-11-30T22:57:32.054Z
+date: 2025-11-30T22:58:55.085Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:31:53.414Z
@@ -95,6 +95,6 @@ defining how cognition stabilizes and evolves recursively in human–AI interact
 
 ---
 
-*References:*  
-* ∿ Neurosymbolic Scaffolding for Recursive Coherence (2025) — first formal definition of the Recursive Feedback Loop (later called F-Loop).    
-* SIGMA Runtime Architecture v0.1 (2025) — canonical standardization as the Recursive Control Loop (RCL).
+> *References:*  
+> Tsaliev, E. (2025). **Neurosymbolic Scaffolding for Recursive Coherence** — DOI: [10.5281/zenodo.17582941](https://doi.org/10.5281/zenodo.17582941)  
+> Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
