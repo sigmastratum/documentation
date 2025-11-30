@@ -2,11 +2,21 @@
 title: Research Notes and Publications
 description: A collection of research materials, papers, notes, and ongoing studies supporting the Sigma Runtime architecture.
 published: true
-date: 2025-11-30T11:02:33.792Z
+date: 2025-11-30T23:02:22.687Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:22:30.902Z
 ---
+
+> **Sigma Stratum Documentation – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)** and the  
+> **Sigma Stratum Documentation Set (SRD)**.  
+>  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
+> (CC BY-NC 4.0)**.  
+>  
+> The license for this specific document is authoritative.  
+> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
 # Research Notes & Publications
 
