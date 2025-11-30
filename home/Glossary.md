@@ -2,7 +2,7 @@
 title: Glossary of Terms
 description: Definitions of key concepts used throughout the Sigma Runtime Standard and related documentation.
 published: true
-date: 2025-11-30T10:58:11.215Z
+date: 2025-11-30T10:58:27.046Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:21:46.759Z
@@ -17,7 +17,7 @@ All definitions are sourced from the canonical texts:
 - *Attractor Architectures in LLM-Mediated Cognitive Fields*  
 - *Neurosymbolic Scaffolding for Recursive Coherence*  
 
-No architectural layers (SL0–SL7) are defined here; those appear only in **SRIP-00** and **SRD/Architecture**.
+
 
 ---
 
