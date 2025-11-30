@@ -2,7 +2,7 @@
 title: Whitepapers
 description: Formal whitepapers presenting theoretical frameworks, architectural foundations, and cognitive-layer methodologies.
 published: true
-date: 2025-11-30T04:23:16.747Z
+date: 2025-11-30T08:11:05.384Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:23:13.027Z
@@ -10,15 +10,56 @@ dateCreated: 2025-11-30T04:23:13.027Z
 
 # Whitepapers
 
-This section includes formal whitepapers associated with the Sigma Runtime
-initiative. These documents provide structured, long-form explanations of the
-architectural principles behind:
+This section contains formal **whitepapers** associated with the Sigma Runtime
+initiative.  
+Whitepapers provide structured, long-form explanations of the architectural,
+cognitive, and theoretical principles that underpin the Sigma Runtime Standard
+and the broader Sigma Stratum research program.
 
-- attractor-based cognition
-- symbolic density layers
-- interaction field theory
-- recursive coherence
-- long-horizon reasoning systems
+They serve as the bridge between:
 
-Whitepapers complement the SRIP specifications by offering conceptual
-justifications and high-level models.
+- empirical research findings, and  
+- the normative SRIP specifications.
+
+Whitepapers focus on describing *why* certain architectural choices exist,  
+*how* attractor-based cognition emerges, and  
+*what* models best represent long-horizon human–AI interaction dynamics.
+
+---
+
+## Scope of the Whitepaper Series
+
+Whitepapers cover the foundational topics that define the Sigma Runtime
+architecture:
+
+- **Attractor-based cognition**  
+  Formal models of stable cognitive configurations in recursive interaction.
+
+- **Symbolic density layers**  
+  Theoretical justification and structure of symbolic density, clusters, and
+  proto-symbols.
+
+- **Interaction field theory**  
+  High-dimensional cognitive-field dynamics in human–LLM systems.
+
+- **Recursive coherence**  
+  Mechanisms ensuring continuity, stability, and self-reinforcing meaning.
+
+- **Long-horizon reasoning systems**  
+  Requirements for maintaining identity, memory, and coherence over extended
+  dialogue timelines.
+
+---
+
+Whitepapers complement the **SRIP specifications** by offering:
+
+- conceptual grounding  
+- system-level motivation  
+- architectural rationale  
+- theoretical interpretations  
+- high-level models that inform normative requirements
+
+While SRIP documents define *what must be implemented*,  
+whitepapers explain *why the system works that way*.
+
+Additional whitepapers will be added as the Sigma Runtime initiative evolves.
