@@ -2,7 +2,7 @@
 title: Research Notes and Publications
 description: A collection of research materials, papers, notes, and ongoing studies supporting the Sigma Runtime architecture.
 published: true
-date: 2025-11-30T08:18:48.715Z
+date: 2025-11-30T11:02:33.792Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:22:30.902Z
@@ -54,13 +54,15 @@ Documentation (SRD) are derived.
 
 ### **Discurs AI – Rapid AI-Assisted Design of a Social Network Moderation Platform**  
 **DOI:** https://doi.org/10.5281/zenodo.15450121  
+**Published:** May 17, 2025 
 *Applied research demonstrating early structured agent behavior.*
 
 ---
 
 ### **Discurs AI – Technical Documentation**  
 **DOI:** https://doi.org/10.5281/zenodo.15453344  
-**Published:** May 17, 2025  
+**Published:** May 17, 2025 
+**Developed:** January, 2025  
 *Engineering documentation for an early applied system built on recursion principles.*
 
 ---
