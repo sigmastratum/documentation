@@ -2,11 +2,21 @@
 title: Developer Onboarding
 description: Concise developer onboarding for the Sigma Runtime architecture. Explains core concepts, runtime loop, memory model, attractors, drift control, and integration patterns for building conformant runtime implementations.
 published: true
-date: 2025-11-30T11:52:03.460Z
+date: 2025-11-30T23:00:07.932Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T10:23:15.634Z
 ---
+
+> **Sigma Stratum Documentation – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)** and the  
+> **Sigma Stratum Documentation Set (SRD)**.  
+>  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
+> (CC BY-NC 4.0)**.  
+>  
+> The license for this specific document is authoritative.  
+> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
 # Sigma Runtime — Developer Onboarding v1.0  
 *A practical engineering introduction to building Sigma Runtime systems.*
