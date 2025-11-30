@@ -2,7 +2,7 @@
 title: Developer Onboarding
 description: Concise developer onboarding for the Sigma Runtime architecture. Explains core concepts, runtime loop, memory model, attractors, drift control, and integration patterns for building conformant runtime implementations.
 published: true
-date: 2025-11-30T10:23:15.634Z
+date: 2025-11-30T11:50:21.935Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T10:23:15.634Z
@@ -87,7 +87,7 @@ Every step of interaction runs through the **same canonical loop**:
 
 This is the *entire runtime* in one diagram:
 
-User Input
+>User Input
 ↓
 State Update
 ↓
