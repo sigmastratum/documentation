@@ -2,19 +2,19 @@
 title: SRIP-00: Foundations and Scope
 description: Defines the foundational vocabulary, architectural scope, and invariants of the Sigma Runtime Standard.
 published: true
-date: 2025-11-30T04:39:56.567Z
+date: 2025-11-30T10:34:23.208Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:39:52.677Z
 ---
 
-> **License Notice – Sigma Runtime Standard**
+> **Sigma Runtime Standard – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)**.  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
+> (CC BY-NC 4.0)**.  
 >
-> This document is part of the **Sigma Runtime Standard (SRS)**  
-> and is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.
->
-> The repository-wide MIT license does **not** apply to this document.  
-> See `/SRS/LICENSE.md` for full terms.
+> The license for this specific document is authoritative.  
+> See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 
 # SRIP-00: Foundations and Scope  
