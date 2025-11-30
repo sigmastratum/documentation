@@ -2,7 +2,7 @@
 title: Developer Onboarding
 description: Concise developer onboarding for the Sigma Runtime architecture. Explains core concepts, runtime loop, memory model, attractors, drift control, and integration patterns for building conformant runtime implementations.
 published: true
-date: 2025-11-30T11:50:21.935Z
+date: 2025-11-30T11:52:03.460Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T10:23:15.634Z
