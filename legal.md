@@ -2,7 +2,7 @@
 title: Legal & Licensing
 description: Licensing framework, IP policy, and attribution rules for the Sigma Runtime Standard and associated documentation.
 published: true
-date: 2025-11-30T23:24:27.116Z
+date: 2025-11-30T23:26:02.702Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:54:15.817Z
@@ -90,7 +90,7 @@ Official releases are timestamped, versioned, and archived via **Zenodo**:
 For legal, licensing, or attribution inquiries:
 
 **Sigma Stratum Research Group (SSRG)**  
-contact@sigmastratum.org  
+legal@sigmastratum.org  
 DOI Registry: [https://zenodo.org/communities/sigmastratum](https://zenodo.org/communities/sigmastratum/)
 
 ---
