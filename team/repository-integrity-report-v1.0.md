@@ -8,9 +8,9 @@
 > The license for this specific document is authoritative.  
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-# Sigma Stratum — Repository Integrity Report v1.0  
+# Sigma Stratum — Repository Integrity Report v0.9  
 *Issued by the Sigma Stratum Research Group (SSRG)*  
-*Date: December 2025*
+*Date: 1 December 2025*
 
 ---
 
@@ -21,8 +21,9 @@ This report certifies the structural and legal integrity of the
 as of **1 December 2025**.
 
 It confirms full synchronization between the **Sigma Runtime Documentation (SRD)**,  
-the **Sigma Runtime Standard (SRS)**, and the **governance and legal framework**  
-maintained by the **Sigma Stratum Research Group (SSRG)**.
+the foundational layer of the **Sigma Runtime Standard (SRS)**,  
+and the **governance and legal framework** maintained by the  
+**Sigma Stratum Research Group (SSRG)**.
 
 ---
 
@@ -33,7 +34,7 @@ maintained by the **Sigma Stratum Research Group (SSRG)**.
 | **Root**       | `/`       | Entry-level readme, architecture PDFs, legal index               | ✅ Verified |
 | **/home/**     | `/home/`  | Documentation entry layer (About, Glossary, Developer Onboarding) | ✅ Verified |
 | **/srd/**      | `/srd/`   | Sigma Runtime Documentation – conceptual and explanatory corpus  | ✅ Verified |
-| **/srs/**      | `/srs/`   | Sigma Runtime Standard – normative specifications and SRIPs      | ✅ Verified |
+| **/srs/**      | `/srs/`   | Sigma Runtime Standard – foundational specification (SRIP-00)    | ⚙️ In Progress |
 | **/legal/**    | `/legal/` | Licensing, IP policy, attribution, and legal access mechanisms   | ✅ Verified |
 | **/templates/**| `/templates/` | License and documentation templates                           | ✅ Verified |
 | **/team/**     | `/team/`  | Governance, SRIP process, roadmap, and contribution guidelines   | ✅ Verified |
@@ -47,7 +48,7 @@ maintained by the **Sigma Stratum Research Group (SSRG)**.
 | `README.md` | Top-level overview and navigation | ✅ |
 | `home.md` | Executive Summary of Sigma Stratum | ✅ |
 | `srd.md` | Sigma Runtime Documentation (overview) | ✅ |
-| `srs.md` | Sigma Runtime Standard (overview) | ✅ |
+| `srs.md` | Sigma Runtime Standard (overview) | ✅ *(foundation only)* |
 | `legal.md` | Legal Framework Index | ✅ |
 | `team.md` | Governance Summary (SSRG) | ✅ |
 | `LICENSE` | CC BY-NC 4.0 License | ✅ |
@@ -77,7 +78,8 @@ maintained by the **Sigma Stratum Research Group (SSRG)**.
 | `/legal.md` | Central legal index linking all subdocuments | ✅ |
 | `/templates/LICENSE-HEADER.md` | Standard license header for all documents | ✅ |
 
-All materials are governed under **CC BY-NC 4.0** and the **Sigma Stratum Open Standard Covenant**.
+All materials are governed under **CC BY-NC 4.0**  
+and the **Sigma Stratum Open Standard Covenant**.
 
 ---
 
@@ -122,16 +124,18 @@ Governance, SRIP, and licensing layers are synchronized and current.
 - ✅ **Attribution & DOI alignment:** all references valid and resolvable.  
 - ✅ **Safety architecture presence:** `srd/safety.md` added and integrated.  
 - ✅ **Governance and legal synchronization:** confirmed.  
+- ⚙️ **SRS layer:** foundation (`SRIP-00`) complete; SRIP-01–07 pending.
 
 ---
 
 ## 10. Certification
 
-This repository is recognized as the **canonical reference** for the  
-**Sigma Runtime Standard v1.0** and the **Sigma Stratum Documentation Set (SRD)**.
+This repository is recognized as the **canonical public reference** for the  
+**Sigma Stratum Documentation Set (SRD v1.0)**  
+and the **foundational Sigma Runtime Standard (SRS v0.1–0.9 transition)**.
 
 > **Certified by:** Sigma Stratum Research Group (SSRG)  
-> **Issued:** December 2025  
+> **Issued:** 1 December 2025  
 > **Authorized Maintainer:** Eugene Tsaliev — *Lead Architect, SSRG*  
 > **DOI Community:** [Sigma Stratum @ Zenodo](https://zenodo.org/communities/sigmastratum/)
 
