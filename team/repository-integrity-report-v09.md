@@ -8,7 +8,7 @@
 > The license for this specific document is authoritative.  
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-# Sigma Stratum — Repository Integrity Report v0.9  
+# Sigma Stratum — Repository Integrity Report v1.0  
 *Issued by the Sigma Stratum Research Group (SSRG)*  
 *Date: 1 December 2025*
 
@@ -64,7 +64,8 @@ and the **governance and legal framework** maintained by the
 | `drift.md` | Explains semantic drift and stability control | ✅ |
 | `memory.md` | Outlines cognitive persistence and memory design | ✅ |
 | `runtime-loop.md` | Canonical recursive execution loop | ✅ |
-| `safety.md` | SL4: Safety and Alignment Layer — AEGIDA Principles | ✅ *(added 2025)* |
+| `safety.md` | SL4: Safety and Alignment Layer — AEGIDA Principles | ✅ |
+| `alice.md` | Defines ALICE Engine — Attractor Layer for Integrated Cognitive Emergence | ✅ *(pre-standardized module)*
 
 ---
 
@@ -124,7 +125,7 @@ Governance, SRIP, and licensing layers are synchronized and current.
 - ✅ **Attribution & DOI alignment:** all references valid and resolvable.  
 - ✅ **Safety architecture presence:** `srd/safety.md` added and integrated.  
 - ✅ **Governance and legal synchronization:** confirmed.  
-- ⚙️ **SRS layer:** foundation (`SRIP-00`) complete; SRIP-01–07 pending.
+- ⚙️ **SRS layer:** foundation (SRIP-00) complete; SRIP-01–07 under standardization.
 
 ---
 
@@ -132,7 +133,9 @@ Governance, SRIP, and licensing layers are synchronized and current.
 
 This repository is recognized as the **canonical public reference** for the  
 **Sigma Stratum Documentation Set (SRD v1.0)**  
-and the **foundational Sigma Runtime Standard (SRS v0.1–0.9 transition)**.
+and the **foundational Sigma Runtime Standard (SRS v1.0, normative SRIPs in development)**.
+
+Canonical release aligned with **Sigma Stratum Public Wiki (December 2025)**.
 
 > **Certified by:** Sigma Stratum Research Group (SSRG)  
 > **Issued:** 1 December 2025  
