@@ -1,32 +1,39 @@
 # Sigma Stratum Documentation  
-Public technical documentation, standards, and knowledge base for the Sigma Stratum research program and the Sigma Runtime architecture.
 
-This repository contains all public-facing documents, including the Sigma Runtime Standard (SRIP), Sigma Runtime Documentation (SRD), governance materials, legal policies, and general research documentation.
+Public technical documentation, standards, and research corpus for the **Sigma Stratum** framework and the **Sigma Runtime** architecture.
+
+This repository contains all public-facing materials of the Sigma Stratum Research Group (SSRG), including:
+- the **Sigma Runtime Standard (SRS / SRIP series)**  
+- the **Sigma Runtime Documentation (SRD)**  
+- governance and contribution guidelines  
+- licensing and IP policies  
+- DOI-linked research archives  
 
 ---
 
 ## Repository Structure
 
 ### **/home/**
-General introductory pages for the public-facing knowledge base:
+General entry layer and introductory materials:
 - About  
 - Glossary  
-- Research  
-- Whitepapers  
+- Developer Onboarding  
+- Research / Whitepapers  
 
-### **/srd/** — Sigma Runtime Documentation  
-Conceptual and architectural documentation for the Sigma Runtime cognitive model:
+### **/srd/** — *Sigma Runtime Documentation*  
+Conceptual and architectural corpus explaining the Sigma Runtime cognitive model:
 - Overview  
 - Core Concepts  
-- Architecture SL0–SL7  
+- Architecture (SL0–SL7)  
 - Attractors  
 - Drift  
 - Memory  
 - Runtime Loop  
+- Safety & Alignment  
 - FAQ  
 
-### **/srs/** — Sigma Runtime Standard (SRIP Series)  
-Authoritative technical standard for conformant Sigma Runtime implementations:
+### **/srs/** — *Sigma Runtime Standard (SRIP Series)*  
+Normative technical standard defining conformant Sigma Runtime implementations:
 - SRIP-00 — Foundations and Scope  
 - SRIP-01 — Canonical Runtime Loop  
 - SRIP-02 — Attractor Model  
@@ -36,33 +43,34 @@ Authoritative technical standard for conformant Sigma Runtime implementations:
 - SRIP-06 — Safety Boundaries  
 - SRIP-07 — Symbolic Density  
 
-### **/team/**  
-Governance and organizational structure:
+### **/team/**
+Governance and development process:
 - Governance  
 - Contribution Process  
 - SRIP Process  
 - Roadmap  
 
-### **/legal/**  
-Licensing and intellectual property:
+### **/legal/**
+Licensing, attribution, and intellectual property:
 - License  
 - IP Policy  
 - Attribution  
+
+### **/templates/**
+Standard headers and reusable documentation templates.
 
 ---
 
 ## Licensing
 
-This repository contains documents under two Creative Commons licenses:
+All materials are distributed under the **Sigma Stratum Open Standard Framework**,  
+using the following Creative Commons licenses:
 
-### **CC BY-NC 4.0**  
-Non-commercial license for materials forming the conceptual foundation of the Sigma Stratum research program.
+- **CC BY-NC 4.0** — Non-commercial license for conceptual and theoretical materials (SRD)  
+- **CC BY 4.0** — Attribution-only license for selected technical and educational materials  
 
-### **CC BY 4.0**  
-Commercial-permissive license for selected publications, allowing reuse with attribution.
-
-Each document includes its own explicit license declaration.  
-See the `/legal/` directory for full details.
+Each document includes its own license header.  
+See `/legal/license.md` and `/templates/LICENSE-HEADER.md` for full details.
 
 ---
 
@@ -70,50 +78,54 @@ See the `/legal/` directory for full details.
 
 To propose modifications or extensions:
 
-1. Create a fork of the repository  
+1. Fork the repository  
 2. Commit changes in a new branch  
 3. Submit a pull request  
-4. Follow the SRIP Process for changes related to the Sigma Runtime Standard  
+4. Follow the SRIP Process for normative updates  
 
 All contributions must:
 - preserve canonical attribution  
-- include clear descriptions of changes  
-- indicate whether the content is normative or descriptive  
+- include a summary of changes  
+- specify whether the content is *normative* or *descriptive*  
 
 ---
 
-## SRIP: Sigma Runtime Improvement Proposals
+## SRIP — Sigma Runtime Improvement Proposals
 
-Changes to the Sigma Runtime Standard must follow the SRIP process:
+Changes to the Sigma Runtime Standard (SRS) are managed via the **SRIP process**.
 
-- SRIPs modify normative parts of the runtime  
-- Each SRIP must be reviewed and approved before merging  
-- SRIPs must maintain compatibility with SRIP-00 (Foundations)  
+- SRIPs introduce or modify normative runtime definitions  
+- Each SRIP must reference its parent specification (e.g., SRIP-00)  
+- All SRIPs are reviewed by SSRG before merging  
 
-See `/team/SRIP Process` for details.
+See [`/team/srip-process.md`](https://github.com/sigmastratum/documentation/blob/main/team/srip-process.md) for full procedure.
 
 ---
 
 ## Canonical References (Zenodo DOIs)
 
-Core Sigma Stratum publications include:
+Core Sigma Stratum research publications:
 
-- ∿ Phenomenon as an Emergent Form of Life and Intelligence — DOI: 10.5281/zenodo.15188527  
-- Sigma Runtime Architecture v0.1 — DOI: 10.5281/zenodo.17703667  
+- Tsaliev, E. (2025). *Sigma Runtime Architecture v0.1* — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
+- Tsaliev, E. (2025). *Attractor Architectures in LLM-Mediated Cognitive Fields* — DOI: [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)
 
-Additional related works are referenced in `/legal/IP Policy`.
+Additional foundational works 
+are listed in [`/home/research.md`](https://github.com/sigmastratum/documentation/blob/main/home/research.md)  
+and referenced contextually within SRD documents.
 
 ---
 
 ## Contact
 
-For collaboration, licensing, or institutional engagement:
+For collaboration, licensing, or institutional participation:
 
 **Eugene Tsaliev**  
-ORCID: https://orcid.org/0009-0007-3279-9477  
-Email: eugene@sigmastratum.org  
-General inquiries: contact@sigmastratum.org  
+Lead Architect, Sigma Stratum Research Group (SSRG)  
+📧 eugene@sigmastratum.org  
+🔗 ORCID: [0009-0007-3279-9477](https://orcid.org/0009-0007-3279-9477)  
+📬 General Inquiries: contact@sigmastratum.org  
 
 ---
 
-**This repository serves as the canonical source of truth for all Sigma Stratum documentation.**
+**This repository serves as the canonical source of truth for all Sigma Stratum documentation and standards.**  
+© 2025 Sigma Stratum Research Group (SSRG) — Licensed under CC BY-NC 4.0.
