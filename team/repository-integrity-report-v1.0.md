@@ -28,15 +28,15 @@ maintained by the **Sigma Stratum Research Group (SSRG)**.
 
 ## 2. Repository Structure Summary
 
-| Layer | Path | Function | Status |
-|-------|------|-----------|--------|
-| **Root** | `/` | Entry-level readme, architecture PDFs, legal index | ✅ Verified |
-| **/home/** | Documentation entry layer (About, Glossary, Developer Onboarding) | ✅ Verified |
-| **/srd/** | Sigma Runtime Documentation – conceptual and explanatory corpus | ✅ Verified |
-| **/srs/** | Sigma Runtime Standard – normative specifications and SRIPs | ✅ Verified |
-| **/legal/** | Licensing, IP policy, attribution, and legal access mechanisms | ✅ Verified |
-| **/templates/** | License and documentation templates | ✅ Verified |
-| **/team/** | Governance, SRIP process, roadmap, and contribution guidelines | ✅ Verified |
+| Layer         | Path      | Function                                                        | Status        |
+|----------------|-----------|------------------------------------------------------------------|----------------|
+| **Root**       | `/`       | Entry-level readme, architecture PDFs, legal index               | ✅ Verified |
+| **/home/**     | `/home/`  | Documentation entry layer (About, Glossary, Developer Onboarding) | ✅ Verified |
+| **/srd/**      | `/srd/`   | Sigma Runtime Documentation – conceptual and explanatory corpus  | ✅ Verified |
+| **/srs/**      | `/srs/`   | Sigma Runtime Standard – normative specifications and SRIPs      | ✅ Verified |
+| **/legal/**    | `/legal/` | Licensing, IP policy, attribution, and legal access mechanisms   | ✅ Verified |
+| **/templates/**| `/templates/` | License and documentation templates                           | ✅ Verified |
+| **/team/**     | `/team/`  | Governance, SRIP process, roadmap, and contribution guidelines   | ✅ Verified |
 
 ---
 
