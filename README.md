@@ -24,7 +24,8 @@ General entry layer and introductory materials:
 Conceptual and architectural corpus explaining the Sigma Runtime cognitive model:
 - Overview  
 - Core Concepts  
-- Architecture (SL0–SL7)  
+- Architecture (SL0–SL7)
+- ALICE  
 - Attractors  
 - Drift  
 - Memory  
