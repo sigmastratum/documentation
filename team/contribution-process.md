@@ -2,7 +2,7 @@
 title: Contribution Process
 description: Guidelines for contributing to the Sigma Runtime Standard and related documentation.
 published: true
-date: 2025-12-02T02:08:28.968Z
+date: 2025-12-02T02:09:14.303Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:51:35.481Z
@@ -54,7 +54,7 @@ These contributions are submitted as formal **Sigma Runtime Improvement Proposal
 ## 3. Contributor Requirements
 
 All contributors must:
-- Agree to the [Sigma Stratum IP Policy](/legal/IP-Policy.md)  
+- Agree to the [Sigma Stratum IP Policy](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md)  
 - Include license headers in all Markdown documents  
 - Clearly state whether the change is **normative** or **descriptive**  
 - Maintain consistent attribution and citation style  
