@@ -201,7 +201,7 @@ if len(self.memory_episodic) > 500:
 
 Example runtime walkthroughs are provided in the `/tests` directory:
 
-- **[Reference Implementation Stability Test (v0.1)](https://github.com/sigmastratum/documentation/blob/main/runtime/tests/Sigma%20Runtime%20-%20Reference%20Implementation%20Stability%20Test%20(v0.1).md)**  
+- **[Reference Implementation Stability Test (v0.1)](https://github.com/sigmastratum/documentation/blob/main/runtime/tests/Sigma%20Runtime%20-%20Reference%20Implementation%20Stability%20Test%20(v0.1))**  
   Standardized **stability protocol (4–30 cycles)** validating attractor formation, drift control, and recursive coherence.  
   *Used for RI (short mode) and ERI (extended mode).*
 
