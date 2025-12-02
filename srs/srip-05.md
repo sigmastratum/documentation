@@ -1,5 +1,5 @@
 ---
-title: SRIP-05: Interoperability Interface v1.0
+title: SRIP-05 - Interoperability Interface v1.0
 description: Specifies schemas, APIs, and exchange formats for multi-system interoperability.
 published: true
 date: 2025-11-30T04:44:03.684Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-11-30T04:43:59.986Z
 ---
 
-# SRIP-05: Interoperability Interface v1.0
+# SRIP-05 - Interoperability Interface v1.0
 
 **Status:** Draft  
 **Category:** Interoperability  
