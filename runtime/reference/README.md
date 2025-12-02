@@ -96,6 +96,9 @@ def _generate(self, context: str) -> str:
     )
     return response["choices"][0]["message"]["content"]
 ```
+> 💡 **Note:** The API key is automatically read from the `OPENAI_API_KEY` environment variable.  
+> You can also set it manually inside `_generate()` using `openai.api_key = "your_key_here"`.
+
 Example — Anthropic Claude
 ```python
 def _generate(self, context: str) -> str:
