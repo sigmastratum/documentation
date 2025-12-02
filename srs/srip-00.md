@@ -1,5 +1,5 @@
 ---
-title: SRIP-00: Foundations and Scope
+title: SRIP-00 - Foundations and Scope
 description: Defines the foundational vocabulary, architectural scope, and invariants of the Sigma Runtime Standard.
 published: true
 date: 2025-11-30T10:34:23.208Z
