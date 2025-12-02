@@ -1,5 +1,5 @@
 ---
-title: SRIP-03: Drift Metrics & Stabilization Algorithms
+title: SRIP-03 - Drift Metrics & Stabilization Algorithms
 description: Normative definition of drift metrics, detection thresholds, and stabilization procedures.
 published: true
 date: 2025-11-30T04:42:30.378Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-11-30T04:42:26.480Z
 ---
 
-# SRIP-03: Drift Metrics & Stabilization Algorithms
+# SRIP-03 - Drift Metrics & Stabilization Algorithms
 
 **Status:** Draft  
 **Category:** Stability / Safety  
