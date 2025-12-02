@@ -69,7 +69,7 @@ Each cycle prints:
 > Every cognitive layer (PIL, ALICE, Drift Monitor, Causal Chain, etc.) can be isolated, tested, or extended independently.  
 >
 > Developers are encouraged to fork this file and experiment with:  
-> - Replacing `_generate()` with your own model API (OpenAI, Claude, URIEL, etc.)  
+> - Replacing `_generate()` with your own model API (OpenAI, Claude, Grok, etc.)  
 > - Custom drift functions or symbolic motifs  
 > - Alternative attractor-stability heuristics  
 
@@ -81,7 +81,7 @@ Each cycle prints:
 |------|----------------------|
 | Learn the basic structure of Sigma Runtime | **RI (Reference Implementation)** |
 | Study attractor dynamics and recursive coherence | **ERI (Extended Reference Implementation)** |
-| Integrate runtime into custom models (URIEL, Claude, etc.) | Start with **ERI**, replace `_generate()` with your model API |
+| Integrate runtime into custom models (GPT, Claude, etc.) | Start with **ERI**, replace `_generate()` with your model API |
 | Research SRIP conformance or open-standard alignment | Use **ERI** for full layer visibility and data export |
 
 ---
