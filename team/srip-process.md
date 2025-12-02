@@ -2,7 +2,7 @@
 title: SRIP Process
 description: Formal definition of the Sigma Runtime Improvement Proposal lifecycle.
 published: true
-date: 2025-12-02T02:13:09.003Z
+date: 2025-12-02T02:16:42.153Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:52:16.687Z
@@ -55,7 +55,7 @@ To submit a new SRIP:
 
 1. Fork the [`sigmastratum/documentation`](https://github.com/sigmastratum/documentation) repository.  
 2. Create a new branch named `srip-XX-your-title`.  
-3. Draft your proposal following the `/templates/SRIP-TEMPLATE.md`.  
+3. Draft your proposal following the [`/templates/SRIP-TEMPLATE.md`](https://github.com/sigmastratum/documentation/blob/main/templates/SRIP-TEMPLATE.md).  
 4. Submit a pull request labeled `SRIP Proposal`.  
 5. Engage in open discussion and peer review through the **Issues** or **Discussions** section.  
 
