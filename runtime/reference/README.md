@@ -88,6 +88,19 @@ Each cycle prints:
 | **Recursive Control Loop (RCL)** | Main runtime orchestrator | RI / ERI |
 
 ---
+### Test Scenarios
+
+Example runtime walkthroughs are provided in the `/tests` directory:
+
+- **[Reference Implementation Stability Test (v0.1)](https://github.com/sigmastratum/documentation/blob/main/runtime/tests/Sigma%20Runtime%20-%20Reference%20Implementation%20Stability%20Test%20(v0.1))**   
+4-cycle demonstration of attractor formation and drift stabilization (for RI)
+30-cycle demonstration of attractor formation and drift stabilization (for ERI).
+
+- **[THE FULL 200-TURN ATTRACTOR STABILITY TEST SCENARIO (v1.0)](https://github.com/sigmastratum/documentation/blob/main/runtime/tests/THE%20FULL%20200-TURN%20ATTRACTOR%20STABILITY%20TEST%20SCENARIO%20(v1.0).md)**   
+  Extended 200-cycle experiment used for long-term attractor dynamics,  
+  recursive stability analysis, and symbolic density decay modeling.  
+  *(Recommended for research replication, not for standard demo runs.)*
+---
 
 ## 🔍 Notes
 
