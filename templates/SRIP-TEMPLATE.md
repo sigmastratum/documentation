@@ -8,7 +8,7 @@
 > The license for this specific document is authoritative.  
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-# SRIP-XX — [Title of Proposal]
+# SRIP-XX - [Title of Proposal]
 *Status: Draft / Review / Accepted / Rejected*  
 *Author(s): [Name, Affiliation, Contact]*  
 *Date: [YYYY-MM-DD]*  
