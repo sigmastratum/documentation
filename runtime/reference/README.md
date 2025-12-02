@@ -64,6 +64,17 @@ Each cycle prints:
 
 ---
 
+> 💡 **Developer Note:**  
+> The Extended Reference Implementation is fully self-contained and modular.  
+> Every cognitive layer (PIL, ALICE, Drift Monitor, Causal Chain, etc.) can be isolated, tested, or extended independently.  
+>
+> Developers are encouraged to fork this file and experiment with:  
+> - Replacing `_generate()` with your own model API (OpenAI, Claude, URIEL, etc.)  
+> - Custom drift functions or symbolic motifs  
+> - Alternative attractor-stability heuristics  
+
+---
+
 ## Guidance
 
 | Goal | Recommended Version |
