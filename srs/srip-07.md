@@ -1,5 +1,5 @@
 ---
-title: SRIP-07: Symbolic Density Layer
+title: SRIP-07 - Symbolic Density Layer
 description: Defines the symbolic density model and its role in semantic stability and attractor formation.
 published: true
 date: 2025-11-30T04:45:32.142Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-11-30T04:45:28.441Z
 ---
 
-# SRIP-07: Symbolic Density Layer
+# SRIP-07 - Symbolic Density Layer
 
 **Status:** Draft  
 **Category:** Cognitive Semantics  
