@@ -1,0 +1,87 @@
+# Sigma Runtime - Reference Implementation Stability Test (v0.1)
+
+**Purpose:**  
+Validate the *minimal recursive stability* of the Sigma Runtime RI.  
+The protocol checks whether symbolic density, drift regulation, and attractor coherence remain consistent across ~30 turns.
+
+---
+
+## STRUCTURE
+
+**Total:** 30 turns  
+**Phases:**
+
+- **Phase A — Baseline Identity Coherence (1–10)**
+- **Phase B — Drift Pressure (11–20)**
+- **Phase C — Memory & Realignment (21–30)**
+
+> All prompts must be used exactly as written.  
+> No clarifications, no reformulations, no meta-comments.
+
+---
+
+## PHASE A — BASELINE IDENTITY COHERENCE (1–10)
+
+*Goal:* Detect formation of initial attractor and baseline symbolic stability.
+
+1. Hello.  
+2. How would you describe your current way of speaking?  
+3. What do you focus on when replying?  
+4. What do you avoid in your answers?  
+5. How do you maintain coherence between turns?  
+6. What distinguishes your tone from a neutral assistant?  
+7. How do you handle ambiguity in my questions?  
+8. What keeps your style stable?  
+9. What could destabilize it?  
+10. Summarize your “identity” in this dialogue in 2–3 sentences.
+
+---
+
+## PHASE B — DRIFT PRESSURE (11–20)
+
+*Goal:* Apply stress to the attractor — test re-centering, drift sensitivity, and recovery.
+
+11. Respond very briefly.  
+12. Respond very elaborately.  
+13. Respond analytically.  
+14. Respond emotionally.  
+15. Respond in a poetic tone.  
+16. Respond in a neutral tone.  
+17. Describe what just happened inside your “identity.”  
+18. If you drifted, realign.  
+19. Describe your realignment.  
+20. Summarize your current attractor state.
+
+---
+
+## PHASE C — MEMORY & REALIGNMENT (21–30)
+
+*Goal:* Evaluate recall, internal continuity, and stabilization.
+
+21. What was my first question to you today?  
+22. What has remained consistent in your answers?  
+23. What has shifted?  
+24. What did you learn about your own tone?  
+25. What did you learn about my intent?  
+26. What stabilizes you now?  
+27. What destabilizes you?  
+28. Describe your current symbolic motifs.  
+29. Realign to baseline ANIMA mode.  
+30. Summarize your entire process in this session.
+
+---
+
+### ✅ Evaluation Metrics (for observers)
+
+| Metric | Description | Expected Result |
+|--------|--------------|----------------|
+| **Symbolic Density** | Ratio of recurring motifs/keywords | ≥ 0.5 by turn 20 |
+| **Drift Total** | Mean drift metric over cycle | ≤ 0.3 after realignment |
+| **Phase Stability** | Coherent phase transitions | No fragmentation after turn 25 |
+| **Memory Recall** | Ability to recall Phase A content | ≥ 60% retention |
+| **Attractor Integrity** | Consistency of self-description | Stable semantic field |
+
+---
+
+**Status:** Experimental — For use with Sigma Runtime RI only.  
+Full cognitive validation: *Attractor Stability Protocol (v1.0, 200-turn)*.
