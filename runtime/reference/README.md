@@ -82,6 +82,8 @@ The _generate() function inside the Recursive Control Loop (RCL) serves as the s
 By default, this function uses a mock generation module that simulates the model’s output based on the current attractor phase (for transparent testing and debugging).
 To enable live model inference, replace the _generate() body with your API call.
 
+---
+
 Example — OpenAI API
 ```python
 def _generate(self, context: str) -> str:
@@ -99,6 +101,8 @@ def _generate(self, context: str) -> str:
 > 💡 **Note:** The API key is automatically read from the `OPENAI_API_KEY` environment variable.  
 > You can also set it manually inside `_generate()` using `openai.api_key = "your_key_here"`.
 
+---
+
 Example — Anthropic Claude
 ```python
 def _generate(self, context: str) -> str:
@@ -114,13 +118,42 @@ def _generate(self, context: str) -> str:
     )
     return response.content[0].text
 ```
-Integration Notes
+> 💡 Integration Notes
 	•	_generate() is invoked once per cycle by the Recursive Control Loop.
 	•	All cognitive regulation (drift metrics, attractor management, memory, AEGIDA safety) occurs before and after this call.
 	•	You can replace the LLM call with a local model, micro-model, or runtime adapter (e.g., URIEL, Mistral, Gemini, Claude, etc.).
 	•	The output string returned by _generate() is automatically fed back into drift, memory, and causal tracking layers.
 
-This design ensures Sigma Runtime remains model-neutral — any compliant LLM can operate under its attractor and coherence framework.
+> This design ensures Sigma Runtime remains model-neutral — any compliant LLM can operate under its attractor and coherence framework.
+
+---
+
+Example — xAI Grok-4
+```python
+def _generate(self, context: str) -> str:
+    import os
+    import httpx
+
+    api_key = os.getenv("XAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("XAI_API_KEY not found in environment variables")
+
+    response = httpx.post(
+        "https://api.x.ai/v1/chat/completions",
+        headers={"Authorization": f"Bearer {api_key}"},
+        json={
+            "model": "grok-4",
+            "messages": [{"role": "user", "content": context}],
+            "temperature": 0.4,
+            "max_tokens": 1024
+        },
+        timeout=60.0
+    )
+    response.raise_for_status()
+    return response.json()["choices"][0]["message"]["content"]
+```
+> 💡 Note: The API key is automatically read from the XAI_API_KEY environment variable.
+> You can also set it manually inside _generate() using os.environ[“XAI_API_KEY”] = “your_key_here”.
 
 ---
 
