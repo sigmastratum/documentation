@@ -118,13 +118,14 @@ def _generate(self, context: str) -> str:
     )
     return response.content[0].text
 ```
-> 💡 Integration Notes
-	•	_generate() is invoked once per cycle by the Recursive Control Loop.
-	•	All cognitive regulation (drift metrics, attractor management, memory, AEGIDA safety) occurs before and after this call.
-	•	You can replace the LLM call with a local model, micro-model, or runtime adapter (e.g., URIEL, Mistral, Gemini, Claude, etc.).
-	•	The output string returned by _generate() is automatically fed back into drift, memory, and causal tracking layers.
-
-> This design ensures Sigma Runtime remains model-neutral — any compliant LLM can operate under its attractor and coherence framework.
+> 💡 **Note:**
+>
+> • `_generate()` is invoked once per cycle by the **Recursive Control Loop**.  
+> • All cognitive regulation (drift metrics, attractor management, memory, AEGIDA safety) occurs **before and after** this call.  
+> • You can replace the LLM call with a local model, micro-model, or runtime adapter *(e.g., URIEL, Mistral, Gemini, Claude, etc.)*.  
+> • The output string returned by `_generate()` is automatically fed back into **drift**, **memory**, and **causal tracking** layers.  
+>
+> This design ensures **Sigma Runtime** remains **model-neutral** — any compliant LLM can operate under its attractor and coherence framework.
 
 ---
 
@@ -152,7 +153,8 @@ def _generate(self, context: str) -> str:
     response.raise_for_status()
     return response.json()["choices"][0]["message"]["content"]
 ```
-> 💡 Note: The API key is automatically read from the XAI_API_KEY environment variable.
+> 💡 **Note:**
+> The API key is automatically read from the XAI_API_KEY environment variable.
 > You can also set it manually inside _generate() using os.environ[“XAI_API_KEY”] = “your_key_here”.
 
 ---
