@@ -7,7 +7,7 @@ Two complementary implementations are provided:
 
 ---
 
-## 🧩 Sigma Runtime – Reference Implementation (RI)
+## Sigma Runtime – Reference Implementation (RI)
 
 A **minimal and transparent** demonstration of the core runtime loop.
 
@@ -32,7 +32,7 @@ Principles (SRIP-01…SRIP-04).
 
 ---
 
-## 🧠 Sigma Runtime – Extended Reference Implementation (ERI)
+## Sigma Runtime – Extended Reference Implementation (ERI)
 
 A **comprehensive functional prototype** (~800 lines) implementing the full  
 Sigma Runtime v0.1 cognitive architecture.
@@ -64,7 +64,7 @@ Each cycle prints:
 
 ---
 
-## 🧭 Guidance
+## Guidance
 
 | Goal | Recommended Version |
 |------|----------------------|
@@ -75,7 +75,7 @@ Each cycle prints:
 
 ---
 
-## 📘 Architecture Summary
+## Architecture Summary
 
 | Layer | Description | Present In |
 |-------|--------------|-------------|
@@ -102,7 +102,7 @@ Example runtime walkthroughs are provided in the `/tests` directory:
   *(Recommended for research replication, not for standard demo runs.)*
 ---
 
-## 🔍 Notes
+## Notes
 
 - Both implementations are **open-standard reference designs**, not proprietary code.  
 - They are intended for **research, experimentation, and alignment testing** under  
