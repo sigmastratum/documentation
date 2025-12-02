@@ -74,6 +74,52 @@ Each cycle prints:
 | Research SRIP conformance or open-standard alignment | Use **ERI** for full layer visibility and data export |
 
 ---
+API Integration
+
+Both runtime versions are model-agnostic — they do not depend on any specific LLM provider.
+The _generate() function inside the Recursive Control Loop (RCL) serves as the single integration point for connecting an external model.
+
+By default, this function uses a mock generation module that simulates the model’s output based on the current attractor phase (for transparent testing and debugging).
+To enable live model inference, replace the _generate() body with your API call.
+
+Example — OpenAI API
+```python
+def _generate(self, context: str) -> str:
+    import openai
+    response = openai.ChatCompletion.create(
+        model="gpt-4o",
+        messages=[
+            {"role": "system", "content": "You are operating within the Sigma Runtime architecture."},
+            {"role": "user", "content": context}
+        ],
+        temperature=0.4
+    )
+    return response["choices"][0]["message"]["content"]
+```
+Example — Anthropic Claude
+```python
+def _generate(self, context: str) -> str:
+    import anthropic
+    client = anthropic.Anthropic(api_key="YOUR_API_KEY")
+    response = client.messages.create(
+        model="claude-3-5-sonnet",
+        messages=[
+            {"role": "user", "content": context}
+        ],
+        max_tokens=500,
+        temperature=0.4
+    )
+    return response.content[0].text
+```
+Integration Notes
+	•	_generate() is invoked once per cycle by the Recursive Control Loop.
+	•	All cognitive regulation (drift metrics, attractor management, memory, AEGIDA safety) occurs before and after this call.
+	•	You can replace the LLM call with a local model, micro-model, or runtime adapter (e.g., URIEL, Mistral, Gemini, Claude, etc.).
+	•	The output string returned by _generate() is automatically fed back into drift, memory, and causal tracking layers.
+
+This design ensures Sigma Runtime remains model-neutral — any compliant LLM can operate under its attractor and coherence framework.
+
+---
 
 ## Architecture Summary
 
