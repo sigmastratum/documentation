@@ -1,5 +1,5 @@
 ---
-title: SRIP-04: Memory Layer Architecture
+title: SRIP-04 - Memory Layer Architecture
 description: Defines the structure, persistence rules, and recall mechanisms for the Sigma Runtime memory layer.
 published: true
 date: 2025-11-30T04:43:20.595Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-11-30T04:43:17.127Z
 ---
 
-# SRIP-04: Memory Layer Architecture
+# SRIP-04 - Memory Layer Architecture
 
 **Status:** Draft  
 **Category:** Cognitive Memory  
