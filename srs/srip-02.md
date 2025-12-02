@@ -1,5 +1,5 @@
 ---
-title: SRIP-02: Attractor State Model & Metadata
+title: SRIP-02 - Attractor State Model & Metadata
 description: Defines the structure, lifecycle, and metadata schema of attractors within the runtime.
 published: true
 date: 2025-11-30T04:41:48.163Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-11-30T04:41:44.566Z
 ---
 
-# SRIP-02: Attractor State Model & Metadata
+# SRIP-02 - Attractor State Model & Metadata
 
 **Status:** Draft  
 **Category:** Cognitive Structures  
