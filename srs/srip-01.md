@@ -1,5 +1,5 @@
 ---
-title: SRIP-01: Canonical Runtime Loop
+title: SRIP-01 - Canonical Runtime Loop
 description: Specifies the execution semantics and ordered stages of the Sigma Runtime loop (SL0–SL7).
 published: true
 date: 2025-11-30T04:40:59.909Z
@@ -8,7 +8,7 @@ editor: markdown
 dateCreated: 2025-11-30T04:40:56.340Z
 ---
 
-# SRIP-01: Canonical Runtime Loop
+# SRIP-01 - Canonical Runtime Loop
 
 **Status:** Draft  
 **Category:** Architectural / Runtime Semantics  
