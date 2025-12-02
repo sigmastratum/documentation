@@ -17,7 +17,7 @@ dateCreated: 2025-11-30T04:39:52.677Z
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 
-# SRIP-00: Foundations and Scope  
+# SRIP-00 - Foundations and Scope  
 **Sigma Runtime Improvement Proposal**  
 **Category:** Foundational / Architectural  
 **Status:** Draft  
