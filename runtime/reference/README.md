@@ -92,9 +92,9 @@ Each cycle prints:
 
 Example runtime walkthroughs are provided in the `/tests` directory:
 
-- **[Reference Implementation Stability Test (v0.1)](https://github.com/sigmastratum/documentation/blob/main/runtime/tests/Sigma%20Runtime%20-%20Reference%20Implementation%20Stability%20Test%20(v0.1))**   
-4-cycle demonstration of attractor formation and drift stabilization (for RI)
-30-cycle demonstration of attractor formation and drift stabilization (for ERI).
+- **[Reference Implementation Stability Test (v0.1)](https://github.com/sigmastratum/documentation/blob/main/runtime/tests/Sigma%20Runtime%20-%20Reference%20Implementation%20Stability%20Test%20(v0.1).md)**  
+  Standardized **stability protocol (4–30 cycles)** validating attractor formation, drift control, and recursive coherence.  
+  *Used for RI (short mode) and ERI (extended mode).*
 
 - **[THE FULL 200-TURN ATTRACTOR STABILITY TEST SCENARIO (v1.0)](https://github.com/sigmastratum/documentation/blob/main/runtime/tests/THE%20FULL%20200-TURN%20ATTRACTOR%20STABILITY%20TEST%20SCENARIO%20(v1.0).md)**   
   Extended 200-cycle experiment used for long-term attractor dynamics,  
