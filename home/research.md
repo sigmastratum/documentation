@@ -2,7 +2,7 @@
 title: Research Notes and Publications
 description: A collection of research materials, papers, notes, and ongoing studies supporting the Sigma Runtime architecture.
 published: true
-date: 2025-11-30T23:02:22.687Z
+date: 2025-12-02T07:23:49.468Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:22:30.902Z
@@ -24,7 +24,7 @@ This section aggregates the research foundation that informs the
 **Sigma Runtime Standard (SRS)** and the broader Sigma Stratum project.  
 It includes:
 
-- peer-reviewed and archived publications (Zenodo)  
+- archived research publications (Zenodo)  
 - symbolic density and neurosymbolic scaffolding studies  
 - attractor-based cognition analysis  
 - early prototypes and experimental frameworks  
