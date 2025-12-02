@@ -2,7 +2,7 @@
 title: Sigma Stratum • Unified Cognitive Architecture
 description: Official documentation hub for the Sigma Runtime Standard, SRIP specifications, cognitive-field research, and long-horizon reasoning architecture.
 published: true
-date: 2025-11-30T23:17:01.494Z
+date: 2025-12-02T23:45:27.444Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:13:15.742Z
@@ -160,7 +160,7 @@ Normative specification:
 
 ### **3. Legal & Governance**
 - [Licensing](/legal/license)  
-- [Ip-Policy](/legal/ip-policy)  
+- [IP-Policy](/legal/ip-policy)  
 - [Contribution Process](/team/contribution-process)  
 - [SRIP Process](/team/srip-process)  
 - [Roadmap](/team/roadmap)  
