@@ -2,7 +2,7 @@
 title: Developer Onboarding
 description: Concise developer onboarding for the Sigma Runtime architecture. Explains core concepts, runtime loop, memory model, attractors, drift control, and integration patterns for building conformant runtime implementations.
 published: true
-date: 2025-11-30T23:00:07.932Z
+date: 2025-12-02T04:41:29.920Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T10:23:15.634Z
@@ -281,6 +281,20 @@ If you are a developer:
 
 You can build this today.
 It is not complicated — it’s just structured recursion.
+
+
+
+---
+## Further Reading
+
+For implementation details, runtime source code, and test scenarios, see:  
+👉 [Sigma Runtime – Reference Implementations (RI & ERI)](https://github.com/sigmastratum/documentation/blob/main/runtime/reference/README.md)
+
+This document contains:
+- Full architectural overview (RI and ERI)
+- Instructions for running both implementations
+- Guidance on integration with external models (GPT, Claude, URIEL)
+- Reference test scenarios for stability and drift validation
 
 ⸻
 
