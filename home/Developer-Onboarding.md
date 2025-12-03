@@ -2,7 +2,7 @@
 title: Developer Onboarding
 description: Concise developer onboarding for the Sigma Runtime architecture. Explains core concepts, runtime loop, memory model, attractors, drift control, and integration patterns for building conformant runtime implementations.
 published: true
-date: 2025-12-02T04:42:33.287Z
+date: 2025-12-03T23:19:56.643Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T10:23:15.634Z
@@ -264,8 +264,8 @@ Just an LLM API.
 ## 8. What to Read First
 
 For engineers:
-	1. [Attractor Architectures (PDF) — shows how attractors behave](/attractor_architectures_in_llm_mediated_cognitive_fields.pdf)
-	2. [Runtime Architecture v0.1 (PDF) — shows SL0–SL6 separation](/sigma_runtime_architecture_v0_1.pdf)
+	1. [Attractor Architectures (PDF) — shows how attractors behave](https://doi.org/10.5281/zenodo.17629926)
+	2. [Runtime Architecture v0.1 (PDF) — shows SL0–SL6 separation](https://doi.org/10.5281/zenodo.17703667)
 
 These two documents contain everything required to implement the runtime.
 
