@@ -1,5 +1,5 @@
 """
-SIGMA Runtime v0.1 - Extended Reference Implementation
+SIGMA Runtime v0.1 - Extended Reference Implementation (oAI Ready)
 A demonstration of attractor-based cognition for LLM systems
 
 This implementation includes:
@@ -9,8 +9,7 @@ This implementation includes:
 - Semantic embeddings for real drift metrics
 - AEGIDA safety principles
 - Multi-tier memory system
-
-Total: ~800 lines
+- Logging
 """
 
 import json
@@ -730,6 +729,66 @@ class IntentModule:
 # ============================================================================
 
 class RecursiveControlLoop:
+    def __init__(self, 
+                 pil: PersistentIdentityLayer,
+                 memory: MemoryLayer,
+                 alice: ALICEEngine,
+                 drift_monitor: DriftMonitor,
+                 intent_module: IntentModule,
+                 causal_chain: CausalContinuityChain,
+                 embedding_engine: EmbeddingEngine):
+        """
+        Initialize the recursive control loop with all cognitive subsystems.
+        Does not yet run inference or require user input.
+        """
+        self.pil = pil
+        self.memory = memory
+        self.alice = alice
+        self.drift_monitor = drift_monitor
+        self.intent_module = intent_module
+        self.causal_chain = causal_chain
+        self.embedding_engine = embedding_engine
+
+        # initialize internal state
+        self.cycle = 0
+        self.last_mode = "initializing"
+        self.last_context = ""
+        self.last_output = ""
+
+    def _generate(self, context: str) -> Tuple[str, dict]:
+        """
+        Generate model response using OpenAI's modern API (>=1.0.0),
+        with timing and approximate token counting.
+        """
+        import time
+        from openai import OpenAI
+        start_time = time.time()
+        try:
+            client = OpenAI()
+            response = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "system", "content": "You are operating within the Sigma Runtime architecture."},
+                    {"role": "user", "content": context}
+                ],
+                temperature=0.4
+            )
+            output_text = response.choices[0].message.content.strip()
+        except Exception as e:
+            output_text = f"[OpenAIError: {e}]"
+
+        end_time = time.time()
+        latency = round(end_time - start_time, 3)
+        input_tokens = len(context.split())
+        output_tokens = len(output_text.split())
+
+        return output_text, {
+            "latency_sec": latency,
+            "input_tokens": input_tokens,
+            "output_tokens": output_tokens,
+            "total_tokens": input_tokens + output_tokens
+        }
+
     def _extract_symbols(self, text: str) -> list:
         import re
         tokens = re.findall(r"\b[a-zA-Z]+\b", text.lower())
@@ -774,7 +833,7 @@ class RecursiveControlLoop:
 
         # Assemble context and generate
         context = self._assemble_context(user_input, symbols)
-        response = self._generate(context)
+        response, usage = self._generate(context)
 
         # Compute drift
         drift_metrics = self.drift_monitor.compute_drift(user_input, response, symbols)
@@ -811,54 +870,9 @@ class RecursiveControlLoop:
             "drift_metrics": drift_metrics,
             "attractor_state": attractor_state,
             "intent_mode": mode.value,
-            "causal_links": self.causal_chain.to_dict()
+            "causal_links": self.causal_chain.to_dict(),
+            "usage": usage
         }
-
-    def __init__(self, 
-                 pil: PersistentIdentityLayer,
-                 memory: MemoryLayer,
-                 alice: ALICEEngine,
-                 drift_monitor: DriftMonitor,
-                 intent_module: IntentModule,
-                 causal_chain: CausalContinuityChain,
-                 embedding_engine: EmbeddingEngine):
-        """
-        Initialize the recursive control loop with all cognitive subsystems.
-        Does not yet run inference or require user input.
-        """
-        self.pil = pil
-        self.memory = memory
-        self.alice = alice
-        self.drift_monitor = drift_monitor
-        self.intent_module = intent_module
-        self.causal_chain = causal_chain
-        self.embedding_engine = embedding_engine
-
-        # initialize internal state
-        self.cycle = 0
-        self.last_mode = "initializing"
-        self.last_context = ""
-        self.last_output = ""
-
-    def _generate(self, context: str) -> str:
-        """
-        Generate model response using OpenAI's modern API (>=1.0.0).
-        """
-        from openai import OpenAI
-        try:
-            client = OpenAI()
-            response = client.chat.completions.create(
-                model="gpt-4o",
-                messages=[
-                    {"role": "system", "content": "You are operating within the Sigma Runtime architecture."},
-                    {"role": "user", "content": context}
-                ],
-                temperature=0.4
-            )
-            return response.choices[0].message.content.strip()
-        except Exception as e:
-            return f"[OpenAIError: {e}]"      
-
 # ============================================================================
 # SIGMA RUNTIME (Main Orchestrator)
 # ============================================================================
@@ -984,7 +998,8 @@ def demo_sigma_runtime():
         "symbolic_density": result["attractor_state"]["symbolic_density"],
         "drift_total": result["drift_metrics"]["total"],
         "intent_mode": result["intent_mode"],
-        "top_motifs": result["attractor_state"]["top_motifs"]
+        "top_motifs": result["attractor_state"]["top_motifs"],
+        "usage": result.get("usage", {})
     })    
         # Display runtime metadata
         print("📊 RUNTIME STATE:")
@@ -1044,7 +1059,8 @@ def save_runtime_log(results: list, final_state: dict):
             "symbolic_density": final_state["attractor"]["symbolic_density"],
             "motif_count": final_state["attractor"]["motif_count"]
         },
-        "cycles": results
+        "cycles": results,
+        "causal_chain": final_state["causal_chain"]
     }
 
     with open(path, "w", encoding="utf-8") as f:
