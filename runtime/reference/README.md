@@ -161,6 +161,9 @@ def _generate(self, context: str) -> str:
 
 ## Architecture Summary
 
+![SIGMA Runtime — Recursive Cognitive Loop (RCL) v0.1](https://github.com/sigmastratum/documentation/raw/378ced7fbffc97a057fef0d8e88a1916f05e824a/sigmaruntime-rcl.png)
+*Figure 1. Core architecture of attractor-based cognition in LLMs.*
+
 | Layer | Description | Present In |
 |-------|--------------|-------------|
 | **PIL (Persistent Identity Layer)** | Long-term traits and invariants | ERI |
