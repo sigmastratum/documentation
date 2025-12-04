@@ -64,6 +64,50 @@ Each cycle prints:
 
 ---
 
+## Sigma Runtime – Extended Reference Implementation (oAI-Ready)
+
+A **fully updated OpenAI-compliant build** of the Extended Reference Implementation (ERI),  
+designed for direct integration with the new `openai>=1.0.0` SDK and other compatible APIs.
+
+**Implements:** SRIP-01 → SRIP-07  
+**File:** [→ sigma_runtime_extended_oai_ready.py](https://github.com/sigmastratum/documentation/blob/main/runtime/reference/sigma_runtime_extended_oai_ready.py)
+
+### Improvements over ERI (v0.1)
+- ✅ Updated for `openai>=1.0.0` (uses `from openai import OpenAI`)
+- ✅ Secure environment-based key handling (`OPENAI_API_KEY`)
+- ✅ Fully functional `_generate()` tested with GPT-4o
+- ✅ Expanded runtime loop output (stability, drift, motifs)
+- ✅ Compatible with Claude / Grok / Gemini integration stubs
+- ✅ Stable across multi-cycle (200+) attractor tests
+
+### Quick Start
+```bash
+pip install openai>=1.0.0
+export OPENAI_API_KEY="sk-..."
+python3 sigma_runtime_extended_oai_ready.py
+```
+### What You’ll See
+
+Each cognitive cycle prints:
+- user input and generated response  
+- attractor phase, stability, and symbolic density  
+- drift metrics and intent mode  
+- causal continuity chain entries  
+
+---
+
+### Purpose
+
+This version is the **canonical ERI implementation** for GPT-based cognitive runtime testing.  
+It serves as the foundation for further research into:
+- attractor persistence and symbolic drift regulation  
+- multi-cycle coherence under recursive cognition  
+- integration of Sigma Runtime into large-model ecosystems  
+
+> 💡 **This is the recommended build for researchers using GPT-4o, GPT-5, or compatible APIs.**
+
+---
+
 ## Guidance
 
 | Goal | Recommended Version |
