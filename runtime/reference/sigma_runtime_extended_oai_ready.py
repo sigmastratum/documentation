@@ -940,6 +940,7 @@ def demo_sigma_runtime():
     print("Attractor-Based Cognition Architecture")
     print("=" * 70)
     print()
+    os.makedirs("./tests", exist_ok=True)
     
     # Initialize runtime
     runtime = SigmaRuntime(identity_id="SIGMA-DEMO-01")
@@ -961,6 +962,8 @@ def demo_sigma_runtime():
     print("RUNNING TEST SEQUENCE")
     print("─" * 70 + "\n")
     
+    all_results = []
+
     for i, user_input in enumerate(test_inputs, 1):
         print(f"\n{'='*70}")
         print(f"CYCLE {i}")
@@ -972,7 +975,17 @@ def demo_sigma_runtime():
         
         # Display response
         print(f"🤖 SIGMA: {result['response']}\n")
-        
+        all_results.append({
+        "cycle": i,
+        "user_input": user_input,
+        "response": result["response"],
+        "phase": result["attractor_state"]["phase"],
+        "stability": result["attractor_state"]["stability"],
+        "symbolic_density": result["attractor_state"]["symbolic_density"],
+        "drift_total": result["drift_metrics"]["total"],
+        "intent_mode": result["intent_mode"],
+        "top_motifs": result["attractor_state"]["top_motifs"]
+    })    
         # Display runtime metadata
         print("📊 RUNTIME STATE:")
         print(f"  Attractor: {result['attractor_state']['active_attractor']}")
@@ -1001,8 +1014,43 @@ def demo_sigma_runtime():
     print(f"Motif Count: {final_state['attractor']['motif_count']}")
     print(f"Memory Episodes: {final_state['memory']['episodic_count']}")
     
+    save_runtime_log(all_results, final_state)
     print("\n✓ Demo complete\n")
 
+# ============================================================================
+# LOGGING
+# ============================================================================
+
+import datetime
+import os
+
+def save_runtime_log(results: list, final_state: dict):
+    """Save structured runtime log as JSON (auto-named by timestamp)."""
+    os.makedirs("./tests", exist_ok=True)
+    
+    timestamp = datetime.datetime.utcnow().strftime("%Y%m%d-%H%M%S")
+    filename = f"sigma_test_{timestamp}.json"
+    path = os.path.join("./tests", filename)
+    
+    data = {
+        "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        "runtime_version": "v0.1 (OpenAI Ready)",
+        "total_cycles": len(results),
+        "identity": final_state["pil"]["id"],
+        "final_state": {
+            "attractor": final_state["attractor"]["active_attractor"],
+            "phase": final_state["attractor"]["phase"],
+            "stability": final_state["attractor"]["stability"],
+            "symbolic_density": final_state["attractor"]["symbolic_density"],
+            "motif_count": final_state["attractor"]["motif_count"]
+        },
+        "cycles": results
+    }
+
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2, ensure_ascii=False)
+    
+    print(f"\n🧾 Runtime log saved → {path}\n")
 
 if __name__ == "__main__":
     demo_sigma_runtime()
