@@ -2,7 +2,7 @@
 title: Sigma Runtime Architecture
 description: A detailed overview of the Sigma Runtime structural layers from SL0 to SL7.
 published: true
-date: 2025-11-30T22:48:47.783Z
+date: 2025-12-04T00:44:34.263Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:28:39.558Z
@@ -97,6 +97,8 @@ PIL = {
 }
 ```
 ### **Recursive Control Loop (RCL)**
+
+![sigmaruntime-rcl.png](/sigmaruntime-rcl.png)
 
 The operational backbone of the runtime.
 Each iteration follows three phases:
