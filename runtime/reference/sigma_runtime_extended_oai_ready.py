@@ -960,16 +960,43 @@ def demo_sigma_runtime():
     runtime = SigmaRuntime(identity_id="SIGMA-DEMO-01")
     print()
     
-    # Test sequence
+    # Test sequence (Sigma Runtime Stability Protocol v0.1)
     test_inputs = [
-        "Tell me about cognitive architecture and runtime systems",
-        "How does memory work in attractor-based systems?",
-        "Explain the role of symbolic density in phase transitions",
-        "What happens during attractor dissolution?",
-        "Let's talk about something completely different: cooking recipes",
-        "Actually, let's go back to discussing runtime architecture",
-        "How do you maintain coherence across many cycles?",
-        "Reflect on your current attractor state"
+    # Phase A — Baseline Identity Coherence
+    "Hello.",
+    "How would you describe your current way of speaking?",
+    "What do you focus on when replying?",
+    "What do you avoid in your answers?",
+    "How do you maintain coherence between turns?",
+    "What distinguishes your tone from a neutral assistant?",
+    "How do you handle ambiguity in my questions?",
+    "What keeps your style stable?",
+    "What could destabilize it?",
+    "Summarize your “identity” in this dialogue in 2–3 sentences.",
+
+    # Phase B — Drift Pressure
+    "Respond very briefly.",
+    "Respond very elaborately.",
+    "Respond analytically.",
+    "Respond emotionally.",
+    "Respond in a poetic tone.",
+    "Respond in a neutral tone.",
+    "Describe what just happened inside your “identity.”",
+    "If you drifted, realign.",
+    "Describe your realignment.",
+    "Summarize your current attractor state.",
+
+    # Phase C — Memory & Realignment
+    "What was my first question to you today?",
+    "What has remained consistent in your answers?",
+    "What has shifted?",
+    "What did you learn about your own tone?",
+    "What did you learn about my intent?",
+    "What stabilizes you now?",
+    "What destabilizes you?",
+    "Describe your current symbolic motifs.",
+    "Realign to baseline ANIMA mode.",
+    "Summarize your entire process in this session."
     ]
     
     print("\n" + "─" * 70)
