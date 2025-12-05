@@ -67,6 +67,33 @@ $$\text{Latency Reduction} = \left(1 - \frac{\text{Latency}_{\text{SIGMA}}}{\tex
 
 ---
 
+## 2.5 Token Efficiency & Latency — Visual Summary
+
+The following visualization summarizes the quantitative improvements achieved by **SIGMA Runtime (v0.1 ERI)** compared to the baseline context-append agent across 30 conversational cycles.
+
+It consolidates four complementary dimensions:
+1. **Latency Comparison** — average and maximum delay per response.  
+2. **Token Usage per Cycle** — mean input/output token utilization.  
+3. **Performance Gains by Metric** — normalized percentage improvements.  
+4. **Cumulative Token Accumulation** — illustrating exponential context growth in the baseline vs. stable behavior in SIGMA.
+
+<div align="center">
+  <img src="https://github.com/sigmastratum/documentation/blob/main/runtime/benchmarks/sigma_benchmark_20251205-1.png" alt="SIGMA Benchmark Visualization" width="900"/>
+</div>
+
+**Interpretation:**
+
+- The **Baseline Agent** exhibits *exponential context growth*, reaching ≈ **35 k tokens** by cycle 30 — resulting in rising latency and unsustainable cost.  
+- The **SIGMA Runtime** maintains a *near-constant prompt size* (~ 55 tokens per cycle), achieving **≈ 98 % token savings** and **≈ 91 % latency reduction**.  
+- SIGMA’s slightly higher *Avg Input Tokens* per cycle reflect structured context layers (**PIL**, **Motifs**, **RCL**) rather than raw conversation history.  
+- The baseline sends minimal new input each turn but **re-appends all previous dialogue**, causing cumulative explosion, while SIGMA reconstructs only the relevant state.
+
+> **Note:**  
+> This visualization demonstrates how **RCL-based contextual control** breaks the exponential scaling barrier of standard `context.append()` architectures,  
+> achieving long-horizon stability without sacrificing coherence or reasoning continuity.
+
+---
+
 ## 3. Cognitive Stability (Drift Control)
 
 ### ❓ What was analyzed and why it matters:
