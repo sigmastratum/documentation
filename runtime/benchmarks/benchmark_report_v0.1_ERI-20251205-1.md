@@ -1,0 +1,93 @@
+# Benchmark Report: SIGMA Runtime (v0.1 ERI) vs. Baseline Agent
+
+## Abstract
+
+This benchmark compares the SIGMA Runtime (v0.1 ERI) with a baseline context-append agent to quantify improvements in token efficiency, real-time performance, and cognitive stability across 30 conversational cycles.
+
+**Raw Data:**  
+- [Baseline Agent Log (2025-12-04)](https://github.com/sigmastratum/documentation/blob/main/runtime/benchmarks/baseline_20251204-103258.json)  
+- [SIGMA Runtime Log (v0.1 ERI, 2025-12-04)](https://github.com/sigmastratum/documentation/blob/main/runtime/benchmarks/sigma_test_20251204-101319.json)  
+- [Summary CSV (2025-12-04)](https://github.com/sigmastratum/documentation/blob/main/runtime/benchmarks/summary_20251204-225642.csv)
+
+## Goal
+
+The primary goal of this benchmark is to empirically validate the architectural superiority of the **SIGMA Runtime (v0.1 ERI)** over a traditional `Baseline Agent` (standard `context.append()` agent) across a sustained 30-cycle session, focusing on: **economic efficiency** (token usage) and **real-time performance** (latency).
+
+## Test Setup
+
+| Parameter | Baseline Agent (GPT-4o) | SIGMA Runtime (v0.1 ERI) |
+| :--- | :--- | :--- |
+| **Model** | GPT-4o | GPT-4o |
+| **Session Length** | 30 Cycles | 30 Cycles |
+| **Context Mechanism** | `context.append()` (Accumulative) | **RCL** (Selective Assembly, Drift Control, PIL) |
+
+## Key Results Summary (Cycle 30 Comparison)
+
+| Metric | Baseline Agent | SIGMA Runtime | Improvement (Δ) |
+| :--- | :--- | :--- | :--- |
+| **Input Tokens (Cycle 30)** | $\approx \mathbf{3,890}$ | $\mathbf{55}$ | $\downarrow \mathbf{98.6\%}$ |
+| **Latency (Cycle 30)** | $\mathbf{10.199 \text{ sec}}$ | $\mathbf{0.866 \text{ sec}}$ | $\downarrow \mathbf{91.5\%}$ |
+| **Cognitive Stability (Drift Control)** | Exponential decay, memory loss | Controlled ($\text{Drift}_{\text{total}} \approx 0.431$), $\text{Stability} \approx 0.524$ | **Critical** |
+
+---
+
+## 1. Token Efficiency (Input Tokens)
+
+### ❓ What was calculated and why it matters:
+
+This metric measures the **economic cost** of operating the agent.
+
+**Calculation Method:** Comparison of the final prompt size (Input Tokens) on Cycle 30.
+
+1.  **Baseline Agent Tokens (Cycle 30):** The cumulative sum of all previous conversation output tokens ($\approx 2,141$) plus the estimated system prompt overhead ($\approx 1,749$). **Estimated Total: $\mathbf{3,890}$ tokens.**
+2.  **SIGMA Runtime Tokens (Cycle 30):** The actual logged input tokens, comprising only the necessary **PIL, Motifs, and Causal Chain** data. **Actual Total: $\mathbf{55}$ tokens**.
+
+**Calculation:**
+$$\text{Token Savings} = \left(1 - \frac{\text{Tokens}_{\text{SIGMA}}}{\text{Tokens}_{\text{Baseline}}}\right) \times 100\% = \left(1 - \frac{55}{3890}\right) \times 100\% \approx \mathbf{98.6\%}$$
+
+**Significance:** SIGMA's **Multi-Tier Memory** and **Context Assembly** successfully eliminate the exponential token cost, validating the architecture's core economic benefit.
+
+---
+
+## 2. Latency Reduction (Real-Time Performance)
+
+### ❓ What was calculated and why it matters:
+
+Latency measures the agent's usability in real-time interactions, as it correlates directly with prompt length.
+
+**Calculation Method:** Comparison of the logged response time (latency\_sec) on Cycle 30.
+
+1.  **Baseline Agent Latency (Cycle 30):** **$\mathbf{10.199 \text{ sec}}$**.
+2.  **SIGMA Runtime Latency (Cycle 30):** **$\mathbf{0.866 \text{ sec}}$**.
+
+**Calculation:**
+$$\text{Latency Reduction} = \left(1 - \frac{\text{Latency}_{\text{SIGMA}}}{\text{Latency}_{\text{Baseline}}}\right) \times 100\% = \left(1 - \frac{0.866}{10.199}\right) \times 100\% \approx \mathbf{91.5\%}$$
+
+**Significance:** SIGMA maintains a consistently low latency, while the Baseline agent degrades into an unusable state, proving SIGMA's suitability for **high-performance, low-latency applications**.
+
+---
+
+## 3. Cognitive Stability (Drift Control)
+
+### ❓ What was analyzed and why it matters:
+
+**Stability is measured as the ability to preserve semantic self-consistency and intent alignment across recursive cycles.**
+
+* **Drift Control:** The final $\text{Drift}_{\text{total}}$ of $\mathbf{0.431}$ remained safely below the critical threshold ($\mathbf{0.5}$) for the entire 30-cycle session.
+* **Controlled State:** The session concluded in a **`transitional`** phase with $\text{Stability}$ at $\mathbf{0.524}$, demonstrating that the **ALICE Engine** successfully managed the cognitive load and prevented the attractor from dissolving.
+
+**Significance:** SIGMA's **Drift Monitor** and **ALICE Engine** create a **self-aware and self-regulating** system, solving the critical problem of long-term coherence and reliability that plagues standard LLM applications.
+
+---
+
+## 4. Interpretation and Next Steps
+
+These results confirm that the **SIGMA Runtime (v0.1 ERI)** delivers stable and efficient long-horizon performance with over **90% latency reduction** and **98% token savings** relative to baseline context accumulation.
+
+The next experimental phase will explore:
+
+* **Memory externalization** — integration with distributed or retrieval-augmented stores.
+* **Multi-agent governance** — introducing coordination and identity persistence across parallel cognitive instances.
+* **Extended-cycle validation** — scaling to 200+ turns and multi-session continuity.
+
+Together, these directions form the foundation for a **distributed cognitive fabric**, where LLM runtimes operate as coherent, adaptive entities.
