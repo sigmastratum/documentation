@@ -106,14 +106,35 @@ It consolidates four complementary dimensions:
 
 ---
 
-## 4. Interpretation and Next Steps
+## 4. Next Steps
 
-These results confirm that the **SIGMA Runtime (v0.1 ERI)** delivers stable and efficient long-horizon performance with over **90% latency reduction** and **98% token savings** relative to baseline context accumulation.
+### Cognitive Coherence Benchmark
+**Goal:** validate SIGMA’s ability to preserve *semantic and archetypal coherence* over long recursive cycles.  
+- Reduce token economy from 98 % → ~65 % to maintain richer context density.  
+- Measure:  
+  - Drift stability (`Δdrift < 0.5`)  
+  - Motif retention  
+  - Semantic entropy (consistency of meaning)  
+  - Tone and intent coherence  
+*Objective:* demonstrate that SIGMA not only economizes context but maintains a stable “cognitive self”.
 
-The next experimental phase will explore:
+---
 
-* **Memory externalization** — integration with distributed or retrieval-augmented stores.
-* **Multi-agent governance** — introducing coordination and identity persistence across parallel cognitive instances.
-* **Extended-cycle validation** — scaling to 200+ turns and multi-session continuity.
+### 2. Extended-Cycle Continuity Test
+**Goal:** stress-test the attractor’s endurance across 100–200 conversational turns.  
+- Observe phase stability, semantic resonance, and recovery from divergence.  
+- Quantify how long the cognitive attractor can persist without external resets.  
+*Objective:* empirically confirm long-term continuity of reasoning and identity.
 
-Together, these directions form the foundation for a **distributed cognitive fabric**, where LLM runtimes operate as coherent, adaptive entities.
+---
+
+### 3. Memory Externalization (RAG Integration)
+**Goal:** extend coherence beyond the runtime itself.  
+- Integrate **Retrieval-Augmented Memory** to store and recall symbolic traces across sessions.  
+- Use the RCL layer as an interface between the runtime and external semantic memory.  
+*Objective:* enable durable, self-referential cognition — a runtime that “remembers” beyond its own context window.
+
+---
+
+Together, these experiments will move SIGMA from *architectural proof* to *cognitive validation* —  
+demonstrating not just efficiency, but **persistent coherence and self-stabilizing intelligence**.
