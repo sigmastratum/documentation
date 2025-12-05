@@ -1,0 +1,9 @@
+Metric,Baseline,SIGMA,Δ Improvement (%)
+Avg Latency (s),3.713366666666666,1.5803333333333331,57.44
+Max Latency (s),21.194,4.008,81.09
+Avg Total Tokens,101.8,58.06666666666667,42.96
+Total Tokens,3054.0,1742.0,42.96
+Avg Input Tokens,5.366666666666666,19.366666666666667,-260.87
+Avg Output Tokens,96.43333333333334,38.7,59.87
+Cumulative Token Efficiency (%),3054.0,1742.0,42.96
+Cumulative Latency Efficiency (%),111.40099999999998,47.41,57.44
