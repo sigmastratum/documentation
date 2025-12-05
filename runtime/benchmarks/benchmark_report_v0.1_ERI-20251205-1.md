@@ -89,8 +89,7 @@ It consolidates four complementary dimensions:
 - The baseline sends minimal new input each turn but **re-appends all previous dialogue**, causing cumulative explosion, while SIGMA reconstructs only the relevant state.
 
 > **Note:**  
-> This visualization demonstrates how **RCL-based contextual control** breaks the exponential scaling barrier of standard `context.append()` architectures,  
-> achieving long-horizon stability without sacrificing coherence or reasoning continuity.
+> This visualization demonstrates how **RCL-based contextual control** breaks the exponential scaling barrier of standard `context.append()` architectures, achieving long-horizon stability without sacrificing coherence or reasoning continuity.
 
 ---
 
