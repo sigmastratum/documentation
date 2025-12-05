@@ -120,7 +120,7 @@ It consolidates four complementary dimensions:
 
 ---
 
-### 2. Extended-Cycle Continuity Test
+### Extended-Cycle Continuity Test
 **Goal:** stress-test the attractor’s endurance across 100–200 conversational turns.  
 - Observe phase stability, semantic resonance, and recovery from divergence.  
 - Quantify how long the cognitive attractor can persist without external resets.  
@@ -128,7 +128,7 @@ It consolidates four complementary dimensions:
 
 ---
 
-### 3. Memory Externalization (RAG Integration)
+### Memory Externalization (RAG Integration)
 **Goal:** extend coherence beyond the runtime itself.  
 - Integrate **Retrieval-Augmented Memory** to store and recall symbolic traces across sessions.  
 - Use the RCL layer as an interface between the runtime and external semantic memory.  
