@@ -29,6 +29,9 @@ The primary goal of this benchmark is to empirically validate the architectural 
 | **Latency (Cycle 30)** | $\mathbf{10.199 \text{ sec}}$ | $\mathbf{0.866 \text{ sec}}$ | $\downarrow \mathbf{91.5\%}$ |
 | **Cognitive Stability (Drift Control)** | Exponential decay, memory loss | Controlled ($\text{Drift}_{\text{total}} \approx 0.431$), $\text{Stability} \approx 0.524$ | **Critical** |
 
+> **Transparency Note:**  
+> All metrics below reflect **peak values measured at Cycle 30**, representing the end-state efficiency of each runtime.
+
 ---
 
 ## 1. Token Efficiency (Input Tokens)
