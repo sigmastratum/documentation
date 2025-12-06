@@ -23,14 +23,14 @@ The primary goal of this benchmark is to empirically validate the architectural 
 
 ## Key Results Summary (Cycle 30 Comparison)
 
+> **Transparency Note:**  
+> All metrics below reflect **peak values measured at Cycle 30**, representing the end-state efficiency of each runtime.
+
 | Metric | Baseline Agent | SIGMA Runtime | Improvement (Δ) |
 | :--- | :--- | :--- | :--- |
 | **Input Tokens (Cycle 30)** | $\approx \mathbf{3,890}$ | $\mathbf{55}$ | $\downarrow \mathbf{98.6\%}$ |
 | **Latency (Cycle 30)** | $\mathbf{10.199 \text{ sec}}$ | $\mathbf{0.866 \text{ sec}}$ | $\downarrow \mathbf{91.5\%}$ |
 | **Cognitive Stability (Drift Control)** | Exponential decay, memory loss | Controlled ($\text{Drift}_{\text{total}} \approx 0.431$), $\text{Stability} \approx 0.524$ | **Critical** |
-
-> **Transparency Note:**  
-> All metrics below reflect **peak values measured at Cycle 30**, representing the end-state efficiency of each runtime.
 
 ---
 
