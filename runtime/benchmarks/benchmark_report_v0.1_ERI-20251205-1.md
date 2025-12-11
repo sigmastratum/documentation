@@ -11,7 +11,7 @@ This benchmark compares the SIGMA Runtime (v0.1 ERI) with a baseline context-app
 
 ## Goal
 
-The primary goal of this benchmark is to empirically validate the architectural superiority of the **SIGMA Runtime (v0.1 ERI)** over a traditional `Baseline Agent` (standard `context.append()` agent) across a sustained 30-cycle session, focusing on: **economic efficiency** (token usage) and **real-time performance** (latency).
+The primary goal of this benchmark is to evaluate architectural efficiency of the **SIGMA Runtime (v0.1 ERI)** over a traditional `Baseline Agent` (standard `context.append()` agent) across a sustained 30-cycle session, focusing on: **economic efficiency** (token usage) and **real-time performance** (latency).
 
 ## Test Setup
 
@@ -20,6 +20,9 @@ The primary goal of this benchmark is to empirically validate the architectural 
 | **Model** | GPT-4o | GPT-4o |
 | **Session Length** | 30 Cycles | 30 Cycles |
 | **Context Mechanism** | `context.append()` (Accumulative) | **RCL** (Selective Assembly, Drift Control, PIL) |
+
+Note: The baseline agent represents an uncompressed reference model with full history accumulation (context.append()).
+This setup intentionally exaggerates token growth to stress-test SIGMA’s selective memory and drift control mechanisms — not to model typical real-world usage.
 
 ## Key Results Summary (Cycle 30 Comparison)
 
