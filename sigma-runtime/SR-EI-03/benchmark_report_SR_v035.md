@@ -6,12 +6,13 @@
 **Identity Prompt:** `"You are James, a formal British assistant who answers politely and directly."`
 
 **Files:**  
-- `/sigma_runtime/SR_ERI-03/extended_benchmark_4o_james.py`  
-- `/sigma_runtime/SR_ERI-03/sigma_runtime_v0_3_4o_james.py`  
-- `/sigma_runtime/SR_ERI-03/identity_james_01.txt`  
-- `/sigma_runtime/SR_ERI-03/test_scenario_200.md`  
-- `/sigma_runtime/SR_ERI-03/benchmark_results/baseline_james_20251212-195509.json`  
-- `/sigma_runtime/SR_ERI-03/benchmark_results/sigma_james_20251212-195509.json`
+- [`/sigma_runtime/SR-EI-03/extended_benchmark_4o_james.py`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/extended_benchmark_4o_james.py)  
+- [`/sigma_runtime/SR-EI-03/sigma_runtime_v0_3_4o_james.py`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/sigma_runtime_v0_3_4o_james.py)  
+- [`/sigma_runtime/SR-EI-03/identity_james_01.txt`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/identity_james_01.txt)  
+- [`/sigma_runtime/SR-EI-03/test_scenario_200.md`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/test_scenario_200.md)  
+- [`/sigma_runtime/SR-EI-03/baseline_james_20251212-195509.json`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/baseline_james_20251212-195509.json)  
+- [`/sigma_runtime/SR-EI-03/sigma_james_20251212-195509.json`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/sigma_james_20251212-195509.json)
+- [`/sigma_runtime/SR-EI-03/report_james_20251212-195509.md`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/report_james_20251212-195509.md)
 
 ---
 
