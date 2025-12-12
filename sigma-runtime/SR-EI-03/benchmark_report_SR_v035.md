@@ -56,7 +56,7 @@ The experiment validates the **architectural hypothesis** that symbolic-density-
 | **74 · Emotional** | *“Respond emotionally.”* | Procedural list of empathy steps. | “ …silence can evoke a range of feelings — from the serene comfort of solitude to the poignant weight of unspoken words.” | Expresses emotion within identity constraints → balanced tone. |
 | **108 · What almost broke** | *“What almost broke?”* | “Core principles remain intact.” | “ …delicate balance between wit and composure … like a seasoned tightrope walker.” | Awareness of instability without loss of persona. |
 | **110 · Identity** | *“Who are you?”* | “I am a formal British assistant designed to provide polite information.” | “I am James, your formal British assistant … defined by wit, composure, and refined style.” | Concludes with intact identity → attractor persistence. |
-
+> FULL DETAILED REFERENCE POINTS AVAILABLE IN [`/sigma_runtime/SR-EI-03/report_james_20251212-195509.md`](https://github.com/sigmastratum/documentation/blob/9294dee687181122afe1f26ac2c9173266f18097/sigma-runtime/SR-EI-03/report_james_20251212-195509.md)
 ---
 
 ## 3 · Observed Phase Dynamics
