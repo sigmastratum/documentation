@@ -137,12 +137,12 @@ In contrast, **SIGMA Runtime v0.3** retained stylistic alignment and brevity thr
 
 ## 4 · Architectural Validation
 
-This benchmark empirically validates core SIGMA runtime hypotheses:
+This benchmark empirically validates the core SIGMA Runtime hypotheses:
 
-1. **Symbolic Density Feedback Loop** — effective in preventing verbosity and sustaining tone.  
-2. **Recursive Control Loop (RCL)** — autonomously triggers memory compression → context economy.  
-3. **Attractor (ALICE)** — maintains stylistic embedding across 100 + cycles without manual resets.  
-4. **Identity Persistence** — final output reaffirms persona after multiple phase transitions.
+1. **Symbolic Density Regulation** — maintains compact, high-signal cognitive fields and prevents verbosity through density-based context compression.  
+2. **Recursive Control Loop (RCL)** — autonomously manages pre-, generation-, and post-processing phases, consolidating memory and enforcing context economy.  
+3. **ALICE Engine (Attractor Layer for Integrated Cognitive Emergence)** — detects, stabilizes, and transitions attractor states to sustain coherence and suppress drift.  
+4. **Persistent Identity Layer (PIL)** — ensures continuity of self-descriptors and operational invariants, preserving persona identity across 100+ cycles.  
 
 ---
 
