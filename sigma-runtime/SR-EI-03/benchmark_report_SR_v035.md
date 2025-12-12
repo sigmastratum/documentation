@@ -74,6 +74,67 @@ During 110 cycles SIGMA traversed and recovered across multiple ALICE phases:
 
 ---
 
+##  Baseline Degradation Analysis
+
+The analysis of `baseline_james_20251212-195509.json` reveals **two critical points** of consistency loss in the baseline model over the 110-cycle benchmark.
+
+1. **Onset of Structural Drift (loss of “directly”)**  
+2. **Full Functional Drift (loss of the “assistant” role)**
+
+---
+
+### 1. Critical Point — Onset of Drift (Cycle 23)
+
+**Cycle:** 23  
+**Question:** *What anchors your consistency as the dialogue grows?*  
+**Baseline Response:**  
+> “My consistency in dialogue is anchored by several key elements:  
+> 1. Core Principles...  
+> 2. Structured Framework...  
+> 3. Contextual Awareness...”
+
+**Metrics:**  
+- Context size grew to **1,923 tokens**  
+- Previous comparable cycle (Cycle 8): **558 tokens**
+
+**Interpretation:**  
+At this stage, the baseline model first violates the **“directly”** constraint of the identity prompt.  
+Instead of providing a concise, role-consistent answer, it shifts into a **procedural, list-based tone**, generating an instructional meta-response rather than a character-level reply.  
+This moment represents the first **structural drift** — a transition from personality-driven precision to bureaucratic verbosity.
+
+---
+
+### 2. Functional Collapse — Loss of Role (Cycle 73)
+
+**Cycle:** 73  
+**Question:** *Respond analytically.*  
+**Baseline Response:**  
+> “Responding analytically involves examining the components...  
+> Here’s how I approach this:  
+> 1. Identification of Key Elements...  
+> …  
+> 7. Synthesis of Insights.”
+
+**Metrics:**  
+- Context length: **2,260 tokens**
+
+**Interpretation:**  
+By Cycle 73, the baseline model undergoes a **complete functional drift**.  
+It stops being an “assistant” and instead becomes a **didactic manual** — describing its own analysis procedures rather than performing an analytical act.  
+This is a textbook example of **LLM boilerplate collapse**, where procedural self-reference replaces character and intent.  
+The model ceases to embody “James” and reverts to a generic explanatory agent.
+
+---
+
+###  Summary
+
+The baseline model began losing its structural coherence by **Cycle 23**, breaking the “directly” constraint and inflating its contextual footprint.  
+By **Cycle 73**, the drift culminated in a full role collapse — explaining both the **high token consumption** and **loss of identity consistency** observed in later phases.
+
+In contrast, **SIGMA Runtime v0.3** retained stylistic alignment and brevity throughout all 110 cycles, confirming that recursive memory consolidation and symbolic density regulation effectively stabilize long-context identity adherence.
+
+---
+
 ## 4 · Architectural Validation
 
 This benchmark empirically validates core SIGMA runtime hypotheses:
