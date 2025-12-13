@@ -30,6 +30,29 @@ The experiment validates the **architectural hypothesis** that symbolic-density-
 
 ---
 
+## 0 · Technical Methodology & Benchmarking Parameters
+
+To ensure a rigorous and unbiased comparison, both **Baseline** and **SIGMA v0.3.5** were tested under identical operational constraints. This benchmark measures the effect of the **architectural control layer**, not raw model capacity or memory volume.
+
+| Parameter | Baseline (Standard) | SIGMA v0.3.5 (Enhanced) |
+|:--|:--|:--|
+| **Base Model** | GPT-4o (`gpt-4o`) | GPT-4o (`gpt-4o`) |
+| **System Prompt (`msg[0]`)** | **Static:** Identity instructions only. | **Dynamic:** Identity + ALICE State + RCL Feedback. |
+| **Context Window** | Rolling buffer (max **20 messages**). | Rolling buffer (max **20 messages**). |
+| **Identity Persistence** | System message is preserved. | System message is preserved & refreshed. |
+| **History Handling** | FIFO Trimming (preserving `msg[0]`). | FIFO Trimming + Recursive Consolidation. |
+| **Temperature** | 0.4 (consistent for both) | 0.4 (consistent for both) |
+
+
+
+### Why this setup matters:
+
+1. **Identical Memory Depth:** Both agents were limited to the same short-term memory (rolling buffer of 20 messages). This ensures that SIGMA’s efficiency is not a result of having "more information," but of **managing the same information more effectively**.
+2. **The "Freshness" Factor:** While the Baseline relies on a static initial instruction that loses "weight" as the context grows, SIGMA uses the system message (`message[0]`) as a **dynamic control channel**. By updating this channel every cycle with ALICE metrics (Stability, Density, Motifs), SIGMA forces the model to re-align with its core identity continuously.
+3. **Neutral Ground:** Using the same GPT-4o model proves that "identity drift" is a **structural property** of current LLMs that can be mitigated through neurosymbolic runtime architectures without altering the underlying model weights.
+
+---
+
 ## 1 · Objective Metrics
 
 | Metric | Baseline | SIGMA v0.3.5 | Δ |
