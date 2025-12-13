@@ -18,7 +18,7 @@
 
 ## Executive Summary
 
-The 110-cycle benchmark demonstrates that **SIGMA Runtime v0.3.5** successfully preserves identity, tone, and structural coherence over long conversational runs. While the baseline model exhibited significant **Identity Drift**—gradually reverting to generic LLM verbosity and procedural "boilerplate"—SIGMA sustained the *“James”* persona through autonomous feedback loops (ALICE, RCL, Memory Layer).
+The 110-cycle benchmark demonstrates that **SIGMA Runtime v0.3.5** successfully preserves identity, tone, and structural coherence over long conversational runs. While the baseline model exhibited significant **Identity Drift**—gradually reverting to generic LLM verbosity and procedural "boilerplate"—SIGMA sustained the *“James”* persona through autonomous feedback loops (ALICE, RCL, PIL).
 
 ### Key Quantitative Improvements:
 - **−60.7 % Token Reduction** (avg 1322 → 520)
