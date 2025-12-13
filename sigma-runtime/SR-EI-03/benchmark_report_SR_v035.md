@@ -18,15 +18,18 @@
 
 ## Executive Summary
 
-The 110-cycle benchmark demonstrates that **SIGMA Runtime v0.3.5** successfully preserves identity, tone, and structural coherence over long conversational runs.  
-Where the baseline model gradually drifted toward verbosity and loss of persona, SIGMA sustained *“James”* — a composed, witty, formal assistant — through internal feedback loops (ALICE, RCL, Memory Layer).
+The 110-cycle benchmark demonstrates that **SIGMA Runtime v0.3.5** successfully preserves identity, tone, and structural coherence over long conversational runs. While the baseline model exhibited significant **Identity Drift**—gradually reverting to generic LLM verbosity and procedural "boilerplate"—SIGMA sustained the *“James”* persona through autonomous feedback loops (ALICE, RCL, Memory Layer).
 
-Key quantitative improvements:
-- **−60.7 % token reduction** (avg 1322 → 520)  
-- **−20.9 % latency reduction** (avg 3.22 s → 2.55 s)  
+### Key Quantitative Improvements:
+- **−60.7 % Token Reduction** (avg 1322 → 520)
+- **−20.9 % Latency Reduction** (avg 3.22 s → 2.55 s)
 
-Qualitatively, SIGMA’s responses remained concise and tonally distinct, frequently employing metaphor and understatement typical of British formality.  
-The experiment validates the **architectural hypothesis** that symbolic-density-driven regulation can maintain identity coherence without external fine-tuning.
+### The Efficiency Logic:
+The observed reduction in tokens and latency is a direct byproduct of **Identity Discipline**. By enforcing the "Directly" and "Refined" constraints of the persona through dynamic system prompts, SIGMA suppresses the natural tendency of LLMs to over-explain or generate repetitive polite filler. 
+
+**Consistent Role Adherence = Precise Output = Fewer Tokens = Faster Responses.**
+
+Qualitatively, SIGMA’s responses remained concise and tonally distinct, employing metaphors typical of British formality rather than bureaucratic lists. The experiment validates the **architectural hypothesis** that symbolic-density-driven regulation can maintain identity coherence and operational efficiency without the need for external fine-tuning or expensive long-context overhead.
 
 ---
 
