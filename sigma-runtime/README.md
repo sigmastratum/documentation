@@ -24,7 +24,7 @@ Each subdirectory represents a distinct phase in the system’s architectural ev
 <tr>
 <td><b>SR-ERI-01</b></td>
 <td>Extended Reference Implementation</td>
-<td>Transitional build extending the RI with internal coherence and stability tracking mechanisms.</td>
+<td>Transitional build extending the RI with internal coherence and stability tracking mechanisms. Frozen reference runtime (formerly <code>/runtime/</code>). Serves as the historical baseline.</td>
 </tr>
 <tr>
 <td><b>SR-EI-03</b></td>
