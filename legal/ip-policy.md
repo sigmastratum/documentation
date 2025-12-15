@@ -2,7 +2,7 @@
 title: Intellectual Property Policy
 description: IP rules covering contributions, rights retention, and open standard commitments.
 published: true
-date: 2025-12-02T02:05:15.739Z
+date: 2025-12-15T20:58:18.008Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:56:05.346Z
@@ -44,7 +44,7 @@ The Sigma Runtime architecture — its definitions, invariants, schemas, and
 structural specifications — must remain fully **open and accessible**.
 
 ### Prohibited:
-- Private or closed-source forks of the **architecture specification**  
+- Distribution of private or closed-source forks of the architecture specification  
 - Modified versions of SRS distributed under restrictive licenses  
 - Attempts to enclose or privatize the Standard  
 
@@ -133,7 +133,7 @@ permissions, and enforcement actions are exercised by:
 
 Eugene Tsaliev
 ORCID: https://orcid.org/0009-0007-3279-9477
-
+Email: eugene@sigmastratum.org
 Unless and until a formal legal entity is established, all references to
 SSRG in licensing, attribution, or enforcement contexts shall be
 interpreted as referring to the above individual.
