@@ -27,5 +27,26 @@ consult the authoritative IP Policy located at:
 
     /legal/IP Policy
 
+────────────────────────────────────────
+SOURCE CODE NOTICE
+────────────────────────────────────────
+
+This repository may contain source code, scripts, reference implementations,
+or experimental software artifacts provided in support of the
+Sigma Stratum research program and the Sigma Runtime Standard.
+
+Unless explicitly stated otherwise at the top of a source file or
+in a directory-specific LICENSE file:
+
+• All source code in this repository is licensed under
+  Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0).
+
+• Commercial use, deployment, redistribution, or incorporation into
+  revenue-generating systems requires explicit written permission
+  from the Sigma Stratum Research Group (SSRG).
+
+Documentation, standards, and policy texts are licensed independently
+and may use different Creative Commons licenses as specified.
+
 For inquiries regarding licensing and commercial permissions:
 eugene@sigmastratum.org
