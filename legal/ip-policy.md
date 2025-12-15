@@ -123,6 +123,23 @@ Integration into the Standard does not transfer ownership — it ensures **prote
 
 ---
 
+The "Sigma Stratum Research Group (SSRG)" is an unincorporated research
+designation used to represent the author and contributors of the
+Sigma Stratum research corpus.
+
+At the time of publication, SSRG does not constitute a registered legal
+entity. All intellectual property rights, licensing authority,
+permissions, and enforcement actions are exercised by:
+
+Eugene Tsaliev
+ORCID: https://orcid.org/0009-0007-3279-9477
+
+Unless and until a formal legal entity is established, all references to
+SSRG in licensing, attribution, or enforcement contexts shall be
+interpreted as referring to the above individual.
+
+---
+
 ## Contact
 
 For IP questions, licensing clarification, or institutional agreements:
