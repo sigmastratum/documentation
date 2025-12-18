@@ -2,7 +2,7 @@
 title: Research Notes and Publications
 description: A collection of research materials, papers, notes, and ongoing studies supporting the Sigma Runtime architecture.
 published: true
-date: 2025-12-02T07:23:49.468Z
+date: 2025-12-18T22:34:58.303Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:22:30.902Z
@@ -137,6 +137,14 @@ Documentation (SRD) are derived.
 **DOI:** https://doi.org/10.5281/zenodo.17703667  
 **Published:** November 24, 2025 (v0.1)  
 *First architectural definition of the Sigma Runtime (SL0–SL6), attractor state model, memory stack, and runtime invariants.*
+
+---
+
+### **Sigma Stratum – Experimental Closure: Verification of the Attractor Hypothesis and the SIGMA Runtime Architecture**  
+**DOI:** https://doi.org/10.5281/zenodo.17924120 
+**Published:** December 13, 2025 (v1.0)  
+*Presents the final experimental validation of the attractor hypothesis and the SIGMA Runtime Architecture.  
+Includes 110-cycle benchmark results, verification of stability and identity persistence, and confirmation of recursive coherence as an emergent runtime property.*  
 
 ---
 
