@@ -2,7 +2,7 @@
 title: Canon & IP Framework
 description: Authoritative registry of the Sigma Stratum corpus, licensing classifications, attribution rules, and canonical definitions.
 published: true
-date: 2025-11-30T23:42:23.767Z
+date: 2025-12-18T22:36:35.366Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T05:35:45.866Z
@@ -155,6 +155,13 @@ License: CC BY 4.0
 DOI: https://doi.org/10.5281/zenodo.17629926  
 Published: 2025-11-17  
 License: CC BY 4.0
+
+### 16. Sigma Stratum – Experimental Closure: Verification of the Attractor Hypothesis and the SIGMA Runtime Architecture  
+**DOI:** https://doi.org/10.5281/zenodo.17924120 
+**Published:** 2025-12-13 (v1.0)  
+**License:** CC BY-NC 4.0  
+**Notes:** Presents the final experimental validation of the attractor hypothesis and the SIGMA Runtime Architecture.  
+Includes 110-cycle benchmark results, verification of stability and identity persistence, and confirmation of recursive coherence as an emergent runtime property.
 
 ---
 
