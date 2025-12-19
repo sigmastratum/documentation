@@ -565,11 +565,9 @@ All experimental data, logs, and analysis scripts are available in the SIGMA Run
 
 **Reproducibility Statement:**  
 All experiments were executed using identical runtime configurations, identical prompts, and the same API tier (GPT-5.2 Web).  
-Independent researchers can reproduce results by running:
+Independent researchers can reproduce results:
+[`/README.md`](https://github.com/sigmastratum/documentation/blob/a1703d2568c3e5d8c9d1b3dad6901a0b253333f4/sigma-runtime/SR-EI-037/code/README.md)
 
-```bash
-python3 extended_benchmark_52_james.py 110
-```
 ---
 
 ## Appendix A: Test Environment Specifications
