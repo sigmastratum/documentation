@@ -57,7 +57,10 @@ python3 sigma_test_runner_52_james.py scenario 110
 python3 extended_benchmark_52_james.py 110
 ```
 
-**Output:** `./results/report_james_YYYYMMDD-HHMMSS.md`
+**Output:** 
+`./benchmark_results/sigma_james_YYYYMMDD-HHMMSS.md`
+`./benchmark_results/baseline_james_YYYYMMDD-HHMMSS.md`
+`./benchmark_report_james_YYYYMMDD-HHMMSS.md`
 
 ### Interactive terminal:
 ```bash
@@ -86,9 +89,9 @@ python3 sigma_test_runner_52_james.py scenario 30
 
 ## Results
 
-**Benchmark output:** `./results/report_james_*.md`  
+**Benchmark output:** `./benchmark_results/report_james_*.md`  
 **Test logs:** `./test_results/test_*.json`  
-**Terminal sessions:** `./terminal_sessions/session_*.json`
+
 
 ---
 
@@ -107,11 +110,11 @@ MODEL = "gpt-5.2"
 
 ✅ Start with 30 cycles to test setup  
 ✅ Use 110 cycles for standard validation  
-✅ Use 200 cycles for comprehensive testing  
-✅ Check `./results/` for markdown reports  
-✅ Terminal mode auto-saves sessions on exit
+✅ Use 200 cycles for comprehensive testing **(memory testing blocks is not supporing in this version)**
+✅ Check `./benchark_results/` for raw data and reports  
+✅ Terminal mode is NOT saving sessions on exit
 
 ---
 
-**Documentation:** See `SIGMA_v0.3.7_Comprehensive_Report.md`  
+**Documentation:** See `SIGMA_Runtime_0_3_7_CVR.md`  
 **Support:** Check test scenario comments in `test_scenario_200.md`
