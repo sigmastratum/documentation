@@ -3,7 +3,7 @@
 This report summarizes validation results for **SIGMA Runtime v0.4.6**,  
 based on a 110-cycle internal test sequence.  
 
-The accompanying file `SIGMA_Runtime_v046_dialogue_excerpt.json`  
+The accompanying file `SIGMA_Runtime_v046_dialogue_cycles.json`  
 contains anonymized conversational data used for coherence and identity-stability analysis.  
 No runtime code or proprietary components are included.
 
