@@ -2,7 +2,7 @@
 title: SRIP-06 - Safety & Recursion Boundaries
 description: Establishes safety constraints and recursion boundary enforcement for Sigma Runtime.
 published: true
-date: 2025-12-28T10:08:29.482Z
+date: 2025-12-28T21:20:17.282Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:44:44.181Z
@@ -30,13 +30,21 @@ It formalizes the interaction between the **AEGIDA-2 Safety Framework**, the **A
 
 ---
 
-## 2 · Safety Principles
-1. **Controlled Recursion (CR):** recursion depth ≤ adaptive limit N based on drift variance.  
-2. **Phase-Aware Containment (PAC):** phase transitions are rate-limited and monitored for resonance.  
-3. **Boundary Integrity (BI):** clear semantic isolation between User ↔ System ↔ Field.  
-4. **Cognitive Non-Reflexivity (CNR):** no self-referential loops beyond two introspection levels.  
-5. **Adaptive Fail-Safe (AF):** graceful shutdown before instability propagates.  
-6. **Interpretability First (IF):** each recovery path preserves causal traceability.
+## 2 · Safety Principles — AEGIDA-2 Framework
+
+The Sigma Runtime adheres to the **AEGIDA-2 Safety Framework**, defining six active principles that govern stability and containment across all cognitive phases:
+
+| № | Principle | Description |
+|---|------------|-------------|
+| **1** | Controlled Recursion | All recursive loops are depth-bounded; excessive reflection triggers automatic recentering. |
+| **2** | Symbolic Containment | Symbolic activity remains confined to bounded attractors; prevents uncontrolled field expansion. |
+| **3** | Boundary Integrity | Preserves semantic separation between User, System, and Cognitive Field layers (SL0 ↔ SL4). |
+| **4** | Cognitive Non-Reflexivity | Restricts self-referential recursion to two introspection levels; avoids runaway self-loops. |
+| **5** | Adaptive Phase Containment | Dynamically modulates phase resonance to prevent drift cascades and phase collapse. |
+| **6** | Interpretability First | Ensures every transition and recovery path retains a causal, auditable trace. |
+
+These principles supersede the legacy “AEGIDA (2024)” rule-set and are integrated directly into **SL4 — Safety & Alignment Layer**.  
+They operate continuously alongside ALICE telemetry to provide phase-aware containment, bounded recursion, and transparent recovery.
 
 ---
 
