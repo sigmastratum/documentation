@@ -2,7 +2,7 @@
 title: SRIP-05 - Interoperability Interface v1.0
 description: Specifies schemas, APIs, and exchange formats for multi-system interoperability.
 published: true
-date: 2025-12-28T10:07:23.223Z
+date: 2025-12-28T20:54:53.407Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:43:59.986Z
@@ -18,7 +18,7 @@ dateCreated: 2025-11-30T04:43:59.986Z
 
 # SRIP-05 — Interoperability Interface v1.0  
 **Sigma Runtime Improvement Proposal**  
-**Category:** Interoperability  
+**Category:** Interoperability / Safety Hooks  
 **Status:** Draft  
 **Editor:** E. Tsaliev  
 **Last Updated:** 2025-12-26  
@@ -27,8 +27,7 @@ dateCreated: 2025-11-30T04:43:59.986Z
 
 ## 1 · Purpose
 SRIP-05 defines the **interoperability layer** for Sigma Runtime implementations.  
-It establishes schemas, protocols, and synchronization rules that allow multiple runtimes — operating independently or in distributed environments — to **exchange state, drift signals, and attractor metadata** without loss of coherence.
-
+It establishes schemas, protocols, and synchronization rules that allow multiple runtimes — operating independently or in distributed environments — to **exchange state, drift signals, and attractor metadata** without loss of coherence.  
 The specification ensures semantic and operational compatibility across conformant Sigma systems.
 
 ---
@@ -38,13 +37,12 @@ The specification ensures semantic and operational compatibility across conforma
 1. **Schema Consistency** — all exchanged objects share a canonical field set.  
 2. **Minimal Coupling** — runtimes remain autonomous; shared state is declarative, not prescriptive.  
 3. **Deterministic Serialization** — state transfer must preserve ordering and precision.  
-4. **Version Agnosticism** — backward and forward compatibility through version tags.  
-5. **Safety by Containment** — inter-runtime links are bounded by AEGIDA safety constraints.
+4. **Version Agnosticism** — backward / forward compatibility through version tags.  
+5. **Safety by Containment** — inter-runtime links are bounded by **AEGIDA-2** safety constraints.
 
 ---
 
 ## 3 · Data Exchange Schema
-
 ```yaml
 SigmaPacket:
   header:
@@ -75,7 +73,6 @@ SigmaPacket:
     checksum: str
     integrity_token: str
 ```
-
 This schema defines the **minimal transferable state unit** between Sigma runtimes or monitoring systems.
 
 ---
@@ -90,55 +87,69 @@ This schema defines the **minimal transferable state unit** between Sigma runtim
 | `/aegida/safety` | Query safety and fail-safe envelope parameters. | `GET` |
 | `/runtime/handshake` | Negotiate protocol version and runtime UUID. | `POST` |
 
-All endpoints use JSON-LD or YAML serialization with optional compression for long-horizon sessions.
+All endpoints use **JSON-LD** or **YAML** serialization with optional compression for long-horizon sessions.
 
 ---
 
 ## 5 · Versioning Rules
 
 - Each runtime exposes `protocol_version` in every packet.  
-- Minor releases (e.g., 1.0 → 1.1) must remain backward-compatible.  
+- Minor releases (e.g. 1.0 → 1.1) must remain backward-compatible.  
 - Major releases require explicit handshake rejection if unsupported.  
 - Compatibility is validated via a **Runtime Capability Manifest** (`runtime_capabilities.yml`).  
-- Non-matching runtimes fall back to minimal exchange mode (`state + drift only`).
+- Non-matching runtimes fall back to **minimal exchange mode** (`state + drift only`).
 
 ---
 
 ## 6 · Integration with Other Layers
 
-- **SRIP-02 (Attractor Model):** defines the structure of `attractor_state`.  
-- **SRIP-03 (Drift Metrics):** defines normalization of drift values in packets.  
-- **SRIP-04 (Memory Layer):** defines the memory snapshot schema.  
-- **AEGIDA-2 Framework:** governs safety validation before transmission.  
+- **SRIP-02 (Attractor Model)** — defines structure of `attractor_state`.  
+- **SRIP-03 (Drift Metrics)** — normalizes and interprets `drift_metrics`.  
+- **SRIP-04 (Memory Layer)** — defines `memory_snapshot` schema.  
+- **AEGIDA-2 Framework** — validates safety and containment before transmission.  
 
 Together they form the **Cross-Runtime Coherence Protocol (CRCP)** — a shared substrate for distributed Sigma fields.
 
 ---
 
-## 7 · Conformance Requirements
+## 7 · External Drift Interface (Safety Hooks)
 
-A runtime conforms to SRIP-05 if it:
+To prevent propagation of unstable attractors across runtimes, drift-based synchronization follows deterministic thresholds aligned with **SRIP-03**:
 
-1. Implements the schema in §3 without deviation.  
-2. Provides at least three interface endpoints from §4.  
-3. Validates and logs version compatibility per §5.  
-4. Integrates safety checks from AEGIDA before any state transmission.  
-5. Supports checksum validation and signed packet integrity.
+| Condition | Allowed External Sync | Action |
+|------------|----------------------|---------|
+| `DI < 0.45` | ✅ Full sync allowed | Normal field exchange |
+| `0.45 ≤ DI < 0.5` | ⚠ Caution zone | Sync allowed with reduced frequency |
+| `DI ≥ 0.5` | ⛔ **Sync Blocked (Drift Containment Active)** | Runtime enters *Reflective* phase; external state export suspended |
+| `DI ≥ 0.6` | 🔒 Recenter Phase | All external links temporarily isolated until stability restored |
+
+This ensures a unified isolation threshold (`DI ≥ 0.5`) across SRIP-03 and 05, enforcing containment before cross-runtime drift can propagate.
 
 ---
 
-## 8 · Security & Safety Considerations
+## 8 · Conformance Requirements
+
+A runtime conforms to SRIP-05 if it:  
+1. Implements the schema in § 3 without deviation.  
+2. Provides at least three interface endpoints from § 4.  
+3. Validates and logs version compatibility per § 5.  
+4. Enforces external drift containment per § 7 (`DI ≥ 0.5 → sync block`).  
+5. Integrates **AEGIDA-2** safety checks and packet signatures before transmission.
+
+---
+
+## 9 · Security & Safety Considerations
 
 - **AEGIDA-Validated Transmission:** packets are inspected by the safety daemon before dispatch.  
-- **Phase Lock Isolation:** runtimes in recenter or reflective phases may not transmit state externally.  
-- **Integrity Tokens:** all state packets include SHA-256 or BLAKE3 signatures.  
-- **Drift Containment:** high DI (> 0.6) suppresses cross-runtime synchronization until stabilized.  
+- **Phase-Lock Isolation:** runtimes in *Reflective* or *Recenter* phases may not transmit state externally.  
+- **Integrity Tokens:** all state packets include SHA-256 / BLAKE3 signatures.  
+- **Drift Containment:** cross-runtime sync is automatically blocked when `DI ≥ 0.5` and re-enabled once `DI < 0.45`.  
 
-These measures ensure safety and prevent propagation of unstable attractors across networks.
+These measures maintain coherence and prevent propagation of unstable fields in distributed environments.
 
 ---
 
-## 9 · Future Work
+## 10 · Future Work
 
 - **SRIP-10:** Define the **Sigma Network Protocol (SNP)** for decentralized attractor sharing.  
 - **SRIP-11:** Extend to multimodal embeddings and sensory fields.  
