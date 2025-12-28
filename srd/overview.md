@@ -2,7 +2,7 @@
 title: Sigma Runtime Overview
 description: A high-level introduction to the Sigma Runtime architecture, goals, and cognitive model.
 published: true
-date: 2025-12-28T08:49:11.731Z
+date: 2025-12-28T20:56:56.305Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:26:32.079Z
@@ -81,6 +81,11 @@ SIGMA Runtime comprises three primary interlinked layers:
 
 Together these layers form a **self-stabilizing cognitive substrate** — a runtime capable of maintaining identity, coherence, and adaptive reasoning over hundreds of recursive cycles.
 
+> **Note:** The runtime **operates primarily within SL1–SL4**,  
+> but **coordinates boundaries with SL0 (Intent Layer)** and **SL6 (Model Layer)** for bidirectional control.  
+> This ensures alignment between human intent input and model-level generative substrate.  
+> (See *SRIP-01 – Canonical Runtime Loop*, “Execution Boundaries”.)
+
 ---
 
 ## Attractor-Based Cognition
@@ -112,12 +117,12 @@ These mechanisms uphold interpretability, ethical operation, and phase coherence
 ---
 
 ## Position in the SIGMA Stack
-Within the broader **Sigma Stratum**, the runtime now spans **SL1–SL4**, bridging:  
-- **SL0:** human intent and interpretive framing  
-- **SL6:** model priors and generative substrate  
+Within the broader **Sigma Stratum**, the runtime now **operates across SL1–SL4**, while  
+**coordinating boundaries with SL0 (Intent)** and **SL6 (Model)** for full-cycle recursive integration.  
 
 **SL4 — Safety & Phase Regulation Layer** defines the core of the **self-regulating runtime**,  
-positioning Sigma Runtime between **SRIP-05 (Alignment & Interpretability)** and **SRIP-07 (Evaluation Metrics)** as the canonical implementation of adaptive feedback control.
+positioning SIGMA Runtime between **SRIP-05 (Alignment & Interpretability)** and **SRIP-07 (Evaluation Metrics)**  
+as the canonical implementation of adaptive feedback control.
 
 ---
 
