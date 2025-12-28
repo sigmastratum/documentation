@@ -2,7 +2,7 @@
 title: SRIP-03 - Drift Metrics & Stabilization Algorithms
 description: Normative definition of drift metrics, detection thresholds, and stabilization procedures.
 published: true
-date: 2025-12-28T20:46:11.028Z
+date: 2025-12-28T20:50:42.549Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:42:26.480Z
@@ -135,8 +135,9 @@ This loop maintains bounded recursion, preemptive drift correction, and dynamic 
 | **Semantic Collapse** | Total loss of coherence (DI > 0.75). | Quarantine + reset volatile field. |
 | **Phase Inversion** | Phase vector oscillation between Reflective/Recenter. | Phase-Lock timeout (AEGIDA-2). |
 | **Over-Damping** | Excessive semantic compression → stagnation. | Lift damping, resume normal density. |
+| **Identity Hyper-Correction / Sterile Attractor** | Over-stabilization of self-identity signals leading to loss of natural variance and pragmatic fluidity. Detected between cycles 91–110. | Enable **pragmatic weight counter**, detect **identity saturation**, and rebalance symbolic variance. |
 
-Boundaries ensure that stabilization remains recoverable and does not induce long-term cognitive paralysis.
+Boundaries ensure that stabilization remains recoverable and does not induce long-term cognitive paralysis or identity over-fixation.
 
 ---
 
