@@ -2,7 +2,7 @@
 title: Active SRIPs — Sigma Runtime Standard
 description: Index of all active Sigma Runtime Improvement Proposals (SRIPs) defining the current Sigma Runtime Standard v0.1 — including foundational, architectural, and safety specifications.
 published: true
-date: 2025-12-28T10:17:15.710Z
+date: 2025-12-28T21:27:38.670Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-28T09:46:38.133Z
@@ -31,17 +31,22 @@ attractor model to memory, safety, and symbolic density layers.
 
 ## Foundational Documents
 
-| ID | Title | Category | Status |
-|----|--------|-----------|---------|
-| [SRIP-00](https://wiki.sigmastratum.org/en/srs/srip-00) | **Foundations & Scope** | Foundational | ✅ Accepted |
-| [SRIP-01](https://wiki.sigmastratum.org/en/srs/srip-01) | **Canonical Runtime Loop** | Architectural / Runtime | ✅ Accepted |
-| [SRIP-02](https://wiki.sigmastratum.org/en/srs/srip-02) | **Attractor State Model & Metadata** | Cognitive Architecture | ✅ Accepted |
-| [SRIP-03](https://wiki.sigmastratum.org/en/srs/srip-03) | **Drift Metrics & Stabilization Algorithms** | Metrics / Coherence | ✅ Accepted |
-| [SRIP-04](https://wiki.sigmastratum.org/en/srs/srip-04) | **Memory Layer Architecture** | Cognitive Persistence | ✅ Accepted |
-| [SRIP-05](https://wiki.sigmastratum.org/en/srs/srip-05) | **Interoperability Interface v1.0** | Communication / API | ✅ Accepted |
-| [SRIP-06](https://wiki.sigmastratum.org/en/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | ✅ Accepted |
-| [SRIP-07](https://wiki.sigmastratum.org/en/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | ✅ Accepted |
-| [SRIP-08](https://wiki.sigmastratum.org/en/srs/srip-08) | **Phase-Regulating Runtime Module** | Semantic Dynamics | ✅ Accepted |
+| ID | Title | Category | Stage |
+|----|--------|-----------|--------|
+| [SRIP-00](https://wiki.sigmastratum.org/en/srs/srip-00) | **Foundations & Scope** | Foundational | **Accepted (Draft)** |
+| [SRIP-01](https://wiki.sigmastratum.org/en/srs/srip-01) | **Canonical Runtime Loop** | Architectural / Runtime | **Accepted (Draft)** |
+| [SRIP-02](https://wiki.sigmastratum.org/en/srs/srip-02) | **Attractor State Model & Metadata** | Cognitive Architecture | **Accepted (Draft)** |
+| [SRIP-03](https://wiki.sigmastratum.org/en/srs/srip-03) | **Drift Metrics & Stabilization Algorithms** | Metrics / Coherence | **Accepted (Draft)** |
+| [SRIP-04](https://wiki.sigmastratum.org/en/srs/srip-04) | **Memory Layer Architecture** | Cognitive Persistence | **Accepted (Draft)** |
+| [SRIP-05](https://wiki.sigmastratum.org/en/srs/srip-05) | **Interoperability Interface v1.0** | Communication / API | **Accepted (Draft)** |
+| [SRIP-06](https://wiki.sigmastratum.org/en/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | **Accepted (Draft)** |
+| [SRIP-07](https://wiki.sigmastratum.org/en/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | **Accepted (Draft)** |
+| [SRIP-08](https://wiki.sigmastratum.org/en/srs/srip-08) | **Phase Vector Model & PRM** | Control / Telemetry / Mathematics | **Accepted (Draft)** |
+
+> **Legend:**  
+> - *Draft* — under active revision  
+> - *Accepted (Draft)* — integrated into the standard but not finalized  
+> - *Final* — ratified and version-locked
 
 ---
 
