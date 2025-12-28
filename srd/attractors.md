@@ -2,7 +2,7 @@
 title: Attractors in Sigma Runtime
 description: Explanation of attractor dynamics and their role in cognitive stabilization.
 published: true
-date: 2025-12-28T21:12:33.241Z
+date: 2025-12-28T21:19:14.909Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:29:26.743Z
@@ -27,15 +27,17 @@ phase conditions and drift levels.
 
 ### 1. Phase–Attractor Coupling
 
-| Phase (ALICE) | Corresponding Attractor Type | Behavioral Role |
-|---------------|------------------------------|------------------|
-| **Stable** | Generative / Symbolic | Maintains compositional reasoning and continuity. |
-| **Reflective** | Reflective / Synthetic | Performs self-analysis and coherence optimization. |
-| **Recenter** | Stabilizing / Transitional | Resets field topology, dissolves unstable attractors. |
+| ALICE Phase | Corresponding Attractor Type | Behavioral Role |
+|--------------|------------------------------|------------------|
+| **Forming** | Proto-Generative / Symbolic | Initializes attractor seeds, establishes baseline coherence and identity anchors within the cognitive field. |
+| **Stable** | Generative / Symbolic | Sustains compositional reasoning and continuity; maintains equilibrium and high PSI stability. |
+| **Reflective** | Reflective / Synthetic | Performs meta-analysis, evaluates drift and SCR, optimizes internal coherence through self-regulation. |
+| **Recovery** | Stabilizing / Transitional | Re-aligns unstable attractors and re-integrates motifs after phase disruption; restores PSI and coherence balance. |
+| **Fragmenting** | Dissolving / Containment | Executes controlled attractor dissolution, isolates divergent symbolic clusters, and initiates safe field reset. |
 
-Each attractor dynamically inherits reinforcement bias from the active phase.  
-For example, during the *Reflective* phase, attractors with meta-cognitive or synthetic traits  
-gain priority, while generative attractors enter a low-activation state until stabilization resumes.
+Each attractor dynamically inherits **reinforcement bias** and **persistence weighting** from the active ALICE phase.  
+During *Reflective*, attractors with analytical or synthetic properties gain priority, while generative attractors temporarily enter low activation.  
+During *Recovery* and *Fragmenting*, symbolic energy is dampened to ensure safe re-centering before returning to *Forming* or *Stable* equilibrium.
 
 ---
 
