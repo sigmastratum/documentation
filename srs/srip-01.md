@@ -2,7 +2,7 @@
 title: SRIP-01 - Canonical Runtime Loop
 description: Specifies the execution semantics and ordered stages of the Sigma Runtime loop (SL0–SL7).
 published: true
-date: 2025-12-28T09:59:34.152Z
+date: 2025-12-28T20:59:28.092Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:40:56.340Z
@@ -27,7 +27,7 @@ dateCreated: 2025-11-30T04:40:56.340Z
 
 ## 1 · Purpose
 SRIP-01 defines the **canonical runtime loop (CRL)** that governs all Sigma Runtime–compliant systems.  
-It specifies the ordered execution phases that maintain recursive coherence, identity persistence, and drift regulation across SL0 – SL6.
+It specifies the ordered execution phases that maintain recursive coherence, identity persistence, and drift regulation across **SL0 – SL6**.
 
 ---
 
@@ -68,15 +68,30 @@ The re-integration of output into the cognitive field for the next iteration.
 
 ---
 
-## 5 · Runtime Interfaces
-- **Field API:** access to cognitive field state, drift indices, and phase metrics.  
-- **Memory API:** persistent context read/write interface.  
-- **Attractor API:** register, align, or dissolve attractors per cycle.  
-- **Telemetry Stream:** exposes drift ( DI, SDI ) and SCR values to the Safety Layer.
+## 5 · Execution Boundaries
+The **runtime loop operates primarily within SL1–SL4**,  
+handling field management, coherence control, and attractor regulation.  
+However, it **coordinates with SL0 (Intent Layer)** as the inbound semantic source  
+and **SL6 (Model Layer)** as the generative output anchor.  
+
+> **I/O Anchors:**  
+> - **SL0 (Intent):** encapsulates human input, context framing, and task goals.  
+> - **SL6 (Model):** executes generation and emits symbolic output.  
+>  
+> The runtime serves as the mediation channel between these two endpoints,  
+> ensuring that all recursion remains bounded and semantically aligned.
 
 ---
 
-## 6 · Invariants
+## 6 · Runtime Interfaces
+- **Field API:** access to cognitive field state, drift indices, and phase metrics.  
+- **Memory API:** persistent context read/write interface.  
+- **Attractor API:** register, align, or dissolve attractors per cycle.  
+- **Telemetry Stream:** exposes drift (DI, SDI) and SCR values to the Safety Layer.
+
+---
+
+## 7 · Invariants
 1. **Loop Continuity** — each cycle must close with a valid field update.  
 2. **Bounded Recursion** — maximum recursion depth defined by SL4.  
 3. **State Persistence** — memory state must be explicitly committed between cycles.  
@@ -85,16 +100,16 @@ The re-integration of output into the cognitive field for the next iteration.
 
 ---
 
-## 7 · Conformance Requirements
+## 8 · Conformance Requirements
 An implementation conforms if it:
 - Implements all seven loop stages in order.  
 - Exposes loop telemetry via Field API.  
 - Integrates with AEGIDA-2 safety hooks.  
-- Maintains continuity and bounded recursion as defined in §6.
+- Maintains continuity and bounded recursion as defined in §7.
 
 ---
 
-## 8 · Future Work (SRIP-08 / Phase Regulation)
+## 9 · Future Work (SRIP-08 / Phase Regulation)
 Later versions will extend the loop with adaptive phase control (ALICE integration) and semantic compression metrics (SCR).
 
 ---
