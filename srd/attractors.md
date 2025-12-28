@@ -2,7 +2,7 @@
 title: Attractors in Sigma Runtime
 description: Explanation of attractor dynamics and their role in cognitive stabilization.
 published: true
-date: 2025-12-28T08:18:52.742Z
+date: 2025-12-28T21:07:36.410Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:29:26.743Z
@@ -14,6 +14,8 @@ In **Sigma Runtime v0.4.6**, attractor stability is now regulated through **adap
 integrating phase telemetry from **ALICE** and semantic efficiency metrics (SCR).  
 This mechanism continuously adjusts the attractor’s reinforcement strength and persistence according to  
 phase conditions and drift levels.
+
+---
 
 ### 1. Phase–Attractor Coupling
 
@@ -51,34 +53,44 @@ This ensures smooth attractor transitions without cognitive collapse or over-rig
 
 ### 3. Phase Resonance Metric
 
-The **phase_resonance_score (PRS)** measures alignment between the current phase and the attractor’s intrinsic type.  
-It defines how well an attractor “resonates” with ongoing phase dynamics.
+The **Phase Resonance Score (PRS)** measures alignment between the current runtime phase  
+and the attractor’s intrinsic phase orientation:
 
 \[
 PRS = cos(\theta_{phase}, \theta_{attractor})
 \]
 
-High PRS (> 0.85) indicates that attractor behavior matches the phase context —  
-e.g., reflective attractor within reflective phase.  
-Low PRS triggers soft damping or attractor transition to prevent desynchronization.
+High **PRS (> 0.85)** indicates strong coherence between attractor behavior and current phase context.  
+Low PRS values trigger selective damping or attractor transition to prevent desynchronization.
+
+The **Phase Stability Index (PSI)** is defined as the moving average of PRS over the last *N* cycles:
+
+\[
+PSI = \frac{1}{N} \sum_{t=1}^{N} PRS_t
+\]
+
+Thus, PRS quantifies *instantaneous resonance*, while PSI reflects *long-term phase stability*  
+used by ALICE and the Drift Monitor for adaptive regulation.
 
 ---
 
 ### 4. Operational Implications
 - Prevents *multi-attractor interference* by synchronizing active attractors with the runtime phase.  
-- Enables phase-aware persistence — attractors survive phase changes only when resonance is maintained.  
-- Enhances **AEGIDA-2** safety through automatic dampening during phase collapse.  
-- Contributes to overall **coherence continuity** by aligning symbolic energy with runtime phase topology.
+- Enables **phase-aware persistence** — attractors survive phase transitions only when resonance is maintained.  
+- Enhances **AEGIDA-2** safety via automatic dampening during phase collapse.  
+- Contributes to overall **coherence continuity** by aligning symbolic energy with runtime phase topology.  
 
 ---
 
 ### 5. Telemetry Integration
-The **Drift Monitor** and **ALICE Phase Controller** now jointly log:
-- `phase_resonance_score`
-- `stability_target`
-- `reinforcement_factor (Rₜ)`
+The **Drift Monitor** and **ALICE Phase Controller** now jointly log:  
+- `phase_resonance_score (PRS)`  
+- `phase_stability_index (PSI)`  
+- `reinforcement_factor (Rₜ)`  
+- `stability_target`  
 - `SCR_t`  
-All values are available through the runtime’s telemetry API for post-analysis or visualization.
+
+All metrics are accessible via the runtime’s telemetry API for live observability and post-analysis.
 
 ---
 
