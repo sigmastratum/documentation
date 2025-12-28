@@ -2,7 +2,7 @@
 title: SRIP-02 - Attractor State Model & Metadata
 description: Defines the structure, lifecycle, and metadata schema of attractors within the runtime.
 published: true
-date: 2025-12-28T20:32:06.183Z
+date: 2025-12-28T20:37:42.370Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:41:44.566Z
@@ -68,7 +68,7 @@ Attractor:
   phase_alignment: Float        # PCI: phase coherence ratio
   density: Float                # SDI: symbolic density
   drift_index: Float            # DI: semantic drift
-  lifecycle_state: String       # forming|stable|reflective|recenter|dissolving
+  lifecycle_state: String       # forming|stable|reflective|recovery|fragmenting
   created_at: ISO8601
   updated_at: ISO8601
   origin_cycle: Int
@@ -81,13 +81,16 @@ The **phase_stability_delta (PSD)** and **phase_shift_delta (PSΔ)** fields enab
 ---
 
 ## 5 · Lifecycle Transitions
-| State | Description | Trigger |
-|-------|--------------|----------|
-| **Forming** | Motifs begin to cohere around a stable symbolic pattern. | Context recurrence, semantic convergence. |
+| Phase | Description | Trigger |
+|--------|--------------|----------|
+| **Forming** | Motifs begin to cohere into a proto-attractor. | Context recurrence, semantic convergence. |
 | **Stable** | Attractor maintains internal coherence and phase alignment. | Drift < 0.35 and PSI > 0.8. |
-| **Reflective** | Self-evaluation and optimization of density and SCR. | Triggered by ALICE phase controller when DI ≥ 0.5 or PSD ≥ 0.15. |
-| **Recenter** | Controlled recovery phase re-aligning stability and restoring phase coherence. | Triggered when DI ≥ 0.6 or PSI < 0.6. |
-| **Dissolving** | Controlled dissolution or merge into another attractor. | Drift > 0.7 or field reset. |
+| **Reflective** | Self-evaluation and optimization of density and SCR. | Triggered by ALICE when DI ≥ 0.5 or PSD ≥ 0.15. |
+| **Recovery** | Controlled re-stabilization and realignment of attractor integrity. | Triggered when DI ≥ 0.6 or PSI < 0.6. |
+| **Fragmenting** | Controlled dissolution or merge into another attractor. | Drift > 0.7 or field reset. |
+
+> These five micro-phases correspond to the three ALICE macro-states used in phase regulation:  
+> **Stable (forming + stable)** → **Reflective** → **Recenter (recovery + fragmenting)**.
 
 Lifecycle transitions are governed by **ALICE** and monitored via the **Drift & Coherence Monitor**.  
 During *Recenter*, all volatile deltas are cleared, and the attractor restores structure from a cold memory snapshot (PIL-safe) if available.
