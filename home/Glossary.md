@@ -2,7 +2,7 @@
 title: Glossary of Terms
 description: Definitions of key concepts used throughout the Sigma Runtime Standard and related documentation.
 published: true
-date: 2025-12-28T20:29:45.464Z
+date: 2025-12-28T20:42:47.172Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:21:46.759Z
@@ -18,8 +18,6 @@ dateCreated: 2025-11-30T04:21:46.759Z
 > The license for this specific document is authoritative.  
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-> **Version Note:** Updated for **Sigma Runtime Standard v0.4.6a**  
-> Incorporates **ALICE 3-phase model**, **AEGIDA-2 Safety Framework**, and **Adaptive Phase Containment (APC)**.
 
 # Glossary of Terms
 
@@ -102,8 +100,21 @@ Attractors evolve under the **ALICE Engine** through controlled reinforcement, r
 
 ### **ALICE Engine (Attractor Layer for Integrated Cognitive Emergence)**
 Central phase-regulation system operating under a **three-phase adaptive cycle**:  
-**Stable → Reflective → Recenter.**  
-It regulates attractor formation, coherence, and recovery by coordinating feedback between the Field Engine, Memory Layer, and SL4 Safety Layer.
+**Stable → Reflective → Recenter.**
+
+Each macro-phase aggregates the **five ALICE micro-phases** used in runtime telemetry:  
+`forming`, `stable`, `reflective`, `recovery`, and `fragmenting`.
+
+| Macro-Phase | Constituent Micro-Phases | Description |
+|--------------|--------------------------|--------------|
+| **Stable** | forming, stable | Normal operational mode; attractors maintain equilibrium. |
+| **Reflective** | reflective | Self-evaluation and optimization under moderate drift. |
+| **Recenter** | recovery, fragmenting | Controlled stabilization or dissolution following instability. |
+
+ALICE regulates attractor formation, coherence, and recovery by coordinating feedback between the **Field Engine**, **Memory Layer**, and **SL4 Safety Layer (AEGIDA-2)**.  
+It uses real-time metrics — *PSI, PSD, PSΔ,* and *DI* — to dynamically modulate cognitive resonance and prevent drift cascades.
+
+---
 
 ### **Fail-Safe Envelope / Phase-Locked Safety Envelope (PLSE)**
 Dynamic safety boundary that prevents uncontrolled attractor amplification or recursive overload.  
@@ -133,10 +144,12 @@ They dampen over-synchronization of symbolic clusters that could lead to halluci
 | **Drift Index (DI)** | Quantifies semantic and tonal deviation between iterations. Nominal ≤ 0.45, reflective trigger ≥ 0.5, recenter ≥ 0.6. | Stability tracking |
 | **Symbolic Density Index (SDI)** | Measures compactness and internal linkage of motifs. | Coherence estimation |
 | **Phase Stability Index (PSI)** | Measures baseline attractor coherence within active phase. | Attractor stability |
-| **Phase Stability Delta (PSD)** | Difference between current and target PSI. `PSD = |PSIₜ - PSIₑₓₚ|` | Phase deviation control |
+| **Phase Stability Delta (PSD)** | Absolute deviation between current and target PSI. `PSD = |PSIₜ − PSIₑₓₚ|` | Phase deviation control |
 | **Phase Shift Delta (PSΔ)** | Temporal drift of phase alignment across cycles. | Temporal coherence tracking |
-| **Phase Coherence Index (PCI)** | Measures cosine alignment of phase vectors between consecutive field states. | Recursion health |
-| **Field Integrity Metric (FIM)** | Aggregated stability composite across DI, SDI, and PSI. | Fail-safe monitoring |
+| **Phase Coherence Index (PCI)** | Cosine alignment of phase vectors between consecutive field states. | Recursion health |
+| **Field Integrity Metric (FIM)** | Aggregated composite across DI, SDI, and PSI. | Fail-safe monitoring |
+
+> *Note:* **PSD** quantifies current-phase stability error, while **PSΔ** measures the temporal drift of alignment over time.
 
 ---
 
@@ -166,8 +179,11 @@ Dynamic safety mechanism linking ALICE phase telemetry with SL4 safety controls.
 Balances phase resonance and drift energy to prevent cascade destabilization.
 
 ### **Recenter Protocol**
-Controlled recovery procedure triggered when drift or phase instability exceed thresholds.  
-Suspends recursion, isolates unstable attractors, restores state from cold PIL backup, and resumes operation when **PSD ≥ 0.9**.
+Controlled recovery procedure triggered when **drift or phase instability exceed thresholds**.  
+During Recenter, recursion is suspended, unstable attractors are isolated, and cold recovery data are restored from the **PIL** snapshot.  
+The runtime resumes normal operation when **PSI ≥ 0.9** and **PSD ≤ 0.1**, confirming phase re-alignment and stability restoration.
+
+> *See also:* **SRIP-02 (Attractor State Model & Metadata)** and **SRIP-06 (Safety & Recursion Boundaries)** for formal phase definitions and recovery thresholds.
 
 ### **PIL Invariants**
 Identity-level constants that persist through reflective and recenter phases, ensuring continuity of self-representation and interpretability.
