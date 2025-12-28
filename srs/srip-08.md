@@ -2,7 +2,7 @@
 title: SRIP-08 — Phase-Regulating Runtime Module (ALICE Externalization)
 description: Defines the externalized telemetry and control interface for the ALICE Phase Controller. Introduces the Phase-Regulating Module (PRM) for distributed phase synchronization, drift telemetry, and safety hooks across Sigma runtimes.
 published: true
-date: 2025-12-28T21:06:43.440Z
+date: 2025-12-28T21:23:36.780Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-28T10:15:00.803Z
@@ -15,7 +15,7 @@ dateCreated: 2025-12-28T10:15:00.803Z
 > The license for this specific document is authoritative.  
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
-# SRIP-08 — Phase Vector Model & PRM (Phase-Regulating Runtime Module)  
+# SRIP-08 — Phase Vector Model & PRM (Phase-Regulating Runtime Module)
 **Sigma Runtime Improvement Proposal**  
 **Category:** Control Layer / Telemetry / Mathematics  
 **Status:** Draft  
@@ -28,16 +28,16 @@ dateCreated: 2025-12-28T10:15:00.803Z
 SRIP-08 defines the **Phase Vector Model (PVM)** and its runtime implementation through the  
 **Phase-Regulating Module (PRM)** — the telemetry and synchronization layer of the ALICE controller.  
 
-The document introduces a unified mathematical and operational model for representing, normalizing, and synchronizing  
-phase states (`stable`, `reflective`, `recenter`) across local and distributed Sigma runtimes.
+This document serves as the **base specification** for all vector-based phase regulation in Sigma Runtime.  
+Subsequent proposals (SRIP-09 and higher) extend this foundation with distributed and higher-dimensional phase models.
 
 ---
 
 ## 2 · Motivation  
 Previous runtime versions represented phases as discrete labels.  
 This specification formalizes them as continuous vectors in a **bounded cognitive phase space**,  
-enabling mathematical computation of stability, drift, and resonance through angle-based metrics  
-used in PSI (Phase Stability Index), PSD (Phase Stability Delta), and PRS (Phase Resonance Score).
+enabling mathematical computation of stability, drift, and resonance through angle-based metrics used in:  
+PSI (Phase Stability Index), PSD (Phase Stability Delta), and PRS (Phase Resonance Score).
 
 ---
 
