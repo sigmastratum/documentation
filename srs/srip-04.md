@@ -2,7 +2,7 @@
 title: SRIP-04 - Memory Layer Architecture
 description: Defines the structure, persistence rules, and recall mechanisms for the Sigma Runtime memory layer.
 published: true
-date: 2025-12-28T19:56:13.779Z
+date: 2025-12-28T21:01:22.264Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:43:17.127Z
@@ -21,7 +21,7 @@ dateCreated: 2025-11-30T04:43:17.127Z
 **Category:** Cognitive Memory  
 **Status:** Draft  
 **Editor:** E. Tsaliev  
-**Last Updated:** 2025-12-26
+**Last Updated:** 2025-12-26  
 
 ---
 
@@ -46,9 +46,9 @@ All layers interact through the **Cognitive Field Engine**, allowing attractors 
 
 ## 3 · Persistence Rules
 1. After each recursive cycle, the runtime commits:  
- - field state vector,   
- - drift metrics (SDI, SV, PD),   
- - phase telemetry (PSI, SCR),   
+ - field state vector,  
+ - drift metrics (SDI, SV, PD),  
+ - phase telemetry (PSI, SCR),  
  - attractor deltas and identity anchors.  
 2. Writes are idempotent and append-safe — each cycle extends memory without mutating prior frames.  
 3. Obsolete or unstable segments are pruned during Recenter operations (SL4).  
@@ -62,7 +62,7 @@ Recall is **reconstructive**, not verbatim. When a new cycle begins:
 1. Runtime queries the Symbolic Motif Store for contextually relevant clusters.  
 2. Semantic Memory re-embeds and weights concepts by density and phase alignment.  
 3. Episodic frames provide temporal ordering and recency bias.  
-4. The Cognitive Field Engine synthesizes a field snapshot for the next cycle.
+4. The Cognitive Field Engine synthesizes a field snapshot for the next cycle.  
 
 This ensures continuity without information bloat.
 
@@ -107,7 +107,7 @@ A conformant memory implementation must guarantee:
 - **Continuity Index (CI)** ≥ 0.8 across five cycles.  
 - **Retention Index (RI)** ≥ 0.7 for core motifs.  
 - **Entropy Ratio (ER)** ≤ 0.3 (signal vs noise).  
-- **Phase Carryover (PC)** ≥ 0.75 (coherence between phases).
+- **Phase Carryover (PC)** ≥ 0.75 (coherence between phases).  
 
 ---
 
@@ -119,16 +119,30 @@ A conformant memory implementation must guarantee:
 
 ---
 
-## 9 · Conformance Requirements
+## 9 · Recovery Logic
+When runtime stability degrades beyond memory safety thresholds, the Recenter protocol initiates targeted recovery of stored state.
+
+> **Rule 9.1 — Memory-Triggered Recenter**  
+> When Recenter is triggered by memory-layer drift (**ER > 0.3**),  
+> the runtime must **restore from cold PIL backup snapshot** prior to resuming the Stable phase.  
+>  
+> This prevents deadlock between volatile memory frames and PIL invariants by resetting only ephemeral segments while preserving identity integrity.  
+
+Recenter then re-evaluates coherence and phase alignment before returning control to ALICE for stability verification.
+
+---
+
+## 10 · Conformance Requirements
 A runtime conforms to SRIP-04 if it:
 1. Implements the schema in § 5.  
 2. Maintains stability invariants in § 7.  
 3. Supports bidirectional integration with ALICE and AEGIDA.  
-4. Preserves PIL anchors under drift or recenter events.
+4. Preserves PIL anchors under drift or Recenter events.  
+5. Implements Rule 9.1 for memory-layer recovery precedence.  
 
 ---
 
-## 10 · Future Work
+## 11 · Future Work
 Planned extensions:
 
 - **Hierarchical Memory Compression** (SRIP-09) for multi-scale retention.  
