@@ -2,7 +2,7 @@
 title: SRIP-06 - Safety & Recursion Boundaries
 description: Establishes safety constraints and recursion boundary enforcement for Sigma Runtime.
 published: true
-date: 2025-12-28T21:20:17.282Z
+date: 2025-12-28T21:20:55.324Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:44:44.181Z
@@ -43,8 +43,7 @@ The Sigma Runtime adheres to the **AEGIDA-2 Safety Framework**, defining six act
 | **5** | Adaptive Phase Containment | Dynamically modulates phase resonance to prevent drift cascades and phase collapse. |
 | **6** | Interpretability First | Ensures every transition and recovery path retains a causal, auditable trace. |
 
-These principles supersede the legacy “AEGIDA (2024)” rule-set and are integrated directly into **SL4 — Safety & Alignment Layer**.  
-They operate continuously alongside ALICE telemetry to provide phase-aware containment, bounded recursion, and transparent recovery.
+Operate continuously alongside ALICE telemetry to provide phase-aware containment, bounded recursion, and transparent recovery.
 
 ---
 
