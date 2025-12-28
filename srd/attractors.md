@@ -2,11 +2,19 @@
 title: Attractors in Sigma Runtime
 description: Explanation of attractor dynamics and their role in cognitive stabilization.
 published: true
-date: 2025-12-28T21:07:36.410Z
+date: 2025-12-28T21:12:33.241Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:29:26.743Z
 ---
+
+> **Sigma Runtime Standard – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)**.  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
+> (CC BY-NC 4.0)**.  
+>
+> The license for this specific document is authoritative.  
+> See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 ## Adaptive Attractor Reinforcement (v0.4.6)
 
