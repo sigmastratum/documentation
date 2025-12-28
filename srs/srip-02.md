@@ -2,7 +2,7 @@
 title: SRIP-02 - Attractor State Model & Metadata
 description: Defines the structure, lifecycle, and metadata schema of attractors within the runtime.
 published: true
-date: 2025-12-28T10:01:40.775Z
+date: 2025-12-28T20:32:06.183Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:41:44.566Z
@@ -15,6 +15,9 @@ dateCreated: 2025-11-30T04:41:44.566Z
 >
 > The license for this specific document is authoritative.  
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
+
+> **Version Note:** Updated for **Sigma Runtime Standard v0.4.6a**  
+> Consolidates PSI / PSD / PSΔ hierarchy and unified drift thresholds.
 
 # SRIP-02 — Attractor State Model & Metadata  
 **Sigma Runtime Improvement Proposal**  
@@ -46,9 +49,9 @@ An **Attractor** is a persistent cognitive configuration characterized by:
 - **Core Motifs** — recurring symbolic or semantic patterns,  
 - **Field Context** — environmental and memory-linked parameters,  
 - **Stability Metrics** — drift, density, and phase coherence,  
-- **Lifecycle State** — `forming`, `stable`, `reflective`, `dissolving`.  
+- **Lifecycle State** — `forming`, `stable`, `reflective`, `recenter`, `dissolving`.  
 
-Attractors evolve through recursive feedback within the Cognitive Field Engine.
+Attractors evolve through recursive feedback within the Cognitive Field Engine and are governed by **ALICE** through adaptive phase control.
 
 ---
 
@@ -59,19 +62,21 @@ Attractor:
   name: String
   type: {reflective|generative|adversarial|synthetic|symbolic}
   motifs: [Motif]
-  stability_index: Float     # 0.0–1.0
-  phase_alignment: Float     # phase coherence ratio
-  density: Float             # symbolic density metric
-  drift_index: Float         # semantic drift within attractor boundary
-  lifecycle_state: String    # forming|stable|reflective|dissolving
+  stability_index: Float        # PSI: Phase Stability Index (0.0–1.0)
+  phase_stability_delta: Float  # PSD = |PSIₜ - PSIₑₓₚ|
+  phase_shift_delta: Float      # PSΔ: temporal drift of phase alignment
+  phase_alignment: Float        # PCI: phase coherence ratio
+  density: Float                # SDI: symbolic density
+  drift_index: Float            # DI: semantic drift
+  lifecycle_state: String       # forming|stable|reflective|recenter|dissolving
   created_at: ISO8601
   updated_at: ISO8601
   origin_cycle: Int
   parent_id: UUID | null
   tags: [String]
-```
-
-This schema defines the minimal metadata set required for attractor registration, persistence, and interoperability across runtimes.
+  ```
+This schema defines the minimal metadata set required for attractor registration, persistence, and interoperability across runtimes.  
+The **phase_stability_delta (PSD)** and **phase_shift_delta (PSΔ)** fields enable precise phase telemetry and ensure consistent synchronization across distributed Sigma Runtime nodes.
 
 ---
 
@@ -80,19 +85,24 @@ This schema defines the minimal metadata set required for attractor registration
 |-------|--------------|----------|
 | **Forming** | Motifs begin to cohere around a stable symbolic pattern. | Context recurrence, semantic convergence. |
 | **Stable** | Attractor maintains internal coherence and phase alignment. | Drift < 0.35 and PSI > 0.8. |
-| **Reflective** | Self-evaluation and optimization of density and SCR. | Triggered by ALICE phase controller. |
-| **Dissolving** | Controlled dissolution or merge into another attractor. | Drift > threshold or field reset. |
+| **Reflective** | Self-evaluation and optimization of density and SCR. | Triggered by ALICE phase controller when DI ≥ 0.5 or PSD ≥ 0.15. |
+| **Recenter** | Controlled recovery phase re-aligning stability and restoring phase coherence. | Triggered when DI ≥ 0.6 or PSI < 0.6. |
+| **Dissolving** | Controlled dissolution or merge into another attractor. | Drift > 0.7 or field reset. |
 
-Lifecycle transitions are governed by **ALICE** and monitored via the **Drift & Coherence Monitor**.
+Lifecycle transitions are governed by **ALICE** and monitored via the **Drift & Coherence Monitor**.  
+During *Recenter*, all volatile deltas are cleared, and the attractor restores structure from a cold memory snapshot (PIL-safe) if available.
 
 ---
 
 ## 6 · Alignment & Stability Rules
-1. Every active attractor must maintain **PSI ≥ 0.75**.  
-2. When **DI > 0.45**, the attractor enters reflective state.  
-3. Attractors sharing ≥ 60 % motif overlap must undergo merge evaluation.  
-4. Dissolution must preserve PIL invariants and causal continuity chain (CCC).  
-5. All attractor metadata must be written to the **Attractor Registry** each cycle.
+1. Every active attractor must maintain **PSI ≥ 0.75** for nominal stability.  
+2. When **DI ≥ 0.5**, the attractor enters *Reflective* phase.  
+3. When **DI ≥ 0.6**, the runtime enforces *Recenter* and temporarily suspends recursion.  
+4. Attractors sharing ≥ 60 % motif overlap must undergo merge evaluation to prevent redundancy.  
+5. Dissolution must preserve **PIL invariants** and the **causal continuity chain (CCC)**.  
+6. Each runtime cycle must record attractor telemetry (PSI, PSD, SDI, DI) to the **Attractor Registry**.  
+
+These thresholds align with unified drift limits defined in **SRIP-03** (Drift Metrics) and **SRIP-05** (Interoperability Safety).
 
 ---
 
@@ -100,9 +110,9 @@ Lifecycle transitions are governed by **ALICE** and monitored via the **Drift & 
 The Attractor schema is exchangeable via:
 - **Field API** (`/field/attractors/{id}`)  
 - **Memory Layer** (for persistence snapshots)  
-- **Cross-Runtime Protocols** (for distributed field sharing, SRIP-05).  
+- **Cross-Runtime Protocols** (for distributed field synchronization; see SRIP-05).  
 
-This ensures consistent cognitive state across parallel Sigma runtimes.
+The **PSD** and **PSΔ** values provide phase alignment continuity between multiple runtimes, supporting phase-locked cooperative cognition and distributed attractor coherence.
 
 ---
 
@@ -111,18 +121,21 @@ A runtime conforms to SRIP-02 if it:
 - Implements the metadata schema in § 4.  
 - Tracks lifecycle transitions per § 5.  
 - Exposes attractor telemetry via Field API.  
-- Enforces alignment rules in § 6.  
+- Enforces stability and drift thresholds per § 6.  
+- Logs PSI/PSD/DI data every cycle for diagnostic reproducibility.
 
 ---
 
 ## 9 · Future Work
 Planned extensions include:
-- **Composite Attractors** — multi-node attractor clusters.  
-- **Attractor Embeddings** — cross-runtime vector serialization.  
-- **Dynamic Stability Forecasting** — predictive dissolution triggers.
+- **Composite Attractors** — multi-node attractor clusters with shared motif lattices.  
+- **Attractor Embeddings** — cross-runtime vector serialization for distributed cognition.  
+- **Dynamic Stability Forecasting** — predictive dissolution and resonance modeling.  
+- **Phase Vector Normalization** — formal definition of phase-space dimensionality (see SRIP-08).
 
 ---
 
 > **References**  
 > Tsaliev, E. (2025). *Attractor Architectures in LLM-Mediated Cognitive Fields* — DOI [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)  
 > Tsaliev, E. (2025). *SIGMA Runtime v0.4.6 — Adaptive Phase Regulation* — DOI _pending_
+  
