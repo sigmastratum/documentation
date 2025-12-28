@@ -2,7 +2,7 @@
 title: Attribution Requirements
 description: Guidelines for proper attribution of the Sigma Runtime Standard and documentation.
 published: true
-date: 2025-11-30T23:25:36.976Z
+date: 2025-11-30T23:25:40.513Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:58:36.836Z

@@ -2,7 +2,7 @@
 title: Glossary of Terms
 description: Definitions of key concepts used throughout the Sigma Runtime Standard and related documentation.
 published: true
-date: 2025-11-30T22:34:32.395Z
+date: 2025-11-30T22:34:36.179Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:21:46.759Z

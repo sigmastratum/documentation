@@ -2,7 +2,7 @@
 title: License
 description: The official license for the Sigma Runtime documentation and standard materials.
 published: true
-date: 2025-11-30T23:41:25.120Z
+date: 2025-12-27T19:45:59.854Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:55:10.166Z
@@ -26,6 +26,19 @@ are released under a hybrid open framework combining:
 
 This model ensures that the **architecture remains open** and publicly reviewable,  
 while implementations and commercial systems may remain proprietary.
+
+---
+
+## 1.1 Publication Boundary
+
+**SR-EI-037 and earlier**  
+Released under **CC BY-NC 4.0** for scientific reproducibility.  
+These builds constitute the last publicly available reference implementations.
+
+**Versions after SR-EI-037**  
+Are proprietary research builds maintained internally by the Sigma Stratum Research Group.  
+They are not publicly distributed.  
+The open standard (SRD / SRS / SRIP) remains fully public and reviewable.
 
 ---
 

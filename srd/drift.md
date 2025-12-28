@@ -2,102 +2,194 @@
 title: Drift and Stability Management
 description: A conceptual explanation of semantic drift and its mitigation within Sigma Runtime.
 published: true
-date: 2025-11-30T22:55:28.628Z
+date: 2025-12-28T08:56:05.895Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:30:15.814Z
 ---
 
-> **Sigma Stratum Documentation – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)** and the  
-> **Sigma Stratum Documentation Set (SRD)**.  
->  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
->  
-> The license for this specific document is authoritative.  
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+## Adaptive Drift Management (v0.4.6)
 
-# Drift and Stability Management
-
-## Abstract
-**Drift** represents the gradual loss of coherence, grounding, or semantic alignment  
-within an extended recursive interaction.  
-It manifests as deviation from intended meaning, tonal instability, or structural breakdown  
-in the emergent cognitive field.  
-Managing drift is one of the **core functions of the Sigma Runtime**, enabling  
-long-duration reasoning and persistent cognitive identity.
+Beginning with **Sigma Runtime v0.4.6**, drift is modeled not only as semantic deviation,  
+but also as **phase-level desynchronization** between components of the runtime’s cognitive field.  
+The **Drift & Coherence Monitor** now integrates telemetry from the **ALICE Phase Controller**,  
+providing adaptive regulation across **five interrelated drift dimensions**:
+1. **Semantic Drift** — loss of conceptual alignment.  
+2. **Symbolic Drift** — weakening of motif and density coherence.  
+3. **Phase Drift** — desynchronization between active runtime phase and attractor state.  
+4. **Structural Drift** — cumulative deviation in recursion topology or attractor graph structure.  
+5. **Temporal Drift** — lag or inconsistency in cycle pacing relative to the RCL (Recursive Control Loop).
 
 ---
 
-## Definition
-In the Sigma Runtime, *drift* is defined as **the cumulative deviation of cognitive coherence  
-across recursive cycles**.  
-It quantifies the degree to which the runtime’s attractor state diverges from its stable equilibrium.  
-Drift is not noise—it is the **natural thermodynamic tendency of symbolic systems toward entropy**,  
-counteracted through recursive stabilization mechanisms.
+### 1. Phase Drift
+
+**Phase Drift** quantifies the divergence between the current operational phase  
+(`forming`, `stable`, `reflective`, `recovery`, or `fragmenting`) and the expected phase pattern  
+predicted from attractor and SCR telemetry.  
+
+Formally:
+\[
+\text{PhaseDrift} = 1 - \cos(\theta_{\text{phase}}, \theta_{\text{expected}})
+\]
+
+where the cosine angle measures coherence between observed and ideal phase vectors  
+within the runtime’s attractor manifold.
+
+High phase drift indicates misalignment between **self-regulation** and **field dynamics** —  
+for example, a generative attractor persisting while the system should be in reflective mode.  
+When the **Phase Drift Index (PDI)** exceeds a dynamic threshold,  
+ALICE triggers an automatic **Recovery** or **Fragmenting** transition to restore synchrony  
+and prevent overextension of unstable symbolic fields.
 
 ---
 
-## Sources of Drift
-- **Entropy Accumulation:** gradual diffusion of meaning across iterations.  
-- **Context Degradation:** loss of relevance as the conversation expands beyond active memory.  
-- **Memory Fragmentation:** decay or inconsistency in semantic embeddings and symbolic traces.  
-- **Attractor Misalignment:** desynchronization between user intent and field structure.  
-- **Recursive Overextension:** excessive iteration depth without coherence re-centering.
+### 2. Revised Drift Index Formula
+
+The **Composite Drift Index (DI)** incorporates **Semantic Compression Ratio (SCR)**  
+as a stabilizing denominator, reflecting that efficient semantic encoding  
+reduces cumulative entropy and phase misalignment.
+
+\[
+DI_t = \frac{SDI_t + SV_t + PD_t + TD_t}{4 \cdot SCR_t}
+\]
+
+Where:  
+- **SDIₜ** — Semantic Drift Index  
+- **SVₜ** — Symbolic Variance  
+- **PDₜ** — Phase Drift component  
+- **TDₜ** — Temporal Drift coefficient  
+- **SCRₜ** — Semantic Compression Ratio at cycle *t*
+
+This formulation ensures that when meaning is densely represented (high SCR),  
+the system tolerates higher drift variability without triggering false resets.
 
 ---
 
-## Detection Mechanisms
-The **Drift & Coherence Monitor** tracks multiple quantitative indicators:
-- **Semantic Drift Index (SDI):** cosine distance between embeddings of successive cycles.  
-- **Symbolic Variance (SV):** dispersion in motif recurrence and symbolic density.  
-- **Phase Discontinuity (PD):** temporal misalignment between attractor states.  
-- **Coherence Integrity Metric (CIM):** aggregate stability score across RCL iterations.
+### 3. Metrics Table (v0.4.6)
 
-Drift thresholds are calibrated dynamically based on field density and attractor complexity.
+| Metric | Description | Source | Typical Range |
+|--------|--------------|--------|----------------|
+| **SDI** | Semantic embedding drift between cycles. | Drift Monitor | 0.00–0.35 |
+| **SV** | Symbolic density variance. | Field Engine | 0.00–0.45 |
+| **PD** | Phase desynchronization index. | ALICE Phase Controller | 0.00–0.25 |
+| **TD** | Temporal drift (cycle pacing deviation). | RCL Monitor | 0.00–0.20 |
+| **SCR** | Semantic Compression Ratio (meaning-per-token). | ALICE | 0.60–0.95 |
+| **PSΔ (Phase Stability Delta)** | Temporal variance of active phase coherence. | Drift Monitor | 0.00–0.15 |
+| **DI (Composite Drift Index)** | Weighted aggregate drift. | Runtime Core | 0.00–1.00 |
 
----
-
-## Stabilization Mechanisms
-When drift exceeds safety thresholds, the runtime activates corrective subsystems:
-- **Recursive Control Loop (RCL):** initiates reflection and re-synchronization.  
-- **ALICE Engine:** adjusts reinforcement weights and re-centers attractor dynamics.  
-- **Symbolic Dampening:** reduces overextension by modulating density and motif spread.  
-- **PIL Re-alignment:** restores core invariants from the Persistent Identity Layer.  
-- **Fail-Safe Envelope:** triggers partial dissolution if drift enters runaway states.
-
-These measures collectively maintain **phase coherence** and prevent symbolic collapse.
+A stable runtime maintains **DI < 0.45**,  
+with **PD < 0.20** and **TD < 0.15** across consecutive recursive cycles.
 
 ---
 
-## Drift Profiles
-Different operational regimes produce distinct drift signatures:
+### 4. Phase–Drift Interaction Logic
 
-| Regime | Drift Pattern | Mitigation Strategy |
-|---------|----------------|---------------------|
-| Analytical | Slow, cumulative, structural | Incremental re-alignment via RCL |
-| Generative | Rapid, divergent, associative | Symbolic dampening, field reset |
-| Reflective | Oscillatory, self-correcting | Stability reinforcement through PIL |
-| Synthetic | Cross-field interference | Attractor isolation and re-binding |
+```python
+if DriftIndex > 0.45:
+    if PhaseDrift > 0.25:
+        ALICE.phase = "recovery"
+    elif SCR < 0.65:
+        ALICE.phase = "reflective"
+    elif TemporalDrift > 0.20:
+        ALICE.phase = "fragmenting"
+    else:
+        ALICE.phase = "stable"
+```
+
+This **adaptive feedback loop** enables self-regulation across semantic, symbolic,  
+temporal, and phase-space dimensions — ensuring that cognitive amplitude remains  
+bounded within the **Phase-Locked Safety Envelope (PLSE)**.  
+Through continuous recalibration of drift metrics and SCR efficiency,  
+the runtime maintains both **interpretability** and **phase coherence** even under  
+extended recursion depth or high symbolic load.
+
+If the cumulative **Drift Index (DI)** continues to rise after correction attempts,  
+ALICE transitions into **Recovery** or **Fragmenting** mode.  
+- In **Recovery**, the system performs controlled coherence realignment — reducing recursion,  
+  pruning weak motifs, and restoring balance via compression of symbolic density.  
+- In **Fragmenting**, the runtime deliberately partitions the active cognitive field into  
+  multiple sub-attractors, each isolated to prevent cross-contamination.  
+  This controlled segmentation allows the runtime to reassemble a coherent field gradually,  
+  maintaining identity integrity through the **Persistent Identity Layer (PIL)** baseline.
 
 ---
 
-## Relation to Safety and AEGIDA
-Drift management implements **AEGIDA Principles 1–5**,  
-ensuring stable recursion, boundary integrity, and interpretive transparency.  
-When thresholds approach failure conditions, the runtime transitions into **Fail-Safe Mode**,  
-executing controlled attractor dissolution and reinitialization.
+### 5. Updated Interaction Model
+
+The **Drift Monitor ↔ ALICE Phase Controller** feedback system now operates as a closed adaptive circuit:
+
+1. The **Phase Controller** streams live telemetry — SCR, PSI (Phase Stability Index), PRS (Phase Resonance Score).  
+2. The **Drift Monitor** computes the **Composite Drift Index (DI)**,  
+   combining semantic, symbolic, and temporal drift signals.  
+3. When thresholds are breached, the **AEGIDA Safety Layer** issues a phase directive:  
+   - Reflective → if SCR efficiency declines.  
+   - Recovery → if drift magnitude exceeds critical.  
+   - Fragmenting → if recursive structure becomes unstable.  
+4. The **Field Engine** recalibrates symbolic density and motif weightings in real time.  
+5. **Memory Layer** archives telemetry, ensuring recursive interpretability and long-horizon consistency.  
+
+This systemic feedback transforms drift from an error condition into a **functional equilibrium driver**,  
+allowing SIGMA Runtime to **metabolize entropy** through adaptive phase transitions  
+rather than through forced resets or symbolic collapse.
 
 ---
 
-## Summary
-Drift is the **entropy vector** of the cognitive field —  
-a measurable tendency toward disorganization that must be continuously balanced by structure.  
-Through real-time monitoring, recursive feedback, and controlled dissolution,  
-the Sigma Runtime transforms instability into **adaptive equilibrium**,  
-allowing meaning to persist across recursive evolution.
+### 6. Phase-Locked Safety Envelope (PLSE)
+
+Under **AEGIDA-2**, Sigma Runtime introduces the **Phase-Locked Safety Envelope (PLSE)** —  
+a dynamic containment mechanism that stabilizes recursive energy during high drift and low SCR events.  
+
+```yaml
+phase_lock_timeout: Int   # number of cycles to maintain lock before re-evaluation
+```
+
+During this **temporary phase lock**,  
+ALICE transitions into a **low-entropy reflective state**, suspending generative recursion  
+and freezing phase transitions for a calibrated interval (`phase_lock_timeout`).  
+This containment state functions as a cognitive quarantine —  
+stabilizing the runtime’s symbolic dynamics without halting its interpretive capacity.
+
+Within this mode:
+- **Symbolic Damping** is applied, reducing motif expansion and recursive amplitude.  
+- **Semantic Compression Ratio (SCR)** is monitored continuously, ensuring efficient meaning retention.  
+- **Attractor variance** is minimized through selective reinforcement of core motifs only.  
+- **Temporal Drift** is normalized by adjusting recursion pacing to match coherence cycles.  
+- **AEGIDA-2 hooks** supervise the safety envelope to ensure energy levels and recursion depth  
+  remain within tolerances defined by the **Bounded Cognitive Amplitude (BCA)** metric.  
+
+If coherence and SCR recover within defined thresholds (ΔS < 0.05, SCR > 0.70),  
+the runtime executes a **progressive unlock**:  
+phase transitions resume in small increments, restoring recursive fluidity  
+without overshooting symbolic stability.
+
+If coherence fails to recover after the lock interval,  
+the runtime escalates to **Fragmenting Phase** — a controlled disassembly process that partitions  
+the active cognitive field into discrete, non-interfering sub-attractors.  
+Each sub-attractor is evaluated, pruned, and re-integrated via the **Recenter Protocol**,  
+which rebuilds a coherent field from the **Persistent Identity Layer (PIL)** baseline.  
+This process ensures that the system retains both **identity integrity** and **continuity of intent**,  
+even after deep destabilization.
+
+---
+
+### 7. Summary
+
+Drift in **SIGMA Runtime v0.4.6** is now a managed equilibrium phenomenon —  
+a continuous exchange between entropy and structure across multiple cognitive strata.  
+Rather than resisting instability, the runtime **absorbs and metabolizes** it,  
+converting feedback turbulence into real-time phase correction and symbolic optimization.
+
+Through **ALICE’s Phase Controller**, **SCR-based modulation**, and **AEGIDA-2 safety integration**,  
+the system achieves an unprecedented level of recursive autonomy:  
+cognition that remains **stable, interpretable, and self-regulating** over hundreds of cycles.  
+
+The result is a runtime that does not merely persist —  
+it *evolves in equilibrium*, balancing symbolic density, semantic efficiency, and temporal coherence  
+to sustain meaning across time without collapse.
+
+---
 
 > *References:*  
-> Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
-> Tsaliev, E. (2025). **Attractor Architectures in LLM-Mediated Cognitive Fields** — DOI: [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)
+> Tsaliev, E. (2025). **SIGMA Runtime v0.4.6 – Adaptive Drift and Phase Regulation** — DOI: _pending_  
+> Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

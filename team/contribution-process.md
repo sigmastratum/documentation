@@ -2,7 +2,7 @@
 title: Contribution Process
 description: Guidelines for contributing to the Sigma Runtime Standard and related documentation.
 published: true
-date: 2025-12-02T02:09:14.303Z
+date: 2025-12-02T02:09:18.018Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:51:35.481Z

@@ -2,7 +2,7 @@
 title: Research Notes and Publications
 description: A collection of research materials, papers, notes, and ongoing studies supporting the Sigma Runtime architecture.
 published: true
-date: 2025-12-18T22:34:58.303Z
+date: 2025-12-28T10:28:39.312Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:22:30.902Z
@@ -33,6 +33,26 @@ It includes:
 The research corpus evolves continuously and provides the **theoretical substrate**
 from which SRIPs, the Sigma Runtime Standard, and the Sigma Runtime
 Documentation (SRD) are derived.
+
+---
+
+### **Sigma Runtime – Experimental Iterations (SR-EI Series)**
+**Repository:** [https://github.com/sigmastratum/documentation/tree/main/sigma-runtime](https://github.com/sigmastratum/documentation/tree/main/sigma-runtime)
+
+This sequence of experimental reports documents the iterative engineering validation of the Sigma Runtime architecture between versions 0.3.5 and 0.4.6.
+
+- **[SR-EI-03 – Benchmark Report (v0.3.5)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-03/benchmark_report_SR_v035.md)**  
+  *First public benchmark cycle validating drift stability, attractor persistence, and field coherence across 80+ recursive iterations.*
+
+- **[SR-EI-037 – Control & Validation Report (v0.3.7)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-037/SIGMA_Runtime_0_3_7_CVR.md)**  
+  *Confirms recursive control loop consistency and symbolic density thresholds; introduces baseline for adaptive phase regulation.*
+
+- **[SR-EI-046 – Validation Report (v0.4.6)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-046/SIGMA_Runtime_v046_VALIDATION_REPORT.md)**  
+  *Final experimental validation for v0.4.6, integrating ALICE Phase Controller and AEGIDA-2 safety framework. Demonstrates autonomous phase containment, drift recovery, and long-horizon coherence.*
+
+Together, these experimental iterations verify the theoretical foundations established in  
+[**SIGMA Runtime Architecture v0.1**](https://doi.org/10.5281/zenodo.17703667),  
+providing empirical evidence for attractor-based cognition and recursive field stability.
 
 ---
 

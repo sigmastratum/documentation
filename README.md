@@ -1,3 +1,13 @@
+---
+title: README
+description: 
+published: true
+date: 2025-12-01T07:39:16.080Z
+tags: 
+editor: markdown
+dateCreated: 2025-12-01T07:34:03.356Z
+---
+
 # Sigma Stratum Documentation  
 
 Public technical documentation, standards, and research corpus for the **Sigma Stratum** framework and the **Sigma Runtime** architecture.

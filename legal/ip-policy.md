@@ -2,7 +2,7 @@
 title: Intellectual Property Policy
 description: IP rules covering contributions, rights retention, and open standard commitments.
 published: true
-date: 2025-12-15T20:58:18.008Z
+date: 2025-12-15T20:58:19.917Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:56:05.346Z

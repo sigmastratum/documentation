@@ -2,7 +2,7 @@
 title: Governance Model
 description: Governance structure, decision process, and roles within the Sigma Stratum Research Group.
 published: true
-date: 2025-12-02T02:11:52.782Z
+date: 2025-12-02T02:11:56.637Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:50:26.859Z

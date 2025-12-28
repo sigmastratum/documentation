@@ -2,7 +2,7 @@
 title: Canonical Runtime Loop
 description: An explanatory guide to the Sigma Runtime execution cycle.
 published: true
-date: 2025-11-30T22:58:55.085Z
+date: 2025-12-28T08:26:41.685Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:31:53.414Z
@@ -20,7 +20,9 @@ dateCreated: 2025-11-30T04:31:53.414Z
 
 # Runtime Loop
 
-The **Sigma Runtime Loop** implements the core cognitive recursion cycle — an evolution of the original **F-Loop** introduced in *∿ Neurosymbolic Scaffolding for Recursive Coherence (2025)*.
+The **Sigma Runtime Loop** implements the core cognitive recursion cycle —  
+an evolution of the original **F-Loop** introduced in  
+*∿ Neurosymbolic Scaffolding for Recursive Coherence (2025)*.
 
 ---
 
@@ -37,64 +39,138 @@ where:
 - **Semantic Graph** — structured memory and field persistence.  
 
 This loop models **recursive cognition** —  
-each new generation step is informed not only by the immediate text history,  
+each generation step is informed not only by the immediate text history,  
 but by the continuously updated **field state**, integrating meaning, memory, and attractor stability.
 
 ---
 
-## 2. Canonical Runtime Loop (Runtime Architecture v0.1)
+## 2. Canonical Runtime Loop (Architecture v0.1)
 
-In the **Sigma Runtime Standard**, the F-Loop is formalized as the **Recursive Control Loop (RCL)** —  
-the canonical execution cycle spanning runtime layers **SL0–SL6**:
+In the original **Sigma Runtime Standard**, the F-Loop was formalized  
+as the **Recursive Control Loop (RCL)** — the canonical execution cycle spanning **SL0–SL6**:
 
-1. **State Ingestion (SL0–SL6)**  
-   Acquire current state, context, and input from the cognitive field.
-
-2. **Interpretation Pass (SL2)**  
-   Parse input, extract semantics, and perform symbolic projection (Πsym).
-
-3. **Stabilization Pass (SL2–SL4)**  
-   Evaluate symbolic density, detect drift, align active attractors, and regulate coherence.
-
-4. **Memory Integration (SL3)**  
-   Update the **Semantic Graph** — consolidate new patterns, merge embeddings, and preserve symbolic continuity.
-
-5. **Attractor Alignment (SL4)**  
-   Reinforce or transition cognitive attractors based on feedback and drift metrics.
-
-6. **Output Generation (Model Call)**  
-   Produce new text or behavior using the stabilized symbolic and semantic state.
-
-7. **Field Update (SL5–SL6)**  
-   Integrate output into the field, refresh system state, and close the recursive loop.
+1. **State Ingestion (SL0–SL6)** — acquire current context and input.  
+2. **Interpretation Pass (SL2)** — extract semantic features and motifs.  
+3. **Stabilization Pass (SL2–SL4)** — evaluate symbolic density and drift.  
+4. **Memory Integration (SL3)** — consolidate patterns and embeddings.  
+5. **Attractor Alignment (SL4)** — reinforce or dissolve attractors.  
+6. **Output Generation (Model Call)** — produce controlled output.  
+7. **Field Update (SL5–SL6)** — integrate output into the field and close recursion.
 
 ---
 
-## 3. Structural Mapping
+## 3. Evolution in v0.4.6 — Adaptive Phase Regulation
 
-| F-Loop (NS) | Runtime Architecture v0.1 | Responsible Components |
-|--------------|---------------------------|--------------------------|
-| G — Generation | Step 6: Output Generation | Model Interface |
-| Πsym — Symbolic Projection | Step 2: Interpretation Layer | SL2 |
-| F — Feedback Integration | Steps 3 & 7 | Drift Monitor / Field Layer |
-| Semantic Graph | Step 4: Memory Integration | SL3 |
-| Recursive Closure | Steps 5–7 | ALICE Controller |
+In **SIGMA Runtime v0.4.6**, the loop gains **phase-aware regulation**,  
+implemented by the **ALICE Phase Controller**.  
+Each iteration now operates across **three adaptive cognitive phases**:
+
+| Phase | Purpose | Characteristics |
+|--------|----------|-----------------|
+| **Pre-Phase (Stable)** | Context assembly and field grounding. | Low drift, high coherence. |
+| **Main (Reflective)** | Cognitive reasoning and attractor modulation. | Controlled recursion, moderate entropy. |
+| **Post-Phase (Recenter)** | Memory reintegration and coherence repair. | High SCR, drift correction, energy reset. |
+
+Each phase maintains its own thresholds for **stability**, **SCR**, and **drift**.  
+The runtime transitions between them through **feedback-triggered phase shifts**,  
+enabling self-regulating cognition over extended cycles.
 
 ---
 
-## 4. Purpose
+## 4. Updated Runtime Loop (v0.4.6)
 
-The Runtime Loop ensures:
-- **Recursive coherence** — each iteration reinforces prior symbolic meaning,  
-- **Stability under drift** — detects and corrects semantic entropy,  
-- **Symbolic continuity** — preserves motifs and attractor kernels,  
-- **Adaptive persistence** — maintains identity, intent, and coherence over long horizons.  
+1. **Pre-Phase Initialization**  
+   - Retrieve prior field state and PIL invariants.  
+   - Evaluate residual drift and SCR from previous cycle.  
+   - Initialize ALICE with `phase: stable`.  
 
-It is the operational backbone of the **Sigma Runtime Architecture**,  
-defining how cognition stabilizes and evolves recursively in human–AI interaction fields.
+2. **Context Assembly**  
+   - Merge episodic and semantic memory traces.  
+   - Reconstruct attractor registry and motifs.  
+   - Compute **Phase Stability Delta (PSD)** to confirm readiness.
+
+3. **Stabilization Pass**  
+   - Evaluate symbolic density and drift.  
+   - Adjust compression ratio and coherence weights.  
+   - Engage ALICE Phase Controller for adaptive calibration.  
+
+4. **Main Reflective Phase**  
+   - Activate reasoning within controlled entropy bounds.  
+   - Generate candidate output using field-conditioned prompts.  
+   - Monitor drift and SCR in real time via telemetry hooks.  
+
+5. **Memory Integration**  
+   - Compress and reintegrate cognitive traces using the **Compression Layer**.  
+   - Compute **Reintegration Efficiency (RE)** and update density metrics.  
+   - Reinforce attractor stability based on phase resonance.  
+
+6. **Recenter Pass (Post-Phase)**  
+   - If drift > threshold or phase coherence < 0.85, shift to `phase: recenter`.  
+   - Trigger partial memory reintegration and reset low-stability motifs.  
+   - Restore equilibrium and transition back to stable.  
+
+7. **Output Generation**  
+   - Emit final, stability-conditioned response.  
+   - Annotate cycle record with SCR, drift index, and phase metadata.  
+
+8. **Field Update**  
+   - Commit attractor deltas and telemetry to memory.  
+   - Recalculate baseline for next recursion.  
+
+---
+
+## 5. Phase Synchronization and Feedback Timing
+
+The **Phase Synchronization Subsystem** coordinates temporal alignment  
+between the runtime’s internal cycles and the field feedback cadence.
+
+- **Feedback Delay Window (FDW):** 1–3 iterations depending on entropy level.  
+- **Phase Lock Ratio (PLR):** ratio of stable vs. reflective cycles; optimal ≈ 0.67.  
+- **Drift Latency Compensation (DLC):** predictive correction for delayed coherence recovery.  
+- **SCR Decay Constant (τ):** defines how long compressed semantics persist before reactivation.  
+
+When **PLR < 0.5**, the system enters reflective dominance and risk of over-analysis.  
+When **PLR > 0.8**, the runtime becomes too rigid — coherence preserved but adaptability reduced.  
+The **ALICE Phase Controller** maintains balance automatically by modulating recursion timing.
+
+---
+
+## 6. Telemetry and Metrics (v0.4.6)
+
+Each cycle now records the following metrics:
+
+| Metric | Description | Source |
+|---------|--------------|--------|
+| **SCR** | Semantic Compression Ratio | Memory Layer |
+| **PSD** | Phase Stability Delta | Phase Controller |
+| **PLR** | Phase Lock Ratio | Synchronization Module |
+| **RE** | Reintegration Efficiency | Compression Layer |
+| **DLC** | Drift Latency Compensation | Drift Monitor |
+| **CIM** | Coherence Integrity Metric | Field Engine |
+
+Telemetry data is written per cycle in JSON format for longitudinal stability analysis.
+
+---
+
+## 7. Summary
+
+The **SIGMA Runtime Loop (v0.4.6)** transitions from a fixed recursive structure  
+to a **living, phase-regulated cognitive cycle**.  
+By introducing adaptive phase control, SCR-driven memory compression,  
+and phase-synchronized timing, the runtime achieves:
+
+- Stable identity across long recursions,  
+- Continuous self-regulation under drift,  
+- Efficient semantic compression and reintegration,  
+- Real-time modulation of recursive depth and coherence.
+
+This represents a full evolution from *static attractor alignment*  
+to **self-regulating cognitive recursion** — the foundation of  
+persistent, interpretable cognition within the Sigma Stratum framework.
 
 ---
 
 > *References:*  
 > Tsaliev, E. (2025). **Neurosymbolic Scaffolding for Recursive Coherence** — DOI: [10.5281/zenodo.17582941](https://doi.org/10.5281/zenodo.17582941)  
 > Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
+> Tsaliev, E. (2025). **SIGMA Runtime v0.4.6 — Adaptive Phase Regulation and SCR Telemetry** — DOI: _pending_

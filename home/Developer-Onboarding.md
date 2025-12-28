@@ -2,7 +2,7 @@
 title: Developer Onboarding
 description: Concise developer onboarding for the Sigma Runtime architecture. Explains core concepts, runtime loop, memory model, attractors, drift control, and integration patterns for building conformant runtime implementations.
 published: true
-date: 2025-12-03T23:19:56.643Z
+date: 2025-12-28T10:24:35.871Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T10:23:15.634Z
@@ -290,12 +290,16 @@ It is not complicated — it’s just structured recursion.
 For implementation details, runtime source code, and test scenarios, see:  
 👉 [Sigma Runtime – Reference Implementations (RI & ERI)](https://github.com/sigmastratum/documentation/blob/main/runtime/reference/README.md)
 
-This document contains:
-- Full architectural overview (RI and ERI)
-- Instructions for running both implementations
-- Guidance on integration with external models (GPT, Claude)
-- Reference test scenarios for stability and drift validation
+Additional engineering references and benchmark materials:
+- [Benchmark Report — Sigma Runtime v0.3.5 (SR-EI-03)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-03/benchmark_report_SR_v035.md)  
+- [Control & Validation Report — Sigma Runtime v0.3.7 (SR-EI-037)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-037/SIGMA_Runtime_0_3_7_CVR.md)
+
+These documents include:
+- benchmark results and runtime performance profiles,  
+- validation data for drift and attractor stability,  
+- comparison of RI and ERI configurations,  
+- and engineering notes from v0.3.x to v0.4.x migration.
 
 ⸻
 
-End of Developer Onboarding v1.0
+End of *Developer Onboarding v1.0*

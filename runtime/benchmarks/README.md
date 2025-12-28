@@ -1,3 +1,13 @@
+---
+title: README
+description: 
+published: true
+date: 2025-12-04T03:35:20.600Z
+tags: 
+editor: markdown
+dateCreated: 2025-12-04T03:35:16.267Z
+---
+
 # SIGMA Runtime Benchmark Plan (v0.1 ERI)
 
 ## Goal

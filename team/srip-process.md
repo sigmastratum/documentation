@@ -2,7 +2,7 @@
 title: SRIP Process
 description: Formal definition of the Sigma Runtime Improvement Proposal lifecycle.
 published: true
-date: 2025-12-02T02:16:42.153Z
+date: 2025-12-02T02:16:46.176Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:52:16.687Z

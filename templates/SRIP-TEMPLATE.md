@@ -1,3 +1,13 @@
+---
+title: SRIP-TEMPLATE
+description: 
+published: true
+date: 2025-12-02T02:27:17.284Z
+tags: 
+editor: markdown
+dateCreated: 2025-12-02T02:16:31.900Z
+---
+
 > **Sigma Stratum Documentation – License Notice**  
 > This document is part of the **Sigma Runtime Standard (SRS)** and the  
 > **Sigma Stratum Documentation Set (SRD)**.  

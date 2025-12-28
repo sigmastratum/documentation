@@ -2,7 +2,7 @@
 title: Legal & Licensing
 description: Licensing framework, IP policy, and attribution rules for the Sigma Runtime Standard and associated documentation.
 published: true
-date: 2025-11-30T23:27:25.441Z
+date: 2025-11-30T23:27:28.875Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:54:15.817Z

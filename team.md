@@ -2,7 +2,7 @@
 title: Team & Governance
 description: Organizational structure, governance model, and working groups responsible for the Sigma Runtime Standard.
 published: true
-date: 2025-12-02T02:10:33.340Z
+date: 2025-12-02T02:10:36.928Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:49:21.214Z

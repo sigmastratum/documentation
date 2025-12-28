@@ -1,3 +1,13 @@
+---
+title: README
+description: 
+published: true
+date: 2025-12-04T08:53:54.576Z
+tags: 
+editor: markdown
+dateCreated: 2025-12-01T10:46:22.001Z
+---
+
 # Sigma Runtime – Reference Implementations (RI & ERI)
 
 The **Sigma Runtime** defines the *Recursive Control Loop (RCL)* and its  

@@ -2,7 +2,7 @@
 title: About Sigma Stratum
 description: Overview of the mission, vision, and core principles behind the Sigma Stratum initiative.
 published: true
-date: 2025-11-30T23:01:57.101Z
+date: 2025-11-30T23:02:00.569Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:20:43.726Z

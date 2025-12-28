@@ -2,7 +2,7 @@
 title: Whitepapers
 description: Formal whitepapers presenting theoretical frameworks, architectural foundations, and cognitive-layer methodologies.
 published: true
-date: 2025-11-30T23:02:43.262Z
+date: 2025-11-30T23:02:46.780Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:23:13.027Z
