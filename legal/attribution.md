@@ -2,29 +2,42 @@
 title: Attribution Requirements
 description: Guidelines for proper attribution of the Sigma Runtime Standard and documentation.
 published: true
-date: 2025-11-30T23:25:40.513Z
+date: 2025-12-29T19:52:52.930Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:58:36.836Z
 ---
 
-> **Sigma Stratum Documentation – Attribution Requirements**  
+---
+title: "Sigma Stratum Documentation – Attribution & Licensing Requirements"
+version: "2025-12-29"
+status: "Authoritative (aligned with Canon v2025-12-29)"
+author: "Sigma Stratum Research Group (SSRG)"
+license: "CC BY-NC 4.0 / CC BY 4.0 / CIL"
+
+---
+
+> **Sigma Stratum Documentation – Attribution & Licensing Requirements**  
 > Defines the official citation, acknowledgment, and crediting standards  
 > for materials published under the **Sigma Runtime Standard (SRS)** and  
 > the **Sigma Runtime Documentation Set (SRD)**.  
 >  
-> Governed by the **Sigma Stratum Research Group (SSRG)** under  
-> the **CC BY-NC 4.0 License**.  
+> Governed by the **Sigma Stratum Research Group (SSRG)**.  
 >  
-> For general legal context, see [`/legal.md`](https://github.com/sigmastratum/documentation/blob/main/legal.md).
+> Licensing model follows the **Sigma Stratum Canon (2025-12-29)** —  
+> a dual-license framework combining **CC BY-NC 4.0**, **CC BY 4.0**,  
+> and the **Commercial Implementation License (CIL)** for derivative commercial systems.  
+>  
+> For full legal context, see  
+> [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/IP-Policy.md).
 
 ---
 
-# Attribution Requirements
+# Attribution & Licensing Requirements
 
 When using, referencing, or adapting content from the  
 **Sigma Runtime Standard** or associated documentation,  
-you must follow the official attribution and citation policy defined below.
+you must comply with both the **attribution** and **license** rules defined herein.
 
 ---
 
@@ -34,68 +47,67 @@ Every reuse (text, figures, excerpts, or derivative works) must include:
 
 - Credit to the **Sigma Stratum Research Group (SSRG)**  
 - Link to the **primary repository**: <https://github.com/sigmastratum/documentation>  
-- Link to the **relevant DOI** or SRIP document, when applicable  
-- The full license reference:  
-  *Licensed under Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)*  
+- Link to the **relevant DOI** or SRIP document  
+- The full license reference (BY-NC 4.0 or BY 4.0, as specified in the document)
 
-Example attribution format:
+**Example format:**
 
 > Based on the **Sigma Runtime Standard (SRS)**  
 > © Sigma Stratum Research Group (SSRG), 2025.  
-> Licensed under CC BY-NC 4.0.  
+> Licensed under CC BY-NC 4.0 / CC BY 4.0 as stated.  
 > Source: [https://wiki.sigmastratum.org](https://wiki.sigmastratum.org)
 
 ---
 
 ## 2. Academic and Research Use
 
-For scholarly and research citations, always include:
+Academic, nonprofit, and independent research use are fully permitted  
+under the applicable Creative Commons license.  
+Researchers are encouraged to:
 
+> **Citation example:**  
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1.*  
 > DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
-> Sigma Stratum Research Group (SSRG), Sigma Runtime Standard.
+> Sigma Stratum Research Group (SSRG).
 
 When referencing multiple Sigma documents, cite them under  
-the umbrella reference *“Sigma Stratum Documentation Set (SRD)”*  
-with the same DOI structure.
+*“Sigma Stratum Documentation Set (SRD)”*.
 
 ---
 
-## 3. Non-Commercial Clause
+## 3. License Structure (per Canon 2025-12-29)
 
-All Sigma Stratum materials are released under the  
-**Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)** license.
+| License | Applies to | Permissions | Restrictions |
+|----------|-------------|--------------|---------------|
+| **CC BY-NC 4.0** | Foundational and theoretical works | Free for research & academic use | No commercial exploitation |
+| **CC BY 4.0** | Methodology and implementation papers | Commercial use with attribution | Must maintain citation integrity |
+| **CIL (Commercial Implementation License)** | Commercial systems and runtimes claiming compatibility | Use in products and services | Requires registration and Sigma Governance participation |
 
-- Commercial redistribution, sale, or monetization requires explicit written permission  
-  from the **Sigma Stratum Research Group (SSRG)**.  
-- Academic, nonprofit, and research use are freely permitted  
-  provided proper attribution is maintained.
-
-Full license text:  
-<https://creativecommons.org/licenses/by-nc/4.0/>
+> All restrictions apply only to **commercial extraction of value  
+> without recognition or participation in Sigma Governance.**
 
 ---
 
 ## 4. Derivative and Collaborative Works
 
-If you produce derivative works, extensions, or analyses based on Sigma Stratum materials:
+Derived works must:
 
-1. Retain the license header block.  
-2. Include a citation to the original DOI and repository.  
-3. Notify SSRG via `legal@sigmastratum.org` if redistribution or formal publication is intended.  
-4. Reference your derived material as *“Based on the Sigma Runtime Standard (SRS)”*.
+1. Retain the original license header.  
+2. Include DOI references and attribution.  
+3. Notify SSRG via `legal@sigmastratum.org` if redistribution or publication is intended.  
+4. Reference the source as *“Based on the Sigma Runtime Standard (SRS)”*.
 
-This ensures version traceability and citation integrity across derivative publications.
+This ensures traceability, authorship continuity, and compliance with Canon integrity rules.
 
 ---
 
 ## 5. Contact
 
 **Sigma Stratum Research Group (SSRG)**  
-legal@sigmastratum.org  
-DOI Registry: [https://zenodo.org/communities/sigmastratum](https://zenodo.org/communities/sigmastratum/)  
+Email: [legal@sigmastratum.org](mailto:legal@sigmastratum.org)  
+DOI Registry: [https://zenodo.org/communities/sigmastratum](https://zenodo.org/communities/sigmastratum)
 
 ---
 
 © 2025 Sigma Stratum Research Group (SSRG).  
-All rights reserved under CC BY-NC 4.0 unless otherwise stated.
+Licensing and attribution governed by the **Sigma Stratum Canon (v2025-12-29)**.
