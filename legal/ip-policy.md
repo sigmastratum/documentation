@@ -2,7 +2,7 @@
 title: Intellectual Property Policy
 description: IP rules covering contributions, rights retention, and open standard commitments.
 published: true
-date: 2025-12-15T20:58:19.917Z
+date: 2025-12-29T19:39:57.754Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:56:05.346Z
@@ -16,6 +16,11 @@ dateCreated: 2025-11-30T04:56:05.346Z
 The Sigma Runtime Standard is an **open, non-proprietary technical standard**.  
 This policy defines the intellectual property framework governing all
 contributions, extensions, and derivative work related to the Standard.
+
+**Accessibility Notice**
+Sigma Stratum is open for use by researchers, individual developers, and independent laboratories.
+All non-commercial experimentation, prototyping, and publication activities are fully permitted.
+The restrictions defined in the Canon apply solely to commercial exploitation or closed-source deployment without recognition or participation within the Sigma Governance framework.
 
 ---
 
