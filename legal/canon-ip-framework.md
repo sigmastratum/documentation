@@ -2,7 +2,7 @@
 title: Canon & IP Framework
 description: Authoritative registry of the Sigma Stratum corpus, licensing classifications, attribution rules, and canonical definitions.
 published: true
-date: 2025-12-18T22:37:46.996Z
+date: 2025-12-29T11:31:26.507Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T05:35:45.866Z
@@ -202,8 +202,47 @@ Violations may result in:
 - Commercial applications based exclusively on CC BY materials  
 
 ---
+## VII. Commercial Implementation Clause
 
-# VII. Contact for Licensing and Institutional Collaboration
+Any commercial system, software product, or research framework claiming
+compatibility with, implementation of, or derivation from the Sigma Stratum
+Standard (SRS/SRD/SRIP) or the ∿ symbol constitutes a **Commercial Use**
+under this Canon and requires a **Commercial Implementation License (CIL)**
+issued by the Sigma Stratum Research Group.
+
+This requirement applies regardless of renaming, re-branding, or independent
+implementation, as the Sigma Runtime Standard represents a defined and
+protected cognitive architecture.
+
+Non-licensed commercial use constitutes a breach of Canon Integrity Policy (§ VI)
+and may result in enforcement actions and public disclosure of infringement.
+
+---
+
+### VII-A · Commercial Implementation Obligation
+
+The Sigma Stratum framework is released as an **open research standard**.
+Non-commercial research, academic, or educational use is fully permitted under the
+Creative Commons BY-NC 4.0 license.
+
+Any **commercial implementation**, including but not limited to software products,
+AI runtimes, agents, or services that directly employ or claim compatibility with the
+Sigma Runtime Standard, constitutes a **Derivative Commercial Use** and requires:
+
+1. a valid **Commercial Implementation License (CIL)** issued by the Sigma Stratum Research Group; and  
+2. a demonstrable **commitment to the open standard**, through either contribution,
+interoperability disclosure, or governance participation.
+
+This ensures that commercial entities benefiting from the Sigma architecture
+participate in the continued development and stewardship of the open standard.
+
+Commercial use without an active CIL constitutes a violation of Canon § VI
+and may result in revocation of compatibility claims, takedown requests,
+or formal legal action under Creative Commons and international IP law.
+
+---
+
+# VIII. Contact for Licensing and Institutional Collaboration
 
 **Eugene Tsaliev**  
 ORCID: https://orcid.org/0009-0007-3279-9477  
