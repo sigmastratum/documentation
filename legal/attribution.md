@@ -2,19 +2,10 @@
 title: Attribution Requirements
 description: Guidelines for proper attribution of the Sigma Runtime Standard and documentation.
 published: true
-date: 2025-12-29T19:52:52.930Z
+date: 2025-12-29T19:53:45.368Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:58:36.836Z
----
-
----
-title: "Sigma Stratum Documentation – Attribution & Licensing Requirements"
-version: "2025-12-29"
-status: "Authoritative (aligned with Canon v2025-12-29)"
-author: "Sigma Stratum Research Group (SSRG)"
-license: "CC BY-NC 4.0 / CC BY 4.0 / CIL"
-
 ---
 
 > **Sigma Stratum Documentation – Attribution & Licensing Requirements**  
