@@ -2,12 +2,17 @@
 title: Canon & IP Framework
 description: Authoritative registry of the Sigma Stratum corpus, licensing classifications, attribution rules, and canonical definitions.
 published: true
-date: 2025-12-29T11:33:37.838Z
+date: 2025-12-29T12:54:44.521Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T05:35:45.866Z
 ---
 
+> **Canonical Reference Notice:**  
+> This Markdown document is a faithful textual rendering of  
+> *Sigma Stratum — Intellectual Property and Licensing Framework (v2025-12-29)*,  
+> archived under DOI [10.5281/zenodo.18085782](https://doi.org/10.5281/zenodo.18085782).  
+> In the event of any discrepancy, the DOI-archived PDF version shall prevail.
 # Sigma Stratum — Intellectual Property and Licensing Framework  
 **Version:** 2025-12-29  
 **Status:** Authoritative Canon Registry  
@@ -249,5 +254,6 @@ ORCID: https://orcid.org/0009-0007-3279-9477
 Email (direct research contact): eugene@sigmastratum.org  
 General inquiries: legal@sigmastratum.org    
 
-
-**Snapshot**: https://perma.cc/LR7D-UU5U
+**Snapshot (2025-12-01):** https://perma.cc/6AGR-JBY8  
+**Snapshot (2025-12-29):** https://perma.cc/LR7D-UU5U  
+**DOI (2025-12-29):** https://doi.org/10.5281/zenodo.18085782
