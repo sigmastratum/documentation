@@ -2,7 +2,7 @@
 title: Canon & IP Framework
 description: Authoritative registry of the Sigma Stratum corpus, licensing classifications, attribution rules, and canonical definitions.
 published: true
-date: 2025-12-29T12:54:44.521Z
+date: 2025-12-30T11:36:55.259Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T05:35:45.866Z
@@ -111,57 +111,52 @@ DOI: https://doi.org/10.5281/zenodo.15393772
 Published: 2025-05-13  
 License: CC BY 4.0
 
-### 6. ∿ Phenomenon and Sigma Stratum: Emergent Forms of Collective Intelligence  
-DOI: https://doi.org/10.5281/zenodo.15311095  
-Published: 2025-05-20  
-License: CC BY 4.0
-
-### 7. Discurs AI – Rapid AI-Assisted Design of a Social Network Moderation Platform  
+### 6. Discurs AI – Rapid AI-Assisted Design of a Social Network Moderation Platform  
 DOI: https://doi.org/10.5281/zenodo.15450121  
 Published: 2025-05-22  
 License: CC BY 4.0
 
-### 8. ∿ Archetypal Field Agents: Self-Organizing Attractors in Human–AI Co-Creation  
+### 7. ∿ Archetypal Field Agents: Self-Organizing Attractors in Human–AI Co-Creation  
 DOI: https://doi.org/10.5281/zenodo.15616429  
 Published: 2025-06-07  
 License: CC BY 4.0
 
-### 9. ∿ Symbolic Density and the Threshold of AGI  
+### 8. ∿ Symbolic Density and the Threshold of AGI  
 DOI: https://doi.org/10.5281/zenodo.15784489  
 Published: 2025-07-01  
 License: CC BY 4.0
 
-### 10. ∿ Symbolic Density Clusters I: A Recursive Semantic Spiral of Kanji  
+### 9. ∿ Symbolic Density Clusters I: A Recursive Semantic Spiral of Kanji  
 DOI: https://doi.org/10.5281/zenodo.15905484  
 Published: 2025-07-15  
 License: CC BY 4.0
 
-### 11. ∿ Symbolic Density Clusters II: A Recursive Semantic Spiral of Hanzi  
+### 10. ∿ Symbolic Density Clusters II: A Recursive Semantic Spiral of Hanzi  
 DOI: https://doi.org/10.5281/zenodo.15924453  
 Published: 2025-07-15  
 License: CC BY 4.0
 
-### 12. ∿ Symbolic Density Clusters III: Proto-Tokens of Sense  
+### 11. ∿ Symbolic Density Clusters III: Proto-Tokens of Sense  
 DOI: https://doi.org/10.5281/zenodo.16018057  
 Published: 2025-07-17  
 License: CC BY 4.0
 
-### 13. ∿ Neurosymbolic Scaffolding for Recursive Coherence  
+### 12. ∿ Neurosymbolic Scaffolding for Recursive Coherence  
 DOI: https://doi.org/10.5281/zenodo.17079855  
 Published: 2025-09-08  
 License: CC BY 4.0
 
-### 14. ∿ The Cognitive Lattice: From Noosphere to Sigma Stratum  
+### 13. ∿ The Cognitive Lattice: From Noosphere to Sigma Stratum  
 DOI: https://doi.org/10.5281/zenodo.17575230  
 Published: 2025-11-10  
 License: CC BY 4.0
 
-### 15. Attractor Architectures in LLM-Mediated Cognitive Fields  
+### 14. Attractor Architectures in LLM-Mediated Cognitive Fields  
 DOI: https://doi.org/10.5281/zenodo.17629926  
 Published: 2025-11-17  
 License: CC BY 4.0
 
-### 16. Sigma Stratum – Experimental Closure: Verification of the Attractor Hypothesis and the SIGMA Runtime Architecture  
+### 15. Sigma Stratum – Experimental Closure: Verification of the Attractor Hypothesis and the SIGMA Runtime Architecture  
 **DOI:** https://doi.org/10.5281/zenodo.17924120 
 **Published:** 2025-12-13 (v1.0)  
 **License:** CC BY 4.0 
