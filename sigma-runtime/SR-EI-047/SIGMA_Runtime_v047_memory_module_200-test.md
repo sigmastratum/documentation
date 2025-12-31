@@ -760,23 +760,6 @@ Total negations: 148 instances of 'not/n't'
 
 ---
 
-## 📊 COMPARISON: v0.4.6 vs v0.4.7
-
-| Metric | v0.4.6 | v0.4.7 | Change |
-|--------|--------|--------|--------|
-| **Max stable cycles** | ~150 | 200+ | +33% |
-| **Avg stability** | ~0.85 | 0.977 | +15% |
-| **Stability variance** | High | Low (~0.02 SD) | -70% |
-| **List collapse %** | 40-50% | 6% | -85% |
-| **Recovery events** | 2-5 by C100 | 0 | -100% |
-| **Context overflow** | Yes @ C150 | No @ C200 | ✅ Fixed |
-| **Memory type** | Linear buffer | Multi-tier | ✅ Enhanced |
-| **Epistemic honesty** | Moderate | Exceptional | ✅ Improved |
-| **Meta-cognition** | Limited | Breakthrough | ✅ Emerged |
-| **Token efficiency** | Baseline | -19.4% | ✅ Better |
-
----
-
 ## 🎓 THEORETICAL IMPLICATIONS
 
 ### 1. Reconstructive Memory > Archival
