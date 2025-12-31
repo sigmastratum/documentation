@@ -2,7 +2,7 @@
 title: Sigma Stratum Registry
 description: Authoritative registry tracking post-core Sigma Runtime Improvement Proposals (SRIP-08+) — experimental extensions, governance updates, and long-term evolution of the Sigma Runtime architecture.
 published: true
-date: 2025-12-31T10:02:33.756Z
+date: 2025-12-31T10:36:12.876Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-31T09:55:42.132Z
@@ -61,7 +61,7 @@ Each file must include:
 
 | SRIP | Title | Status | Date | Maintainer |
 |------|--------|---------|------|-------------|
-| [SRIP-09](./registry/srip-09.md) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | Draft | 2025-12-31 | SSRG |
+| [SRIP-09](./registry/srip-09-LTM-SC.md) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | Draft | 2025-12-31 | SSRG |
 
 ---
 
