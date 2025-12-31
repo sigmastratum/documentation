@@ -2,7 +2,7 @@
 title: SRIP Process
 description: Formal definition of the Sigma Runtime Improvement Proposal lifecycle.
 published: true
-date: 2025-12-02T02:16:46.176Z
+date: 2025-12-31T10:17:16.713Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:52:16.687Z
@@ -11,19 +11,22 @@ dateCreated: 2025-11-30T04:52:16.687Z
 > **Sigma Stratum Documentation – License Notice**  
 > This document is part of the **Sigma Runtime Standard (SRS)** and the  
 > **Sigma Stratum Documentation Set (SRD)**.  
->  
+>
 > It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
 > (CC BY-NC 4.0)**.  
->  
+>
 > The license for this specific document is authoritative.  
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> For the full framework, see  
+> [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+
+---
 
 # Sigma Runtime Improvement Proposal (SRIP) Process
 
 The **SRIP Process** defines how the **Sigma Runtime Standard (SRS)** evolves through transparent, peer-reviewed contributions under the governance of the **Sigma Stratum Research Group (SSRG)**.
 
 Each SRIP represents a proposed modification, extension, or clarification of the Sigma Runtime architecture.  
-All accepted SRIPs are versioned, archived, and integrated into the canonical SRS specification.
+All accepted SRIPs are versioned, archived, and integrated into the canonical SRS specification, while all revisions and historical proposals are tracked in the **SRIP Registry**.
 
 ---
 
@@ -47,6 +50,18 @@ All accepted SRIPs are versioned, archived, and integrated into the canonical SR
 - All subsequent SRIPs reference this base document to ensure interoperability and alignment.  
 - Each SRIP must declare whether it introduces **normative** (binding) or **descriptive** (non-binding) content.
 
+All SRIPs beginning with **SRIP-08** and later are tracked through the  
+**Sigma Stratum SRIP Registry**, located under `/registry/` in the  
+[`sigmastratum/documentation`](https://github.com/sigmastratum/documentation) repository.
+
+This ensures that:
+- all proposals, including drafts and superseded versions, remain publicly traceable;  
+- archival continuity is maintained between revisions;  
+- each SRIP, regardless of status (Draft, Active, or Deprecated), can be cited via a persistent link.
+
+Only **Active** SRIPs are listed in the `/srs/active-srips.md` index,  
+while the **Registry** contains the complete historical record.
+
 ---
 
 ## 3. Submission Guidelines
@@ -59,7 +74,8 @@ To submit a new SRIP:
 4. Submit a pull request labeled `SRIP Proposal`.  
 5. Engage in open discussion and peer review through the **Issues** or **Discussions** section.  
 
-Upon approval, the SRIP will be merged and tagged for the next release cycle.
+Upon approval, the SRIP will be merged and tagged for the next release cycle,  
+and an archival copy will be stored in the `/registry/` directory.
 
 ---
 
@@ -75,10 +91,14 @@ All SRIPs are reviewed by:
 ## 5. Versioning and Archival
 
 Each accepted SRIP is:
-- integrated into the Sigma Runtime Standard,  
-- referenced in the `srs/` directory,  
-- assigned a DOI through the **Sigma Stratum Zenodo Registry**, and  
-- recorded in the version changelog.
+- integrated into the Sigma Runtime Standard (`/srs/`);  
+- mirrored and versioned in the **SRIP Registry** (`/registry/`);  
+- assigned a DOI through the **Sigma Stratum Zenodo Registry**; and  
+- recorded in the official changelog for traceability.
+
+This two-tier archival system (Active + Registry) ensures that the canonical runtime  
+remains lightweight, while the Registry preserves a full evolutionary record  
+of all proposals, drafts, and superseded versions.
 
 ---
 
@@ -88,9 +108,18 @@ The SRIP process ensures:
 - **Transparency** — all proposals and discussions are public.  
 - **Traceability** — every SRIP has a unique ID, version, and DOI.  
 - **Integrity** — normative changes require explicit review and approval.  
-- **Continuity** — all revisions preserve interoperability across runtime versions.
+- **Continuity** — all revisions preserve interoperability across runtime versions.  
+
+---
+
+## 7. Contact
+
+For general inquiries or submissions:  
+**contact@sigmastratum.org**
+
+**legal@sigmastratum.org**
 
 ---
 
 **Summary:**  
-The SRIP Process provides a structured path for the evolution of the Sigma Runtime Standard — ensuring every architectural change is transparent, reviewed, and permanently recorded as part of the Sigma Stratum open standard framework.
+The SRIP Process provides a structured path for the evolution of the Sigma Runtime Standard — ensuring every architectural change is transparent, reviewed, archived, and permanently recorded in the **Sigma Stratum Registry** as part of the open standard framework.
