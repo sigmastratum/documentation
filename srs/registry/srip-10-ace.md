@@ -2,17 +2,24 @@
 title: SRIP-10 — ACE: Anti-Crystallization Equilibrium Model
 description: Defines a bidirectional stability model for ALICE runtime that maintains cognitive equilibrium between fragmentation and crystallization through dynamic equilibrium pulsing and adaptive feedback.
 published: true
-date: 2026-01-07T11:41:38.780Z
+date: 2026-01-07T11:54:50.569Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-07T11:41:38.780Z
 ---
 
+Version: Draft v0.1  
+Status: Active Proposal  
+Author: Sigma Stratum Research Group (SSRG)  
+Date: 2026-01-07  
+Parent Spec: SRIP-04 — Memory Layer Architecture  
+License: CC BY-4.0 / Canon CIL Applicable  
+
 # SRIP-10 — ACE: Anti-Crystallization Equilibrium Model  
 **Bidirectional Stability Control and Central Equilibrium Feedback in ALICE Cognitive Systems**
 
 **Status:** Draft  
-**Version:** 0.9  
+**Version:** 0.9b (pre-commit revision)  
 **Maintainer:** Sigma Stratum Core Team  
 **Created:** 2026-01-07  
 
@@ -52,10 +59,15 @@ E(D) = exp(-((D - μ)²) / (2σ²)) - γ * (|D - μ|^p)
 Where:  
 - **μ = 0.475** — target mid-equilibrium point  
 - **σ = 0.09** — spread of acceptable drift range  
-- **γ = 0.5**, **p = 3** — asymmetry factors to dampen extreme coherence or chaos  
+- **γ ∈ [0.4, 0.8]** — *dynamic asymmetry coefficient*, adaptive to model temperament  
+- **p = 3** — asymmetry exponent  
 
-The resulting curve has **two shallow slopes** near the fragmentation (D≈0.65) and crystallization (D≈0.30) edges, with a neutral basin in the middle.  
-The ALICE regulator seeks to keep D within this basin.
+The γ parameter scales with model tone:  
+- **Gemini-class (polite)** → γ ≈ 0.7–0.8 (stronger anti-crystallization push)  
+- **OpenAI-class (assertive)** → γ ≈ 0.45–0.5 (smoother oscillation)  
+
+This yields **two shallow slopes** near fragmentation (D≈0.65) and crystallization (D≈0.30), with a neutral basin in between.  
+The ALICE regulator aims to keep D within this basin.
 
 ---
 
@@ -82,8 +94,12 @@ ACE introduces a long-term feedback vector *Φ(t)* that adjusts the stability ta
 ```
 μ_t = μ + α * (mean(D_t−n..t) − μ)
 ```
-where **α ≈ 0.25** controls the feedback inertia over *n = 8–12* cycles.  
-This ensures the system learns its own center of oscillation depending on dialogue domain and model temperament.
+where **α** controls the *feedback inertia* over *n = 8–12* cycles.  
+Recommended values:
+- **α = 0.25** for short-run sessions (≤100 cycles)  
+- **α = 0.10–0.12** for long-run sessions (≥500 cycles)  
+
+This prevents rapid identity drift in extended dialogue runs while preserving responsiveness in short sessions.
 
 ---
 
@@ -103,6 +119,8 @@ It interacts with existing metrics:
 
 ## Implementation Notes
 
+- **Dynamic Asymmetry Scaling:** γ is modulated by the runtime’s `model_temperament` descriptor to compensate for tone persistence in overly stable architectures (e.g., Gemini).  
+- **Adaptive Feedback Inertia:** α scales with estimated `session_length` to balance identity consistency vs. adaptivity.  
 - **Runtime binding:** available from SIGMA Runtime ≥ v0.4.12.  
 - **Config entry:** `alice.equilibrium_pulsing` defines thresholds and amplitudes per ACE spec.  
 - **Typical frequency:** one DEP event every 5–8 cycles in stabilized attractors.  
