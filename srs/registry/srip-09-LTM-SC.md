@@ -2,12 +2,18 @@
 title: SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)
 description: Defines the Sigma Runtime’s persistent memory architecture — combining vector embeddings and graph continuity to preserve coherence, reconstruct attractor states, and enable long-range cognitive stability across sessions.
 published: true
-date: 2025-12-31T09:58:08.065Z
+date: 2026-01-07T11:56:28.824Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-31T09:50:13.465Z
 ---
 
+> **Sigma Runtime Standard – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)**.  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+>
+> The license for this specific document is authoritative.  
+> See `/legal/IP-Policy` for the full repository-wide licensing framework.
 # **SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)**
 
 **Version:** Draft v0.1  
