@@ -33,15 +33,17 @@ attractor model to memory, safety, and symbolic density layers.
 
 | ID | Title | Category | Stage |
 |----|--------|-----------|--------|
-| [SRIP-00](https://wiki.sigmastratum.org/en/srs/srip-00) | **Foundations & Scope** | Foundational | **Accepted (Draft)** |
-| [SRIP-01](https://wiki.sigmastratum.org/en/srs/srip-01) | **Canonical Runtime Loop** | Architectural / Runtime | **Accepted (Draft)** |
-| [SRIP-02](https://wiki.sigmastratum.org/en/srs/srip-02) | **Attractor State Model & Metadata** | Cognitive Architecture | **Accepted (Draft)** |
-| [SRIP-03](https://wiki.sigmastratum.org/en/srs/srip-03) | **Drift Metrics & Stabilization Algorithms** | Metrics / Coherence | **Accepted (Draft)** |
-| [SRIP-04](https://wiki.sigmastratum.org/en/srs/srip-04) | **Memory Layer Architecture** | Cognitive Persistence | **Accepted (Draft)** |
-| [SRIP-05](https://wiki.sigmastratum.org/en/srs/srip-05) | **Interoperability Interface v1.0** | Communication / API | **Accepted (Draft)** |
-| [SRIP-06](https://wiki.sigmastratum.org/en/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | **Accepted (Draft)** |
-| [SRIP-07](https://wiki.sigmastratum.org/en/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | **Accepted (Draft)** |
-| [SRIP-08](https://wiki.sigmastratum.org/en/srs/srip-08) | **Phase Vector Model & PRM** | Control / Telemetry / Mathematics | **Accepted (Draft)** |
+| [SRIP-00](https://wiki.sigmastratum.org/en/srs/srip-00) | **Foundations & Scope** | Foundational | **Final (Validated)** |
+| [SRIP-01](https://wiki.sigmastratum.org/en/srs/srip-01) | **Canonical Runtime Loop** | Architectural / Runtime | **Final (Validated)** |
+| [SRIP-02](https://wiki.sigmastratum.org/en/srs/srip-02) | **Attractor State Model & Metadata** | Cognitive Architecture | **Final (Validated)** |
+| [SRIP-03](https://wiki.sigmastratum.org/en/srs/srip-03) | **Drift Metrics & Stabilization Algorithms (SDCP)** | Metrics / Coherence | **Final (Validated)** |
+| [SRIP-04](https://wiki.sigmastratum.org/en/srs/srip-04) | **Entropy Stabilization via Contextual Damping** | Semantic Dynamics | **Final (Validated)** |
+| [SRIP-05](https://wiki.sigmastratum.org/en/srs/srip-05) | **Interoperability Interface v1.0** | Communication / API | **Final (Validated)** |
+| [SRIP-06](https://wiki.sigmastratum.org/en/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | **Final (Validated)** |
+| [SRIP-07](https://wiki.sigmastratum.org/en/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | **Final (Validated)** |
+| [SRIP-08](https://wiki.sigmastratum.org/en/srs/srip-08) | **Phase Vector Model & PRM** | Control / Telemetry / Mathematics | **Final (Validated)** |
+| [SRIP-09](https://wiki.sigmastratum.org/en/srs/srip-09) | **Long-Term Memory Stabilization & Compression (LTM-SC)** | Memory / Stability | **Accepted (Draft)** |
+| [SRIP-10](https://wiki.sigmastratum.org/en/srs/srip-10) | **ACE: Anti-Crystallization Equilibrium Model** | Cognitive Equilibrium / Drift Control | **Final (Validated)** |
 
 > **Legend:**  
 > - *Draft* — under active revision  
