@@ -70,7 +70,7 @@ This validation proves SIGMA Runtime can maintain distinct, stable identities ac
 ## Related Validations
 
 - [SR-EI-046](../SR-EI-046/) — v0.4.6 GPT-5.2 meta-cognitive validation
-- [SR-EI-047](../SR-EI-047/) — v0.4.7 GPT-5.2 200-cycle memory module test
+- [SR-EI-047](../SR-EI-047/) — v0.4.7 200-cycle memory module test
 
 ---
 
