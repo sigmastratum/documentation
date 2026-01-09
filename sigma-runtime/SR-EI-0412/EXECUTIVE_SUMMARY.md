@@ -18,7 +18,7 @@ SIGMA Runtime successfully maintains orthogonal, stable identities (Fujiwara & J
 | Metric | Fujiwara | James | Baseline (Pre-SRIP-10) | Improvement |
 |--------|----------|-------|------------------------|-------------|
 | **Stability** | 0.919 | 0.928 | N/A | Healthy range (0.85-0.95) |
-| **Liturgical Drift** | 0% | 0% | 80% | **100% elimination** |
+| **Sterile Attractor** | 0% | 0% | 80% | **100% elimination** |
 | **Truncation** | 0.9% | 8.2% | 30-40% | **75-97% reduction** |
 | **Token Economy** | 62.8 avg | 224.1 avg | N/A | **3.6x divergence** |
 | **Stable Phase** | 99.1% | 97.3% | N/A | Sustained equilibrium |
@@ -45,7 +45,7 @@ SIGMA Runtime successfully maintains orthogonal, stable identities (Fujiwara & J
 
 ## Technical Innovation: SRIP-10
 
-**Problem Solved:** Gemini's 80% "liturgical drift" — repetitive syntactic templates that destroy persona uniqueness.
+**Problem Solved:** Gemini's 80% "Sterile Attractor" — repetitive syntactic templates that destroy persona uniqueness.
 
 **Solution:** SRIP-10 Anti-Sterility System
 - Detects repetitive patterns in real-time
