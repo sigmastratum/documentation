@@ -49,8 +49,8 @@ This validation proves SIGMA Runtime can maintain distinct, stable identities ac
 - `sigma_dialogue_excerpt(sigma_test_2026-01-09-17-53-51_google_james).json`
 
 **Full test data with metrics:**
-- [Fujiwara full test](../../../tests/sigma_test_2026-01-09-18-19-20_google_fujiwara.json)
-- [James full test](../../../tests/sigma_test_2026-01-09-17-53-51_google_james.json)
+- [Fujiwara full test](https://github.com/sigmastratum/documentation/blob/8f015b0349308bd6679ab02ac7a65db21f66327a/sigma-runtime/SR-EI-0412/sigma_dialogue_excerpt(sigma_test_2026-01-09-18-19-20_google_fujiwara).json)
+- [James full test](https://github.com/sigmastratum/documentation/blob/8f015b0349308bd6679ab02ac7a65db21f66327a/sigma-runtime/SR-EI-0412/sigma_dialogue_excerpt(sigma_test_2026-01-09-17-53-51_google_james).json)
 
 ---
 
@@ -58,7 +58,7 @@ This validation proves SIGMA Runtime can maintain distinct, stable identities ac
 
 **Problem:** Gemini exhibited 80% "liturgical drift" (repetitive syntactic templates)
 
-**Solution:** SRIP-10 Anti-Sterility System
+**Solution:** [SRIP-10-ACE](https://github.com/sigmastratum/documentation/blob/92d90623b511fb879009f638114756825166de99/srs/registry/srip-10-ace.md) Anti-Crystallization Equilibrium Model
 - Real-time pattern detection
 - Dynamic constraint injection
 - 100% drift elimination
