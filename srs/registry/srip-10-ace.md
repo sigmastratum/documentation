@@ -18,7 +18,7 @@ dateCreated: 2026-01-07T11:41:38.780Z
 # SRIP-10 — ACE: Anti-Crystallization Equilibrium Model
 **Bidirectional Stability Control and Central Equilibrium Feedback in ALICE Cognitive Systems**
 
-**Version:** v1.0 (Production)
+**Version:** v1.0 - Production
 **Status:** Validated & Deployed
 **Author:** Sigma Stratum Research Group (SSRG)
 **Date:** 2026-01-08
