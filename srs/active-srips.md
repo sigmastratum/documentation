@@ -42,7 +42,7 @@ attractor model to memory, safety, and symbolic density layers.
 | [SRIP-06](https://wiki.sigmastratum.org/en/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | **Final (Validated)** |
 | [SRIP-07](https://wiki.sigmastratum.org/en/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | **Final (Validated)** |
 | [SRIP-08](https://wiki.sigmastratum.org/en/srs/srip-08) | **Phase Vector Model & PRM** | Control / Telemetry / Mathematics | **Final (Validated)** |
-| [SRIP-09](https://wiki.sigmastratum.org/en/srs/srip-09) | **Long-Term Memory Stabilization & Compression (LTM-SC)** | Memory / Stability | ** (Draft)** |
+| [SRIP-09](https://wiki.sigmastratum.org/en/srs/srip-09) | **Long-Term Memory Stabilization & Compression (LTM-SC)** | Memory / Stability | **(Draft)** |
 | [SRIP-10](https://wiki.sigmastratum.org/en/srs/srip-10) | **ACE: Anti-Crystallization Equilibrium Model** | Cognitive Equilibrium / Drift Control | **Final (Validated)** |
 
 > **Legend:**  
