@@ -17,7 +17,7 @@ SIGMA Runtime successfully maintains orthogonal, stable identities (Fujiwara & J
 
 | Metric | Fujiwara | James | Baseline (Pre-SRIP-10) | Improvement |
 |--------|----------|-------|------------------------|-------------|
-| **Stability** | 0.919 | 0.928 | N/A | Near-perfect |
+| **Stability** | 0.919 | 0.928 | N/A | Healthy range (0.85-0.95) |
 | **Liturgical Drift** | 0% | 0% | 80% | **100% elimination** |
 | **Truncation** | 0.9% | 8.2% | 30-40% | **75-97% reduction** |
 | **Token Economy** | 62.8 avg | 224.1 avg | N/A | **3.6x divergence** |
@@ -62,9 +62,6 @@ SIGMA Runtime successfully maintains orthogonal, stable identities (Fujiwara & J
 - `sigma_dialogue_excerpt(sigma_test_2026-01-09-18-19-20_google_fujiwara).json` (Fujiwara, 110 cycles)
 - `sigma_dialogue_excerpt(sigma_test_2026-01-09-17-53-51_google_james).json` (James, 110 cycles)
 
-**Full test data with system metrics:**
-- `../../../tests/sigma_test_2026-01-09-18-19-20_google_fujiwara.json`
-- `../../../tests/sigma_test_2026-01-09-17-53-51_google_james.json`
 
 ---
 
