@@ -22,7 +22,7 @@ This validation proves SIGMA Runtime can maintain distinct, stable identities ac
 ### Key Results
 
 - ✅ **0.919-0.928 stability** across 220 cycles
-- ✅ **0% liturgical drift** (SRIP-10 100% effective)
+- ✅ **0% Sterile Attractor** (SRIP-10 100% effective)
 - ✅ **3.6x token economy divergence** maintained (Fujiwara vs James)
 - ✅ **Cross-model portability** validated
 
@@ -56,7 +56,7 @@ This validation proves SIGMA Runtime can maintain distinct, stable identities ac
 
 ## Key Innovation: SRIP-10
 
-**Problem:** Gemini exhibited 80% "liturgical drift" (repetitive syntactic templates)
+**Problem:** Gemini exhibited 80% "Sterile Attractor" (repetitive syntactic templates)
 
 **Solution:** [SRIP-10-ACE](https://github.com/sigmastratum/documentation/blob/92d90623b511fb879009f638114756825166de99/srs/registry/srip-10-ace.md) Anti-Crystallization Equilibrium Model
 - Real-time pattern detection
