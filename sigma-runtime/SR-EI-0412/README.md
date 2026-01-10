@@ -79,5 +79,5 @@ This validation proves SIGMA Runtime can maintain distinct, stable identities ac
 ```
 SIGMA Runtime SR-EI-0412 (2026). Model-Agnostic Identity Validation:
 Cross-Model Identity Stabilization on Google Gemini-3.
-SIGMA Research Team.
+SSRG.
 ```
