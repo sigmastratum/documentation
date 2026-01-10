@@ -58,7 +58,7 @@ This validation proves SIGMA Runtime can maintain distinct, stable identities ac
 
 **Problem:** Gemini exhibited 80% "Sterile Attractor" (repetitive syntactic templates)
 
-**Solution:** [SRIP-10-ACE](https://github.com/sigmastratum/documentation/blob/92d90623b511fb879009f638114756825166de99/srs/registry/srip-10-ace.md)(https://github.com/sigmastratum/documentation/blob/7e343c0d39199ab88eead711abb097f4e0c21fff/srs/registry/srip-10-ace.md) Anti-Crystallization Equilibrium Model
+**Solution:** [SRIP-10-ACE](https://github.com/sigmastratum/documentation/blob/92d90623b511fb879009f638114756825166de99/srs/registry/srip-10-ace.md) Anti-Crystallization Equilibrium Model
 - Real-time pattern detection
 - Dynamic constraint injection
 - 100% drift elimination
