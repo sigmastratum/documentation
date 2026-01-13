@@ -2,7 +2,7 @@
 title: Active SRIPs — Sigma Runtime Standard
 description: Index of all active Sigma Runtime Improvement Proposals (SRIPs) defining the current Sigma Runtime Standard v0.1 — including foundational, architectural, and safety specifications.
 published: true
-date: 2026-01-09T21:02:06.433Z
+date: 2026-01-13T10:27:25.596Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-28T09:46:38.133Z
@@ -42,8 +42,6 @@ attractor model to memory, safety, and symbolic density layers.
 | [SRIP-06](https://wiki.sigmastratum.org/en/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | **Final (Validated)** |
 | [SRIP-07](https://wiki.sigmastratum.org/en/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | **Final (Validated)** |
 | [SRIP-08](https://wiki.sigmastratum.org/en/srs/srip-08) | **Phase Vector Model & PRM** | Control / Telemetry / Mathematics | **Final (Validated)** |
-| [SRIP-09](https://wiki.sigmastratum.org/en/srs/registry/srip-09-LTM-SC.md) | **Long-Term Memory Stabilization & Compression (LTM-SC)** | Memory / Stability | **(Draft)** |
-| [SRIP-10](https://wiki.sigmastratum.org/en/srs/registry/srip-10-ace.md) | **ACE: Anti-Crystallization Equilibrium Model** | Cognitive Equilibrium / Drift Control | **Final (Validated)** |
 
 > **Legend:**  
 > - *Draft* — under active revision  
