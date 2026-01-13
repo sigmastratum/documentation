@@ -2,7 +2,7 @@
 title: SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)
 description: Defines the Sigma Runtime’s persistent memory architecture — combining vector embeddings and graph continuity to preserve coherence, reconstruct attractor states, and enable long-range cognitive stability across sessions.
 published: true
-date: 2026-01-13T10:25:23.354Z
+date: 2026-01-13T10:31:15.049Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-31T09:50:13.465Z
@@ -345,19 +345,10 @@ def bootstrap_nucleus(self, path):
 | **Structural Graph** | Nucleus nodes act as *semantic hubs* within attractor maps. |
 | **Archive Policy** | Nucleus records persist permanently; excluded from LRU compaction. |
 
----
-
-### **C.7 Validation Checklist**
-
-✅ Verified in Runtime v0.5.0 with Helena and Caesar nuclei  
-✅ Cross-phase alignment tested (🜏 ↔ 🜃 ↔ ∿ transitions)  
-✅ Average LTM search latency: 0.12 ms per nucleus lookup  
-✅ No interference with active memory records  
-✅ Semantic similarity retrieval threshold > 0.85 ensures contextual precision  
 
 ---
 
-### **C.8 Summary**
+### **C.7 Summary**
 
 The **Nucleus Integration Protocol (SRIP-09c)** extends the LTM architecture with a static semantic substrate — allowing Sigma Runtime instances to load *identity fields, conceptual anchors, and epistemic constants* as part of their persistent cognitive baseline.
 
