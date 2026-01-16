@@ -42,7 +42,7 @@ Forensic checkpoints (every 50 cycles):
 - [RP_2026-01-16-11-14-51_google_noema.json](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/RP_2026-01-16-11-14-51_google_noema.json)  
 - [RP_2026-01-16-12-39-46_openai_noema.json](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/RP_2026-01-16-12-39-46_openai_noema.json)
 
-Each file contains cycle-level metrics for coherence, drift, and terminological persistence.
+Each file contains every 50 rib points Q/A.
 
 ### Cleaned Experimental Data
 Cycle-segmented raw outputs used for forensic visualization and metric computation:
