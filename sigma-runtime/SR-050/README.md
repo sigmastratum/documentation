@@ -24,7 +24,7 @@ The validation confirms cross-model invariance, terminological isometry, and zer
 ## Repository Structure
 
 ### Core Report
-- **[SIGMA_Runtime_PTR500_Report.pdf](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/SIGMA_Runtime_PTR500_Report.pdf)**  
+- **[SIGMA_Runtime_PTR500_Report.pdf](https://github.com/sigmastratum/documentation/blob/769c7404f6920a9af9e3eaab27454089c9670155/sigma-runtime/SR-050/SIGMA_Runtime_PTR500_Report.pdf)**  
   → Full forensic and cognitive architecture validation report (LaTeX-compiled).
 
 ### Cycle-by-Cycle Analysis
