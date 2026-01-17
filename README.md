@@ -52,7 +52,10 @@ Normative technical standard defining conformant Sigma Runtime implementations:
 - SRIP-04 — Memory Layer  
 - SRIP-05 — Interoperability  
 - SRIP-06 — Safety Boundaries  
-- SRIP-07 — Symbolic Density  
+- SRIP-07 — Symbolic Density
+- SRIP-08 — Phase Vector Model & PRM
+- SRIP-09 — Long-Term Memory and Structural Coherence Layer
+- SRIP-10 — ACE: Anti-Crystallization Equilibrium Model  
 
 ### **/team/**
 Governance and development process:
