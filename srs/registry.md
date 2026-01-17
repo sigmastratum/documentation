@@ -61,8 +61,8 @@ Each file must include:
 
 | SRIP | Title | Status | Date | Maintainer |
 |------|--------|---------|------|-------------|
-| [SRIP-09](./registry/srip-09-LTM-SC.md) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | Draft | 2025-01-13 | SSRG |
-| [SRIP-10](./registry/srip-10-ace.md) | Anti-Crystallization Equilibrium Model (ACE) | **Final (Validated)** | 2026-01-07 | SSRG |
+| [SRIP-09](./registry/srip-09-LTM.md) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | **Final (Validated)** | 2025-01-13 | SSRG |
+| [SRIP-10](./registry/srip-10-ACE.md) | Anti-Crystallization Equilibrium Model (ACE) | **Final (Validated)** | 2026-01-07 | SSRG |
 
 ---
 
