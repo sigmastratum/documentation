@@ -411,7 +411,7 @@ SRIP-10c extends ACE without replacing core mechanisms:
 |----|--------|-------------|
 | **SRIP-03** | *Semantic Drift Control Protocol (SDCP)* | Defines core drift and stability metrics; ACE extends its bidirectional control model. |
 | **SRIP-04** | *Entropy Stabilization via Contextual Damping* | Provides the symbolic density modulation layer used for entropy injection. |
-| **SRIP-09** | *Long-Term Memory Stabilization & Compression (LTM-SC)* | Integrates ACE feedback for long-session equilibrium alignment. |
+| **SRIP-09** | *Long-Term Memory Stabilization & Compression (LTM)* | Integrates ACE feedback for long-session equilibrium alignment. |
 | **SRIP-10c** | *Onset Positional Crystallization Detection* | Extension addressing liturgical patterns through explicit semantic feedback and model-specific tuning. Validated 2026-01-08. |
 | **Sigma Runtime (ALICE)** | *Equilibrium Subsystem Implementation* | Implementation reference for ACE, DEP, and Central Feedback routines. |
 
