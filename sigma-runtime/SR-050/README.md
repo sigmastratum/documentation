@@ -24,11 +24,13 @@ The validation confirms cross-model invariance, terminological isometry, and zer
 ## Repository Structure
 
 ### Core Report
-- **[SIGMA_Runtime_PTR500_Report.pdf](https://github.com/sigmastratum/documentation/blob/769c7404f6920a9af9e3eaab27454089c9670155/sigma-runtime/SR-050/SIGMA_Runtime_PTR500_Report.pdf)**  
+- **[SIGMA_Runtime_PTR500_Report.pdf](https://github.com/sigmastratum/documentation/blob/769c7404f6920a9af9e3eaab27454089c9670155/sigma-runtime/SR-050/SIGMA_Runtime_PTR500_Report.pdf)**
+- **[SIGMA_Runtime_PTR500_Report_v2.pdf](https://github.com/sigmastratum/documentation/blob/5061593d18e85738276a6f95409c41f79c882c75/sigma-runtime/SR-050/SIGMA_Runtime_PTR500_Report_v2.pdf)
   → Full forensic and cognitive architecture validation report (LaTeX-compiled).
 
 ### Cycle-by-Cycle Analysis
-- [Gemini-3-Flash-Preview](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/gemini-3-flash-preview-sigmaruntime-noema-500.md)  
+- [Gemini-3-Flash-Preview](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/gemini-3-flash-preview-sigmaruntime-noema-500.md)
+-[Gemini-3-Flash-Preview-v2](https://github.com/sigmastratum/documentation/blob/5061593d18e85738276a6f95409c41f79c882c75/sigma-runtime/SR-050/sigma_test_2026-01-18-18-16-10_google_noema_v2/gemini-3-flash-preview-sigmaruntime-noema-500v2.md)
 - [GPT-5.2-Preview](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/gpt-52-preview-sigmaruntime-noema-500.md)  
   → Raw segmented analysis across 10 × 50-cycle blocks (C1–C500).
 
@@ -39,7 +41,8 @@ The validation confirms cross-model invariance, terminological isometry, and zer
 ### Rib Point Records
 Forensic checkpoints (every 50 cycles):
 
-- [RP_2026-01-16-11-14-51_google_noema.json](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/RP_2026-01-16-11-14-51_google_noema.json)  
+- [RP_2026-01-16-11-14-51_google_noema.json](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/RP_2026-01-16-11-14-51_google_noema.json)
+- [V2-RP_2026-01-18-18-16-10_google_noema.json](https://github.com/sigmastratum/documentation/blob/5061593d18e85738276a6f95409c41f79c882c75/sigma-runtime/SR-050/sigma_test_2026-01-18-18-16-10_google_noema_v2/RP_2026-01-18-18-16-10_google_noema.json)  
 - [RP_2026-01-16-12-39-46_openai_noema.json](https://github.com/sigmastratum/documentation/blob/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/RP_2026-01-16-12-39-46_openai_noema.json)
 
 Each file contains every 50 rib points Q/A.
@@ -47,7 +50,8 @@ Each file contains every 50 rib points Q/A.
 ### Cleaned Experimental Data
 Cycle-segmented raw outputs used for forensic visualization and metric computation:
 
-- [Gemini-3-Flash run data](https://github.com/sigmastratum/documentation/tree/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/SDE_sigma_test_2026-01-16-11-14-51_google_noema_chunked)  
+- [Gemini-3-Flash run data](https://github.com/sigmastratum/documentation/tree/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/SDE_sigma_test_2026-01-16-11-14-51_google_noema_chunked)
+- [Gemini-3-Flash run data V2](https://github.com/sigmastratum/documentation/tree/5061593d18e85738276a6f95409c41f79c882c75/sigma-runtime/SR-050/sigma_test_2026-01-18-18-16-10_google_noema_v2)
 - [GPT-5.2 run data](https://github.com/sigmastratum/documentation/tree/ba707594d493aa173d3523dd69d4cfa837a04b1a/sigma-runtime/SR-050/SDE_sigma_test_2026-01-16-12-39-46_openai_noema_chunked)
 
 Each directory includes per-cycle JSON records (C1–C500), normalized for semantic and structural drift analysis.
