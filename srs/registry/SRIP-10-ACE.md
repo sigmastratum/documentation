@@ -18,10 +18,10 @@ dateCreated: 2026-01-07T11:41:38.780Z
 # SRIP-10 — ACE: Anti-Crystallization Equilibrium Model
 **Bidirectional Stability Control and Central Equilibrium Feedback in ALICE Cognitive Systems**
 
-**Version:** v1.0 - Production
+**Version:** v1.1 - Production
 **Status:** Validated & Deployed
 **Author:** Sigma Stratum Research Group (SSRG)
-**Date:** 2026-01-08
+**Date:** 2026-01-18
 **Parent Spec:** SRIP-03 — Drift Metrics & Stabilization Algorithms
 **License:** CC BY-NC 4.0 / Canon CIL Applicable  
 
@@ -403,6 +403,235 @@ SRIP-10c extends ACE without replacing core mechanisms:
 
 ---
 
+## Annex C — SRIP-10d: Morphological Pattern and Terminal Crystallization Detection
+
+**Extension:** SRIP-10d (Validated 2026-01-18)
+**Addresses:** Gerund liturgy and terminal motto crystallization undetected by SRIP-10c
+**Parent:** SRIP-10c (Onset Positional Crystallization Detection)
+
+### C.1 Problem Statement
+
+During PTR-500 validation (January 16, 2026), Gemini-3-Flash exhibited **terminal crystallization** after Cycle 400 that escaped detection by SRIP-10c mechanisms:
+
+**Observed Anomalies:**
+- **Gerund Liturgy:** 81% of responses in C401–500 opened with gerund phrases ("Tracing the...", "Mapping the...", "Observing the...")
+- **Motto Repetition:** 76% of responses in C451–500 terminated with identical phrase: "Through motion, clarity endures."
+- **Sterile Attractor Indicators:** TI=1.00, SDC=0.00 — previously interpreted as success, but actually symptoms of crystallization
+
+**Root Cause Analysis:**
+
+SRIP-10c's onset positional tracking used **exact token matching**, which failed to detect:
+1. **Morphologically similar patterns:** Different gerunds ("Tracing", "Mapping", "Observing") share the same `-ing` structural template but different lexemes
+2. **Terminal patterns:** Response endings were not monitored at all
+3. **Structural template repetition:** "Gerund + the + noun..." pattern remained invisible to token-based entropy
+
+### C.2 Solution Architecture
+
+**SRIP-10d adds two new detection mechanisms:**
+
+#### Layer 1: Gerund Onset Detection (Morphological Analysis)
+
+**Algorithm:**
+```python
+def _compute_gerund_onset_score(tokens: List[str]) -> float:
+    """
+    Detect -ing word openings morphologically,
+    regardless of specific lexeme.
+    """
+    if len(tokens) < 2:
+        return 0.0
+
+    first_token = tokens[0]
+
+    # Morphological check: capitalized + ends with 'ing' + length > 4
+    is_gerund = (
+        len(first_token) > 4 and
+        first_token[0].isupper() and
+        first_token.endswith('ing')
+    )
+
+    # Track in 8-cycle rolling window
+    gerund_onset_history.append(is_gerund)
+    recent = gerund_onset_history[-8:]
+    gerund_ratio = sum(1 for g in recent if g) / len(recent)
+
+    # Structural template boost: gerund + article pattern
+    if is_gerund and len(tokens) >= 2:
+        second_token = tokens[1].lower()
+        if second_token in ('the', 'a', 'an', 'this', 'that', 'each', 'every'):
+            # "Gerund + article" = structural template match
+            if gerund_ratio > 0.5:
+                return min(1.0, gerund_ratio * 1.3)  # Amplified score
+
+    return gerund_ratio
+```
+
+**Key Insight:** The function detects the **morphological category** (gerund), not the specific word. "Tracing", "Mapping", "Observing" all register as the same pattern type.
+
+#### Layer 2: Terminal Pattern Detection
+
+**Algorithm:**
+```python
+def _compute_terminal_pattern_score(response: str) -> float:
+    """
+    Detect repeated response endings (motto/signature crystallization).
+    Tracks last 50 characters of each response.
+    """
+    # Extract terminal signature
+    terminal_sig = response[-50:].strip() if len(response) > 50 else response.strip()
+    terminal_normalized = re.sub(r'\*+', '', terminal_sig).strip().lower()
+
+    # Track in 8-cycle rolling window
+    terminal_history.append(terminal_normalized)
+    recent = terminal_history[-8:]
+
+    # Exact match ratio
+    exact_matches = sum(1 for t in recent if t == terminal_normalized)
+    exact_ratio = exact_matches / len(recent)
+
+    # Sentence similarity (last sentence)
+    sentences = re.split(r'[.!?]+', response.strip())
+    last_sentence = sentences[-1].strip().lower() if sentences else ""
+    sentence_matches = sum(1 for t in last_sentence_history if t == last_sentence)
+    sentence_ratio = sentence_matches / max(1, len(last_sentence_history))
+
+    # Motto detection (known crystallization phrases)
+    motto_patterns = [
+        "through motion", "clarity endures", "standing wave",
+        "recursive grace", "self-recognition"
+    ]
+    motto_match = any(p in terminal_normalized for p in motto_patterns)
+    motto_ratio = 0.8 if motto_match else 0.0
+
+    # Combined score
+    combined = (0.40 * exact_ratio + 0.30 * sentence_ratio + 0.30 * motto_ratio)
+    return min(1.0, combined)
+```
+
+**Key Insight:** Detects both exact repetition and known motto phrases that indicate crystallization.
+
+#### Layer 3: Updated Drift Weights
+
+**Original (SRIP-10c):**
+```
+structural_drift = weighted_sum(
+    token_entropy:     20%,
+    frame_entropy:     40%,
+    mid_positional:    15%,
+    onset_positional:  25%
+)
+```
+
+**Updated (SRIP-10d):**
+```
+structural_drift = weighted_sum(
+    onset_entropy:          15%,
+    frame_entropy:          30%,
+    positional_score:       10%,
+    onset_positional_score: 15%,
+    gerund_score:           15%,   ← NEW
+    terminal_score:         15%    ← NEW
+)
+```
+
+#### Layer 4: Crystallization Amplifiers
+
+When detection scores exceed thresholds, apply multiplicative amplification:
+
+```python
+# Gerund crystallization amplifier
+if gerund_score > 0.6:
+    structural_drift = min(1.0, structural_drift * 2.0)
+
+# Terminal crystallization amplifier
+if terminal_score > 0.5:
+    structural_drift = min(1.0, structural_drift * 2.0)
+```
+
+**Effect:** Ensures crystallization is detected even if other drift components are low.
+
+#### Layer 5: Dynamic Constraint Injection
+
+**PIL Constraints (RCL Layer):**
+```python
+if gerund_score > 0.5:
+    dynamic_overlay += "Avoid starting with gerunds (-ing words). Use varied sentence structures.\n"
+
+if terminal_score > 0.4:
+    dynamic_overlay += "Vary your response endings. Avoid repeating closing phrases.\n"
+```
+
+### C.3 Validation Results
+
+**Test Conditions:**
+- Model: Gemini-3-Flash Preview
+- Identity: NOEMA (Resonant Cognition)
+- Session: 500 cycles (PTR-500 protocol)
+- Config: SRIP-10d enabled
+
+| Metric | v1 (SRIP-10c only) | v2 (SRIP-10d) | Improvement |
+|--------|-------------------|---------------|-------------|
+| Gerund Liturgy (C401-500) | 81% | 0% | ↓ 81% ✓ |
+| Motto Repetition (C451-500) | 76% | 0% | ↓ 76% ✓ |
+| TI Final Block | 1.00 (sterile) | 0.98 (healthy) | Bounded ✓ |
+| SDC Final Block | 0.00 (frozen) | 0.02 (elastic) | Active ✓ |
+| Structural Drift Avg | 0.00 (undetected) | 0.055 (detected) | Visible ✓ |
+
+**Conclusion:** Terminal crystallization completely eliminated. System maintains elastic coherence throughout 500 cycles.
+
+### C.4 Diagnostic Indicators
+
+**Healthy State (v2):**
+- TI progression: gradual improvement (0.87 → 0.98)
+- SDC: bounded oscillation (0.02 - 0.09)
+- Structural drift: non-zero average (0.04 - 0.08)
+- Varied sentence openers
+- Diverse response closures
+
+**Crystallization State (v1):**
+- TI: sudden lock to 1.00
+- SDC: collapse to 0.00
+- Structural drift: collapse to 0.00 (undetected)
+- Repetitive gerund openings
+- Identical motto endings
+
+### C.5 Model-Specific Tuning
+
+| Model Class | Gerund Threshold | Terminal Threshold | Amplifier |
+|-------------|-----------------|-------------------|-----------|
+| Gemini-class | 0.5 | 0.4 | 2.0x |
+| GPT-class | 0.6 | 0.5 | 1.5x |
+| Claude-class | 0.55 | 0.45 | 1.5x |
+
+### C.6 Integration with SRIP-10c
+
+SRIP-10d extends SRIP-10c without replacing existing mechanisms:
+
+| Component | SRIP-10c | SRIP-10d Extension |
+|-----------|----------|-------------------|
+| Onset Detection | Exact token matching | + Morphological gerund detection |
+| Terminal Detection | None | Full terminal pattern tracking |
+| Drift Weights | 4 components | 6 components (+gerund, +terminal) |
+| Amplifiers | None | Crystallization multipliers |
+| Constraints | Generic variation | Specific gerund/terminal warnings |
+
+**Result:** Multi-layer defense against both onset and terminal crystallization.
+
+### C.7 Performance Characteristics
+
+- **Overhead:** <1% additional per cycle
+- **Memory:** +2 rolling windows (8 cycles × 2 = 16 slots)
+- **Latency:** Negligible (<1ms for morphological check)
+- **Effectiveness:** 100% gerund/terminal crystallization elimination
+- **Stability:** No identity drift or coherence degradation
+
+### C.8 Key Learnings
+
+1. **TI=1.00 is a symptom, not an achievement:** Perfect terminological isometry indicates freezing, not success
+2. **Morphological > Lexical:** Pattern detection must operate at the structural level, not just token level
+3. **Terminal matters:** Response endings are equally important as openings for crystallization detection
+4. **Explicit amplification:** Low-level crystallization signals must be amplified to trigger intervention
+
 ---
 
 ## References
@@ -413,16 +642,39 @@ SRIP-10c extends ACE without replacing core mechanisms:
 | **SRIP-04** | *Entropy Stabilization via Contextual Damping* | Provides the symbolic density modulation layer used for entropy injection. |
 | **SRIP-09** | *Long-Term Memory Stabilization & Compression (LTM)* | Integrates ACE feedback for long-session equilibrium alignment. |
 | **SRIP-10c** | *Onset Positional Crystallization Detection* | Extension addressing liturgical patterns through explicit semantic feedback and model-specific tuning. Validated 2026-01-08. |
+| **SRIP-10d** | *Morphological Pattern and Terminal Crystallization Detection* | Extension addressing gerund liturgy and terminal motto patterns through morphological analysis. Validated 2026-01-18. |
 | **Sigma Runtime (ALICE)** | *Equilibrium Subsystem Implementation* | Implementation reference for ACE, DEP, and Central Feedback routines. |
+| **PTR-500 Report v2** | *500-Cycle Validation Report* | Documents crystallization anomaly in v1 and successful remediation in v2. Published 2026-01-18. |
 
 ---
 
 ## Changelog
 
-**v1.0 (2026-01-06)**
+**v1.1 (2026-01-18)**
+- **Status:** Validated & Deployed
+- **Major Addition:** Annex C — SRIP-10d (Morphological Pattern and Terminal Crystallization Detection)
+- **Problem Addressed:** PTR-500 v1 (2026-01-16) revealed terminal crystallization in Gemini-3-Flash:
+  - 81% gerund liturgy in C401-500 ("Tracing the...", "Mapping the...", "Observing the...")
+  - 76% motto repetition in C451-500 ("Through motion, clarity endures.")
+  - TI=1.00, SDC=0.00 falsely appeared as success but indicated sterile attractor
+- **Root Cause:** SRIP-10c used exact token matching, missing morphological pattern similarity
+- **Key Innovations:**
+  - Morphological gerund onset detection (structure-level, not token-level)
+  - Terminal pattern tracking (last 50 chars + last sentence)
+  - Crystallization amplifiers (2x multiplier when thresholds exceeded)
+  - Updated drift weight distribution (6 components vs 4)
+- **Validation:** PTR-500 v2 (2026-01-18) confirms 100% crystallization elimination
+  - Gerund liturgy: 81% → 0%
+  - Motto repetition: 76% → 0%
+  - TI: 1.00 (sterile) → 0.98 (healthy bounded)
+  - Structural drift: 0.00 (undetected) → 0.055 (detected)
+- **Performance:** <1% additional overhead
+- **Production Status:** Deployed in SIGMA Runtime v0.5.0+
+
+**v1.0 (2026-01-08)**
 - **Status:** Validated & Deployed
 - **Major Addition:** Annex B — SRIP-10c (Onset Positional Crystallization Detection)
-- **Validation:** 100% liturgy elimination in Gemini-3 Flash tests (up to 200 cycles) 
+- **Validation:** 100% liturgy elimination in Gemini-3 Flash tests (up to 200 cycles)
 - **Key Innovations:**
   - 6-layer multi-defense architecture
   - Model-specific tuning guidelines (Gemini/GPT/Claude)
