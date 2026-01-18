@@ -1,8 +1,8 @@
 ---
-title: "SRIP-10 — ACE: Anti-Crystallization Equilibrium Model"
+title: SRIP-10 — ACE: Anti-Crystallization Equilibrium Model
 description: Defines a bidirectional stability model for ALICE runtime that maintains cognitive equilibrium between fragmentation and crystallization through dynamic equilibrium pulsing and adaptive feedback.
 published: true
-date: 2026-01-09T08:57:29.001Z
+date: 2026-01-18T13:04:23.016Z
 tags: 
 editor: markdown
 dateCreated: 2026-01-07T11:41:38.780Z
@@ -422,7 +422,7 @@ SRIP-10c extends ACE without replacing core mechanisms:
 **v1.0 (2026-01-08)**
 - **Status:** Validated & Deployed
 - **Major Addition:** Annex B — SRIP-10c (Onset Positional Crystallization Detection)
-- **Validation:** 100% liturgy elimination in Gemini-3 Flash tests (0/30 cycles vs 24/30 baseline)
+- **Validation:** 100% liturgy elimination in Gemini-3 Flash tests (up to 200 cycles) 
 - **Key Innovations:**
   - 6-layer multi-defense architecture
   - Model-specific tuning guidelines (Gemini/GPT/Claude)
