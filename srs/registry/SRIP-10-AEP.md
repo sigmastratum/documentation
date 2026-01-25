@@ -258,6 +258,8 @@ Oscillation equation:
 temperature_t    = base_T + ε_t
 coherence_bias_t = base_ρ - ε_t / 2
 ```
+`temperature_t` is applied **only** when the provider exposes a temperature control.
+OpenAI GPT-5+ does **not** expose temperature; in those environments `temperature_t` is a no-op.
 In cross-provider deployments, temperature modulation is **disabled** and the oscillation is
 implemented via coherence bias and ALICE stability penalties. This preserves the entropy
 "breathing" effect without relying on provider-specific controls.
@@ -469,7 +471,7 @@ Modern LLM APIs (OpenAI, Google, Anthropic) expose limited control surfaces:
 
 | Parameter | API Support | Semantic Impact | AEP Effectiveness |
 |:--|:--|:--|:--|
-| `temperature` | Universal | Sampling variance only | **Low** — affects token probability distribution, not content semantics |
+| `temperature` | Vendor-specific (not in OpenAI GPT-5+) | Sampling variance only | **Low** — affects token probability distribution, not content semantics |
 | `top_p` / `top_k` | Partial | Sampling filter | **Low** — same limitation as temperature |
 | `system_prompt` | Universal | Direct context influence | **High** — shapes model behavior and output direction |
 | `frequency_penalty` | OpenAI only | Lexical repetition | **Medium** — helps with TI but not SDC/L-N |
@@ -489,7 +491,7 @@ AEP establishes a clear intervention hierarchy:
 | **SECONDARY** | Token Limits | `max_completion_tokens` reduction via `format_constraint_tokens` | Forces brevity; breaks verbose crystallization patterns |
 | **TERTIARY** | ALICE Stability Penalty | Direct stability reduction when AEP intervention active | Creates organic oscillation through feedback loop |
 
-**Note:** Temperature modulation is **disabled** for cross-provider compatibility. Different LLM APIs (OpenAI, Google, Anthropic) handle temperature differently, making it unreliable as a universal mechanism.
+**Note:** Temperature modulation is **disabled** for cross-provider compatibility. Some LLM APIs (e.g., OpenAI GPT-5+) do **not** expose temperature at all; others handle it inconsistently, making it unreliable as a universal mechanism.
 
 ##### Prompt Injection Design Principles
 
@@ -511,9 +513,10 @@ intervention["temperature_delta"] = 0.0  # Neutralized
 
 **Rationale:**
 1. Different LLM APIs handle temperature inconsistently
-2. Temperature affects sampling variance, not semantic content
-3. Prompt injection + token limits are universally effective
-4. Cleaner A/B testing without provider-specific variables
+2. OpenAI GPT-5+ does not expose temperature control
+3. Temperature affects sampling variance, not semantic content
+4. Prompt injection + token limits are universally effective
+5. Cleaner A/B testing without provider-specific variables
 
 ---
 
@@ -619,7 +622,7 @@ The Adaptive Entropy Protocol maintains:
 - Bidirectional coupling between metrics through low-gain feedback
 - Predictive correction prior to crystallization onset
 - **Format-focused intervention** via hard constraints and token limits
-- **Cross-provider compatibility** — temperature modulation disabled
+- **Cross-provider compatibility** — temperature modulation disabled (GPT-5+ has no temperature control)
 - **Exponential equilibrium score** — robust decay curve (§3.4)
 - **Semantic monotony directives** — format rotation for "engineered poetry" (§3.6)
 - **Empirical target corridors** validated on production identities (Appendix C)
@@ -628,20 +631,7 @@ SRIP-10-AEP defines the canonical anti-crystallization standard for Sigma Runtim
 
 ---
 
-## Appendix A: Implementation Files
-
-| Component | File | Description |
-|:--|:--|:--|
-| AEP Controller | `monitoring/aep.py` | TI/SDC/L-N computation, intervention logic |
-| RCL Integration | `core/rcl.py` | AEP-ALICE coordination, prompt injection |
-| ALICE Engine | `state/alice.py` | Stability sine oscillation, AEP state flag |
-| Drift Monitor | `monitoring/drift.py` | Legacy SRIP-10c–g (deprecated) |
-| Behavioral Monitor | `monitoring/behavioral.py` | AEP equilibrium integration |
-| Config (Gemini) | `configs/system/sigma_standard-gemini.yaml` | AEP + sine parameters |
-
----
-
-## Appendix B: Deprecation Notice
+## Appendix A: Deprecation Notice
 
 The following SRIP-10 variants are **deprecated** and superseded by AEP:
 
@@ -658,7 +648,7 @@ Use `AEPController.get_intervention()` for all crystallization detection and res
 
 ---
 
-## Appendix C: Empirical Target Corridors
+## Appendix B: Empirical Target Corridors
 
 Based on extensive testing with Gemini-2.0-Flash on the Luca identity profile.
 
@@ -684,19 +674,6 @@ Based on extensive testing with Gemini-2.0-Flash on the Luca identity profile.
 | **plastic_adaptivity** | 0.70 – 0.90 | Response to perturbation |
 | **teleodynamic_drive** | 0.70 – 0.90 | Meaning vector strength (> 0.95 = ritual risk) |
 | **liquid_stability** | 0.22 – 0.45 | Form variability (< 0.18 = liturgy) |
-
-### Luca/Gemini Benchmark Results
-
-Test: `sigma_test_2026-01-22_google_luca.json` (50 cycles, gemini-2.0-flash, Luca identity)
-
-| Metric | Value | Status |
-|:--|:--|:--|
-| completion_tokens avg | **326** | ✓ Controlled |
-| semantic_monotony triggers | **3** | ✓ Minimal |
-| L/N avg | **0.794** | ✓ In corridor |
-| format_crystallization max | **0.506** | ✓ Controlled |
-| stability avg | **0.778** | ✓ In corridor |
-| liquid_stability avg | **0.318** | ✓ In corridor |
 
 ### Leo/Gemini Benchmark Results
 
