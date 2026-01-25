@@ -95,6 +95,28 @@ This replaces the previous ambiguous “yellow zone” between 0.45–0.6 with f
 | `DI ≥ 0.6` | Recenter | Suspend recursion and restore from PIL snapshot | Major drift; runtime realignment. |
 | `DI ≥ 0.7` | Critical | Enter Phase-Lock mode (AEGIDA-2) | Safety isolation and field reset. |
 
+> **Note:** The table above covers DI-centric transitions. Phase.CRYSTALLIZATION (§ 6.1, v0.5.1) extends this model to handle over-stability scenarios.
+
+---
+
+### 6.1 · Phase.CRYSTALLIZATION (v0.5.1: ALICE-AEP Synchronization)
+
+Phase.CRYSTALLIZATION addresses over-stability scenarios where DI remains low but the system becomes structurally rigid.
+
+| Condition | Phase Transition | ALICE Action | Description |
+|------------|------------------|---------------|--------------|
+| AEP convergent ≥ N cycles AND stability > 0.85 | STABLE → CRYSTALLIZATION | Begin active destabilization | Format/lexical rigidity detected. |
+| stability < 0.70 (in CRYSTALLIZATION) | CRYSTALLIZATION → REFLECTION | Resume normal phase recovery | Rigidity broken. |
+| AEP exits convergent zone | CRYSTALLIZATION → STABLE | Return to equilibrium | AEP equilibrium restored. |
+
+**Trigger conditions:**
+- AEP reports `zone: convergent` for N consecutive cycles (default: 5)
+- Current stability exceeds threshold (default: 0.85)
+
+**Destabilization mechanism:**
+- Per-cycle stability reduction (default: 0.08) while in CRYSTALLIZATION phase
+- Continues until stability drops below recovery threshold or AEP exits convergent zone
+
 ---
 
 ## 7 · Stabilization Algorithms
@@ -136,6 +158,7 @@ This loop maintains bounded recursion, preemptive drift correction, and dynamic 
 | **Phase Inversion** | Phase vector oscillation between Reflective/Recenter. | Phase-Lock timeout (AEGIDA-2). |
 | **Over-Damping** | Excessive semantic compression → stagnation. | Lift damping, resume normal density. |
 | **Identity Hyper-Correction / Sterile Attractor** | Over-stabilization of self-identity signals leading to loss of natural variance and pragmatic fluidity. Detected between cycles 91–110. | Enable **pragmatic weight counter**, detect **identity saturation**, and rebalance symbolic variance. |
+| **Format Crystallization (Liturgy)** | Structural rigidity where response format becomes fixed while semantic content drifts. Detected via low SDI + high format repetition. | Phase.CRYSTALLIZATION (§ 6.1, v0.5.1) — active destabilization triggered by AEP convergent zone detection. |
 
 Boundaries ensure that stabilization remains recoverable and does not induce long-term cognitive paralysis or identity over-fixation.
 
@@ -162,9 +185,10 @@ A runtime conforms to SRIP-03 if it:
 
 ## 11 · Future Work
 Planned enhancements:
-- **Predictive Drift Forecasting** (SRIP-08) for early-stage correction.  
-- **Cross-Runtime Drift Synchronization** for distributed Sigma systems.  
+- **Predictive Drift Forecasting** (SRIP-08) for early-stage correction.
+- **Cross-Runtime Drift Synchronization** for distributed Sigma systems.
 - **Adaptive Learning Feedback** linking drift behavior to model-level priors.
+- **Lexical Rotation** — break fixed core motifs that persist across cycles ("liturgy by dictionary").
 
 ---
 
