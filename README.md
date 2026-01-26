@@ -55,7 +55,7 @@ Normative technical standard defining conformant Sigma Runtime implementations:
 - SRIP-07 — Symbolic Density
 - SRIP-08 — Phase Vector Model & PRM
 - SRIP-09 — Long-Term Memory and Structural Coherence Layer
-- SRIP-10 — ACE: Anti-Crystallization Equilibrium Model  
+- SRIP-10 — AEP: Adaptive Entropy Protocol 
 
 ### **/team/**
 Governance and development process:
