@@ -63,6 +63,7 @@ Each file must include:
 |------|--------|---------|------|-------------|
 | [SRIP-09-LTM](/srs/registry/SRIP-09-LTM) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | **Final (Validated)** | 2025-01-13 | SSRG |
 | [SRIP-10-AEP](/srs/registry/SRIP-10-AEP) | Adaptive Entropy Protocol (AEP) | **Active (Production)** | 2026-01-25 | SSRG |
+| [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) | Compression & Memory Topology (CMT) | **Active (v0.5.3)** | 2026-02-04 | SSRG |
 
 ---
 
