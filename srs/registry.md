@@ -2,7 +2,7 @@
 title: Sigma Stratum Registry
 description: Authoritative registry tracking post-core Sigma Runtime Improvement Proposals (SRIP-08+) — experimental extensions, governance updates, and long-term evolution of the Sigma Runtime architecture.
 published: true
-date: 2026-01-25T18:00:00.000Z
+date: 2026-01-25T21:24:39.279Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-31T09:55:42.132Z
