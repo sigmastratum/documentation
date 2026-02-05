@@ -3,10 +3,6 @@
 **Version:** SR v0.5.3 (SRIP-11 CMT + SRIP-10h/10i Anti-Crystallization)
 **Purpose:** Demonstration of Compression, Memory Topology & Response Diversity for Healthcare AI
 
-**Test Files (Chunked Source):**
-- Gemini 3 Flash: `/home/ubuntu/sigma_runtime/SR-05x/SR_EI-05-3/reports/SDE_sigma_test_2026-02-05-17-06-15_google_iaso_chunked`
-- GPT-5.2: `/home/ubuntu/sigma_runtime/SR-05x/SR_EI-05-3/reports/SDE_sigma_test_2026-02-05-17-33-51_openai_iaso_chunked`
-
 ---
 
 ## Clinical Relevance Summary
