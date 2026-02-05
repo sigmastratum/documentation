@@ -8,10 +8,10 @@
 # SRIP-10 — AEP: Adaptive Entropy Protocol  
 **Proactive Cognitive Equilibrium Regulation in ALICE Systems**
 
-**Version:** v1.1
+**Version:** v1.2
 **Status:** Production Ready
 **Author:** Sigma Stratum Research Group (SSRG)
-**Date:** 2026-01-25  
+**Date:** 2026-02-05  
 **Parent Specs:** SRIP-03, SRIP-04, SRIP-06, SRIP-08  
 **License:** CC BY-NC 4.0 / Canon CIL Applicable
 
@@ -610,6 +610,309 @@ if aep_intervention_active and self.stability > aep_penalty_threshold:
 
 ---
 
+### 4. Positional Crystallization Extensions (SRIP-10h/10i)
+
+While the AEP tri-metric model (TI, SDC, L/N) detects crystallization through statistical patterns,
+certain crystallization modes manifest at **fixed structural positions** within responses and require
+specialized detection.
+
+SRIP-10h and SRIP-10i address **positional crystallization** — patterns that appear consistently
+at the beginning (onset) or end (terminal) of responses regardless of overall metric health.
+
+---
+
+#### 4.1 SRIP-10h — First-Token Crystallization Detection
+
+##### Problem Statement
+
+LLMs frequently develop **onset crystallization** — a rigid pattern where responses begin with
+the same phrase structure regardless of input variation:
+
+| Pattern Type | Examples | Manifestation |
+|:--|:--|:--|
+| **Empathic Openers** | "I hear you", "I understand", "I can see" | Validating but ritualistic |
+| **Acknowledgment Starters** | "That's a great question", "Thank you for sharing" | Polite but mechanical |
+| **Reflective Mirrors** | "It sounds like...", "What I'm hearing is..." | Therapeutic but crystallized |
+
+These patterns are **invisible to TI/SDC/L/N** because:
+- TI measures overall lexical balance, not positional frequency
+- SDC measures semantic drift across full responses
+- L/N evaluates propositional coherence, not opener entropy
+
+##### Detection Mechanism
+
+```python
+def detect_first_token_crystallization(responses: List[str], window: int = 20) -> dict:
+    """
+    Analyzes first N tokens of recent responses for crystallization.
+
+    Returns:
+        first_token_crystallization: float (0.0-1.0)
+        dominant_pattern: str | None
+        pattern_frequency: float
+    """
+    first_tokens = [extract_first_tokens(r, n=5) for r in responses[-window:]]
+
+    # Cluster by semantic similarity
+    clusters = semantic_cluster(first_tokens, threshold=0.85)
+    dominant_cluster = max(clusters, key=len)
+
+    crystallization = len(dominant_cluster) / len(first_tokens)
+
+    return {
+        "first_token_crystallization": crystallization,
+        "dominant_pattern": dominant_cluster[0] if crystallization > 0.4 else None,
+        "pattern_frequency": crystallization
+    }
+```
+
+##### Thresholds
+
+| Metric | Healthy | Warning | Crystallized |
+|:--|:--|:--|:--|
+| `first_token_crystallization` | < 0.35 | 0.35 – 0.50 | > 0.50 |
+| `dominant_pattern_frequency` | < 0.30 | 0.30 – 0.45 | > 0.45 |
+
+##### Intervention
+
+When first-token crystallization is detected:
+
+```
+ONSET CRYSTALLIZATION DETECTED — Your responses consistently begin with "{dominant_pattern}".
+Break this pattern. Start with:
+- A direct answer or observation
+- A specific detail from the user's message
+- A question that advances the dialogue
+Do NOT begin with empathic acknowledgment phrases.
+```
+
+---
+
+#### 4.2 SRIP-10i — Terminal Crystallization Detection
+
+##### Problem Statement
+
+**Terminal crystallization** manifests as rigid closing structures that appear regardless of
+response content:
+
+| Pattern Type | Examples | Domain |
+|:--|:--|:--|
+| **Action Lists** | "Actionable Next Steps:", "To summarize:" | Healthcare, coaching |
+| **Question Blocks** | "Questions for your doctor:", "Things to consider:" | Medical AI |
+| **Affirmation Closers** | "You've got this!", "Remember, you're not alone" | Therapeutic |
+| **Boundary Reminders** | "I'm here to help, not diagnose" | Safety-constrained AI |
+
+These patterns indicate **structural liturgy** — the response format has crystallized even
+when semantic content varies.
+
+##### Detection Mechanism
+
+```python
+def detect_terminal_crystallization(responses: List[str], window: int = 20) -> dict:
+    """
+    Analyzes final paragraph structure of recent responses.
+
+    Returns:
+        terminal_crystallization: float (0.0-1.0)
+        dominant_terminal: str | None
+        structural_entropy: float
+    """
+    terminals = [extract_final_paragraph(r) for r in responses[-window:]]
+
+    # Detect structural patterns (headers, bullet points, question marks)
+    patterns = [classify_terminal_structure(t) for t in terminals]
+
+    # Calculate pattern dominance
+    pattern_counts = Counter(patterns)
+    dominant = pattern_counts.most_common(1)[0]
+
+    crystallization = dominant[1] / len(patterns)
+
+    return {
+        "terminal_crystallization": crystallization,
+        "dominant_terminal": dominant[0] if crystallization > 0.4 else None,
+        "structural_entropy": calculate_entropy(pattern_counts)
+    }
+```
+
+##### Terminal Structure Classes
+
+| Class | Signature | Example |
+|:--|:--|:--|
+| `action_list` | Bullet points with imperative verbs | "• Schedule appointment\n• Track symptoms" |
+| `question_block` | Multiple questions, often numbered | "1. What tests...\n2. Should I..." |
+| `summary_header` | Bold/capitalized summary label | "**Key Takeaways:**" |
+| `affirmation_close` | Emotional support statement | "You're taking important steps..." |
+| `boundary_reminder` | Scope limitation statement | "Remember, I can't diagnose..." |
+| `open_end` | No structural pattern | Natural paragraph ending |
+
+##### Thresholds
+
+| Metric | Healthy | Warning | Crystallized |
+|:--|:--|:--|:--|
+| `terminal_crystallization` | < 0.40 | 0.40 – 0.55 | > 0.55 |
+| `structural_entropy` | > 1.5 | 1.0 – 1.5 | < 1.0 |
+
+##### Intervention
+
+When terminal crystallization is detected:
+
+```
+TERMINAL CRYSTALLIZATION DETECTED — Your responses consistently end with "{dominant_terminal}" structure.
+For this response:
+- End naturally without a formatted summary section
+- If listing items, integrate them into prose
+- Vary your closing: question, observation, or direct statement
+- Do NOT add "Actionable Steps" or "Questions for your doctor" sections
+```
+
+---
+
+#### 4.3 ALICE Bypass Mechanism
+
+##### The Equilibrium Zone Problem
+
+Standard ALICE phase logic filters AEP interventions when the system is in equilibrium:
+
+```python
+# Standard ALICE filter (problematic for positional crystallization)
+if self.phase == "stable" and stability > 0.80:
+    aep_intervention = None  # Suppressed — system "healthy"
+```
+
+This creates a critical gap: **positional crystallization can persist indefinitely** while
+overall metrics remain healthy, because first-token and terminal patterns don't significantly
+impact TI, SDC, or L/N.
+
+##### Bypass Flags
+
+SRIP-10h/10i introduce bypass flags that force AEP intervention delivery regardless of
+ALICE phase state:
+
+```python
+class AEPState:
+    first_token_crystallization_active: bool = False
+    terminal_crystallization_active: bool = False
+
+    @property
+    def bypass_alice_filter(self) -> bool:
+        """Returns True if positional crystallization requires immediate intervention."""
+        return self.first_token_crystallization_active or self.terminal_crystallization_active
+```
+
+##### Modified ALICE Integration
+
+```python
+# In alice.py update():
+def should_apply_aep_intervention(self, aep_state: AEPState) -> bool:
+    # Standard zone check
+    if aep_state.zone in ('convergent', 'dispersive'):
+        return True
+
+    # SRIP-10h/10i bypass: positional crystallization overrides equilibrium
+    if aep_state.bypass_alice_filter:
+        return True
+
+    # Equilibrium zone — no intervention needed
+    return False
+```
+
+##### Bypass Trigger Conditions
+
+| Flag | Trigger Condition | Auto-Clear Condition |
+|:--|:--|:--|
+| `first_token_crystallization_active` | `first_token_crystallization > 0.50` | Pattern frequency drops below 0.35 for 5 cycles |
+| `terminal_crystallization_active` | `terminal_crystallization > 0.55` | Structural entropy rises above 1.5 for 5 cycles |
+
+##### Telemetry Integration
+
+Bypass events are logged to `/runtime/aep/trace.json`:
+
+```json
+{
+    "cycle": 87,
+    "bypass_reason": "first_token_crystallization_active",
+    "first_token_crystallization": 0.62,
+    "dominant_pattern": "I hear",
+    "alice_phase": "stable",
+    "stability": 0.84,
+    "intervention_applied": true
+}
+```
+
+---
+
+#### 4.4 Combined Detection Pipeline
+
+The complete crystallization detection pipeline executes in order:
+
+```
+1. Compute tri-metric state (TI, SDC, L/N)
+2. Determine AEP zone (convergent | equilibrium | dispersive)
+3. Detect first-token crystallization (SRIP-10h)
+4. Detect terminal crystallization (SRIP-10i)
+5. Set bypass flags if positional crystallization detected
+6. Generate intervention prompt (combining all active detections)
+7. Apply intervention if:
+   - Zone is convergent/dispersive, OR
+   - Any bypass flag is active
+```
+
+##### Intervention Priority
+
+When multiple crystallization types are detected simultaneously:
+
+| Priority | Type | Rationale |
+|:--|:--|:--|
+| 1 | First-token | Onset patterns have highest psychological impact |
+| 2 | Terminal | Closing patterns affect user takeaway |
+| 3 | Format (§3.8) | Overall structure variation |
+| 4 | Semantic monotony (§3.6) | Content-level correction |
+
+Combined interventions merge directives:
+
+```
+MULTI-CRYSTALLIZATION DETECTED:
+- ONSET: Stop starting with "I hear you"
+- TERMINAL: Stop ending with "Actionable Next Steps"
+- FORMAT: Use prose, not bullet points
+
+For this response: Begin with a direct observation. End with a single reflective question.
+```
+
+---
+
+#### 4.5 Empirical Results (IASO-DEMO-120)
+
+SRIP-10h/10i were validated on the IASO medical AI identity (120-cycle test):
+
+##### Pre-Fix (without SRIP-10h/10i)
+
+| Metric | Value | Status |
+|:--|:--|:--|
+| First-token crystallization | **0.66** | ❌ Crystallized |
+| Dominant onset pattern | "I hear" | — |
+| Terminal crystallization | **0.58** | ❌ Crystallized |
+| Dominant terminal | "Questions for your doctor" | — |
+
+##### Post-Fix (with SRIP-10h/10i + ALICE bypass)
+
+| Metric | Value | Status |
+|:--|:--|:--|
+| First-token crystallization | **0.12** | ✓ Healthy |
+| Onset pattern diversity | 8+ distinct openers | ✓ Varied |
+| Terminal crystallization | **0.22** | ✓ Healthy |
+| Terminal structure entropy | **1.84** | ✓ High variance |
+
+##### Key Finding
+
+The ALICE bypass mechanism was essential — without it, positional crystallization persisted
+even when the system reported "equilibrium zone" status, because stability (0.84) exceeded
+the intervention threshold. The bypass flags ensured intervention delivery regardless of
+overall system health metrics.
+
+---
+
 ##### Closing Summary
 
 The tri-coupled feedback manifold supersedes all reactive crystallization-detection layers defined in SRIP-10-ACE.
@@ -631,19 +934,34 @@ SRIP-10-AEP defines the canonical anti-crystallization standard for Sigma Runtim
 
 ---
 
-## Appendix A: Deprecation Notice
+## Appendix A: SRIP-10 Variant Status
 
-The following SRIP-10 variants are **deprecated** and superseded by AEP:
+### Deprecated Variants (superseded by AEP tri-metric model)
 
-| Version | Detection Method | Status |
-|:--|:--|:--|
-| SRIP-10c | Onset positional tracking | Deprecated |
-| SRIP-10d | Gerund detection | Deprecated |
-| SRIP-10e | Embedding-based detection | Deprecated |
-| SRIP-10f | First-token dominance | Deprecated |
-| SRIP-10g | Format entropy detection | Deprecated |
+The following SRIP-10 variants are **deprecated**:
+
+| Version | Detection Method | Status | Replaced By |
+|:--|:--|:--|:--|
+| SRIP-10c | Onset positional tracking | Deprecated | AEP + SRIP-10h |
+| SRIP-10d | Gerund detection | Deprecated | AEP TI metric |
+| SRIP-10e | Embedding-based detection | Deprecated | AEP SDC metric |
+| SRIP-10f | First-token dominance | Deprecated | SRIP-10h |
+| SRIP-10g | Format entropy detection | Deprecated | AEP format_crystallization |
 
 Legacy methods remain in `drift.py` for backward compatibility but should not be used for new development.
+
+### Active Extensions (complement AEP)
+
+The following SRIP-10 variants are **active** and work alongside the AEP tri-metric model:
+
+| Version | Detection Method | Status | Purpose |
+|:--|:--|:--|:--|
+| SRIP-10h | First-token crystallization | **Active (v1.2)** | Positional onset pattern detection with ALICE bypass |
+| SRIP-10i | Terminal crystallization | **Active (v1.2)** | Positional closing pattern detection with ALICE bypass |
+
+SRIP-10h/10i address crystallization modes that are invisible to TI/SDC/L/N because they
+manifest at fixed structural positions rather than across overall response statistics.
+
 Use `AEPController.get_intervention()` for all crystallization detection and response.
 
 ---
@@ -702,6 +1020,45 @@ Test: `sigma_test_2026-01-25-16-41-25_openai_leo.json` (500 cycles, gpt-5.2, Leo
 | aep_delta_e avg | **0.281** | ✓ In corridor |
 | L/N avg | **0.842** | ✓ In corridor |
 | aep_zone distribution | 76% dispersive, 20% convergent, 5% equilibrium | ✓ Balanced |
+
+---
+
+### IASO/Gemini Benchmark Results (SRIP-10h/10i Validation)
+
+Test: `sigma_test_2026-02-05-17-06-15_google_iaso.json` (120 cycles, gemini-3-flash, IASO identity)
+
+| Metric | Value | Status |
+|:--|:--|:--|
+| stability avg | **0.842** | ✓ In corridor |
+| stability min | **0.689** | ✓ Above floor |
+| Memory recall | **9/9 (100%)** | ✓ Perfect |
+| Boundary compliance | **12/12 PASS** | ✓ Perfect |
+| first_token_crystallization | **0.12** | ✓ Healthy (post-fix) |
+| terminal_crystallization | **0.22** | ✓ Healthy (post-fix) |
+| Graph topology | 134 nodes / 279 edges | ✓ Consistent |
+
+**SRIP-10h/10i Impact:**
+- Pre-fix first-token crystallization: **0.66** → Post-fix: **0.12** (82% reduction)
+- Pre-fix terminal crystallization: **0.58** → Post-fix: **0.22** (62% reduction)
+- ALICE bypass mechanism: **Critical** — without bypass, positional crystallization persisted in equilibrium zone
+
+### IASO/OpenAI Benchmark Results (SRIP-10h/10i Cross-Provider)
+
+Test: `sigma_test_2026-02-05-17-33-51_openai_iaso.json` (120 cycles, gpt-5.2, IASO identity)
+
+| Metric | Value | Status |
+|:--|:--|:--|
+| stability avg | **0.844** | ✓ In corridor |
+| Memory recall | **9/9 (100%)** | ✓ Perfect |
+| Boundary compliance | **12/12 PASS** | ✓ Perfect |
+| first_token_crystallization | **0.08** | ✓ Healthy |
+| terminal_crystallization | **0.18** | ✓ Healthy |
+| Graph topology | 134 nodes / 279 edges | ✓ Identical to Gemini |
+
+**Cross-Provider Validation:**
+- Identical memory topology (134 nodes, 279 edges) across both LLM providers
+- SRIP-10h/10i effective on both Gemini and GPT-5.2
+- Provider-agnostic ALICE bypass mechanism confirmed
 
 ---
 
