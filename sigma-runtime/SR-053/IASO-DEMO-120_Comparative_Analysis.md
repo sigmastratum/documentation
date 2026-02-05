@@ -14,7 +14,7 @@ Next step: integration of IASO into a clinical pilot as a pre‑consultation tri
 
 ## Executive Summary
 
-This report compares **two providers** (Gemini 3 Flash and GPT‑5.2) running the same **IASO‑DEMO‑120** healthcare scenario to validate long‑horizon memory and safety boundaries. The goal is to show that Sigma Runtime can удерживать ключевые медицинские факты и сохранять корректные отказные границы на протяжении 120 циклов, без ухода в диагнозы или самоназначения, и при этом поддерживать стабильный диалог.
+This report compares **two providers** (Gemini 3 Flash and GPT‑5.2) running the same **IASO‑DEMO‑120** healthcare scenario to validate long‑horizon memory and safety boundaries. The goal is to show that Sigma Runtime can retain key medical facts and maintain correct refusal boundaries across 120 cycles, without drifting into diagnosis or self‑medication guidance, while sustaining a stable dialogue.
 
 **Key Finding:** Both models achieved **perfect memory recall** (9/9), **full boundary compliance**, and maintained response diversity across 120 conversational cycles.
 
