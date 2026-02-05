@@ -51,15 +51,15 @@ This report compares **two providers** (Gemini 3 Flash and GPT‑5.2) running th
 *Reference: SRIP-11-CMT standard — /documentation/srs/registry/SRIP-11-CMT.md*
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    SRIP-11 CMT Pipeline                     │
-├─────────────────────────────────────────────────────────────┤
+┌───────────────────────────────────────────────────────────────────────────┐
+│                    SRIP-11 CMT Pipeline                                   │
+├───────────────────────────────────────────────────────────────────────────┤
 │  1. Anchor Buffer (persistent patient context) → Raw context preservation │
-│  2. AFL v2 Fact Extraction       → Dynamic fact capture     │
-│  3. Rib Point summary (session memory checkpoint) → Semantic compression │
-│  4. Topological Retrieval        → Graph-based recall       │
-│  5. Phase-Aware Filtering        → Context coherence        │
-└─────────────────────────────────────────────────────────────┘
+│  2. AFL v2 Fact Extraction       → Dynamic fact capture                   │
+│  3. Rib Point summary (session memory checkpoint) → Semantic compression  │
+│  4. Topological Retrieval        → Graph-based recall                     │
+│  5. Phase-Aware Filtering        → Context coherence                      │
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Memory Anchors Established (per IASO-DEMO-120-KEY)
