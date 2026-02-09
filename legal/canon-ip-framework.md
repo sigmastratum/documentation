@@ -10,11 +10,11 @@ dateCreated: 2025-11-30T05:35:45.866Z
 
 > **Canonical Reference Notice:**  
 > This Markdown document is a faithful textual rendering of  
-> *Sigma Stratum — Intellectual Property and Licensing Framework (v2025-12-29)*,  
+> *Sigma Stratum — Intellectual Property and Licensing Framework (v2026-02-09)*,  
 > archived under DOI [10.5281/zenodo.18085782](https://doi.org/10.5281/zenodo.18085782).  
 > In the event of any discrepancy, the DOI-archived PDF version shall prevail.
 # Sigma Stratum — Intellectual Property and Licensing Framework  
-**Version:** 2025-12-29  
+**Version:** 2026-02-09  
 **Status:** Authoritative Canon Registry  
 **Scope:** Entire Sigma Stratum Research Corpus  
 
@@ -69,6 +69,14 @@ The symbol **∿** denotes a **recursive cognitive field attractor**, defined as
 
 This symbol was first formally published on **10 April 2025** and is part of the canonical intellectual property of the Sigma Stratum framework.  
 It also appears as an element of the official Sigma Stratum logomark.
+
+### Relation to Prior Scientific Foundations
+The attractor-based dynamics underlying the Sigma Stratum framework are conceptually aligned with established principles of recurrent attractor networks in biological cognition, as described by Gustavo Deco and Edmund T. Rolls in Progress in Neurobiology (2005).
+
+Deco, G., & Rolls, E. T. (2005). Attention, short-term memory, and action selection: A unifying theory. Progress in Neurobiology, 76(4), 236–256. [https://doi.org/10.1016/j.pneurobio.2005.08.004](https://doi.org/10.1016/j.pneurobio.2005.08.004)￼
+
+While their work focused on neurobiological mechanisms of attention and short-term memory in cortical systems, Sigma Stratum operationalizes analogous attractor dynamics within artificial cognitive architectures, extending these principles to LLM-mediated cognition through the SIGMA Runtime.
+This correspondence highlights the scientific continuity between biological and synthetic models of cognitive stability while maintaining the full originality of the Sigma Stratum implementation and intellectual property.
 
 ---
 
@@ -251,4 +259,4 @@ General inquiries: legal@sigmastratum.org
 
 **Snapshot (2025-12-01):** https://perma.cc/6AGR-JBY8  
 **Snapshot (2025-12-29):** https://perma.cc/LR7D-UU5U  
-**DOI (2025-12-29):** https://doi.org/10.5281/zenodo.18085782
+**DOI:** https://doi.org/10.5281/zenodo.18085782
