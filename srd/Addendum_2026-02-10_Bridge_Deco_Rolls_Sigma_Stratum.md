@@ -1,5 +1,5 @@
 ---
-title: Addendum (2026-02-10): From Cortical Attractors to Cognitive Fields
+title: Addendum (2026-02-10) From Cortical Attractors to Cognitive Fields
 description: Bridges Deco & Rolls (2005) and Sigma Stratum (2025–2026), showing how attractor dynamics unify biological and artificial cognition through the ∿ recursive field architecture.
 published: true
 date: 2026-02-10T09:18:50.685Z
