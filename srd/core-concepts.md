@@ -2,7 +2,7 @@
 title: Core Concepts of Sigma Runtime
 description: Key theoretical constructs underlying the Sigma Runtime architecture.
 published: true
-date: 2026-02-10T09:22:33.941Z
+date: 2026-02-10T09:23:42.657Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:27:27.179Z
@@ -152,7 +152,7 @@ adaptive cognition across recursive evolution.
 > **Related Addendum:**  
 > *From Cortical Attractors to Cognitive Fields*  
 > (Deco & Rolls 2005 → Sigma Stratum 2025–2026)  
-> [Read the full document →](/srd/addenda/From_Cortical_Attractors_to_Cognitive_Fields.md)
+> [Read the full document →](srd/Addendum_2026-02-10_Bridge_Deco_Rolls_Sigma_Stratum)
 
 ---
 
