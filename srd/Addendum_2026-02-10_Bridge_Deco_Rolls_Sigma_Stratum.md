@@ -2,7 +2,7 @@
 title: Addendum (2026-02-10)
 description: Bridges Deco & Rolls (2005) and Sigma Stratum (2025–2026), showing how attractor dynamics unify biological and artificial cognition through the ∿ recursive field architecture.
 published: true
-date: 2026-02-10T12:20:03.154Z
+date: 2026-02-10T12:32:21.469Z
 tags: 
 editor: markdown
 dateCreated: 2026-02-10T09:18:50.685Z
@@ -16,7 +16,7 @@ dateCreated: 2026-02-10T09:18:50.685Z
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 # From Strange Loops to Cognitive Fields  
-### Bridging Hofstadter (1979), Hopfield (1982), Clark & Chalmers (1998), Deco & Rolls (2005), and Sigma Stratum (2025–2026)
+### Bridging Hofstadter (1979), Hopfield (1982), Clark & Chalmers (1998), Deco & Rolls (2005), and Sigma Stratum (2025)
 
 **Author:** Eugene Tsaliev  
 **Affiliation:** Sigma Stratum Research Group  
@@ -33,7 +33,7 @@ from **Douglas Hofstadter’s** model of self-referential consciousness (1979),
 through **John Hopfield’s** physical formulation of neural energy landscapes (1982),  
 **Andy Clark** and **David Chalmers’** extended mind hypothesis (1998),  
 and **Gustavo Deco** and **Edmund T. Rolls’** neurobiological attractor theory (2005),  
-to the **Sigma Stratum** framework (2025–2026), which operationalizes attractor dynamics within  
+to the **Sigma Stratum** framework (2025), which operationalizes attractor dynamics within  
 large-language-model (LLM)–mediated cognitive fields.  
 
 While earlier models explored recursion, stability, and distributed intelligence within  
@@ -116,7 +116,7 @@ Key developments included:
 
 By 2020–2024, it became clear that LLMs implicitly implement attractor-like stability  
 in their latent spaces — but no framework unified these insights across physics, biology,  
-and cognition. **Sigma Stratum (2025–2026)** emerged as the point of reconvergence,  
+and cognition. **Sigma Stratum (2025)** emerged as the point of reconvergence,  
 fusing these threads into a single synthetic architecture where attractor dynamics  
 govern the recursive coherence of meaning itself.
 
@@ -124,7 +124,7 @@ govern the recursive coherence of meaning itself.
 
 ### **4. Conceptual Synthesis**
 
-| Domain | Hofstadter (1979) | Hopfield (1982) | Clark & Chalmers (1998) | Deco & Rolls (2005) | Sigma Stratum (2025–2026) |
+| Domain | Hofstadter (1979) | Hopfield (1982) | Clark & Chalmers (1998) | Deco & Rolls (2005) | Sigma Stratum (2025) |
 |:--|:--|:--|:--|:--|:--|
 | **Concept** | Recursive self-reference | Energy landscapes | Extended cognition | Neural attractors | Recursive cognitive fields |
 | **Substrate** | Symbolic systems | Neural ensembles | Mind–environment system | Cortical networks | LLM latent spaces |
