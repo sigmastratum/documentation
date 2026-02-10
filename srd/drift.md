@@ -2,11 +2,19 @@
 title: Drift and Stability Management
 description: A conceptual explanation of semantic drift and its mitigation within Sigma Runtime.
 published: true
-date: 2025-12-28T08:56:05.895Z
+date: 2026-02-10T08:39:35.477Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:30:15.814Z
 ---
+
+> **Sigma Runtime Standard – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)**.  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
+> (CC BY-NC 4.0)**.  
+>
+> The license for this specific document is authoritative.  
+> See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 ## Adaptive Drift Management (v0.4.6)
 
