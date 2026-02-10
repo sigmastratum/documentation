@@ -2,7 +2,7 @@
 title: Core Concepts of Sigma Runtime
 description: Key theoretical constructs underlying the Sigma Runtime architecture.
 published: true
-date: 2025-12-28T08:31:16.150Z
+date: 2026-02-10T09:22:33.941Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:27:27.179Z
@@ -147,6 +147,12 @@ a *regulated field process* — where feedback, phase coherence, and
 semantic compression maintain a living equilibrium between reasoning and stability.  
 Together, these constructs enable persistent, interpretable, and  
 adaptive cognition across recursive evolution.
+
+---
+> **Related Addendum:**  
+> *From Cortical Attractors to Cognitive Fields*  
+> (Deco & Rolls 2005 → Sigma Stratum 2025–2026)  
+> [Read the full document →](/srd/addenda/From_Cortical_Attractors_to_Cognitive_Fields.md)
 
 ---
 
