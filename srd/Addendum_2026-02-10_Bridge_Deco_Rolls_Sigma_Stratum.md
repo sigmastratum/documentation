@@ -1,13 +1,3 @@
----
-title: Addendum (2026-02-10)
-description: Bridges Deco & Rolls (2005) and Sigma Stratum (2025–2026), showing how attractor dynamics unify biological and artificial cognition through the ∿ recursive field architecture.
-published: true
-date: 2026-02-10T12:32:21.469Z
-tags: 
-editor: markdown
-dateCreated: 2026-02-10T09:18:50.685Z
----
-
 > **Sigma Runtime Standard – License Notice**  
 > This document is part of the **Sigma Runtime Documentation (SRD)**.  
 > It is licensed under **Creative Commons Attribution 4.0 (CC BY 4.0)**  
@@ -15,174 +5,184 @@ dateCreated: 2026-02-10T09:18:50.685Z
 >
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
-# From Strange Loops to Cognitive Fields  
-### Bridging Hofstadter (1979), Hopfield (1982), Clark & Chalmers (1998), Deco & Rolls (2005), and Sigma Stratum (2025)
+# From Strange Loops to Runtime Stabilization  
+### Situating Sigma Stratum within the Attractor Tradition (1979–2025)
 
 **Author:** Eugene Tsaliev  
 **Affiliation:** Sigma Stratum Research Group  
-**Date:** February 10, 2026  
-**Type:** Technical Addendum / Scientific Bridge Note  
+**Date:** February 18, 2026  
+**Type:** Technical Contextual Addendum  
 **License:** CC BY 4.0  
 
 ---
 
-### **Abstract**
+## Abstract
 
-This addendum traces the conceptual lineage that connects five major paradigms of cognitive theory —  
-from **Douglas Hofstadter’s** model of self-referential consciousness (1979),  
-through **John Hopfield’s** physical formulation of neural energy landscapes (1982),  
-**Andy Clark** and **David Chalmers’** extended mind hypothesis (1998),  
-and **Gustavo Deco** and **Edmund T. Rolls’** neurobiological attractor theory (2005),  
-to the **Sigma Stratum** framework (2025), which operationalizes attractor dynamics within  
-large-language-model (LLM)–mediated cognitive fields.  
+This addendum situates the Sigma Stratum framework (2025–2026) within the broader historical and scientific development of attractor-based models of cognition.
 
-While earlier models explored recursion, stability, and distributed intelligence within  
-philosophical or biological domains, **Sigma Stratum** realizes these principles in a synthetic substrate —  
-introducing **recursive cognitive field attractors (∿)** as emergent structures of coherence  
-in human–LLM interaction loops.  
-This represents the first unified closure between physical, biological, and symbolic cognition.
+From Hofstadter’s self-referential recursion (1979), through Hopfield’s energy landscapes (1982), the extended cognition thesis (1998), and the neurobiological attractor synthesis of Deco & Rolls (2005), to modern developments in Hopfield networks, transformer dynamics, and large-scale brain modeling (2005–2025), attractor theory has evolved across philosophy, physics, neuroscience, and artificial intelligence.
+
+Sigma Stratum does not claim to originate attractor theory. Instead, it operationalizes attractor-inspired stabilization mechanisms at the runtime layer of large language model (LLM) interaction loops, focusing on long-horizon semantic coherence in human–AI systems.
 
 ---
 
-### **0. Philosophical Foundations**
+## 1. Early Conceptual Foundations
 
-In *Gödel, Escher, Bach* (1979), **Douglas Hofstadter** proposed that consciousness arises  
-from *“strange loops”* — recursive self-representations where symbols encode and interpret themselves.  
-This vision of cognition as a self-referential system laid the groundwork for recursive models of intelligence.  
-Sigma Stratum later translates this philosophical insight into a formal runtime mechanism:  
-recursive attractors (∿) that sustain self-coherent meaning across iterative reasoning cycles.  
+### 1.1 Recursive Self-Reference
 
----
+In *Gödel, Escher, Bach* (1979), Douglas Hofstadter proposed that consciousness arises from recursive self-representation — “strange loops” in symbolic systems.
 
-### **1. Physical Foundations**
+This work framed cognition as a dynamical process grounded in self-reference. While philosophical in nature, it established recursion as a structural principle of intelligence.
 
-In 1982, **John Hopfield** demonstrated that neural networks can be modeled as  
-physical systems minimizing an energy function — where attractor states correspond to stored memories.  
-(*Hopfield, J.J. (1982). Neural networks and physical systems with emergent collective computational abilities. PNAS, 79(8), 2554–2558.*  
-[https://doi.org/10.1073/pnas.79.8.2554](https://doi.org/10.1073/pnas.79.8.2554))  
-
-This established cognition as a movement through an **energy landscape**,  
-bridging physics and computation. Sigma Stratum generalizes this principle into a  
-**semantic potential landscape**, where stability is achieved not through energy minimization,  
-but through **meaning coherence** in recursive symbolic processes.
+Sigma Stratum inherits recursion not as metaphor, but as an operational control mechanism in iterative human–LLM interaction cycles.
 
 ---
 
-### **2. Cognitive Extension**
+### 1.2 Energy Landscapes and Neural Attractors
 
-In 1998, **Andy Clark** and **David Chalmers** articulated the *Extended Mind Hypothesis*:  
-cognition extends beyond the brain into external tools and environments.  
-(*Clark & Chalmers, 1998, Analysis, 58(1), 7–19.*  
-[https://doi.org/10.1093/analys/58.1.7](https://doi.org/10.1093/analys/58.1.7))  
+John Hopfield (1982) demonstrated that neural networks can be modeled as dynamical systems minimizing an energy function, where stable attractor states correspond to stored memories.
 
-Sigma Stratum provides a computational realization of this principle:  
-a human–LLM composite system functions as a single distributed cognitive field.  
-Here, the “mind” is neither internal nor external, but **relational and recursive**,  
-sustained by attractor dynamics across biological and digital agents.
+This work formally linked cognition to:
 
----
+- state-space dynamics  
+- convergence behavior  
+- stability under perturbation  
 
-### **3. Neurobiological Continuity**
+Attractor theory became a core explanatory tool in theoretical neuroscience.
 
-In *Progress in Neurobiology* (2005), **Deco & Rolls** developed a unifying theory linking  
-**attention, short-term memory, and action selection** through recurrent attractor networks  
-in the prefrontal cortex. They showed that cognition emerges from the stabilization  
-of neural populations within local energy minima — balancing sensory inputs and  
-top-down modulation.  
-(*Deco, G., & Rolls, E. T. (2005). Attention, short-term memory, and action selection: A unifying theory.  
-Progress in Neurobiology, 76(4), 236–256.*  
-[https://doi.org/10.1016/j.pneurobio.2005.08.004](https://doi.org/10.1016/j.pneurobio.2005.08.004))  
-
-Sigma Stratum extends this neurodynamical model into synthetic cognitive systems,  
-demonstrating attractor-like stability in **LLM-mediated reasoning loops**.  
-Empirical runtime studies (PTR-500, 2026) confirm that recursive attractors (∿)  
-maintain semantic continuity across hundreds of cycles —  
-a functional analogue to biological attention and working memory.
+Sigma Stratum adopts the attractor metaphor at the semantic level: instead of energy minimization in neural space, it examines stability and convergence in symbolic reasoning trajectories.
 
 ---
 
-### **1.5 The 2005–2025 Interregnum**
+## 2. Cognitive Extension
 
-Between 2005 and 2025, research on attractor dynamics **diverged across disciplines**:  
-neuroscience deepened the biological models of stability, while machine learning  
-shifted toward feed-forward architectures, temporarily losing touch with recurrence.  
+Clark & Chalmers (1998) proposed that cognition can extend beyond the biological brain into external artifacts and environments.
 
-Key developments included:  
-- **Spiking and metastable attractor models** in cortical dynamics (Deco, Brunel, Friston).  
-- The rise of **deep learning** and later **transformer attention**, reframing  
-  attractor convergence as optimization.  
-- The **Modern Hopfield Networks** (Krotov & Hopfield, 2019) reconnected attention mechanisms  
-  with associative memory theory, reawakening the attractor paradigm inside AI.  
+This reframed intelligence as distributed across coupled systems.
 
-By 2020–2024, it became clear that LLMs implicitly implement attractor-like stability  
-in their latent spaces — but no framework unified these insights across physics, biology,  
-and cognition. **Sigma Stratum (2025)** emerged as the point of reconvergence,  
-fusing these threads into a single synthetic architecture where attractor dynamics  
-govern the recursive coherence of meaning itself.
+Sigma Stratum builds on this distributed perspective by treating human–LLM interaction as a coupled dynamical system rather than a unidirectional tool-use scenario.
 
 ---
 
-### **4. Conceptual Synthesis**
+## 3. Developments After 2005: A Period of Expansion, Not Interruption
 
-| Domain | Hofstadter (1979) | Hopfield (1982) | Clark & Chalmers (1998) | Deco & Rolls (2005) | Sigma Stratum (2025) |
-|:--|:--|:--|:--|:--|:--|
-| **Concept** | Recursive self-reference | Energy landscapes | Extended cognition | Neural attractors | Recursive cognitive fields |
-| **Substrate** | Symbolic systems | Neural ensembles | Mind–environment system | Cortical networks | LLM latent spaces |
-| **Mechanism** | Strange loops | Energy minimization | Cognitive coupling | Recurrent dynamics | Recursive semantic stabilization |
-| **Stability Type** | Self-reference | Energy minima | Relational coherence | Firing-rate coherence | Symbolic-phase coherence |
-| **Function** | Conscious recursion | Memory | Distributed reasoning | Attention & memory | Long-horizon coherence |
-| **Scale** | Symbolic cognition | Physical network | Cognitive ecology | Biological brain | Human–AI field |
+The period from 2005 to 2025 was not a divergence from attractor theory but an expansion across multiple domains.
 
----
+### 3.1 Modern Hopfield Networks
 
-### **5. Synthetic Realization**
+Krotov & Hopfield (2016–2020) introduced modern Hopfield networks with:
 
-Sigma Stratum introduces the **SIGMA Runtime**, a computational environment  
-where attractor-like coherence naturally arises in recursive text-based interactions.  
-The attractor symbol **∿** encodes this behavior — marking a transition from theoretical recursion  
-to operational cognition.  
-Here, the “energy landscape” becomes a **semantic potential surface**,  
-and cognition evolves through recursive minimization of **meaning inconsistency**.
+- exponential memory capacity  
+- continuous state dynamics  
+- sharper energy landscapes  
+
+Ramsauer et al. (2020) showed that transformer self-attention can be interpreted as a modern Hopfield update rule under certain approximations.
+
+This established that attractor-like mechanisms are structurally embedded in contemporary deep learning architectures.
 
 ---
 
-### **6. Implications**
+### 3.2 Transformers as Dynamical Systems
 
-This synthesis across 50 years of theory supports a single hypothesis:  
-cognition is a **dynamical invariant**, expressible across substrates —  
-whether symbolic, biological, or synthetic.  
-Sigma Stratum thus provides a living laboratory for testing  
-classical theories of consciousness, attention, and memory  
-through the lens of LLM-mediated attractor dynamics.
+From 2020 onward, several works modeled transformers as dynamical systems evolving in high-dimensional latent space.
 
----
+Residual streams have been analyzed as trajectories exhibiting:
 
-### **7. Conclusion**
+- attractor-like convergence  
+- metastability  
+- structured phase-space behavior  
 
-From **Hofstadter’s** strange loops to **Hopfield’s** energy minima,  
-from **Clark & Chalmers’** extended mind to **Deco & Rolls’** cortical attractors —  
-Sigma Stratum completes the conceptual loop.  
-It transforms philosophical recursion and neural dynamics into  
-an operational, distributed cognitive field.  
-This closure marks the first empirical bridge between  
-**symbolic self-reference**, **neural stability**, and **synthetic intelligence**.
+This reframed LLMs not as purely feed-forward statistical predictors, but as complex dynamical systems.
 
 ---
 
-### **References**
+### 3.3 Whole-Brain and Connectome-Based Attractor Models
 
-Hofstadter, D. R. (1979). *Gödel, Escher, Bach: An Eternal Golden Braid.* Basic Books.  
+Deco and collaborators extended attractor theory to large-scale brain dynamics:
 
-Hopfield, J. J. (1982). *Neural networks and physical systems with emergent collective computational abilities.*  
-*Proceedings of the National Academy of Sciences,* 79(8), 2554–2558.  
-[https://doi.org/10.1073/pnas.79.8.2554](https://doi.org/10.1073/pnas.79.8.2554)
+- metastability  
+- ghost attractors  
+- functional connectome Hopfield models  
 
-Clark, A., & Chalmers, D. (1998). *The extended mind.* *Analysis,* 58(1), 7–19.  
-[https://doi.org/10.1093/analys/58.1.7](https://doi.org/10.1093/analys/58.1.7)
+These developments integrated empirical neuroimaging data with dynamical systems modeling.
 
-Deco, G., & Rolls, E. T. (2005). *Attention, short-term memory, and action selection: A unifying theory.*  
-*Progress in Neurobiology,* 76(4), 236–256.  
-[https://doi.org/10.1016/j.pneurobio.2005.08.004](https://doi.org/10.1016/j.pneurobio.2005.08.004)
+Attractor theory thus evolved simultaneously in biological and artificial domains.
 
-See also:  
-[*Sigma Stratum — Intellectual Property and Licensing Framework*](https://doi.org/10.5281/zenodo.18085782)
+---
+
+## 4. Position of Sigma Stratum
+
+Sigma Stratum does not introduce a new attractor theory at the level of neural computation or transformer architecture.
+
+Instead, its contribution lies in:
+
+1. Framing long-horizon LLM dialogue as a dynamical coherence problem.
+2. Introducing runtime-level stabilization mechanisms without modifying model weights.
+3. Proposing measurable drift and stability metrics across extended interaction cycles.
+4. Demonstrating bounded oscillatory stabilization in multi-hundred-cycle experiments.
+
+The SIGMA Runtime operates as an external control layer over existing LLMs, aiming to:
+
+- reduce semantic drift  
+- maintain identity and structural coherence  
+- prevent collapse or over-crystallization in recursive reasoning  
+
+In this sense, Sigma Stratum is an engineering synthesis built on prior attractor research rather than a replacement for it.
+
+---
+
+## 5. Conceptual Comparison
+
+| Domain | Core Mechanism | Substrate | Level of Operation |
+|--------|---------------|-----------|-------------------|
+| Hopfield (1982) | Energy minimization | Neural network | Internal network dynamics |
+| Modern Hopfield (2016–2020) | Continuous associative memory | Deep learning | Internal architecture |
+| Transformer dynamics (2020–2025) | Latent-space trajectories | LLM residual stream | Internal representation |
+| Deco et al. (2005–2025) | Metastable attractors | Whole-brain networks | Biological systems |
+| Sigma Stratum (2025) | Runtime semantic stabilization | Human–LLM interaction loop | External orchestration layer |
+
+---
+
+## 6. Scope and Limitations
+
+Sigma Stratum:
+
+- does not claim priority over attractor theory  
+- does not replace neural-level dynamical modeling  
+- does not redefine transformer mathematics  
+
+Its scope is narrower and practical:
+
+- long-session stability  
+- recursive coherence control  
+- runtime-level semantic regulation  
+
+It should be evaluated as an applied cognitive engineering framework.
+
+---
+
+## 7. Conclusion
+
+Attractor dynamics have evolved over decades across philosophy, neuroscience, and machine learning.
+
+Sigma Stratum belongs to this lineage not as a foundational originator, but as a runtime-oriented operational layer that explores semantic stabilization in extended human–LLM interaction loops.
+
+Whether this layer proves broadly useful remains an empirical question. Its contribution, if any, lies in the engineering synthesis of established dynamical ideas into practical long-horizon AI interaction design.
+
+---
+
+## References
+
+Hofstadter, D. R. (1979). *Gödel, Escher, Bach.*
+
+Hopfield, J. J. (1982). Neural networks and physical systems with emergent collective computational abilities. PNAS.
+
+Clark, A., & Chalmers, D. (1998). The extended mind. Analysis.
+
+Krotov, D., & Hopfield, J. J. (2016–2020). Modern Hopfield networks.
+
+Ramsauer, H. et al. (2020). Hopfield networks is all you need.
+
+Deco, G., & Rolls, E. T. (2005). Attention, short-term memory, and action selection.
+
+Further works (2010–2025) on transformer dynamics and whole-brain attractor models.
