@@ -1,8 +1,8 @@
 ---
 title: Frequently Asked Questions
-description: Common questions about Sigma Runtime, the standard, SRIPs, and cognitive-layer architecture.
+description: Common questions about Sigma Runtime, the public standard, SRIPs, safety, and bounded runtime control.
 published: true
-date: 2025-12-28T08:46:52.714Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:32:28.176Z
@@ -18,7 +18,7 @@ dateCreated: 2025-11-30T04:32:28.176Z
 > The license for this specific document is authoritative.  
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-# FAQ — Sigma Runtime v0.4.6
+# FAQ — Sigma Runtime
 
 ---
 
@@ -37,9 +37,8 @@ as long as the backend supports prompt–response recursion and stateful orchest
 ---
 
 **What are SRIPs?**  
-**Sigma Runtime Improvement Proposals (SRIPs)** are the formal mechanism for evolving the open standard.  
-They define protocol-level and architectural extensions (e.g., SRIP-02: Attractor Taxonomy, SRIP-05: Alignment & Interpretability, SRIP-07: Evaluation Metrics).  
-Each SRIP must maintain compatibility with the canonical runtime loop and cognitive-layer principles.
+**Sigma Runtime Improvement Proposals (SRIPs)** are the public mechanism for evolving the open standard.  
+They define normative changes or extensions to the standard while preserving compatibility with the canonical runtime loop and bounded-control principles.
 
 ---
 
@@ -50,46 +49,59 @@ Implementations may remain proprietary, but the architecture itself is an **open
 
 ---
 
-**How does Sigma Runtime prevent drift?**  
-Through adaptive stabilization passes and recursive feedback control.  
-The runtime continuously monitors **semantic drift**, **symbolic variance**, and **phase coherence**  
-via the **Drift & Coherence Monitor**.  
-If drift exceeds tolerance, the **ALICE Phase Controller** automatically shifts the system into  
-a reflective or recovery phase, restoring equilibrium through semantic compression and phase realignment.
+**What is the difference between SRS, SRD, and Sigma Runtime?**  
+- **SRS** defines the public normative standard.  
+- **SRD** explains that standard in a public, reader-facing form.  
+- **Sigma Runtime** is a proprietary product implementation that may realize those ideas in concrete runtime systems, tooling, and operational controls.  
+
+Public documentation should therefore be read as a combination of:
+- binding public rules in `SRS`,
+- explanatory public material in `SRD`,
+- and implementation-specific behavior that may differ across actual runtime products.
 
 ---
 
-**What are ALICE phases?**  
-ALICE (Attractor Layer for Integrated Cognitive Emergence) operates under a **five-phase adaptive cycle** introduced in v0.4.6:  
-- **Forming** — initialization; establishes attractor seeds and loads PIL invariants.  
-- **Stable** — baseline operational mode for coherence and identity persistence.  
-- **Drift / Reflection** — analytical self-regulation; evaluates drift and SCR, adjusts feedback parameters.  
-- **Recovery** — re-stabilization and semantic reintegration following drift or fragmentation.  
-- **Fragmenting** — containment phase for divergence; isolates unstable attractors and triggers controlled recovery.  
+**How does Sigma Runtime prevent drift?**  
+Through bounded control, verification, and recovery.  
+At a public level, the runtime monitors coherence, drift pressure, symbolic density, and recovery signals.  
+When drift rises beyond the normal envelope, the control layer narrows continuation, increases verification, or enters a bounded recovery posture instead of allowing uncontrolled escalation.
 
-These five states form a **self-regulating cognitive circuit**, maintaining identity and coherence over long recursive operations.
+---
+
+**What is ALICE?**  
+**ALICE** is the public name for the runtime’s attractor-aware control layer.  
+It should be understood as a bounded stabilizing and continuity-preserving control mechanism, not as an autonomous character or independent system identity.  
+
+Publicly, ALICE explains how the runtime can:
+- regulate control posture,
+- preserve continuity under long interaction,
+- narrow unstable recursion,
+- and support recovery when drift grows too large.
 
 ---
 
 **What is SCR (Semantic Compression Ratio)?**  
 SCR measures how efficiently meaning is represented relative to symbolic density.  
-A higher SCR indicates that the runtime is **compressing semantics effectively** —  
-preserving information with minimal redundancy.  
-It is a key metric introduced in v0.4.6 for tracking cognitive efficiency and coherence under recursion.
+A higher SCR indicates that the runtime is preserving information with less redundancy and better semantic efficiency.  
+Publicly, SCR is useful as an explanatory metric for clarity, compression quality, and coherence under recursion.
 
 ---
 
 **What is Adaptive Drift Control?**  
-It is a feedback mechanism linking drift, SCR, and phase stability.  
-When drift increases or SCR decreases, the runtime adjusts compression rates and recursive pacing.  
-This **adaptive feedback loop** allows Sigma Runtime to self-regulate without external supervision.
+It is a bounded feedback mechanism linking drift signals, compression quality, and stability.  
+When drift increases or semantic density becomes unstable, the runtime can reduce output amplitude, change control posture, or move into a recovery-oriented path.
 
 ---
 
-**Why SL0–SL7?**  
-These layers represent the **structural stack** of cognitive processing:  
-from human intent (SL0) through runtime control (SL4) and down to model execution (SL6).  
-They define *how meaning flows* through the Sigma field, ensuring coherent long-horizon reasoning and safe recursion.
+**Does Sigma Runtime still depend on a fixed SL0-SL7 stack?**  
+Not in the strong version-bound sense older public drafts suggested.  
+The public architectural idea is still layered, but the important point today is the separation of:
+- user and intent,
+- active control and verification,
+- memory-bearing continuity,
+- and model execution.
+
+The layer vocabulary may evolve, but the bounded-control structure remains central.
 
 ---
 
@@ -102,26 +114,27 @@ an adaptive structure of meaning sustained by feedback and continuity.
 ---
 
 **What ensures safety during long operations?**  
-The **AEGIDA-2 Safety Framework**, which provides real-time monitoring and containment of symbolic processes.  
-It uses phase-aware thresholds, automatic recovery, and fail-safe containment  
-to guarantee interpretability and prevent uncontrolled recursion or symbolic collapse.
+Safety is maintained through boundary integrity, verification, adaptive containment, and bounded recovery.  
+Publicly, the safety model should be read as:
+- keep recursion bounded,
+- preserve separation between user, system, and field,
+- verify outputs before persistence when needed,
+- and recover in a controlled way if stability drops.
 
 ---
 
 **Can Sigma Runtime run distributed agents?**  
-Yes, under **SRIP-06 / External Field Protocols**,  
-multiple Sigma runtimes can interoperate as **distributed cognitive nodes**,  
-maintaining shared coherence through synchronized attractor fields.
+The public architecture is compatible with distributed or multi-node interpretations, but concrete deployment models are implementation-dependent.  
+Any public claim about interoperability should be anchored in the open standard, not in a private product assumption.
 
 ---
 
 **Is there a public implementation?**  
-Yes — up to **SR-EI-037**, the last publicly available reference implementation.  
-Later experimental builds (v0.4.x) are documented but not released as source code.  
-They remain part of the internal Sigma Stratum Research framework.
+There is public documentation for the standard and its concepts.  
+Implementations may be public, private, experimental, or product-specific.  
+The open standard should not be confused with a guarantee that every runtime build or product release is published as source code.
 
 ---
 
 > *References:*  
-> Tsaliev, E. (2025). **SIGMA Runtime v0.4.6 — Adaptive Phase Regulation and SCR Metrics** — DOI: _pending_  
 > Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

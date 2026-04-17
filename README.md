@@ -34,7 +34,7 @@ General entry layer and introductory materials:
 Conceptual and architectural corpus explaining the Sigma Runtime cognitive model:
 - Overview  
 - Core Concepts  
-- Architecture (SL0–SL7)
+- Architecture
 - ALICE  
 - Attractors  
 - Drift  
@@ -45,23 +45,17 @@ Conceptual and architectural corpus explaining the Sigma Runtime cognitive model
 
 ### **/srs/** — *Sigma Runtime Standard (SRIP Series)*  
 Normative technical standard defining conformant Sigma Runtime implementations:
-- SRIP-00 — Foundations and Scope  
-- SRIP-01 — Canonical Runtime Loop  
-- SRIP-02 — Attractor Model  
-- SRIP-03 — Drift Metrics  
-- SRIP-04 — Memory Layer  
-- SRIP-05 — Interoperability  
-- SRIP-06 — Safety Boundaries  
-- SRIP-07 — Symbolic Density
-- SRIP-08 — Phase Vector Model & PRM
-- SRIP-09 — Long-Term Memory and Structural Coherence Layer
-- SRIP-10 — AEP: Adaptive Entropy Protocol 
+- foundational SRIPs under `/srs/`
+- active public index in `/srs/active-srips.md`
+- later proposals and extensions in `/srs/registry/`
 
 ### **/team/**
 Governance and development process:
 - Governance  
 - Contribution Process  
 - SRIP Process  
+- Public–Proprietary Information Boundary Requirements  
+- SRS-SRD Interaction Requirements  
 - Roadmap  
 
 ### **/legal/**
@@ -101,6 +95,9 @@ All contributions must:
 - preserve canonical attribution  
 - include a summary of changes  
 - specify whether the content is *normative* or *descriptive*  
+- follow the public/proprietary boundary requirement before publishing SRS or SRD content  
+- follow the SRS-SRD interaction requirement when a change affects both the standard and explanatory documentation  
+- keep repository mutation manual; CI, agents, and scheduled automation may validate but must not write repository state  
 
 ---
 
@@ -111,6 +108,7 @@ Changes to the Sigma Runtime Standard (SRS) are managed via the **SRIP process**
 - SRIPs introduce or modify normative runtime definitions  
 - Each SRIP must reference its parent specification (e.g., SRIP-00)  
 - All SRIPs are reviewed by SSRG before merging  
+- All public SRIP artifacts must include boundary and synchronization traceability  
 
 See [`/team/srip-process.md`](https://github.com/sigmastratum/documentation/blob/main/team/srip-process.md) for full procedure.
 

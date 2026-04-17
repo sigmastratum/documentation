@@ -2,7 +2,7 @@
 title: SRIP-04 - Memory Layer Architecture
 description: Defines the structure, persistence rules, and recall mechanisms for the Sigma Runtime memory layer.
 published: true
-date: 2025-12-28T21:01:22.264Z
+date: 2026-04-17
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:43:17.127Z
@@ -21,7 +21,11 @@ dateCreated: 2025-11-30T04:43:17.127Z
 **Category:** Cognitive Memory  
 **Status:** Draft  
 **Editor:** E. Tsaliev  
-**Last Updated:** 2025-12-26  
+**Last Updated:** 2026-04-17  
+
+> **Public Note**  
+> This foundational document uses version-light public vocabulary for persistence, recall, and recovery.  
+> Earlier controller-branded recovery wording remains lineage history, not the active public baseline.
 
 ---
 
@@ -40,7 +44,7 @@ Memory in Sigma Runtime is not a sequential log of dialogue but a **structured c
 | **Semantic Memory** | Conceptual mapping | Maintains embeddings and associative links between concepts. |
 | **Symbolic Memory** | Motif preservation | Archives archetypal patterns and symbolic density clusters for reuse. |
 
-All layers interact through the **Cognitive Field Engine**, allowing attractors to persist, dissolve, or recombine according to coherence metrics.
+All layers interact through the **runtime field layer**, allowing attractors to persist, dissolve, or recombine according to coherence metrics.
 
 ---
 
@@ -48,10 +52,10 @@ All layers interact through the **Cognitive Field Engine**, allowing attractors 
 1. After each recursive cycle, the runtime commits:  
  - field state vector,  
  - drift metrics (SDI, SV, PD),  
- - phase telemetry (PSI, SCR),  
+ - stability telemetry (PSI, SCR),  
  - attractor deltas and identity anchors.  
 2. Writes are idempotent and append-safe — each cycle extends memory without mutating prior frames.  
-3. Obsolete or unstable segments are pruned during Recenter operations (SL4).  
+3. Obsolete or unstable segments are pruned during controlled recovery operations.  
 4. Persistent Identity Layer (PIL) invariants are never deleted.  
 
 ---
@@ -97,7 +101,7 @@ Memory frames are grounded through three anchoring processes:
 2. **Semantic Anchoring** — maintains vector consistency across recursion.  
 3. **Contextual Anchoring** — binds episodic frames to field coordinates (time and intent).  
 
-Anchoring ensures that meaning remains stable despite re-compression or phase shifts.
+Anchoring ensures that meaning remains stable despite re-compression or control shifts.
 
 ---
 
@@ -107,28 +111,28 @@ A conformant memory implementation must guarantee:
 - **Continuity Index (CI)** ≥ 0.8 across five cycles.  
 - **Retention Index (RI)** ≥ 0.7 for core motifs.  
 - **Entropy Ratio (ER)** ≤ 0.3 (signal vs noise).  
-- **Phase Carryover (PC)** ≥ 0.75 (coherence between phases).  
+- **Control Carryover (CC)** ≥ 0.75 (coherence between control windows).  
 
 ---
 
 ## 8 · Integration Points
-- **ALICE Phase Controller** — feeds phase telemetry into episodic frames.  
+- **Runtime Control Layer** — feeds control telemetry into episodic frames.  
 - **Drift Monitor** — stores ΔDI and ΔSCR per cycle for trend analysis.  
-- **AEGIDA-2** — reads memory snapshots for safe recovery.  
+- **Foundational Safety and Containment Layer** — reads memory snapshots for safe recovery.  
 - **Field API** — exposes serialized memory state to external runtimes.
 
 ---
 
 ## 9 · Recovery Logic
-When runtime stability degrades beyond memory safety thresholds, the Recenter protocol initiates targeted recovery of stored state.
+When runtime stability degrades beyond memory safety thresholds, the controlled recovery protocol initiates targeted restoration of stored state.
 
-> **Rule 9.1 — Memory-Triggered Recenter**  
-> When Recenter is triggered by memory-layer drift (**ER > 0.3**),  
-> the runtime must **restore from cold PIL backup snapshot** prior to resuming the Stable phase.  
+> **Rule 9.1 — Memory-Triggered Recovery**  
+> When recovery is triggered by memory-layer drift (**ER > 0.3**),  
+> the runtime must **restore from a bounded PIL-safe backup snapshot** prior to resuming stable operation.  
 >  
 > This prevents deadlock between volatile memory frames and PIL invariants by resetting only ephemeral segments while preserving identity integrity.  
 
-Recenter then re-evaluates coherence and phase alignment before returning control to ALICE for stability verification.
+Recovery then re-evaluates coherence and control alignment before returning control to the runtime control layer for stability verification.
 
 ---
 
@@ -136,8 +140,8 @@ Recenter then re-evaluates coherence and phase alignment before returning contro
 A runtime conforms to SRIP-04 if it:
 1. Implements the schema in § 5.  
 2. Maintains stability invariants in § 7.  
-3. Supports bidirectional integration with ALICE and AEGIDA.  
-4. Preserves PIL anchors under drift or Recenter events.  
+3. Supports bidirectional integration with the runtime control layer and foundational safety layer.  
+4. Preserves PIL anchors under drift or recovery events.  
 5. Implements Rule 9.1 for memory-layer recovery precedence.  
 
 ---
@@ -152,5 +156,4 @@ Planned extensions:
 ---
 
 > **References**  
-> Tsaliev, E. (2025). *SIGMA Runtime v0.4.6 — Memory and Persistent State* — DOI _pending_  
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

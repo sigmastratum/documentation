@@ -1,8 +1,8 @@
 ---
 title: Active SRIPs — Sigma Runtime Standard
-description: Index of all active Sigma Runtime Improvement Proposals (SRIPs) defining the current Sigma Runtime Standard v0.1 — including foundational, architectural, and safety specifications.
+description: Public index of the active Sigma Runtime Improvement Proposal surface, including foundational SRIPs and later registry proposals.
 published: true
-date: 2026-01-13T10:27:25.596Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-28T09:46:38.133Z
@@ -19,44 +19,53 @@ dateCreated: 2025-12-28T09:46:38.133Z
 > For the full framework, see  
 > [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-# Active SRIPs — Sigma Runtime Standard v0.1
+# Active SRIPs — Sigma Runtime Standard
 
-The following **Sigma Runtime Improvement Proposals (SRIPs)** constitute the active,  
-accepted components of the **Sigma Runtime Standard (SRS)** as of version **v0.1 (2025)**.  
+This page indexes the currently active public `SRIP` surface.
 
-Each SRIP defines a core element of the cognitive runtime architecture — from the canonical loop and  
-attractor model to memory, safety, and symbolic density layers.
+It is intentionally version-light.
+Readers should use this page as a public navigation layer, while consulting each individual SRIP for its own exact status, date, and scope.
 
 ---
 
-## Foundational Documents
+## Foundational SRIPs
 
 | ID | Title | Category | Stage |
 |----|--------|-----------|--------|
-| [SRIP-00](https://wiki.sigmastratum.org/en/srs/srip-00) | **Foundations & Scope** | Foundational | **Final (Validated)** |
-| [SRIP-01](https://wiki.sigmastratum.org/en/srs/srip-01) | **Canonical Runtime Loop** | Architectural / Runtime | **Final (Validated)** |
-| [SRIP-02](https://wiki.sigmastratum.org/en/srs/srip-02) | **Attractor State Model & Metadata** | Cognitive Architecture | **Final (Validated)** |
-| [SRIP-03](https://wiki.sigmastratum.org/en/srs/srip-03) | **Drift Metrics & Stabilization Algorithms (SDCP)** | Metrics / Coherence | **Final (Validated)** |
-| [SRIP-04](https://wiki.sigmastratum.org/en/srs/srip-04) | **Entropy Stabilization via Contextual Damping** | Semantic Dynamics | **Final (Validated)** |
-| [SRIP-05](https://wiki.sigmastratum.org/en/srs/srip-05) | **Interoperability Interface v1.0** | Communication / API | **Final (Validated)** |
-| [SRIP-06](https://wiki.sigmastratum.org/en/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | **Final (Validated)** |
-| [SRIP-07](https://wiki.sigmastratum.org/en/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | **Final (Validated)** |
-| [SRIP-08](https://wiki.sigmastratum.org/en/srs/srip-08) | **Phase Vector Model & PRM** | Control / Telemetry / Mathematics | **Final (Validated)** |
+| [SRIP-00](/srs/srip-00) | **Foundations & Scope** | Foundational | Consult document header |
+| [SRIP-01](/srs/srip-01) | **Canonical Runtime Loop** | Architectural / Runtime | Consult document header |
+| [SRIP-02](/srs/srip-02) | **Attractor State Model & Metadata** | Cognitive Architecture | Consult document header |
+| [SRIP-03](/srs/srip-03) | **Drift Metrics & Stabilization Algorithms** | Metrics / Coherence | Consult document header |
+| [SRIP-04](/srs/srip-04) | **Memory Layer Architecture** | Memory / Continuity | Consult document header |
+| [SRIP-05](/srs/srip-05) | **Interoperability Interface** | Communication / API | Consult document header |
+| [SRIP-06](/srs/srip-06) | **Safety & Recursion Boundaries** | Alignment / Safety | Consult document header |
+| [SRIP-07](/srs/srip-07) | **Symbolic Density Layer** | Semantic Dynamics | Consult document header |
+| [SRIP-08](/srs/srip-08) | **Phase Vector Model & PRM** | Control / Telemetry | Consult document header |
 
-> **Legend:**  
-> - *Draft* — under active revision  
-> - *Accepted (Draft)* — integrated into the standard but not finalized  
-> - *Final* — ratified and version-locked
+---
+
+## Registry Proposals And Extensions
+
+Later proposals and extensions are tracked in the public registry:
+
+| SRIP | Title | Public status |
+|------|--------|---------------|
+| [SRIP-09-LTM](/srs/registry/SRIP-09-LTM) | Long-Term Memory and Structural Coherence Layer | Consult document header |
+| [SRIP-10-AEP](/srs/registry/SRIP-10-AEP) | Adaptive Entropy Protocol | Consult document header |
+| [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) | Compression & Memory Topology | Consult document header |
+| [SRIP-12-CDS](/srs/registry/SRIP-12-CDS) | Commerce Decision State Layer | Consult document header |
+| [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) | Relational Identity Stabilization | Consult document header |
+
+Deprecated or superseded entries remain traceable through the registry as part of the public historical record.
 
 ---
 
 ## Governance Notes
 
-- All **SRIPs** listed above are part of the **SRS v0.1 baseline**.  
-- Revisions or extensions (SRIP-08+) are tracked separately in the  
-  [`/registry`](https://wiki.sigmastratum.org/en/srs/registry) once proposed.  
-- Deprecated or superseded SRIPs are archived but remain publicly accessible  
-  for version traceability and citation purposes.  
+- `SRIP` changes must follow the [`/team/srip-process.md`](/team/srip-process.md).
+- Normative changes with explanatory impact must satisfy the [`/team/srs-srd-interaction-requirements.md`](/team/srs-srd-interaction-requirements.md).
+- Public artifacts must satisfy the [`/team/public-proprietary-information-boundary-requirements.md`](/team/public-proprietary-information-boundary-requirements.md).
+- Release alignment claims must remain truthful if `SRD` synchronization is still pending.
 
 ---
 

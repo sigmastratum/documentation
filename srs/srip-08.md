@@ -2,7 +2,7 @@
 title: SRIP-08 — Phase-Regulating Runtime Module (ALICE Externalization)
 description: Defines the externalized telemetry and control interface for the ALICE Phase Controller. Introduces the Phase-Regulating Module (PRM) for distributed phase synchronization, drift telemetry, and safety hooks across Sigma runtimes.
 published: true
-date: 2025-12-28T21:23:36.780Z
+date: 2026-04-17
 tags: 
 editor: markdown
 dateCreated: 2025-12-28T10:15:00.803Z
@@ -20,7 +20,12 @@ dateCreated: 2025-12-28T10:15:00.803Z
 **Category:** Control Layer / Telemetry / Mathematics  
 **Status:** Draft  
 **Editor:** E. Tsaliev  
-**Last Updated:** 2025-12-26  
+**Last Updated:** 2026-04-17  
+
+> **Public Status Note**  
+> This document is retained as **foundational lineage with status note**, not as the active public control baseline.  
+> Its vector-control and externalization model remains historically informative, but active public control and runtime-boundary language now lives elsewhere.  
+> Any future active public successor must be introduced through an explicit successor reference or new proposal path.
 
 ---
 
@@ -28,7 +33,7 @@ dateCreated: 2025-12-28T10:15:00.803Z
 SRIP-08 defines the **Phase Vector Model (PVM)** and its runtime implementation through the  
 **Phase-Regulating Module (PRM)** — the telemetry and synchronization layer of the ALICE controller.  
 
-This document serves as the **base specification** for all vector-based phase regulation in Sigma Runtime.  
+This document should now be read as a **foundational lineage specification** for vector-based phase regulation in Sigma Runtime.  
 Subsequent proposals (SRIP-09 and higher) extend this foundation with distributed and higher-dimensional phase models.
 
 ---

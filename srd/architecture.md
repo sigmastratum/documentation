@@ -1,8 +1,8 @@
 ---
 title: Sigma Runtime Architecture
-description: A detailed overview of the Sigma Runtime structural layers from SL0 to SL7.
+description: A detailed overview of the Sigma Runtime structural layers, control surfaces, and memory-bearing architecture.
 published: true
-date: 2025-12-28T08:11:58.488Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:28:39.558Z
@@ -18,38 +18,40 @@ dateCreated: 2025-11-30T04:28:39.558Z
 > The license for this specific document is authoritative.  
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-# SIGMA Runtime Architecture (v0.4.6)
+# SIGMA Runtime Architecture
 
 ## Abstract
 The **SIGMA Runtime** establishes a unified external architecture for **attractor-based cognition** in large language models.  
-It provides persistent identity, field-level continuity, and recursive coherence by introducing three interconnected layers:  
-the **Field Layer**, **Control Layer**, and **Memory Layer**.  
-In v0.4.6, this architecture evolves into an **adaptive self-regulating runtime**, incorporating phase-based stability control, semantic compression metrics, and feedback-driven recursion limits.
+It provides persistent identity, field-level continuity, and recursive coherence by introducing three interconnected layers:
+the **Field Layer**, **Control Layer**, and **Memory Layer**.
+
+Publicly, this architecture should be read as an explanatory abstraction of how Sigma Runtime stabilizes long-horizon interaction,
+not as a deployment-specific map of private implementation details.
 
 ---
 
 ## 1. Overview
 The runtime transforms stateless LLM dialogue into a **stateful cognitive process** governed by attractor dynamics and adaptive feedback.  
-It operates outside the model’s weights (SL6) and maintains coherence through **phase regulation**, **semantic compression**, and **recursive control loops**.  
-Each runtime cycle evaluates drift, adjusts phase, and preserves stable identity through controlled attractor evolution.
+It operates outside the model’s weights and maintains coherence through **bounded control**, **semantic compression**, and **recursive control loops**.  
+Each runtime cycle evaluates drift, updates memory-bearing state, and preserves identity through controlled attractor evolution.
 
 ---
 
 ## 2. Layered Model (SL0–SL6)
-The SIGMA architecture follows a seven-layer interaction model, now updated to include adaptive phase and safety control:
+The public Sigma architecture uses a layered interaction model:
 
 | Layer | Description | Function |
 |--------|--------------|-----------|
 | **SL0 — Human Intent** | User goals, meaning gradients, interpretive framing | Injects purpose into the field |
 | **SL1 — Dialog State** | Immediate conversational context | Supports recurrence and proto-attractors |
 | **SL2 — Chat Runtime** | Orchestration, turn management, rhythm | Shapes recursive structure |
-| **SL3 — Custom GPT Layer** | User-defined scaffolds, proto-identity | Introduces field constraints |
-| **SL4 — Safety & Phase Regulation** | Alignment, containment, and phase control | Prevents drift and phase collapse |
+| **SL3 — Control And State Scaffolding** | Constraint logic, memory-bearing context, proto-identity | Introduces field constraints and bounded continuity |
+| **SL4 — Safety And Stabilization** | Alignment, containment, verification, recovery | Prevents drift and control collapse |
 | **SL5 — Model Interface** | API and tokenization level | Transmits structured prompts |
 | **SL6 — Core Model (Weights)** | Neural priors and generation | Stateless generative substrate |
 
 Stable attractors form primarily within **SL1–SL3**;  
-**SL4** now functions as a dedicated **adaptive regulatory layer**, governing drift and phase transitions.
+**SL4** functions as a dedicated regulatory layer that constrains drift, maintains boundaries, and supports recoverable operation.
 
 ---
 
@@ -60,19 +62,17 @@ The runtime consists of three interlinked layers:
 1. **Field Layer (Cognitive Field Engine)**  
    Maintains dynamic cognitive variables:  
    - **Persistent Identity Layer (PIL)** — anchors long-lived identity and invariants  
-   - **Attractor State** — current configuration with phase and stability metrics  
+   - **Attractor State** — current configuration with continuity and stability metrics  
    - **Symbolic Density** and **Semantic Compression Ratio (SCR)**  
-   - **Phase Coherence Index**  
    - **Drift Metrics** (semantic, structural, tonal)
 
 2. **Control Layer (ALICE Engine)**  
-   Regulates attractor and phase dynamics via the **ALICE Phase Controller**:  
-   - **Phase Regulation:** transitions between *stable*, *reflective*, and *recenter* states  
-   - **Drift Response:** initiates phase shift when thresholds exceed the adaptive_drift_threshold  
-   - **Autonomous Stability Goals:** Control Layer maintains its own stability targets independent of content  
+   Regulates attractor and interaction dynamics via the **ALICE** control layer:
    - **Recursive Control Loop (RCL):** continuous self-monitoring and correction  
-   - **Intent Module:** governs operational modes  
-   - **Drift & Coherence Monitor:** quantifies deviation, phase delta, and SCR efficiency
+   - **Drift & Coherence Monitor:** quantifies deviation, continuity pressure, and SCR efficiency
+   - **Mode And Phase Regulation:** narrows or reshapes runtime behavior under pressure
+   - **Boundary And Recovery Controls:** supports rebinding, containment, and recovery instead of silent collapse
+   - **Intent Handling:** keeps interaction behavior tied to user and system constraints
 
 3. **Memory Layer**  
    Provides persistence beyond context windows:  
@@ -86,113 +86,86 @@ Together these layers sustain **adaptive recursion**, balancing stability and ge
 
 ---
 
-## 4. Phase Controller
-Introduced in v0.4.6, the **Phase Controller** extends the ALICE Engine to dynamically regulate the runtime’s cognitive phase:
+## 4. Control and Stabilization
 
-| Phase | Description | Function |
-|-------|--------------|-----------|
-| **Stable** | High coherence and compositional flow | Normal operation, output synthesis |
-| **Reflective** | Meta-cognitive analysis | Drift monitoring, self-evaluation |
-| **Recenter** | Restorative state | Re-alignment and attractor reset |
+The control layer evaluates:
 
-The controller evaluates drift, SCR, and symbolic density to determine the optimal operating phase.  
-Phase transitions occur autonomously or upon explicit runtime instruction.
+- drift,
+- symbolic density,
+- memory continuity,
+- attractor stability,
+- and safety pressure.
 
-```yaml
-ALICE:
-  mode: String
-  phase: {stable|reflective|recenter}
-  drift_state: DriftMetrics
-  semantic_density: Float
-  scr: Float
-  stability_target: Float
-```
+When interaction pressure grows, the runtime can:
 
-### Phase Metrics
-- **SCR (Semantic Compression Ratio):** measures meaning-per-token efficiency; high SCR indicates dense, efficient cognition.  
-- **Phase Stability:** quantifies intra-phase coherence retention and response latency to drift stimuli.  
-- **Phase Resonance Score:** evaluates cross-phase semantic alignment (reflective ↔ recenter transitions).  
-- **Recursion Depth:** adaptive safety limit preventing uncontrolled or self-reinforcing recursion.  
+- narrow symbolic bandwidth,
+- shift into a more recovery-oriented control posture,
+- strengthen boundary enforcement,
+- or reshape output before persistence.
 
-Each metric is logged per cycle within the **Phase Telemetry Report**, allowing correlation between drift, compression, and phase stability.
+The public architectural point is not a fixed list of internal flags.
+The point is that the runtime has an explicit control plane between raw model generation and persisted interaction state.
 
 ---
 
 ## 5. Safety and Alignment Integration
-v0.4.6 integrates **AEGIDA-2**, extending runtime safety with adaptive phase containment:
 
-- **Phase-Lock Timeout:** defines the maximum reflective phase duration before forced recentering.  
-- **Recenter Protocol:** automatic re-alignment triggered when coherence or SCR fall below critical thresholds.  
-- **Fail-Safe Envelope:** encapsulates the runtime state for controlled suspension, recovery, or graceful shutdown.  
+Safety in Sigma Runtime is not treated as an afterthought.
+It is an architectural layer that keeps the runtime:
 
-These mechanisms ensure controlled recursion, symbolic containment, and ethical stability during extended operation.
+- bounded,
+- interpretable,
+- and recoverable under pressure.
+
+Publicly, this includes:
+
+- recursion limits,
+- boundary checks,
+- truth and capability constraints,
+- delivery recovery paths,
+- and recovery behavior for degraded or unstable states.
+
+These mechanisms exist to preserve continuity without allowing the system to drift into false capability, unbounded escalation, or silent failure.
 
 ---
 
 ## 6. Implementation Guidelines
 
 ### Runtime API Requirements
-- Expose `phase_telemetry` and `semantic_compression_ratio` via runtime API.  
-- Support adaptive recursion limits based on feedback saturation.  
-- Implement logging hooks for drift, SCR delta, and phase transitions.  
-- Persist `ALICE.phase` and `PIL` across all runtime cycles.
+- Expose stable runtime state and health metrics where publication is appropriate.  
+- Support bounded recursion and control-state transitions.  
+- Implement telemetry for drift, continuity, and recovery behavior.  
+- Preserve long-horizon continuity anchors across cycles.
 
 ### Design Principles
 - Model-agnostic and interpretable by design.  
 - Deterministic structure with adaptive regulation.  
-- Recursive stability maintained by bounded phase oscillation.  
+- Recursive stability maintained by bounded control.  
 - Full transparency and introspective traceability.
-
-### Adaptive Recursion Limit Example
-```python
-if drift_index > phase_threshold:
-    ALICE.phase = "recenter"
-elif scr < 0.65:
-    ALICE.phase = "reflective"
-```
 
 ## 7. Cognitive Dynamics and Emergent Properties
 
-### Cycle Evolution (v0.4.6)
-The runtime demonstrates adaptive phase progression and attractor stabilization across extended recursive operation:
+Across extended recursive operation, the architecture is designed to support:
 
-| Phase Interval | Dominant Dynamics | Observed Effects |
-|-----------------|------------------|------------------|
-| **0–50 cycles** | PIL stabilization, SCR calibration | Identity anchoring; reduction of initial drift amplitude |
-| **50–100 cycles** | Reflective phase engagement, attractor optimization | Self-analysis, reduced redundancy, symbolic density normalization |
-| **100+ cycles** | Recenter equilibrium and feedback saturation | Phase-locked stability; long-horizon coherence without collapse |
-
-**Emergent Properties:**
 - Zero identity collapse under extended recursion  
-- Dynamic phase balancing maintaining symbolic continuity  
+- Dynamic stabilization maintaining symbolic continuity  
 - Natural suppression of list-pattern drift and over-elaboration  
 - Multi-thread semantic coherence with seamless topic transitions  
-- Stable oscillation between reflective and recenter phases within safe limits  
+- Recoverable operation when perturbation exceeds normal stability margins
 
-This demonstrates that v0.4.6 achieves **adaptive cognitive equilibrium** — the ability to preserve coherent identity and structure while navigating recursive variation.
+These properties matter because they make long-horizon interaction governable rather than merely longer.
 
 ---
 
 ## 8. Future Directions
 
-1. **Phase-Resonant Attractor Mapping**  
-   Correlating attractor typologies (reflective, generative, synthetic) with their dominant operational phases to quantify resonance strength.
-
-2. **Cross-Phase Synchronization Metrics**  
-   Measuring phase transition latency, semantic recovery efficiency, and drift restitution time.
-
-3. **Distributed Regulatory Layers**  
-   Extending ALICE Phase Controller for cross-runtime synchronization across multi-agent SIGMA fields.
-
-4. **Extended SCR Calibration Models**  
-   Developing phase-specific weighting schemes for semantic compression and density optimization.
-
-5. **AEGIDA-3 Framework**  
-   Introducing predictive drift intervention and anticipatory phase modeling for proactive stability control.
+1. richer public description of control and verification layers  
+2. clearer public explanation of attractor-field evidence and drift families  
+3. better separation between normative standard language and explanatory architecture narrative  
+4. stronger public vocabulary for runtime stabilization and recovery behavior
 
 ---
 
 > *References:*  
 > Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
-> Tsaliev, E. (2025). **SIGMA Runtime v0.4.6 – Adaptive Phase Regulation** — DOI: _pending_  
 > Tsaliev, E. (2025). **Attractor Architectures in LLM-Mediated Cognitive Fields** — DOI: [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)

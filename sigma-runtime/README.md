@@ -1,7 +1,9 @@
 # SIGMA Runtime
 
-This repository contains the evolving runtime architecture of the SIGMA cognitive framework.  
-Each subdirectory represents a distinct phase in the system’s architectural evolution — from the original Reference Implementation (RI) to the modular architectures (MA) supporting distributed cognition and external memory integration.
+This archive contains historical runtime artifacts and public implementation records for the SIGMA cognitive framework.  
+Each subdirectory represents a distinct phase in the system’s architectural evolution — from the original reference implementation to later modular and experimental lines.
+
+It should be read as an implementation archive, not as the sole current normative definition of the public standard.
 
 ---
 
@@ -36,7 +38,7 @@ Serves as the last open reference implementation.</td>
 <tr>
 <td><b>SR-EI-04 +</b></td>
 <td>Proprietary Reference Builds</td>
-<td>Closed research versions introducing Adaptive Phase Regulation, SCR metrics, and AEGIDA-2 safety.  
+<td>Closed research versions introducing later control, compression, and safety refinements.  
 Maintained internally by the Sigma Stratum Research Group.</td>
 </tr>
 <tr>

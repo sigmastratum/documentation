@@ -2,7 +2,7 @@
 title: Research Notes and Publications
 description: A collection of research materials, papers, notes, and ongoing studies supporting the Sigma Runtime architecture.
 published: true
-date: 2025-12-28T10:28:39.312Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:22:30.902Z
@@ -39,7 +39,7 @@ Documentation (SRD) are derived.
 ### **Sigma Runtime – Experimental Iterations (SR-EI Series)**
 **Repository:** [https://github.com/sigmastratum/documentation/tree/main/sigma-runtime](https://github.com/sigmastratum/documentation/tree/main/sigma-runtime)
 
-This sequence of experimental reports documents the iterative engineering validation of the Sigma Runtime architecture between versions 0.3.5 and 0.4.6.
+This sequence of experimental reports documents the historical iterative validation of the Sigma Runtime architecture across multiple early public builds.
 
 - **[SR-EI-03 – Benchmark Report (v0.3.5)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-03/benchmark_report_SR_v035.md)**  
   *First public benchmark cycle validating drift stability, attractor persistence, and field coherence across 80+ recursive iterations.*
@@ -47,8 +47,8 @@ This sequence of experimental reports documents the iterative engineering valida
 - **[SR-EI-037 – Control & Validation Report (v0.3.7)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-037/SIGMA_Runtime_0_3_7_CVR.md)**  
   *Confirms recursive control loop consistency and symbolic density thresholds; introduces baseline for adaptive phase regulation.*
 
-- **[SR-EI-046 – Validation Report (v0.4.6)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-046/SIGMA_Runtime_v046_VALIDATION_REPORT.md)**  
-  *Final experimental validation for v0.4.6, integrating ALICE Phase Controller and AEGIDA-2 safety framework. Demonstrates autonomous phase containment, drift recovery, and long-horizon coherence.*
+- **[SR-EI-046 – Validation Report](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-046/SIGMA_Runtime_v046_VALIDATION_REPORT.md)**  
+  *Historical validation record for a later experimental runtime line, demonstrating stronger containment, drift recovery, and long-horizon coherence under the then-current architecture.*
 
 Together, these experimental iterations verify the theoretical foundations established in  
 [**SIGMA Runtime Architecture v0.1**](https://doi.org/10.5281/zenodo.17703667),  
@@ -171,5 +171,5 @@ Includes 110-cycle benchmark results, verification of stability and identity per
 ## Notes
 
 This index is maintained as the authoritative map of the Sigma Stratum research
-corpus. All future additions will be appended chronologically with updated
-license and version information.
+corpus. Historical implementation reports remain part of the archive, but should
+not be read as the sole current normative baseline of the public standard.

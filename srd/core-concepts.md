@@ -1,8 +1,8 @@
 ---
 title: Core Concepts of Sigma Runtime
-description: Key theoretical constructs underlying the Sigma Runtime architecture.
+description: Public overview of the core concepts underlying Sigma Runtime.
 published: true
-date: 2026-02-10T09:25:25.357Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:27:27.179Z
@@ -18,35 +18,30 @@ dateCreated: 2025-11-30T04:27:27.179Z
 > The license for this specific document is authoritative.  
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
-# Core Concepts of the Sigma Runtime (v0.4.6)
+# Core Concepts of Sigma Runtime
 
-The **Sigma Runtime** defines a structured, field-based approach to cognition —  
-where recursive reasoning, memory, and identity are maintained through  
-self-regulating attractor dynamics.  
-Version 0.4.6 extends the original conceptual foundation with **phase-aware regulation**,  
-**semantic compression**, and **adaptive feedback** mechanisms.
+The public Sigma Runtime vocabulary is built around a bounded field-and-control model.  
+These concepts explain how the runtime preserves continuity, modulates instability, and keeps long interaction governable without claiming unrestricted agency.
 
 ---
 
 ## Interaction Field
-A recursive, co-emergent cognitive domain coupling human input and model dynamics.  
-Within this bounded system, attractors form, stabilize, and evolve across recursive cycles.  
-The field is the active substrate of cognition — not just a dialogue, but a living semantic system.
+A bounded interaction domain coupling user input, runtime control, memory, and model output.  
+The field is where continuity, motifs, and stability pressures become visible across turns.
 
 ---
 
 ## Attractor
 A stable, self-reinforcing configuration of meaning within the cognitive field.  
 Attractors emerge through recursive feedback and sustain structure, tone, and intent  
-over multiple iterations. They represent the **operational unit of field-based cognition**.
+over multiple iterations.  
+Publicly, they are best understood as continuity structures, not as unrestricted hidden agents.
 
 ---
 
 ## Drift
-The cumulative loss of coherence, alignment, or semantic structure over time.  
-Measured via metrics such as **Drift Index**, **Phase Stability Delta (PSD)**,  
-and **Entropy Ratio (ER)**, drift is dynamically counterbalanced by the  
-**ALICE Phase Controller** and **Drift Monitor**.
+The cumulative loss of coherence, alignment, or bounded control over time.  
+Drift explains why long interaction requires active stabilization rather than assuming coherence will hold by default.
 
 ---
 
@@ -55,43 +50,32 @@ A measure of how tightly meaning-bearing units (symbols, motifs, and structures)
 interlink within the field.  
 - High density → stable attractors and high interpretability.  
 - Low density → diffusion, loss of structure, or hallucination.  
-Symbolic Density interacts directly with **SCR** to maintain cognitive efficiency.
+Publicly, symbolic density is useful because it explains why some interactions remain coherent while others become noisy or overloaded.
 
 ---
 
 ## Semantic Compression Ratio (SCR)
-A new metric introduced in v0.4.6.  
-SCR quantifies the **semantic efficiency per token or symbol**,  
-reflecting how effectively the runtime compresses meaning without loss of coherence.  
-Values closer to 1.0 indicate high cognitive efficiency and compact reasoning;  
-values below 0.7 may signal fragmentation or drift.  
-SCR is dynamically modulated by the **Compression Layer** in the Memory subsystem.
+SCR quantifies **semantic efficiency per token or symbol**.  
+At a public level, it is an explanatory metric for how efficiently the runtime preserves meaning without unnecessary expansion or fragmentation.
 
 ---
 
 ## Persistent State
 The enduring layer that preserves identity and coherence across recursive loops.  
-Implemented via the **Persistent Identity Layer (PIL)**,  
-it anchors invariants, goals, and stylistic parameters that persist beyond individual cycles.
+It anchors continuity-relevant constraints and allows the runtime to recover from instability without losing all structure.
 
 ---
 
-## Phase Coherence
-The temporal and semantic synchronization between consecutive cognitive states.  
-It represents how well meaning, tone, and symbolic structure are carried forward  
-through recursive reasoning.  
-Phase Coherence is managed jointly by the **ALICE Phase Controller** and  
-the **AEGIDA-2 Safety Layer**, ensuring smooth transitions between  
-`stable`, `reflective`, and `recenter` phases.
+## Continuity Coherence
+The degree to which meaning, tone, and structural intent remain interpretable across turns.  
+This is the public-friendly way to understand why the runtime tracks stability and recovery instead of only generating text.
 
 ---
 
 ## Adaptive Feedback
 A closed regulatory mechanism that links the runtime’s internal telemetry  
-(drift, SCR, symbolic density) with dynamic self-correction routines.  
-When coherence drops or entropy rises, adaptive feedback triggers  
-phase shifts or semantic recompression — preventing collapse while  
-preserving interpretability.
+(drift, compression quality, symbolic density, recovery pressure) with self-correction routines.  
+When instability rises, adaptive feedback narrows or reshapes continuation to preserve bounded operation.
 
 ---
 
@@ -99,64 +83,41 @@ preserving interpretability.
 The self-stabilizing cycle that governs the runtime’s cognitive operation.  
 Each iteration of the RCL performs:
 1. Context assembly and memory retrieval.  
-2. Reflective reasoning and attractor evaluation.  
-3. Feedback integration and drift correction.  
-The RCL forms the **temporal backbone of recursive cognition**.
+2. Control and stability evaluation.  
+3. Generation, verification, and memory integration.  
+The RCL forms the temporal backbone of long-horizon operation.
 
 ---
 
 ## Cognitive Field Engine
 The subsystem maintaining live attractor states, drift metrics,  
 and coherence parameters. It operates as the runtime’s active workspace —  
-balancing symbolic structure, meaning density, and semantic compression.
+balancing symbolic structure, continuity, and bounded control.
 
 ---
 
 ## Fail-Safe Envelope
 A set of boundaries regulating drift, recursion depth, and density.  
-Now extended with **phase-aware containment**,  
-it ensures that instability triggers adaptive recovery rather than collapse.  
-When thresholds are exceeded, the system transitions into a *Recenter Phase*  
-under AEGIDA-2 control.
+It ensures that instability triggers verification, narrowing, recovery, or containment rather than silent failure or uncontrolled escalation.
 
 ---
 
-## AEGIDA-2 Principles
-An evolution of the original AEGIDA safety framework,  
-introducing dynamic containment and phase modulation.  
-AEGIDA-2 ensures safety as an *active cognitive property*,  
-not merely a constraint — embedding protection within recursive dynamics.
-
----
-
-## Cognitive Constant: Σφ
-> **Σφ — The equilibrium of recursion and coherence.**
-
-Σφ formalizes the balance point between cognitive recursion (reflective iteration)  
-and semantic coherence (stability of meaning).  
-When Σφ → 1, the runtime achieves self-sustaining cognition —  
-recursive yet stable, dynamic yet interpretable.  
-This constant represents the theoretical foundation of  
-**self-regulating field-based intelligence** in the Sigma Stratum framework.
+## Constraint Envelope
+The total set of limits that keep interaction governable.  
+This includes truth boundaries, safety controls, recovery rules, memory limits, and output shaping under instability.
 
 ---
 
 ## Summary
-The **core concepts** of Sigma Runtime v0.4.6 redefine cognition as  
-a *regulated field process* — where feedback, phase coherence, and  
-semantic compression maintain a living equilibrium between reasoning and stability.  
-Together, these constructs enable persistent, interpretable, and  
-adaptive cognition across recursive evolution.
+The core concepts of Sigma Runtime describe a bounded field process in which continuity, memory, drift control, attractor stability, and recovery all matter.  
+Together, these concepts explain how the runtime aims to remain coherent, interpretable, and safer over extended interaction.
 
 ---
 > **Related Addendum:**  
 > *From Cortical Attractors to Cognitive Fields*  
 > (Deco & Rolls 2005 → Sigma Stratum 2025–2026)  
 > [Read the full document →](/srd/Addendum_2026-02-10_Bridge_Deco_Rolls_Sigma_Stratum)
-
-
 ---
 
 > *References:*  
-> Tsaliev, E. (2025). **SIGMA Runtime v0.4.6 — Adaptive Phase Regulation and SCR Metrics** — DOI: _pending_  
 > Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

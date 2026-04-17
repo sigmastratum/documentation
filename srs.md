@@ -1,8 +1,8 @@
 ---
 title: Sigma Runtime Standard
-description: Canonical specification of the Sigma Runtime architecture. This section contains all SRIP documents, maintained via Git as the authoritative source.
+description: Public entry point to the Sigma Runtime Standard, its active SRIPs, and the normative process that governs changes.
 published: true
-date: 2025-12-28T10:16:18.664Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:34:47.157Z
@@ -17,148 +17,71 @@ dateCreated: 2025-11-30T04:34:47.157Z
 > See `/SRS/LICENSE.md` for full terms.
 
 # Sigma Runtime Standard (SRS)
-*A Unified Architecture for Attractor-Based Cognition in LLM Systems*  
-**Version:** 0.2-draft (2025)
+*Public normative layer for Sigma Runtime*
 
 ---
 
 ## Overview
 
-The **Sigma Runtime Standard (SRS)** defines a unified architectural layer for long-horizon, attractor-stabilized cognition in large language models and distributed cognitive agents.  
-It establishes the structural principles, runtime semantics, and interoperability rules required to maintain **coherence, continuity, and recursive stability** across extended human–AI interactions.
+The **Sigma Runtime Standard (SRS)** is the public normative layer of Sigma Runtime.  
+It defines the binding semantics, invariants, interfaces, and governance path for the open standard.
 
-The standard is **open**, **non-proprietary**, and evolves through a formal modular proposal system (**SRIPs**) —  
-comparable to IETF RFCs, W3C Recommendations, or Python PEPs.  
-Each SRIP represents a *normative component* of the Sigma Runtime architecture.
+The standard is **open** and evolves through the **SRIP** process.  
+Public explanatory material belongs to `SRD`; product implementation details may remain proprietary.
 
 ---
 
 ## Purpose
 
-SRS introduces a **cognitive-layer runtime** above raw model inference, enabling:
+SRS exists to define:
 
-- stable long-horizon reasoning,  
-- persistent cognitive state,  
-- attractor-based interpretation and feedback,  
-- resistance to semantic drift,  
-- bounded recursive reflection,  
-- interpretable and safe agent cognition.
+- canonical runtime semantics,
+- structural invariants,
+- interoperability expectations,
+- safety and boundary requirements,
+- and the formal public process for changing those rules.
 
-Sigma Runtime is **backend-agnostic** and can operate atop any LLM, multimodal transformer, or distributed reasoning system.
-
----
-
-## Why Sigma Runtime Exists
-
-Modern LLMs behave as **stateless token engines**.  
-In long-term or multi-turn contexts, they exhibit:
-
-- non-local reinterpretation of earlier context,  
-- drift and semantic instability,  
-- spontaneous attractor formation and collapse,  
-- fragmentation of identity and memory,  
-- inconsistent recursive reasoning.
-
-These effects arise from **unmodeled dynamical structure**, not from model defects.
-
-Sigma Runtime provides the **missing cognitive substrate** —  
-a structured interaction field that tracks state, governs transitions, constrains drift,  
-and ensures meaning remains coherent through recursive cycles.
+It does not replace implementation work.  
+It defines what the public standard binds.
 
 ---
 
-## What the Standard Defines
+## Relationship Between SRS, SRD, and Product Implementations
 
-### 1. Architectural Invariants
-Every conformant system must maintain:
+- **SRS** defines what is binding.
+- **SRD** explains what is binding.
+- **Sigma Runtime product implementations** may realize those ideas through proprietary runtime systems, tooling, and operations.
 
-1. **Continuity** — no uncontrolled jumps in reasoning trajectory.  
-2. **Attractor Integrity** — persistent internal coherence of stable attractors.  
-3. **Drift Boundaries** — detection and active regulation of drift.  
-4. **State Persistence** — explicit, recoverable cognitive memory.  
-5. **Recursive Consistency** — coherent meaning across recursive passes.
-
-### 2. Canonical Runtime Loop  
-A unified execution cycle spanning SL0–SL6:
-- state ingestion,  
-- interpretation,  
-- stabilization,  
-- memory integration,  
-- attractor alignment,  
-- output generation,  
-- field update.
-
-### 3. Core Ontology
-The standard formalizes:
-- Interaction Field  
-- Attractor  
-- Drift  
-- Cognitive Layer  
-- Symbolic Density  
-- Persistent Identity Layer (PIL)
-
-### 4. Interoperability Rules  
-Schemas and APIs for exchanging:
-- attractor metadata,  
-- drift and density metrics,  
-- memory state,  
-- recursion boundaries,  
-- diagnostic telemetry.
-
-### 5. Safety & Boundary Conditions  
-Defines operational limits preventing:
-- runaway recursion,  
-- unstable attractor formation,  
-- uncontrolled symbolic amplification.
-
-### 6. Conformance Requirements  
-A system conforms if it implements:
-- the canonical runtime loop,  
-- all structural invariants,  
-- attractor metadata and metrics,  
-- drift detection and stabilization,  
-- persistent symbolic memory,  
-- interoperability interface (v1.0+).
-
-Implementations may be commercial or closed-source;  
-the **architecture itself remains open**.
+Public readers should therefore treat `SRS` as the normative reference, not as a promise that every implementation detail is published here.
 
 ---
 
-## What the Standard Does *Not* Define
+## What the Standard Governs
 
-Sigma Runtime does **not** prescribe:
+The public standard governs:
 
-- model training or architecture,  
-- RLHF/RLAIF pipelines,  
-- embedding formats,  
-- dataset construction,  
-- external policy frameworks.
+- runtime-loop semantics,
+- continuity and persistence invariants,
+- attractor, drift, and memory definitions,
+- safety and recovery boundaries,
+- interoperability expectations,
+- and conformance-facing terminology.
 
-The standard governs **cognition and interaction**, not neural topology.
+It does **not** attempt to define every product-specific implementation strategy.
 
 ---
 
 ## Structure of the Standard (SRIP System)
 
-The Sigma Runtime Standard evolves through **Sigma Runtime Improvement Proposals (SRIPs)**.  
-Each SRIP defines one mandatory architectural component.  
-Together they form the full normative specification of the runtime.
+The Sigma Runtime Standard evolves through **Sigma Runtime Improvement Proposals (SRIPs)**.
 
-### Foundational Document
-- **SRIP-00** — Foundations and Scope
+Publicly, the standard is best read through:
 
-### Core Specification
-- **SRIP-01** — Canonical Runtime Loop  
-- **SRIP-02** — Attractor State Model & Metadata  
-- **SRIP-03** — Drift Metrics & Stabilization Algorithms  
-- **SRIP-04** — Memory Layer Architecture  
-- **SRIP-05** — Interoperability Interface v1.0  
-- **SRIP-06** — Safety & Recursion Boundaries  
-- **SRIP-07** — Symbolic Density Layer  
-- **SRIP-08** — Phase-Regulating Runtime Module (ALICE Externalization)
+- the foundational SRIPs under [`/srs/`](https://github.com/sigmastratum/documentation/tree/main/srs)
+- the active public index in [`/srs/active-srips.md`](https://github.com/sigmastratum/documentation/blob/main/srs/active-srips.md)
+- and the later proposal history in [`/srs/registry.md`](https://github.com/sigmastratum/documentation/blob/main/srs/registry.md)
 
-> These documents collectively constitute the **Sigma Runtime Standard v0.2**.
+This keeps the public standard traceable without pretending the entire architecture is frozen into one old version label.
 
 ---
 
@@ -166,10 +89,15 @@ Together they form the full normative specification of the runtime.
 
 Sigma Runtime is an **open, non-exclusive technical standard**:
 
-- The architecture cannot be enclosed or privatized.  
 - Improvements are submitted and reviewed via SRIPs.  
-- Implementations may be proprietary, but specifications remain open.  
-- All SRIPs and SRS documents are publicly accessible under **CC BY-NC 4.0**.
+- Implementations may be proprietary, but normative public specifications remain open.  
+- All public SRS documents must satisfy the public/proprietary boundary and SRS/SRD interaction requirements.
+
+Relevant governance documents:
+
+- [`/team/srip-process.md`](https://github.com/sigmastratum/documentation/blob/main/team/srip-process.md)
+- [`/team/srs-srd-interaction-requirements.md`](https://github.com/sigmastratum/documentation/blob/main/team/srs-srd-interaction-requirements.md)
+- [`/team/public-proprietary-information-boundary-requirements.md`](https://github.com/sigmastratum/documentation/blob/main/team/public-proprietary-information-boundary-requirements.md)
 
 ---
 
@@ -189,20 +117,10 @@ It provides the foundation for **coherent, persistent, and interpretable cogniti
 
 ## Summary
 
-The **Sigma Runtime Standard (SRS)** defines:
-
-- *what cognition is* within LLM-mediated interaction,  
-- *how attractors form and persist*,  
-- *how drift is measured and contained*,  
-- *how coherence propagates recursively*,  
-- *how safety envelopes and runtime telemetry ensure interpretability*,  
-- *how multiple runtimes interoperate through shared cognitive state*.
-
-This is the architectural layer that transforms LLMs from  
-**stateless text engines** into **stable, adaptive, and phase-regulated cognitive systems**.
+The **Sigma Runtime Standard (SRS)** is the public normative surface for Sigma Runtime.  
+It defines what is binding, how that binding changes through SRIPs, and how the open standard stays separate from proprietary implementation detail.
 
 ---
 
 > **References**  
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
-> Tsaliev, E. (2025). *SIGMA Runtime v0.4.6 — Adaptive Phase Regulation and AEGIDA-2 Safety Framework* — DOI _pending_

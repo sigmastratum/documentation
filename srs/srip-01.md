@@ -1,8 +1,8 @@
 ---
 title: SRIP-01 - Canonical Runtime Loop
-description: Specifies the execution semantics and ordered stages of the Sigma Runtime loop (SL0–SL7).
+description: Specifies the execution semantics and ordered stages of the Sigma Runtime loop.
 published: true
-date: 2025-12-28T20:59:28.092Z
+date: 2026-04-17
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:40:56.340Z
@@ -21,13 +21,17 @@ dateCreated: 2025-11-30T04:40:56.340Z
 **Category:** Architectural / Runtime Semantics  
 **Status:** Draft  
 **Editor:** E. Tsaliev  
-**Last Updated:** 2025-12-26  
+**Last Updated:** 2026-04-17  
+
+> **Public Note**  
+> This foundational document uses version-light runtime-boundary language.  
+> Earlier `SL0–SL6` or `SL0–SL7` labels remain part of lineage history, but are not required as the active public vocabulary for the canonical runtime loop.
 
 ---
 
 ## 1 · Purpose
 SRIP-01 defines the **canonical runtime loop (CRL)** that governs all Sigma Runtime–compliant systems.  
-It specifies the ordered execution phases that maintain recursive coherence, identity persistence, and drift regulation across **SL0 – SL6**.
+It specifies the ordered execution phases that maintain recursive coherence, identity persistence, and bounded correction across the **runtime boundary**.
 
 ---
 
@@ -47,7 +51,7 @@ The canonical loop formalizes a deterministic, bounded process for recursive cog
 The cyclical execution process through which cognitive state is ingested, interpreted, stabilized, and emitted.
 
 ### 3.2 Runtime Phase
-A discrete operational window corresponding to one pass through SL0 – SL6.
+A discrete operational window corresponding to one pass through the canonical runtime loop.
 
 ### 3.3 Feedback Closure
 The re-integration of output into the cognitive field for the next iteration.
@@ -58,25 +62,25 @@ The re-integration of output into the cognitive field for the next iteration.
 
 | Step | Layer Scope | Function |
 |------|-------------|-----------|
-| **1. State Ingestion** | SL0–SL6 | Acquire user input and current field state. |
-| **2. Interpretation Pass** | SL2 | Parse input, extract semantics, generate symbolic projection (Πsym). |
-| **3. Stabilization Pass** | SL2–SL4 | Evaluate drift, adjust attractors, enforce coherence thresholds. |
-| **4. Memory Integration** | SL3 | Merge new data into semantic & symbolic memory layers. |
-| **5. Attractor Alignment** | SL4 | Reinforce or dissolve attractors per stability metrics. |
-| **6. Output Generation** | SL5–SL6 | Produce new text / behavior via the backend LLM. |
-| **7. Field Update** | SL5–SL6 | Integrate output into the cognitive field, close loop. |
+| **1. State Ingestion** | Runtime boundary | Acquire user input and current field state. |
+| **2. Interpretation Pass** | Interpretation layer | Parse input, extract semantics, generate symbolic projection (Πsym). |
+| **3. Stabilization Pass** | Control and stabilization layer | Evaluate drift, adjust attractors, enforce coherence thresholds. |
+| **4. Memory Integration** | Memory layer | Merge new data into semantic and symbolic memory layers. |
+| **5. Attractor Alignment** | Attractor alignment layer | Reinforce or dissolve attractors per stability metrics. |
+| **6. Output Generation** | Model generation layer | Produce new text or behavior via the backend model. |
+| **7. Field Update** | Feedback and field update layer | Integrate output into the runtime field and close the loop. |
 
 ---
 
 ## 5 · Execution Boundaries
-The **runtime loop operates primarily within SL1–SL4**,  
-handling field management, coherence control, and attractor regulation.  
-However, it **coordinates with SL0 (Intent Layer)** as the inbound semantic source  
-and **SL6 (Model Layer)** as the generative output anchor.  
+The **runtime loop operates primarily inside the runtime mediation boundary**,  
+handling field management, coherence control, memory integration, and attractor regulation.  
+However, it **coordinates with the input boundary** as the inbound semantic source  
+and **the model generation boundary** as the generative output anchor.  
 
 > **I/O Anchors:**  
-> - **SL0 (Intent):** encapsulates human input, context framing, and task goals.  
-> - **SL6 (Model):** executes generation and emits symbolic output.  
+> - **Input boundary:** encapsulates human input, context framing, and task goals.  
+> - **Model generation boundary:** executes generation and emits symbolic output.  
 >  
 > The runtime serves as the mediation channel between these two endpoints,  
 > ensuring that all recursion remains bounded and semantically aligned.
@@ -87,13 +91,13 @@ and **SL6 (Model Layer)** as the generative output anchor.
 - **Field API:** access to cognitive field state, drift indices, and phase metrics.  
 - **Memory API:** persistent context read/write interface.  
 - **Attractor API:** register, align, or dissolve attractors per cycle.  
-- **Telemetry Stream:** exposes drift (DI, SDI) and SCR values to the Safety Layer.
+- **Telemetry Stream:** exposes drift (DI, SDI) and SCR values to the safety layer.
 
 ---
 
 ## 7 · Invariants
 1. **Loop Continuity** — each cycle must close with a valid field update.  
-2. **Bounded Recursion** — maximum recursion depth defined by SL4.  
+2. **Bounded Recursion** — maximum recursion depth defined by the runtime control boundary.  
 3. **State Persistence** — memory state must be explicitly committed between cycles.  
 4. **Attractor Integrity** — no untracked formation or collapse events.  
 5. **Drift Boundaries** — DI ≤ 0.45 for nominal operation.
@@ -102,18 +106,17 @@ and **SL6 (Model Layer)** as the generative output anchor.
 
 ## 8 · Conformance Requirements
 An implementation conforms if it:
-- Implements all seven loop stages in order.  
-- Exposes loop telemetry via Field API.  
-- Integrates with AEGIDA-2 safety hooks.  
-- Maintains continuity and bounded recursion as defined in §7.
+- implements all seven loop stages in order,  
+- exposes loop telemetry via Field API,  
+- integrates with foundational safety and containment hooks,  
+- maintains continuity and bounded recursion as defined in § 7.
 
 ---
 
-## 9 · Future Work (SRIP-08 / Phase Regulation)
-Later versions will extend the loop with adaptive phase control (ALICE integration) and semantic compression metrics (SCR).
+## 9 · Future Work
+Later versions may extend the loop with adaptive control postures and semantic compression metrics (SCR).
 
 ---
 
 > **References**  
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
-> Tsaliev, E. (2025). *SIGMA Runtime v0.4.6 — Adaptive Phase Regulation* — DOI _pending_

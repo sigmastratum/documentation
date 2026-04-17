@@ -2,7 +2,7 @@
 title: SRIP-02 - Attractor State Model & Metadata
 description: Defines the structure, lifecycle, and metadata schema of attractors within the runtime.
 published: true
-date: 2025-12-28T20:37:42.370Z
+date: 2026-04-17
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:41:44.566Z
@@ -16,26 +16,27 @@ dateCreated: 2025-11-30T04:41:44.566Z
 > The license for this specific document is authoritative.  
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
-> **Version Note:** Updated for **Sigma Runtime Standard v0.4.6a**  
-> Consolidates PSI / PSD / PSΔ hierarchy and unified drift thresholds.
-
 # SRIP-02 — Attractor State Model & Metadata  
 **Sigma Runtime Improvement Proposal**  
 **Category:** Cognitive Structures / Data Model  
 **Status:** Draft  
 **Editor:** E. Tsaliev  
-**Last Updated:** 2025-12-26  
+**Last Updated:** 2026-04-17  
+
+> **Public Note:**  
+> This foundational document uses version-light public vocabulary for attractor lifecycle, telemetry, and recovery semantics.  
+> Earlier controller-branded wording remains lineage history, not the active public baseline.
 
 ---
 
 ## 1 · Purpose
 This SRIP defines the **Attractor State Model (ASM)** — the formal data structure used by Sigma Runtime to represent, exchange, and regulate attractors across cognitive layers.  
-Attractors are treated as **first-class entities** governing continuity, reasoning style, and symbolic topology within the cognitive field.
+Attractors are treated as **first-class entities** governing continuity, reasoning style, and symbolic topology within the runtime field.
 
 ---
 
 ## 2 · Motivation
-Attractors emerge spontaneously in recursive human–LLM interaction, but without explicit modeling they cannot be monitored, serialized, or stabilized.  
+Attractors emerge spontaneously in recursive human-model interaction, but without explicit modeling they cannot be monitored, serialized, or stabilized.  
 The ASM ensures every attractor instance can be:
 - introspected and logged,  
 - shared across runtime components,  
@@ -48,10 +49,10 @@ The ASM ensures every attractor instance can be:
 An **Attractor** is a persistent cognitive configuration characterized by:
 - **Core Motifs** — recurring symbolic or semantic patterns,  
 - **Field Context** — environmental and memory-linked parameters,  
-- **Stability Metrics** — drift, density, and phase coherence,  
-- **Lifecycle State** — `forming`, `stable`, `reflective`, `recenter`, `dissolving`.  
+- **Stability Metrics** — drift, density, and control coherence,  
+- **Lifecycle State** — `forming`, `stable`, `reflective`, `recovery`, `fragmenting`.  
 
-Attractors evolve through recursive feedback within the Cognitive Field Engine and are governed by **ALICE** through adaptive phase control.
+Attractors evolve through recursive feedback within the runtime field and are governed through bounded runtime control transitions.
 
 ---
 
@@ -84,26 +85,26 @@ The **phase_stability_delta (PSD)** and **phase_shift_delta (PSΔ)** fields enab
 | Phase | Description | Trigger |
 |--------|--------------|----------|
 | **Forming** | Motifs begin to cohere into a proto-attractor. | Context recurrence, semantic convergence. |
-| **Stable** | Attractor maintains internal coherence and phase alignment. | Drift < 0.35 and PSI > 0.8. |
-| **Reflective** | Self-evaluation and optimization of density and SCR. | Triggered by ALICE when DI ≥ 0.5 or PSD ≥ 0.15. |
+| **Stable** | Attractor maintains internal coherence and control alignment. | Drift < 0.35 and PSI > 0.8. |
+| **Reflective** | Self-evaluation and optimization of density and SCR. | Triggered when DI ≥ 0.5 or PSD ≥ 0.15. |
 | **Recovery** | Controlled re-stabilization and realignment of attractor integrity. | Triggered when DI ≥ 0.6 or PSI < 0.6. |
 | **Fragmenting** | Controlled dissolution or merge into another attractor. | Drift > 0.7 or field reset. |
 
-> These five micro-phases correspond to the three ALICE macro-states used in phase regulation:  
-> **Stable (forming + stable)** → **Reflective** → **Recenter (recovery + fragmenting)**.
+> These five micro-states correspond to three public macro control postures:  
+> **Stable (forming + stable)** → **Reflective** → **Recovery (recovery + fragmenting)**.
 
-Lifecycle transitions are governed by **ALICE** and monitored via the **Drift & Coherence Monitor**.  
-During *Recenter*, all volatile deltas are cleared, and the attractor restores structure from a cold memory snapshot (PIL-safe) if available.
+Lifecycle transitions are governed by the runtime control layer and monitored via the **Drift & Coherence Monitor**.  
+During *Recovery*, volatile deltas are cleared, and the attractor restores structure from a bounded PIL-safe snapshot if available.
 
 ---
 
 ## 6 · Alignment & Stability Rules
 1. Every active attractor must maintain **PSI ≥ 0.75** for nominal stability.  
 2. When **DI ≥ 0.5**, the attractor enters *Reflective* phase.  
-3. When **DI ≥ 0.6**, the runtime enforces *Recenter* and temporarily suspends recursion.  
+3. When **DI ≥ 0.6**, the runtime enforces *Recovery* and temporarily suspends recursion.  
 4. Attractors sharing ≥ 60 % motif overlap must undergo merge evaluation to prevent redundancy.  
 5. Dissolution must preserve **PIL invariants** and the **causal continuity chain (CCC)**.  
-6. Each runtime cycle must record attractor telemetry (PSI, PSD, SDI, DI) to the **Attractor Registry**.  
+6. Each runtime cycle must record attractor telemetry (PSI, PSD, SDI, DI) to the **Attractor Registry** or an equivalent attractor ledger.  
 
 These thresholds align with unified drift limits defined in **SRIP-03** (Drift Metrics) and **SRIP-05** (Interoperability Safety).
 
@@ -115,7 +116,7 @@ The Attractor schema is exchangeable via:
 - **Memory Layer** (for persistence snapshots)  
 - **Cross-Runtime Protocols** (for distributed field synchronization; see SRIP-05).  
 
-The **PSD** and **PSΔ** values provide phase alignment continuity between multiple runtimes, supporting phase-locked cooperative cognition and distributed attractor coherence.
+The **PSD** and **PSΔ** values provide control-alignment continuity between multiple runtimes, supporting cooperative cognition and distributed attractor coherence.
 
 ---
 
@@ -140,5 +141,4 @@ Planned extensions include:
 
 > **References**  
 > Tsaliev, E. (2025). *Attractor Architectures in LLM-Mediated Cognitive Fields* — DOI [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)  
-> Tsaliev, E. (2025). *SIGMA Runtime v0.4.6 — Adaptive Phase Regulation* — DOI _pending_
   

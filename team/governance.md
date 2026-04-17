@@ -37,6 +37,8 @@ Governance ensures that all changes to the **Sigma Runtime Standard (SRS)** and 
 - Maintains the canonical repository of the **Sigma Stratum Documentation (SRD)** and the **Sigma Runtime Standard (SRS)**.  
 - Ensures consistency across documents, style, and versioning.  
 - Manages the integration of accepted SRIPs into the runtime standard.
+- Enforces the public/proprietary boundary for public documentation.
+- Enforces SRS-SRD synchronization requirements so normative changes do not silently drift away from explanatory documentation.
 
 ### **Contributors**
 - Submit proposals, documentation improvements, or technical analyses.  
@@ -59,6 +61,20 @@ Governance ensures that all changes to the **Sigma Runtime Standard (SRS)** and 
 - **Meritocracy:** Influence is earned through consistent, high-quality contributions.  
 - **Accountability:** Each SRIP and document change is traceable through version control and DOI records.  
 - **Integrity:** All materials adhere to the Sigma Stratum Open Standard Covenant and licensing framework.  
+
+### Repository Control Boundary
+
+Repository mutation authority is human-controlled.
+
+The public documentation repository must not allow:
+
+- automated commits,
+- automated pushes,
+- CI/CD workflows that write back into repository state,
+- agent-driven self-modification of tracked documentation or configuration.
+
+Validation and review may be automated.
+Repository writes must remain manual and operator-authenticated.
 
 ---
 

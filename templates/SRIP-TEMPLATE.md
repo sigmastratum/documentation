@@ -24,6 +24,11 @@ dateCreated: 2025-12-02T02:16:31.900Z
 *Date: [YYYY-MM-DD]*  
 *Version: 0.1*  
 *Target Standard Version: [SRS vX.Y]*  
+*Information Class: Open / Derived-Public*  
+*Change Class: SRS-only / Mixed SRS+SRD*  
+*Affected SRS Artifacts: [list]*  
+*Affected SRD Artifacts: [list or none]*  
+*Release Alignment Status: aligned / aligned with deferred SRD sync / no public-doc impact*  
 
 ---
 
@@ -45,9 +50,23 @@ Include links or citations to SRD/SRS documents or research references.
 
 ---
 
-## 3. Scope and Applicability
+## 3. Public Boundary and Traceability
 
-Specify **which layers (SL0–SL6)** or components of the runtime are affected.  
+State the following explicitly:
+
+1. whether the source material is `Open` or `Derived-Public`
+2. whether any proprietary origin context was abstracted before publication
+3. which `SRS` artifacts are affected
+4. which `SRD` artifacts are affected
+5. whether SRD synchronization is required in the same change set or as a linked follow-up
+
+This section is mandatory for review readiness.
+
+---
+
+## 4. Scope and Applicability
+
+Specify which components, interfaces, concepts, or normative surfaces of the runtime are affected.  
 Clarify whether this SRIP introduces **normative** (required for conformance) or **descriptive** (informative) content.
 
 | Type | Description |
@@ -57,7 +76,7 @@ Clarify whether this SRIP introduces **normative** (required for conformance) or
 
 ---
 
-## 4. Specification
+## 5. Specification
 
 Provide the **technical definition** of the change.  
 Include schemas, pseudocode, diagrams, or interface definitions as applicable.
@@ -73,7 +92,7 @@ If referencing other SRIPs, cite explicitly (e.g., *extends SRIP-02 Attractor Mo
 
 ---
 
-## 5. Interoperability and Dependencies
+## 6. Interoperability and Dependencies
 
 Describe any interactions or dependencies with existing SRIPs or runtime layers.  
 Indicate backward compatibility considerations and migration notes if applicable.
@@ -85,9 +104,9 @@ Indicate backward compatibility considerations and migration notes if applicable
 
 ---
 
-## 6. Safety and Alignment Review
+## 7. Safety and Alignment Review
 
-Explain how this change aligns with the **AEGIDA Principles** and existing safety frameworks.  
+Explain how this change aligns with the public safety, boundary, and recoverability requirements of the standard.  
 Identify potential risks (e.g., recursive instability, symbolic overload, drift amplification)  
 and how they are mitigated by design.
 
@@ -95,7 +114,19 @@ and how they are mitigated by design.
 
 ---
 
-## 7. Implementation Guidelines
+## 8. SRD Synchronization Plan
+
+If the proposal changes anything that readers must understand differently in public explanatory documentation, specify:
+
+- affected `SRD` pages,
+- whether the update is same-change or deferred follow-up,
+- and what release alignment state remains truthful until that sync is complete.
+
+If there is no `SRD` impact, say so explicitly.
+
+---
+
+## 9. Implementation Guidelines
 
 Outline recommended steps for implementation or testing.  
 This may include validation procedures, reference code, or dataset alignment criteria.  
@@ -104,7 +135,7 @@ This may include validation procedures, reference code, or dataset alignment cri
 
 ---
 
-## 8. Versioning and Backward Compatibility
+## 10. Versioning and Backward Compatibility
 
 Specify how the proposed change affects existing implementations or SRS versions.  
 Include migration steps or compatibility flags if relevant.
@@ -113,7 +144,7 @@ Include migration steps or compatibility flags if relevant.
 
 ---
 
-## 9. References
+## 11. References
 
 List related Sigma Stratum publications, SRIPs, or external research.  
 Use DOI or repository links.
@@ -124,7 +155,7 @@ Use DOI or repository links.
 
 ---
 
-## 10. Change Log
+## 12. Change Log
 
 | Version | Date | Author | Description |
 |----------|------|---------|--------------|

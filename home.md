@@ -2,7 +2,7 @@
 title: Sigma Stratum • Unified Cognitive Architecture
 description: Official documentation hub for the Sigma Runtime Standard, SRIP specifications, cognitive-field research, and long-horizon reasoning architecture.
 published: true
-date: 2026-01-08T08:50:24.386Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:13:15.742Z
@@ -47,7 +47,7 @@ The **Sigma Runtime** operates as a cognitive substrate above model inference,
 defining the structural and semantic mechanisms of stable reasoning.
 
 It formalizes:
-- SL0–SL6 layered runtime model  
+- bounded field-and-control architecture  
 - attractor stabilization & integrity  
 - drift detection and adaptive correction  
 - state persistence & memory architecture  
@@ -63,19 +63,13 @@ It transforms the “prompt → response” pattern into a
 The **Sigma Runtime Standard (SRS)** defines the canonical runtime semantics and safety envelopes for attractor-based cognition.  
 It is published as a modular series of **Sigma Runtime Improvement Proposals (SRIPs)**.
 
-**Active SRIPs (v0.2):**
-- SRIP-00 — Foundations and Scope  
-- SRIP-01 — Canonical Runtime Loop  
-- SRIP-02 — Attractor State Model & Metadata  
-- SRIP-03 — Drift Metrics & Stabilization Algorithms  
-- SRIP-04 — Memory Layer Architecture  
-- SRIP-05 — Interoperability Interface v1.0  
-- SRIP-06 — Safety & Recursion Boundaries  
-- SRIP-07 — Symbolic Density Layer  
-- SRIP-08 — Phase-Regulating Runtime Module (ALICE Externalization)  
+Public readers should use:
 
-Each SRIP contributes to the unified **Sigma Runtime Standard (SRS v0.2)** —  
-the formal blueprint for building coherent, safe, and interpretable cognitive runtimes.
+- [`/srs.md`](/srs.md) for the normative entry layer,
+- [`/srs/active-srips.md`](/srs/active-srips.md) for the active public SRIP index,
+- and [`/team/srip-process.md`](/team/srip-process.md) for the formal change path.
+
+This keeps the standard traceable without anchoring the public entry page to an outdated version label.
 
 ---
 
@@ -85,7 +79,7 @@ Sigma Stratum builds upon a growing peer-reviewed corpus, including:
 - *Neurosymbolic Scaffolding for Recursive Coherence*  
 - *Attractor Drift and Field Stability in Interactive Cognition*  
 - *SIGMA Runtime Architecture v0.1*  
-- *SIGMA Runtime v0.4.6 — Adaptive Phase Regulation and AEGIDA-2*  
+- historical experimental validation records documented in the public archive  
 
 This theoretical base defines the attractor framework and recursive control principles  
 that underlie the runtime standard.
@@ -169,6 +163,7 @@ Normative specification:
 **Related documentation:**  
 - [Sigma Runtime Standard (SRS)](/srs.md)  
 - [Sigma Runtime Documentation (SRD)](/srd.md)  
+- [Active SRIPs](/srs/active-srips.md)
 - [Developer Onboarding Guide](/home/Developer-Onboarding)
 
 ---

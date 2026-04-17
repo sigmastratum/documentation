@@ -2,7 +2,7 @@
 title: SRIP-05 - Interoperability Interface v1.0
 description: Specifies schemas, APIs, and exchange formats for multi-system interoperability.
 published: true
-date: 2025-12-28T20:54:53.407Z
+date: 2026-04-17
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:43:59.986Z
@@ -21,14 +21,19 @@ dateCreated: 2025-11-30T04:43:59.986Z
 **Category:** Interoperability / Safety Hooks  
 **Status:** Draft  
 **Editor:** E. Tsaliev  
-**Last Updated:** 2025-12-26  
+**Last Updated:** 2026-04-17  
+
+> **Public Status Note**  
+> This document is retained as **foundational lineage with status note**, not as the active public interoperability baseline.  
+> Its packet schema, endpoints, and containment hooks remain useful for historical traceability, but they should not be read as the current public interoperability contract.  
+> Any active successor-facing public interoperability surface must be introduced through an explicit successor reference or new proposal path.
 
 ---
 
 ## 1 · Purpose
 SRIP-05 defines the **interoperability layer** for Sigma Runtime implementations.  
 It establishes schemas, protocols, and synchronization rules that allow multiple runtimes — operating independently or in distributed environments — to **exchange state, drift signals, and attractor metadata** without loss of coherence.  
-The specification ensures semantic and operational compatibility across conformant Sigma systems.
+The specification should now be read as a foundational lineage reference for semantic and operational compatibility across conformant Sigma systems.
 
 ---
 

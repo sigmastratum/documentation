@@ -47,6 +47,9 @@ These contributions are submitted as formal **Sigma Runtime Improvement Proposal
 5. The **SSRG Steering Committee** reviews and assigns your contribution:  
    - *SRD contributions* are merged after editorial review.  
    - *SRIP proposals* follow the [SRIP Process](/team/srip-process.md).  
+   - *All public contributions* must satisfy the [Public–Proprietary Information Boundary Requirements](/team/public-proprietary-information-boundary-requirements.md).  
+   - *Mixed SRS+SRD changes* must also satisfy the [SRS–SRD Interaction Requirements](/team/srs-srd-interaction-requirements.md).  
+   - *Repository writes* must remain manual; automation may validate but must not commit or push repository state.  
 6. Once approved, the change is merged and versioned in the next SRS or SRD release.
 
 ---
@@ -58,6 +61,9 @@ All contributors must:
 - Include license headers in all Markdown documents  
 - Clearly state whether the change is **normative** or **descriptive**  
 - Maintain consistent attribution and citation style  
+- Classify source material as `Open`, `Proprietary`, or `Derived-Public` before publishing it  
+- Declare whether the change is `SRD-only`, `SRS-only`, or `Mixed SRS+SRD` when it touches standards and explanatory documentation together  
+- Do not rely on CI, agents, or scheduled automation to mutate repository state on your behalf  
 
 ---
 

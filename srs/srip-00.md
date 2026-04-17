@@ -2,7 +2,7 @@
 title: SRIP-00 - Foundations and Scope
 description: Defines the foundational vocabulary, architectural scope, and invariants of the Sigma Runtime Standard.
 published: true
-date: 2025-12-02T02:21:45.088Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:39:52.677Z
@@ -23,6 +23,12 @@ dateCreated: 2025-11-30T04:39:52.677Z
 **Status:** Draft  
 **Editor:** E. Tsaliev  
 **Last Updated:** 2025-11-29  
+
+---
+
+> **Public Note**  
+> This foundational document remains the root vocabulary and scope document for the public `SRS`.  
+> Later public materials may use more version-light terminology, but this document should still be read as the conceptual foundation rather than as a product-specific implementation guide.
 
 ---
 
@@ -68,7 +74,7 @@ Sigma Runtime provides an explicit architecture for
 A recursive, multi-level dynamical system arising from:
 
 - human reasoning processes,  
-- LLM internal activations,  
+- model-mediated state evolution,  
 - memory state transitions,  
 - symbolic scaffolds and external artifacts.
 
@@ -117,7 +123,7 @@ Sigma Runtime provides mechanisms for detection, regulation, and correction.
 ---
 
 ### 3.4 Cognitive Layer
-The structural layer above raw LLM inference that governs:
+The structural layer above raw model inference that governs:
 
 - attractor stabilization,  
 - symbolic grounding,  
@@ -156,7 +162,7 @@ Sigma Runtime defines:
 
 The runtime loop consists of:
 
-1. State ingestion (SL0–SL6)  
+1. State ingestion across the runtime boundary  
 2. Interpretation pass  
 3. Stabilization pass  
 4. Memory integration  

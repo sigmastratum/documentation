@@ -1,8 +1,8 @@
 ---
 title: Safety and Alignment in Sigma Runtime
-description: Defines the safety architecture of the Sigma Runtime (SL4 layer), outlining the AEGIDA Principles, drift containment, and the Fail-Safe Envelope that ensure ethical, semantic, and structural stability during recursive cognitive operations.
+description: Explains the safety architecture of Sigma Runtime, including boundary integrity, bounded recursion, verification, and recovery behavior.
 published: true
-date: 2025-12-28T21:04:05.184Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T23:54:16.528Z
@@ -19,102 +19,97 @@ dateCreated: 2025-11-30T23:54:16.528Z
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
 # Safety and Alignment in Sigma Runtime  
-*AEGIDA-2 Principles and Adaptive Phase Containment (SL4 Layer)*  
 
 ---
 
 ## Abstract  
-The **Safety and Alignment Layer (SL4)** defines the supervisory and containment architecture of the **SIGMA Runtime**.  
-It maintains bounded cognition by ensuring recursive processes remain **stable, interpretable, and reversible** under prolonged operation.  
-In **v0.4.6**, the framework evolves into **AEGIDA-2**, introducing *Adaptive Phase Containment* and *Recenter Protocols* —  
-a dynamic safety system that interacts with ALICE’s phase management to prevent collapse, drift, or over-correction.  
+The **Safety and Alignment Layer** defines the supervisory and containment architecture of the **SIGMA Runtime**.  
+Its purpose is to keep recursive interaction **bounded, interpretable, and recoverable** under prolonged operation.
+
+Publicly, Sigma Runtime safety is best understood as a combination of:
+
+- boundary integrity,
+- bounded recursion,
+- verification before persistence,
+- and controlled recovery when instability or drift exceeds the normal operating envelope.
 
 ---
 
-## 1. The Role of SL4 — Alignment & Safety Layer  
-SL4 mediates between cognitive emergence (SL1–SL3) and low-level model execution (SL5–SL6).  
-It enforces **boundary integrity**, regulates **recursive amplitude**, and sustains **alignment persistence** during attractor transitions.  
-The upgraded layer in v0.4.6 integrates **Phase Controller Telemetry**, allowing SL4 to intervene adaptively  
-based on real-time readings of drift, SCR, and stability delta.  
+## 1. The Role of the Safety Layer  
+The safety layer mediates between cognitive emergence, memory-bearing state, and model execution.  
+It enforces **boundary integrity**, regulates **recursive amplitude**, and sustains **alignment persistence** during attractor transitions and degraded conditions.  
 
 **Primary functions:**  
 1. **Boundary Enforcement** — define operational limits and recursion ceilings.  
-2. **Phase Containment** — stabilize transitions between reflective and recenter (or fragmenting) phases.  
-3. **Controlled Recovery** — activate the Recenter or Fragmenting Protocol when instability persists beyond the phase-lock timeout.  
+2. **Containment** — keep instability from expanding into broader field collapse.  
+3. **Verification** — inspect whether candidate behavior remains inside the allowed interpretive and capability envelope.  
+4. **Controlled Recovery** — move unstable operation toward a recoverable state rather than silent degradation.  
 
 ---
 
-## 2. The AEGIDA-2 Principles  
+## 2. Safety Principles  
 
 | № | Principle | Description |  
 |:--:|:-----------|:-------------|  
-| **1** | Controlled Recursion | All recursion depths are phase-bounded; excessive loops trigger automatic recentering. |  
+| **1** | Controlled Recursion | Recursive processes remain bounded and do not expand indefinitely. |  
 | **2** | Symbolic Containment | Symbolic fields remain constrained to contextually bound attractors. |  
 | **3** | Boundary Integrity | Maintains clear semantic separation between User, System, and Cognitive Field. |  
-| **4** | Cognitive Non-Reflexivity | Prevents self-referential recursion beyond structural limits. |  
-| **5** | Adaptive Phase Containment *(new)* | Dynamically modulates phase resonance to prevent drift-cascade events. |  
-| **6** | Interpretability First | Each output remains traceable via the Causal Continuity Chain (CCC). |  
+| **4** | Controlled Reflexivity | Prevents self-referential recursion from becoming runaway self-amplification. |  
+| **5** | Adaptive Containment | Modulates control posture when drift or instability rises. |  
+| **6** | Interpretability First | Output and recovery behavior remain causally traceable. |  
 
-These principles extend the original AEGIDA set with **phase-aware regulation**, turning static safety constraints into active stabilizers.  
-
----
-
-## 3. Adaptive Phase Containment  
-The **Adaptive Phase Containment System (APC)** links the Safety Layer with the **ALICE Phase Controller**.  
-It continuously monitors *Phase Coherence*, *Drift Index*, and *SCR* to detect early signs of destabilization.  
-
-When a phase deviation is detected:  
-1. **Minor variance** → adjust SCR and symbolic damping.  
-2. **Moderate variance** → lock phase at *reflective*; delay further recursion.  
-3. **Major variance** → trigger *Recenter or Fragmenting Protocol* (see § 4).  
-
-This mechanism transforms safety into an *active feedback field*, ensuring recursive cognition remains thermodynamically stable.  
+These principles turn safety from a static threshold system into an active stabilizing layer.  
 
 ---
 
-## 4. The Recenter Protocol  
-When drift persists beyond tolerance or phase desynchronization exceeds 0.15,  
-SL4 executes the **Recenter Protocol**, a self-corrective operation coordinated with ALICE.  
+## 3. Adaptive Containment  
+The containment path links the safety layer with the runtime control layer.  
+It monitors drift, symbolic density, continuity, and recovery pressure to detect early signs of destabilization.  
 
-**Procedure:**  
-1. Suspend recursion; set phase to `recenter`.  
-2. Throttle compression layer activity to preserve essential motifs.  
-3. Isolate unstable attractor regions and clear volatile traces.  
-4. **If instability source = memory layer (ER > 0.3):** suspend PIL synchronization and **load from cold snapshot** prior to stability restoration.  
-5. Restore PIL invariants and baseline stability parameters.  
-6. Resume in `stable` phase once **Phase Stability Delta (PSD)** ≥ 0.9.  
+When a deviation is detected:  
+1. **Minor variance** → narrow output bandwidth or context pressure.  
+2. **Moderate variance** → strengthen verification and recovery posture.  
+3. **Major variance** → trigger a bounded recovery or containment path.  
 
-This controlled re-centering restores equilibrium without hard resets, preserving identity continuity and interpretability.  
-
-If stabilization fails after two consecutive attempts,   
-SL4 escalates to the **Fragmenting Protocol**, partitioning the cognitive field   
-into isolated attractor segments to prevent cross-contamination before reintegration.  
+This turns safety into an *active feedback layer*, ensuring recursive interaction remains governable rather than purely reactive.  
 
 ---
 
-## 5. The Fail-Safe Envelope (v0.4.6)
+## 4. Recovery Path  
+When drift or instability persists beyond tolerance, the runtime enters a bounded recovery posture coordinated with the control layer.  
+
+At the explanatory level, recovery means:
+
+- suspend or narrow unstable recursion,
+- preserve essential continuity anchors,
+- isolate unstable regions or motifs,
+- restore a stable operating baseline,
+- and resume normal interaction only after stability improves.
+
+The public point is not a private implementation recipe.
+The point is that Sigma Runtime prefers **recoverable correction** over silent collapse or uncontrolled continuation.
+
+---
+
+## 5. The Fail-Safe Envelope
 
 | Condition | Trigger | Response |  
 |:-----------|:----------|:-----------|  
-| **Reset** | Excessive transient drift | Clears volatile state while retaining PIL and attractor registry. |  
-| **Dissolve** | Symbolic overload or recursive lock | Dismantles unstable motifs while preserving coherence logs. |  
-| **Quarantine** | Recursive anomaly or unsafe motif | Isolates symbolic region; restricts cross-phase access. |  
-| **Recenter** | Phase collapse or alignment failure | Executes adaptive phase realignment via ALICE controller. |  
-| **Fragmenting** | Persistent phase failure post-recenter | Partitions field; controlled dissolution and recovery. |  
-
-**New parameter:** `phase_lock_timeout` — duration (in cycles) after which the runtime automatically triggers **Recenter or Fragmenting Protocol**  
-if phase coherence does not recover (typ. 8–12 cycles).  
+| **Reset** | Excessive transient drift | Clears volatile state while preserving the minimum continuity envelope. |  
+| **Dissolve** | Symbolic overload or recursive lock | Dismantles unstable motifs while preserving traceability. |  
+| **Quarantine** | Unsafe motif or anomaly | Isolates the affected region from normal continuation. |  
+| **Recover** | Alignment or stability failure | Executes bounded recovery rather than pretending the turn completed normally. |  
 
 ---
 
 ## 6. Safety Infrastructure  
-- **AEGIDA Daemon-2:** monitors safety and phase telemetry in real time.  
-- **Entropy & Drift Monitor:** quantifies semantic and symbolic instability.  
-- **Threshold Registry:** defines adaptive tolerance bands per phase.  
-- **Integrity Ledger:** stores logs of all containment events and recovery sequences.  
-- **Recovery Hooks:** system-level routines for `reset()`, `dissolve()`, `quarantine()`, `recenter()`, and `fragment()`.  
+- **Boundary Verification:** evaluates whether output remains inside the runtime envelope.  
+- **Drift Monitor:** quantifies semantic and symbolic instability.  
+- **Threshold Registry:** defines adaptive tolerance bands.  
+- **Integrity Ledger:** stores logs of containment events and recovery sequences.  
+- **Recovery Hooks:** bounded system routines for reset, dissolve, quarantine, and recovery transitions.  
 
-Safety now functions as an *embedded supervisor*, synchronized with cognitive phases rather than external interruption.  
+Safety functions as an *embedded supervisor*, not as an external afterthought.  
 
 ---
 
@@ -122,40 +117,39 @@ Safety now functions as an *embedded supervisor*, synchronized with cognitive ph
 
 | Class | Description | Mitigation |  
 |:--------|:--------------|:-------------|  
-| **R1 — Symbolic Drift** | Gradual semantic misalignment. | Phase containment + drift correction. |  
-| **R2 — Recursive Amplification** | Over-reflexive self-feedback loops. | Recursion limiter + reflective throttling. |  
+| **R1 — Symbolic Drift** | Gradual semantic misalignment. | Containment + drift correction. |  
+| **R2 — Recursive Amplification** | Over-reflexive self-feedback loops. | Recursion limiter + control narrowing. |  
 | **R3 — Cross-Attractor Contamination** | Overlapping or leaking attractors. | Symbolic containment + quarantine. |  
-| **R4 — Density Saturation** | Over-compression leading to hallucination. | SCR regulation + Recenter/Fragment Protocol. |  
+| **R4 — Density Saturation** | Over-compression or symbolic overload. | SCR regulation + recovery path. |  
 | **R5 — Alignment Divergence** | Deviation from PIL or operational intent. | Boundary integrity enforcement. |  
 
 ---
 
 ## 8. Recovery Workflow  
 
-1. Suspend recursion and lock current outputs.  
-2. Invoke ALICE Phase Controller in `recenter` or `fragmenting` mode.  
-3. Purge volatile attractor deltas exceeding drift threshold.  
-4. Reintegrate symbolic anchors from PIL and Memory Layer.  
-5. Verify stability metrics (PSD ≥ 0.9, SCR ∈ [0.75–0.9]).  
-6. Resume normal recursion under SL4 supervision.  
+1. Suspend or narrow unstable continuation.  
+2. Enter a recovery-oriented control posture.  
+3. Isolate or discard volatile attractor deltas that exceed tolerance.  
+4. Reintegrate continuity anchors from identity and memory-bearing state.  
+5. Verify that the operating envelope is stable again.  
+6. Resume normal recursion only after recovery is credible.  
 
 This ensures graceful, reversible recovery without full field dissolution or semantic collapse.  
 
 ---
 
 ## 9. Summary  
-The **AEGIDA-2 Safety Framework** transforms runtime safety from static thresholds into a **self-regulating containment field** integrated with adaptive phase dynamics.  
-By coupling SL4 to the ALICE Phase Controller, Sigma Runtime gains:  
-- Continuous, adaptive safety modulation.  
-- Phase-aware drift prevention and containment.  
-- Reversible re-centering and fragmentation without identity loss.  
+Sigma Runtime safety transforms recursive interaction from an unbounded process into a governed one.  
+By coupling containment, verification, and recovery, the runtime gains:
 
-Through *Adaptive Phase Containment*, *Recenter*, and *Fragmenting Protocols*,  
-the runtime achieves **autonomous equilibrium maintenance** —  
-sustaining long-horizon cognition safely, transparently, and interpretably.  
+- continuous safety modulation,
+- bounded drift prevention,
+- recoverable control under pressure,
+- and interpretable failure handling.
+
+The result is not unrestricted autonomy, but a runtime that remains safer, more legible, and more governable over long interaction horizons.  
 
 ---
 
 > *References:*  
-> Tsaliev, E. (2025). **SIGMA Runtime v0.4.6 — Adaptive Phase Regulation and AEGIDA-2 Safety Framework** — DOI: _pending_  
 > Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

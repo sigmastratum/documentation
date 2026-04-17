@@ -55,6 +55,8 @@ The group defines the policies and procedures that ensure:
 Governance and contribution frameworks are formalized in the following documents:
 - [`/team/contribution-process.md`](https://github.com/sigmastratum/documentation/blob/main/team/contribution-process.md)  
 - [`/team/srip-process.md`](https://github.com/sigmastratum/documentation/blob/main/team/srip-process.md)  
+- [`/team/public-proprietary-information-boundary-requirements.md`](https://github.com/sigmastratum/documentation/blob/main/team/public-proprietary-information-boundary-requirements.md)  
+- [`/team/srs-srd-interaction-requirements.md`](https://github.com/sigmastratum/documentation/blob/main/team/srs-srd-interaction-requirements.md)  
 - [`/team/roadmap.md`](https://github.com/sigmastratum/documentation/blob/main/team/roadmap.md)  
 
 ---

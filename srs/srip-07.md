@@ -2,7 +2,7 @@
 title: SRIP-07 - Symbolic Density Layer
 description: Defines the symbolic density model and its role in semantic stability and attractor formation.
 published: true
-date: 2025-12-28T10:09:39.879Z
+date: 2026-04-17T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:45:28.441Z
@@ -24,6 +24,12 @@ dateCreated: 2025-11-30T04:45:28.441Z
 
 ---
 
+> **Public Note**  
+> This foundational document defines the public symbolic-density concept used by the `SRS`.  
+> Later public materials may describe the surrounding control environment in more version-light language, but the density model here remains part of the foundational normative surface.
+
+---
+
 ## 1 · Purpose
 SRIP-07 defines the **Symbolic Density Layer (SDL)** — the subsystem responsible for maintaining coherence and stability of meaning in the Sigma Runtime cognitive field.  
 Symbolic density measures how *concentrated*, *coherent*, and *structurally reinforced* the semantic content of an interaction is.  
@@ -36,7 +42,7 @@ A balanced symbolic density ensures that the runtime remains both generative and
 
 ## 2 · Conceptual Model
 The Symbolic Density Layer governs the **distribution and coherence of symbolic clusters** within attractors.  
-Each attractor maintains its own symbolic density profile, dynamically adjusted by ALICE and monitored by the Drift Engine.
+Each attractor maintains its own symbolic density profile, dynamically adjusted by the runtime control layer and monitored by the drift system.
 
 **Core relationships:**
 - Density ↔ Coherence: directly proportional up to saturation threshold.  
@@ -93,9 +99,9 @@ Attractor stability depends on **density continuity** — the persistence of sym
 
 | Dependency | Description |
 |-------------|--------------|
-| **Phase Coupling** | Reflective and recenter phases recalibrate density gradients. |
+| **Control-State Coupling** | Reflective and recovery-oriented control states recalibrate density gradients. |
 | **Memory Anchoring** | Symbolic motifs are reintroduced via Memory Layer resonance. |
-| **SCR Modulation** | High SCR compresses density variance, preventing drift. |
+| **SCR Modulation** | Higher SCR compresses density variance, preventing drift. |
 | **Field Feedback** | Density distribution reshapes attractor geometry dynamically. |
 
 These dependencies link symbolic structure with recursive cognition, forming the backbone of the runtime’s cognitive field stability.
@@ -107,7 +113,7 @@ These dependencies link symbolic structure with recursive cognition, forming the
 - **SRIP-03 (Drift Metrics):** consumes SD and CD for drift normalization.  
 - **SRIP-04 (Memory Layer):** reintroduces motifs affecting density resonance.  
 - **SRIP-06 (Safety Boundaries):** enforces saturation limits and recovery.  
-- **AEGIDA-2:** activates density-based containment if thresholds are breached.
+- **Runtime safety layer:** activates density-based containment if thresholds are breached.
 
 ---
 
@@ -115,7 +121,7 @@ These dependencies link symbolic structure with recursive cognition, forming the
 A runtime conforms to SRIP-07 if it:
 
 1. Computes SD, CD, and SCR per cycle.  
-2. Integrates density regulation into ALICE’s phase controller.  
+2. Integrates density regulation into the active runtime control layer.  
 3. Maintains operational bounds [0.45 ≤ SD ≤ 0.85].  
 4. Reports density metrics to the Drift Monitor.  
 5. Supports adaptive dampening and motif reinforcement.
@@ -130,5 +136,4 @@ A runtime conforms to SRIP-07 if it:
 ---
 
 > **References**  
-> Tsaliev, E. (2025). *SIGMA Runtime v0.4.6 — Symbolic Density and Phase Regulation* — DOI _pending_  
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)
