@@ -1,8 +1,8 @@
 ---
 title: SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)
-description: Defines the Sigma Runtime persistent memory architecture for semantic recall, structural lineage, temporal traceability, and long-horizon coherence.
+description: Defines the Sigma Runtime long-horizon memory architecture for semantic recall, structural lineage, and temporal traceability.
 published: true
-date: 2026-04-11T00:00:00.000Z
+date: 2026-04-24T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-12-31T09:50:13.465Z
@@ -18,10 +18,10 @@ dateCreated: 2025-12-31T09:50:13.465Z
 # SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)
 **Semantic Memory, Structural Lineage, and Temporal Traceability**
 
-**Version:** Draft v0.3  
+**Version:** Draft v0.4  
 **Status:** Active Proposal / Partial Implementation  
 **Author:** Sigma Stratum Research Group (SSRG)  
-**Date:** 2026-04-11  
+**Date:** 2026-04-24  
 **Parent Spec:** SRIP-04 — Memory Layer Architecture  
 **Related Specs:** SRIP-08, SRIP-10, SRIP-11, SRIP-13  
 **License:** CC BY-NC 4.0 / Canon CIL Applicable
@@ -101,12 +101,13 @@ LTM-SC is defined as four conceptual layers.
 |-------|---------|----------|
 | **Context Memory** | Short-term operational context for the active cycle window. | Baseline |
 | **Semantic Memory** | Meaning-level recall through summaries, embeddings, and hashes. | Baseline / evolving |
-| **Structural Memory** | Queryable graph of cycle lineage, phase transitions, attractors, and recoveries. | Implementation Pending |
+| **Structural Memory** | Queryable graph of cycle lineage, phase transitions, attractors, and recoveries. | Partial / evolving |
 | **Trace Ledger** | Append-only event stream for reproducibility and audit. | Implementation Pending |
 
 Implementations may initially satisfy SRIP-09 through semantic memory and
 lineage metadata. Full conformance requires structural memory and trace-ledger
-capabilities.
+capabilities. Bounded or transitional implementations may satisfy only a subset
+of the full retrieval and lineage surface.
 
 ---
 
@@ -284,7 +285,7 @@ Nucleus records:
 - should be versioned and re-indexed only when their source version changes;
 - should be excluded from ordinary active-memory compaction.
 
-Nucleus integration remains compatible with SRIP-09 v0.3. Full graph
+Nucleus integration remains compatible with SRIP-09 v0.4. Full graph
 conformance should allow static nucleus nodes to participate in anchor and
 stabilization relations.
 
@@ -341,11 +342,11 @@ expectations.
 | Session and cycle anchoring | Baseline | Required for reproducibility. |
 | Static nucleus anchors | Baseline / evolving | Compatible with SRIP-09c. |
 | Runtime metric attachment | Partial | Use available coherence, stability, drift, and density signals. |
-| Structural graph store | Implementation Pending | Required for full conformance. |
+| Structural graph store | Partial / evolving | Required for full conformance. |
 | Append-only trace ledger | Implementation Pending | Required for full audit conformance. |
 | Recovery/recenter trace nodes | Implementation Pending | Depends on trace-ledger or graph persistence. |
-| Branch-safe continuity | Implementation Pending | Requires durable branch identifiers and lineage traversal. |
-| Temporal reconstruction interface | Implementation Pending | Requires queryable lineage and trace ordering. |
+| Branch-safe continuity | Partial / evolving | Requires durable branch identifiers and lineage traversal. |
+| Temporal reconstruction interface | Partial / evolving | Requires queryable lineage and trace ordering. |
 | Cross-runtime memory alignment | Future Work | Not part of minimum conformance. |
 
 ---
@@ -362,7 +363,7 @@ A runtime minimally conforms to SRIP-09 when it:
 6. preserves session scope and governed privacy boundaries;
 7. supports static nucleus anchors when nucleus loading is enabled.
 
-A runtime fully conforms to SRIP-09 v0.3 when it additionally:
+A runtime fully conforms to SRIP-09 v0.4 when it additionally:
 
 1. provides structural graph or graph-equivalent lineage;
 2. records explicit phase, branch, recovery, and recenter relations;
