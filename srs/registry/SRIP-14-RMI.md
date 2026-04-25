@@ -396,7 +396,7 @@ buffers, fact extraction, and adaptive compression parameters.
 
 ---
 
-## XVI. Integration with API-076
+## XVI. Integration with Runtime Stability Constraints
 
 RMI must respect prompt-density, throughput, and degradation constraints.
 
