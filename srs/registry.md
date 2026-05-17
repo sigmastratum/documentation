@@ -1,29 +1,29 @@
 ---
 title: Sigma Stratum Registry
-description: Authoritative registry tracking post-core Sigma Runtime Improvement Proposals (SRIP-08+) — experimental extensions, governance updates, and long-term evolution of the Sigma Runtime architecture.
+description: Authoritative registry tracking post-core Sigma Runtime Improvement Proposals (SRIP-09+) — experimental extensions, governance updates, and long-term evolution of the Sigma Runtime architecture.
 published: true
-date: 2026-01-25T21:24:39.279Z
-tags: 
+date: 2026-05-14T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2025-12-31T09:55:42.132Z
 ---
 
-> **Sigma Stratum Documentation – License Notice**  
-> This document is part of the **Sigma Stratum Registry** under the  
-> **Sigma Runtime Standard (SRS)** and **Sigma Stratum Documentation Set (SRD)**.  
+> **Sigma Stratum Documentation – License Notice**
+> This document is part of the **Sigma Stratum Registry** under the
+> **Sigma Runtime Standard (SRS)** and **Sigma Stratum Documentation Set (SRD)**.
 >
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**,  
-> unless otherwise noted within specific SRIP entries.  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**,
+> unless otherwise noted within specific SRIP entries.
 >
-> Registry entries describing commercial or derivative extensions may  
-> invoke the **Commercial Implementation License (CIL)** as defined in the Canon.  
+> Registry entries describing commercial or derivative extensions may
+> invoke the **Commercial Implementation License (CIL)** as defined in the Canon.
 >
-> For the full legal framework, see  
+> For the full legal framework, see
 > [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
 # Sigma Stratum Registry
 
-The **Sigma Stratum Registry** is the authoritative ledger for all runtime proposals **beyond the core specification** (SRIP-08 and later).  
+The **Sigma Stratum Registry** is the authoritative ledger for runtime proposals **beyond the core specification** (SRIP-09 and later).
 It records extensions, experimental modules, and structural evolutions of the Sigma Runtime architecture.
 
 ---
@@ -36,7 +36,7 @@ This registry ensures:
 - Reference linkage to **Zenodo DOIs** and **governance decisions**
 - Persistent identifiers for each experimental proposal
 
-All documents registered here form the **living layer** of the Sigma Stratum Canon —  
+All documents registered here form the **living layer** of the Sigma Stratum Canon —
 a space where research evolves while preserving canonical lineage.
 
 ---
@@ -45,15 +45,39 @@ a space where research evolves while preserving canonical lineage.
 
 Each SRIP is registered as a standalone entry:
 ```
-/registry/srip-09.md
-/registry/srip-10.md
-/registry/srip-11.md
+/srs/registry/SRIP-09-LTM.md
+/srs/registry/SRIP-10-AEP.md
+/srs/registry/SRIP-11-CMT.md
+/srs/registry/SRIP-12-CDS.md
+/srs/registry/SRIP-13-RIS.md
+/srs/registry/SRIP-14-RMI.md
+/srs/registry/SRIP-15-ADP.md
+/srs/registry/SRIP-16-RSM.md
+/srs/registry/SRIP-17-MAE.md
+/srs/registry/SRIP-18-CSI.md
 ```
 Each file must include:
-- Metadata block (Title, Version, Date, Status, Maintainer)
-- Summary of purpose and architecture
-- Compatibility notes with prior SRIPs and SRS versions
-- License declaration (CC BY 4.0 / Canon CIL Applicable)
+- metadata block including title, version, date, status, author, information class, change class, parent specs, related specs, and release alignment status;
+- summary of purpose and architecture;
+- compatibility notes with prior SRIPs and SRS versions;
+- license declaration.
+
+---
+
+## Numbering And Reading Order
+
+SRIP numbers are immutable public proposal identifiers.
+
+The registry is numerical and historical. It is not required to match the best conceptual reading order for a given architecture stack.
+
+Rules:
+
+- new SRIP numbers are assigned monotonically when a proposal is accepted into the public draft path;
+- existing SRIP numbers are never reassigned to improve logical ordering;
+- conceptual ordering is maintained in reading-order views such as `/srs/architecture-reading-order`;
+- `Parent Specs`, `Related Specs`, `Extends`, `Amends`, and `Supersedes` describe architecture relationships.
+
+This allows the standard to scale without breaking citations or historical continuity.
 
 ---
 
@@ -66,6 +90,11 @@ Each file must include:
 | [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) | Compression & Memory Topology (CMT) | **Active (v0.5.3)** | 2026-02-04 | SSRG |
 | [SRIP-12-CDS](/srs/registry/SRIP-12-CDS) | Commerce Decision State Layer (CDS) | **Draft / Implementation Pending** | 2026-04-11 | SSRG |
 | [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) | Relational Identity Stabilization (RIS) | **Active Proposal** | 2026-04-11 | SSRG |
+| [SRIP-14-RMI](/srs/registry/SRIP-14-RMI) | Retrieval and Memory Integration Layer (RMI) | **Active Proposal / Partial Implementation** | 2026-04-28 | SSRG |
+| [SRIP-15-ADP](/srs/registry/SRIP-15-ADP) | Attractor Dynamics and Controlled Perturbation Layer (ADP) | **Public Draft** | 2026-04-28 | SSRG |
+| [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) | Recursive Self-Modeling (RSM) | **Public Draft** | 2026-05-14 | SSRG |
+| [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) | Multi-Agent Exchange (MAE) | **Public Draft** | 2026-05-14 | SSRG |
+| [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) | Commerce Semantic Integration Layer (CSI) | **Public Draft / Implementation-Ready Architecture** | 2026-05-14 | SSRG |
 
 ---
 
@@ -77,9 +106,12 @@ Each file must include:
 
 ### Governance
 
-Registry entries are maintained by the **Sigma Stratum Research Group (SSRG)**.  
+Registry entries are maintained by the **Sigma Stratum Research Group (SSRG)**.
 
+For conceptual navigation, see:
 
-For inquiries or submissions:  
-[contact@sigmastratum.org](mailto:contact@sigmastratum.org)  
+- [`/srs/architecture-reading-order`](/srs/architecture-reading-order)
+
+For inquiries or submissions:
+[contact@sigmastratum.org](mailto:contact@sigmastratum.org)
 [github.com/sigmastratum/documentation](https://github.com/sigmastratum/documentation)

@@ -2,7 +2,7 @@
 title: Memory and Persistent State
 description: Public overview of memory, continuity, and persistent state in Sigma Runtime.
 published: true
-date: 2026-04-17T00:00:00.000Z
+date: 2026-05-14T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:31:02.763Z
@@ -98,21 +98,88 @@ The point is recoverability, not unlimited persistence.
 
 ---
 
-## 6. Public Evaluation Questions
+## 6. Retrieval as Recall and Perturbation
+Most memory retrieval is recall-oriented: it helps the runtime recover useful
+continuity, facts, or context that are already relevant to the current turn.
+
+SRIP-14 also allows a narrower perturbation-oriented mode. In that mode,
+retrieval is not treated as authoritative truth. It is treated as an
+exploratory signal that can help the runtime escape over-convergence,
+repetition, or low-variance attractor fixation.
+
+Publicly, this means:
+
+- recall reinforces relevant continuity;
+- perturbation introduces controlled contrast or adjacent interpretation;
+- both modes remain bounded by provenance, compression, scope, and semantic
+  load limits;
+- neither mode permits raw retrieval output to bypass runtime control.
+
+Perturbation-derived material should remain distinguishable from ordinary
+memory. It should not become canonical memory unless it is validated and
+reintegrated through the normal memory-governance path.
+
+---
+
+## 7. Runtime Self-Modeling Trace
+
+SRIP-16 introduces a separate class of runtime evidence: self-modeling trace.
+This trace may include meta-vectors, reflective snapshots, or self-model events
+that describe the runtime's recent control posture.
+
+Publicly, this should be understood as operational telemetry rather than
+ordinary user memory. It may help the runtime explain or diagnose drift,
+recovery, over-stabilization, or repeated fallback behavior, but it should not
+be treated as a private identity claim or as automatically retrievable user
+knowledge.
+
+Self-modeling trace remains subordinate to memory governance:
+
+- it is distinct from user-provided facts;
+- it is distinct from RAG or external retrieval evidence;
+- it should not become canonical memory unless validated through the normal
+  memory-governance path;
+- it must remain bounded so reflection does not consume the task context.
+
+---
+
+## 8. Cross-Runtime Exchange Evidence
+
+SRIP-17 introduces exchange artifacts that may arrive from another runtime,
+agent, workspace, or operator-controlled multi-agent workflow.
+
+Publicly, imported exchange material should not be treated as native memory on
+arrival. It remains externally sourced evidence until provenance, scope, drift
+impact, and safety constraints are validated through the receiving runtime's
+normal memory-governance path.
+
+This preserves:
+
+- source attribution;
+- user and workspace boundaries;
+- distinction between recall, retrieval, and external exchange;
+- the ability to quarantine or discard unstable imported material;
+- local control over whether exchanged evidence becomes durable memory.
+
+---
+
+## 9. Public Evaluation Questions
 At the public level, memory quality is most usefully understood through questions such as:
 
 - Is the runtime preserving relevant continuity?
 - Is recall helping or overloading the interaction?
 - Can the system recover from degraded memory states?
 - Does persistence strengthen coherence or amplify drift?
+- When perturbation is used, does it increase useful exploration without
+  destabilizing identity, scope, or coherence?
 
 Exact internal telemetry may evolve, but these are the durable public questions.
 
 ---
 
-## 7. Summary
+## 10. Summary
 The Sigma Runtime memory layer is best understood publicly as a structured continuity system.  
-It helps the runtime remain coherent across time, but it does so through bounded persistence, selective recall, and controlled reintegration rather than literal archival replay.
+It helps the runtime remain coherent across time, but it does so through bounded persistence, selective recall, controlled reintegration, and carefully governed perturbation rather than literal archival replay.
 
 ---
 

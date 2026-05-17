@@ -2,7 +2,7 @@
 title: Sigma Runtime Architecture
 description: A detailed overview of the Sigma Runtime structural layers, control surfaces, and memory-bearing architecture.
 published: true
-date: 2026-04-17T00:00:00.000Z
+date: 2026-05-14T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:28:39.558Z
@@ -73,6 +73,7 @@ The runtime consists of three interlinked layers:
    - **Mode And Phase Regulation:** narrows or reshapes runtime behavior under pressure
    - **Boundary And Recovery Controls:** supports rebinding, containment, and recovery instead of silent collapse
    - **Intent Handling:** keeps interaction behavior tied to user and system constraints
+   - **Runtime Self-Modeling (RSM):** records bounded meta-evidence about control posture, reflection pressure, and recent stability changes
 
 3. **Memory Layer**  
    Provides persistence beyond context windows:  
@@ -106,6 +107,8 @@ When interaction pressure grows, the runtime can:
 The public architectural point is not a fixed list of internal flags.
 The point is that the runtime has an explicit control plane between raw model generation and persisted interaction state.
 
+SRIP-16 adds a bounded self-modeling surface to this control plane. In architectural terms, RSM does not grant the runtime authority to rewrite itself. It creates compact reflective evidence - such as meta-vectors, self-model events, and reflective snapshots - that the control layer can inspect when deciding whether to narrow, recover, perturb, or continue normally.
+
 ---
 
 ## 5. Safety and Alignment Integration
@@ -129,7 +132,27 @@ These mechanisms exist to preserve continuity without allowing the system to dri
 
 ---
 
-## 6. Implementation Guidelines
+## 6. Multi-Agent Exchange Boundary
+
+SRIP-17 extends the public architecture with a bounded multi-agent exchange
+surface. In architectural terms, this is an interoperability boundary between
+local runtime state and external or peer runtime artifacts.
+
+MAE should be read as a governed exchange layer, not as an always-on shared
+mind. Imported material remains evidence until local memory, control, and
+safety layers decide whether it can affect the receiving runtime.
+
+The architectural boundary includes:
+
+- explicit authorization or consent before exchange;
+- provenance and integrity metadata for every artifact;
+- drift and safety gates before import or export;
+- local runtime sovereignty over reintegration;
+- auditability for accepted, narrowed, quarantined, or rejected artifacts.
+
+---
+
+## 7. Implementation Guidelines
 
 ### Runtime API Requirements
 - Expose stable runtime state and health metrics where publication is appropriate.  
@@ -143,7 +166,7 @@ These mechanisms exist to preserve continuity without allowing the system to dri
 - Recursive stability maintained by bounded control.  
 - Full transparency and introspective traceability.
 
-## 7. Cognitive Dynamics and Emergent Properties
+## 8. Cognitive Dynamics and Emergent Properties
 
 Across extended recursive operation, the architecture is designed to support:
 
@@ -157,7 +180,7 @@ These properties matter because they make long-horizon interaction governable ra
 
 ---
 
-## 8. Future Directions
+## 9. Future Directions
 
 1. richer public description of control and verification layers  
 2. clearer public explanation of attractor-field evidence and drift families  

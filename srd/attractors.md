@@ -2,7 +2,7 @@
 title: Attractors in Sigma Runtime
 description: Public explanation of attractor dynamics, bounded stabilization, and continuity in Sigma Runtime.
 published: true
-date: 2026-04-17T00:00:00.000Z
+date: 2026-05-14T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-11-30T04:29:26.743Z
@@ -120,13 +120,49 @@ These are the reasons attractors must stay under bounded runtime control.
 
 ---
 
-## 8. Telemetry and Analysis
+## 8. Controlled Perturbation
+Attractors should not be understood as permanent traps. A stable runtime also
+needs a controlled way to introduce variation when the current field becomes
+too repetitive, over-converged, or locally optimized.
+
+SRIP-15 defines this as controlled perturbation: a bounded deviation from the
+current attractor that explores an alternative trajectory without suspending
+safety, identity, drift, density, or memory constraints.
+
+Publicly, controlled perturbation means:
+
+- the runtime may detect attractor fixation or low-variance repetition;
+- it may introduce a limited contrast, reframing, or adjacent semantic signal;
+- it must preserve a return path to stable operation;
+- it must not treat exploration as permission for uncontrolled drift.
+
+Perturbation can be internal, such as reframing or motif re-weighting, or it can
+use SRIP-14 retrieval as an exploratory signal. In both cases, the perturbation
+remains subordinate to the runtime control stack.
+
+---
+
+## 9. Self-Modeling and Attractor Evolution
+
+SRIP-16 adds a bounded self-modeling view over attractor evolution.
+RSM may observe when an attractor becomes too rigid, too diffuse, or too
+self-referential, and may emit reflective evidence for the control layer.
+
+This does not create a hidden agent or independent attractor authority.
+The self-modeling layer records how the runtime is changing; it does not decide
+by itself that a change should be persisted, amplified, or exposed to the user.
+
+---
+
+## 10. Telemetry and Analysis
 At a public level, attractor analysis is valuable when it helps answer questions like:
 
 - which motifs are stabilizing continuity,
 - where interference begins,
 - whether the current field is coherent or overloaded,
-- and whether a recovery path is narrowing or restoring the interaction.
+- whether a recovery path is narrowing or restoring the interaction,
+- whether controlled perturbation helped produce useful exploration without
+  destabilizing the field.
 
 Exact internal telemetry may evolve, but the explanatory role remains the same:
 attractor analysis helps distinguish stable continuity from unstable amplification.

@@ -1,13 +1,27 @@
+> **Sigma Runtime Standard – License Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)**.
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.
+>
+> The license for this specific document is authoritative.
+> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+
 # SRIP-14 — Retrieval and Memory Integration Layer (RMI)
 **Runtime-Governed Semantic Recall, Optional External Retrieval, and Structured Memory Injection**
 
-**Version:** Draft v0.2  
-**Status:** Active Proposal / Partial Implementation  
-**Author:** Sigma Stratum Research Group (SSRG)  
-**Date:** 2026-04-24  
-**Parent Specs:** SRIP-09, SRIP-11  
-**Related Specs:** SRIP-01, SRIP-03, SRIP-04, SRIP-06, SRIP-07, SRIP-10, SRIP-13  
-**License:** CC BY-NC 4.0 / Canon CIL Applicable
+| Field | Value |
+| --- | --- |
+| Version | Draft v0.3 |
+| Status | Active Proposal / Partial Implementation |
+| Author | Sigma Stratum Research Group (SSRG) |
+| Date | 2026-04-28 |
+| Parent Specs | SRIP-09, SRIP-11 |
+| Related Specs | SRIP-01, SRIP-03, SRIP-04, SRIP-06, SRIP-07, SRIP-10, SRIP-12, SRIP-13 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Impact | Adds perturbation-oriented retrieval as an optional, runtime-governed RMI mode under existing stability, identity, and semantic-load constraints. |
+| SRD Synchronization Action | Completed in `/srd/memory.md` and `/srd/attractors.md`. |
+| Release Alignment Status | aligned |
 
 ---
 
@@ -88,10 +102,14 @@ conformance is complete. Typical bounded conformance may include:
 - structured memory injection;
 - scoped provenance;
 - bounded observability and degradation behavior.
+- optional perturbation-oriented retrieval when retrieval is explicitly treated
+  as exploratory, non-authoritative signal and remains subordinate to runtime
+  stability controls.
 
 Full conformance requires explicit retrieval-governance semantics across
 internal and optional external retrieval surfaces, with sufficient provenance,
-auditability, and interoperability with SRIP-09 and SRIP-11.
+auditability, and interoperability with SRIP-09, SRIP-11, and SRIP-15 when
+retrieval is used as a perturbation source.
 
 ---
 
@@ -111,6 +129,7 @@ auditability, and interoperability with SRIP-09 and SRIP-11.
 | **Memory Injection** | Controlled insertion of compressed recall into interpretation or reasoning layers. |
 | **Source Provenance** | Metadata identifying origin, timestamp, scope, confidence, and retrieval path. |
 | **Memory Resolution Snapshot** | Runtime summary of what recall was considered, injected, suppressed, or degraded for a turn. |
+| **Perturbation Retrieval** | Optional retrieval mode that provides exploratory contrast or adjacent signal under SRIP-15 control, without treating retrieved evidence as authoritative memory. |
 
 ---
 
@@ -493,3 +512,140 @@ flooding it.
 External sources may answer what is known.
 Sigma Runtime must still decide what is relevant, bounded, scoped, coherent,
 and safe to inject.
+
+---
+
+## XXII. Retrieval as Perturbation Source
+
+RMI may be used not only for semantic recall, but also as a controlled source of
+divergence when the runtime detects over-convergence, attractor fixation, or
+insufficient behavioral variance.
+
+This mode treats retrieval as a **perturbation operator**, not as authoritative
+knowledge injection.
+
+Perturbation-oriented retrieval is optional. It is valid only when it remains
+inside the same runtime-governed envelope as standard recall.
+
+### 1. Trigger Conditions
+
+Perturbation-oriented retrieval should be considered when:
+
+- the runtime detects sustained convergence, repeated patterns, or low
+  behavioral variance;
+- symbolic density remains high while structural novelty remains low;
+- unresolved threads are not progressing;
+- attractor stability is high while exploration is low;
+- control signals indicate monotony or closed-loop reinforcement.
+
+Perturbation must not be triggered when:
+
+- system stability is degraded;
+- drift exceeds recovery thresholds;
+- safety, identity, or participant-boundary invariants are under pressure;
+- retrieval would exceed the semantic load budget;
+- retrieval scope cannot be proven authorized.
+
+### 2. Retrieval Strategy
+
+When operating in perturbation mode:
+
+- queries should be shaped toward adjacent or contrasting semantic regions, not
+  only direct matches;
+- retrieval sources may include alternative interpretations, competing
+  frameworks, historical divergences, or structurally dissimilar but relevant
+  patterns;
+- the retrieval envelope should remain stricter than standard recall mode to
+  prevent overload;
+- perturbation should introduce variation without breaking coherence.
+
+Perturbation retrieval must not bypass query shaping, retrieval envelopes,
+provenance, compression, or memory injection rules defined elsewhere in
+SRIP-14.
+
+### 3. Treatment of Retrieved Evidence
+
+Retrieved data in perturbation mode must be treated as:
+
+```text
+non-authoritative exploratory signal
+```
+
+It must not be treated as:
+
+```text
+ground truth or required context
+```
+
+The runtime must:
+
+- mark perturbation-derived evidence as exploratory;
+- preserve provenance and confidence signals;
+- avoid merging perturbation data into canonical memory without validation;
+- keep perturbation state distinguishable from ordinary recall state.
+
+### 4. Compression and Injection
+
+Perturbation retrieval must follow standard RMI constraints:
+
+- apply bounded recall compression;
+- produce structured state, including facts, alternatives, contrasts, and
+  uncertainty;
+- inject only into controlled reasoning or interpretation layers;
+- avoid direct prompt concatenation of raw retrieved text.
+
+Injection should:
+
+- introduce controlled variation;
+- remain reversible;
+- preserve identity and participant boundaries as defined by SRIP-13;
+- preserve domain invariants where domain-specific control layers apply.
+
+### 5. Control Integration
+
+Perturbation behavior must be governed by the runtime control stack:
+
+- safety constraints take precedence over perturbation;
+- drift and density controls must remain within bounds;
+- throughput and semantic-load constraints must not be exceeded;
+- domain and identity invariants must not be violated.
+
+If a conflict occurs, perturbation must yield to the higher-priority control
+layer.
+
+### 6. Return Conditions
+
+The runtime should provide a path back to stable operation when:
+
+- coherence drops below acceptable thresholds;
+- drift increases beyond safe limits;
+- perturbation does not produce useful divergence;
+- control telemetry indicates that exploration is no longer beneficial.
+
+In such cases, the runtime must:
+
+- reduce or stop perturbation;
+- re-anchor to the prior stable attractor state where available;
+- resume normal controlled operation.
+
+### 7. Observability
+
+Perturbation usage should be observable through authorized diagnostics:
+
+- perturbation trigger events;
+- retrieval source classification, such as recall or perturbation;
+- compression ratio and injection scope;
+- impact on variance, drift, and density;
+- return-to-stability events.
+
+These diagnostics must not leak hidden control text, private memory, or
+proprietary implementation detail into user-facing output.
+
+### 8. Final Principle
+
+Retrieval is not only a tool for remembering.
+
+In controlled contexts, it can also be a tool for changing trajectory.
+
+Recall reinforces what is known.
+Perturbation reveals what is possible.

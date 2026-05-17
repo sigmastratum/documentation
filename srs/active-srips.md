@@ -2,7 +2,7 @@
 title: Active SRIPs — Sigma Runtime Standard
 description: Public index of the active Sigma Runtime Improvement Proposal surface, including foundational SRIPs and later registry proposals.
 published: true
-date: 2026-04-17T00:00:00.000Z
+date: 2026-05-14T00:00:00.000Z
 tags: 
 editor: markdown
 dateCreated: 2025-12-28T09:46:38.133Z
@@ -55,6 +55,11 @@ Later proposals and extensions are tracked in the public registry:
 | [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) | Compression & Memory Topology | Consult document header |
 | [SRIP-12-CDS](/srs/registry/SRIP-12-CDS) | Commerce Decision State Layer | Consult document header |
 | [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) | Relational Identity Stabilization | Consult document header |
+| [SRIP-14-RMI](/srs/registry/SRIP-14-RMI) | Retrieval and Memory Integration Layer | Consult document header |
+| [SRIP-15-ADP](/srs/registry/SRIP-15-ADP) | Attractor Dynamics and Controlled Perturbation Layer | Consult document header |
+| [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) | Recursive Self-Modeling | Consult document header |
+| [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) | Multi-Agent Exchange | Consult document header |
+| [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) | Commerce Semantic Integration Layer | Consult document header |
 
 Deprecated or superseded entries remain traceable through the registry as part of the public historical record.
 
@@ -63,6 +68,7 @@ Deprecated or superseded entries remain traceable through the registry as part o
 ## Governance Notes
 
 - `SRIP` changes must follow the [`/team/srip-process.md`](/team/srip-process.md).
+- Numerical order is historical. Conceptual reading order is maintained in [`/srs/architecture-reading-order`](/srs/architecture-reading-order).
 - Normative changes with explanatory impact must satisfy the [`/team/srs-srd-interaction-requirements.md`](/team/srs-srd-interaction-requirements.md).
 - Public artifacts must satisfy the [`/team/public-proprietary-information-boundary-requirements.md`](/team/public-proprietary-information-boundary-requirements.md).
 - Release alignment claims must remain truthful if `SRD` synchronization is still pending.
