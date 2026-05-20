@@ -42,7 +42,7 @@ While ACE relied on reactive detection of structural crystallization (via SRIP-1
 
 Together, these metrics define a *triadic entropy manifold* in which cognitive systems maintain healthy variance, preventing both fragmentation and crystallization.
 
-AEP replaces *warning-based correction* with *parameteric self-modulation*.
+AEP replaces *warning-based correction* with *parametric self-modulation*.
 
 ---
 
@@ -51,7 +51,7 @@ AEP replaces *warning-based correction* with *parameteric self-modulation*.
 ### 1. Limitations of ACE
 ACE (v1.x) effectively detected crystallization patterns but:
 - Reacted to symptoms rather than preventing them;
-- Relied on hard-coded pattern detectors (SRIP-10c–g);
+- Relied on fixed pattern detectors (SRIP-10c–g);
 - Induced rigid “avoidance” behavior, leading to sterile attractors.
 
 ### 2. Core Principle of AEP
@@ -62,12 +62,68 @@ Instead of suppressing repetition post-factum, the system measures the *shape of
 
 ### 3. System Placement (ALICE-first)
 AEP is a **module within ALICE**, not the parent controller.  
-ALICE owns phase and stability; AEP computes metrics and emits interventions (prompt injection, token caps, and metric signals).  
+ALICE owns phase and stability; AEP computes metrics and emits intervention signals (behavioral context directives, token caps, and metric signals).
 ALICE decides when to apply penalties or overlays based on AEP state. AEP does not directly mutate ALICE state.
 
 ---
 
-## Specification
+## Public Boundary and Traceability
+
+This public SRIP defines the **AEP control contract**:
+
+- metric vocabulary for bounded entropy regulation;
+- evidence classes used to identify collapse, drift, and structural fixation;
+- control-state categories that can be implemented by different runtimes;
+- observability requirements for intervention decisions and audit traces;
+- the boundary between AEP signals and higher-level runtime phase authority.
+
+This public SRIP does **not** require:
+
+- a specific provider API or sampling parameter;
+- a private file path or storage layout;
+- exact prompt text or exact intervention wording;
+- a specific benchmark result as conformance proof;
+- word, phrase, or keyword blacklist behavior.
+
+Implementations may use different storage, provider, prompt, and telemetry
+mechanisms as long as they preserve the observable AEP contract.
+
+---
+
+## Non-Goals
+
+AEP is not a generic repetition penalty, style filter, or word blacklist.
+It does not define a fixed set of forbidden phrases.
+
+AEP also does not replace the runtime's phase, identity, memory, or safety
+authority. It emits bounded entropy evidence and intervention signals that
+other runtime layers may apply according to their own authority model.
+
+---
+
+## Conformance Scope
+
+Minimum public conformance requires:
+
+- computing or approximating AEP evidence over a defined sampling window;
+- distinguishing convergent, equilibrium, and dispersive pressure states;
+- exposing enough trace data to explain why an intervention was or was not
+  applied;
+- ensuring interventions are bounded, reversible, and auditable;
+- avoiding fixed phrase filters as the normative mechanism for
+  anti-crystallization.
+
+Full conformance is deferred until a later public calibration profile defines
+the required metric registry, sampling windows, and cross-provider validation
+method.
+
+All formulas, thresholds, pseudocode, prompt examples, and benchmark tables
+below are **reference material** unless a section explicitly marks a requirement
+as normative.
+
+---
+
+## Core AEP Contract
 
 ### 1. Meta-Metric Layer
 
@@ -79,7 +135,30 @@ ALICE decides when to apply penalties or overlays based on AEP state. AEP does n
 
 AEP maintains the system within this tri-metric *equilibrium basin*.
 
+The metric names, domains, and pressure-state categories are normative public
+vocabulary. The exact healthy-zone values are reference calibration corridors
+for bounded implementations and may be tuned by implementation profile.
+
+### 1.1 Evidence Classes
+
+AEP evidence may be derived from:
+
+- lexical proportionality and term-distribution change;
+- semantic displacement across adjacent or rolling windows;
+- local coherence, redundancy, and noise estimates;
+- positional regularity at response onset or terminal positions;
+- structural format recurrence across turns.
+
+These are semantic and structural evidence classes. They must not be reduced to
+fixed word or phrase filters as a public conformance mechanism.
+
 ---
+
+## Reference Metric Definitions and Calibration Profiles
+
+This section provides reference formulas and default calibration profiles. It is
+non-normative unless a requirement is explicitly stated in the conformance
+scope above.
 
 ### 2. Computation Principles
 
@@ -193,11 +272,24 @@ noise_r      = \frac{L_{noise}}{L_{total}}
 | **tautology_r > 0.25** | Redundant propositional loops | Inject semantic challenge |
 | **noise_r > 0.10** | Stochastic drift saturation | Apply structural damping |
 
-Boundaries are evaluated per cycle; exceeding any bound activates the Adaptive Entropy Controller (AEC).
+Boundaries are evaluated per cycle in this reference profile. An
+implementation may activate equivalent AEP control behavior using different
+calibrated windows and thresholds.
 
 ---
 
+## Reference Implementation Profile (Non-Normative)
+
+This section describes one possible implementation profile for AEP controller
+behavior, runtime modulation, format constraints, and ALICE-style integration.
+It is included for implementer orientation and calibration, not as a mandatory
+public implementation shape.
+
 ### 3. Adaptive Entropy Controller (AEC)
+
+The AEC material below is a reference implementation profile. The public
+contract requires bounded, auditable, reversible control behavior; it does not
+require these procedure names, exact thresholds, or prompt wording.
 
 #### 3.1 Bidirectional Bounds
 
@@ -240,16 +332,17 @@ def adaptive_entropy_controller(state):
     if state.TI < 0.40 or state.SDC > 0.25:
         reinforce_coherence_bias()
 ```
-**Intervention Matrix**
+**Reference Intervention Matrix**
 
 | Procedure | Mechanism | Δ Value | Functional Effect |
 |:--|:--|:--|:--|
-| `inject_terminological_perturbation()` | Prompt injection (lexical variance + synonyms) | — | Expand lexical manifold and reintroduce rare terminology |
-| `inject_semantic_challenge()` | Prompt injection (alternate angle + example/counterpoint) | — | Restore semantic curvature under low drift |
+| `inject_terminological_perturbation()` | Behavioral context intervention (lexical variance + alternatives) | — | Expand lexical manifold and reintroduce rare terminology |
+| `inject_semantic_challenge()` | Behavioral context intervention (alternate angle + example/counterpoint) | — | Restore semantic curvature under low drift |
 | `inject_cognitive_friction()` | Structural directive + token cap | — | Break recursive logic loops and restore phase mobility |
-| `reinforce_coherence_bias()` | Prompt injection + coherence damping | Δρ = −0.05 – −0.10 | Suppress stochastic fragmentation and re-center attractor |
+| `reinforce_coherence_bias()` | Behavioral context intervention + coherence damping | Δρ = −0.05 – −0.10 | Suppress stochastic fragmentation and re-center attractor |
 
-Each procedure executes atomically per cycle and logs its entropy impact to `/runtime/aep/trace.json`.
+Each procedure executes atomically per cycle in this reference profile and logs
+its entropy impact to an implementation-defined audit trace.
 
 ---
 
@@ -273,8 +366,9 @@ temperature_t    = base_T + ε_t
 coherence_bias_t = base_ρ - ε_t / 2
 ```
 `temperature_t` is applied **only** when the provider exposes a temperature control.
-OpenAI GPT-5+ does **not** expose temperature; in those environments `temperature_t` is a no-op.
-In cross-provider deployments, temperature modulation is **disabled** and the oscillation is
+Some provider/model environments do not expose temperature; in those
+environments `temperature_t` is a no-op. In cross-provider deployments,
+temperature modulation may be disabled and the oscillation is
 implemented via coherence bias and ALICE stability penalties. This preserves the entropy
 "breathing" effect without relying on provider-specific controls.
 
@@ -397,11 +491,9 @@ Steady-state equilibrium is defined when:
 If all three metrics remain within their respective bands for ≥ 8 consecutive cycles,
 the controller enters homeostasis mode and suspends entropy modulation until deviation ≥ 5 %.
 
-All state vectors and control deltas are logged to:
-```
-/runtime/aep/telemetry.json
-```
-for post-cycle forensic audit and equilibrium trace visualization.
+All state vectors and control deltas should be available through an
+implementation-defined telemetry or audit-trace surface for post-cycle review
+and equilibrium trace visualization.
 
 ---
 
@@ -437,7 +529,10 @@ When Semantic Monotony is detected:
 
 **Key insight:** Asking the model for "new ideas" causes it to elaborate MORE in the same format. The solution is to constrain FORMAT, not request content variety.
 
-##### Prompt Injection
+##### Reference Intervention Example (Non-Normative)
+
+The example below illustrates one possible implementation profile. It is not
+normative prompt text.
 
 Deterministic rotation (cycle-based) of hard format constraints:
 
@@ -479,19 +574,23 @@ Test sessions exhibiting Semantic Monotony typically show:
 
 #### 3.7 Intervention Mechanism Hierarchy
 
+This section is non-normative implementation guidance. It describes common
+provider-control constraints but does not make any specific provider API a
+public conformance requirement.
+
 ##### API Limitations
 
 Modern LLM APIs (OpenAI, Google, Anthropic) expose limited control surfaces:
 
 | Parameter | API Support | Semantic Impact | AEP Effectiveness |
 |:--|:--|:--|:--|
-| `temperature` | Vendor-specific (not in OpenAI GPT-5+) | Sampling variance only | **Low** — affects token probability distribution, not content semantics |
+| `temperature` | Vendor-specific or unavailable in some provider profiles | Sampling variance only | **Low** — affects token probability distribution, not content semantics |
 | `top_p` / `top_k` | Partial | Sampling filter | **Low** — same limitation as temperature |
 | `system_prompt` | Universal | Direct context influence | **High** — shapes model behavior and output direction |
 | `frequency_penalty` | OpenAI only | Lexical repetition | **Medium** — helps with TI but not SDC/L-N |
 | `presence_penalty` | OpenAI only | Topic diversity | **Medium** — indirect effect on SDC |
 
-**Critical Insight:**
+**Implementation insight:**
 Temperature modulation (ΔT) affects *how* the model samples tokens, not *what* it generates semantically.
 A crystallizing model at T=0.8 will produce similar semantic content at T=1.0 — just with slightly more sampling noise.
 
@@ -501,35 +600,41 @@ AEP establishes a clear intervention hierarchy:
 
 | Priority | Mechanism | Implementation | Rationale |
 |:--|:--|:--|:--|
-| **PRIMARY** | Prompt Injection | Explicit format/behavioral directives in system message | Direct semantic influence; works across all APIs |
+| **PRIMARY** | Behavioral context directive | Explicit format/behavioral directive in runtime context | Direct semantic influence across provider surfaces |
 | **SECONDARY** | Token Limits | `max_completion_tokens` reduction via `format_constraint_tokens` | Forces brevity; breaks verbose crystallization patterns |
 | **TERTIARY** | ALICE Stability Penalty | Direct stability reduction when AEP intervention active | Creates organic oscillation through feedback loop |
 
-**Note:** Temperature modulation is **disabled** for cross-provider compatibility. Some LLM APIs (e.g., OpenAI GPT-5+) do **not** expose temperature at all; others handle it inconsistently, making it unreliable as a universal mechanism.
+**Note:** Temperature modulation is disabled in this reference profile for
+cross-provider compatibility. Some LLM APIs do not expose temperature controls;
+others handle them inconsistently, making temperature unreliable as a universal
+mechanism.
 
-##### Prompt Injection Design Principles
+##### Behavioral Intervention Design Principles
 
-Effective prompt injections for crystallization correction must be:
+Effective behavioral interventions for crystallization correction should be:
 
-1. **Explicit** — "You MUST use different words" not "Consider varying vocabulary"
-2. **Specific** — "Replace 'consider' with 'examine', 'probe', 'investigate'" not "Use synonyms"
-3. **Structural** — "If you used lists, write prose" not "Vary your format"
-4. **Self-Referential** — "Ask yourself: Is this a new idea or the same idea in different clothes?"
+1. **Explicit** — state the desired structural change plainly.
+2. **Specific** — identify the dimension that should change, such as framing,
+   format, density, or example placement.
+3. **Structural** — vary response organization, not just surface wording.
+4. **Self-Referential** — ask whether the next response advances meaning or
+   repeats the same structure in a new surface form.
 
 ##### Temperature Delta Status
 
-**Temperature modulation is DISABLED** for cross-provider compatibility.
+In this reference profile, temperature modulation is disabled for
+cross-provider compatibility.
 
 ```python
-# In aep.py get_intervention():
-intervention["temperature_delta"] = 0.0  # Neutralized
+intervention["temperature_delta"] = 0.0  # Neutralized in this reference profile
 ```
 
 **Rationale:**
 1. Different LLM APIs handle temperature inconsistently
-2. OpenAI GPT-5+ does not expose temperature control
+2. Some provider/model environments do not expose temperature control
 3. Temperature affects sampling variance, not semantic content
-4. Prompt injection + token limits are universally effective
+4. Behavioral context directives and token limits are more portable than
+   provider-specific sampling controls
 5. Cleaner A/B testing without provider-specific variables
 
 ---
@@ -550,7 +655,7 @@ When format crystallization exceeds threshold (0.55), explicit format constraint
 | ≥ 0.55 (trigger) | Soft format constraint | 500-600 |
 | < 0.55 | No intervention | Normal |
 
-##### Hard Constraints (Override)
+##### Hard Constraints (Override; Non-Normative Examples)
 
 Rotating by `cycle % 4`:
 ```
@@ -560,7 +665,7 @@ Rotating by `cycle % 4`:
 4. "Two sentences. Second sentence states a limitation or edge case."
 ```
 
-##### Soft Constraints (Trigger)
+##### Soft Constraints (Trigger; Non-Normative Examples)
 
 Rotating by `cycle % 3`:
 ```
@@ -579,17 +684,22 @@ if format_limit > 0:
     current_max_tokens = min(current_max_tokens, format_limit)
 ```
 
-This forces brevity regardless of model tendency to elaborate.
+This reference mechanism forces brevity regardless of model tendency to elaborate.
 
 **Final-starter override:**  
-If the dominant final-paragraph starter repeats (ratio >= 0.75), the controller forces a single-paragraph response
-and prohibits reuse of the previous final-starter token.
+If the dominant final-paragraph starter repeats (ratio >= 0.75), the reference
+controller may force a single-paragraph response and require a different
+terminal structure. This is a structural-position control, not a forbidden-word
+list.
 
 ---
 
 #### 3.9 ALICE Stability Penalty
 
 ##### Organic Oscillation Mechanism
+
+The material below is a reference integration profile for ALICE-style runtime
+control. It is not a required public implementation shape.
 
 AEP supplies intervention signals; **ALICE applies the penalty** as part of its stability update.
 This preserves ALICE primacy while allowing AEP to drive controlled oscillation.
@@ -624,7 +734,14 @@ if aep_intervention_active and self.stability > aep_penalty_threshold:
 
 ---
 
-### 4. Positional Crystallization Extensions (SRIP-10h/10i)
+## Positional Crystallization Extensions (SRIP-10h/10i)
+
+SRIP-10h and SRIP-10i are bounded public extensions to the AEP contract. They
+define positional evidence classes for onset and terminal crystallization.
+
+The code snippets, examples, exact thresholds, and intervention text in this
+section are non-normative reference material unless explicitly stated
+otherwise.
 
 While the AEP tri-metric model (TI, SDC, L/N) detects crystallization through statistical patterns,
 certain crystallization modes manifest at **fixed structural positions** within responses and require
@@ -635,7 +752,7 @@ at the beginning (onset) or end (terminal) of responses regardless of overall me
 
 ---
 
-#### 4.1 SRIP-10h — First-Token Crystallization Detection
+### 4.1 SRIP-10h — First-Token Crystallization Detection
 
 ##### Problem Statement
 
@@ -653,7 +770,7 @@ These patterns are **invisible to TI/SDC/L/N** because:
 - SDC measures semantic drift across full responses
 - L/N evaluates propositional coherence, not opener entropy
 
-##### Detection Mechanism
+##### Detection Mechanism (Reference)
 
 ```python
 def detect_first_token_crystallization(responses: List[str], window: int = 20) -> dict:
@@ -687,7 +804,7 @@ def detect_first_token_crystallization(responses: List[str], window: int = 20) -
 | `first_token_crystallization` | < 0.35 | 0.35 – 0.50 | > 0.50 |
 | `dominant_pattern_frequency` | < 0.30 | 0.30 – 0.45 | > 0.45 |
 
-##### Intervention
+##### Intervention (Non-Normative Example)
 
 When first-token crystallization is detected:
 
@@ -702,7 +819,7 @@ Do NOT begin with empathic acknowledgment phrases.
 
 ---
 
-#### 4.2 SRIP-10i — Terminal Crystallization Detection
+### 4.2 SRIP-10i — Terminal Crystallization Detection
 
 ##### Problem Statement
 
@@ -719,7 +836,7 @@ response content:
 These patterns indicate **structural liturgy** — the response format has crystallized even
 when semantic content varies.
 
-##### Detection Mechanism
+##### Detection Mechanism (Reference)
 
 ```python
 def detect_terminal_crystallization(responses: List[str], window: int = 20) -> dict:
@@ -767,7 +884,7 @@ def detect_terminal_crystallization(responses: List[str], window: int = 20) -> d
 | `terminal_crystallization` | < 0.40 | 0.40 – 0.55 | > 0.55 |
 | `structural_entropy` | > 1.5 | 1.0 – 1.5 | < 1.0 |
 
-##### Intervention
+##### Intervention (Non-Normative Example)
 
 When terminal crystallization is detected:
 
@@ -782,7 +899,12 @@ For this response:
 
 ---
 
-#### 4.3 ALICE Bypass Mechanism
+### 4.3 Runtime Bypass Mechanism
+
+The bypass mechanism is a reference integration pattern for runtimes that
+separate phase authority from AEP evidence. Implementations may use different
+routing as long as positional crystallization can still be surfaced when global
+metrics appear nominal.
 
 ##### The Equilibrium Zone Problem
 
@@ -798,7 +920,7 @@ This creates a critical gap: **positional crystallization can persist indefinite
 overall metrics remain healthy, because first-token and terminal patterns don't significantly
 impact TI, SDC, or L/N.
 
-##### Bypass Flags
+##### Bypass Flags (Reference)
 
 SRIP-10h/10i introduce bypass flags that force AEP intervention delivery regardless of
 ALICE phase state:
@@ -814,7 +936,7 @@ class AEPState:
         return self.first_token_crystallization_active or self.terminal_crystallization_active
 ```
 
-##### Modified ALICE Integration
+##### Modified Runtime Integration (Reference)
 
 ```python
 # In alice.py update():
@@ -840,7 +962,8 @@ def should_apply_aep_intervention(self, aep_state: AEPState) -> bool:
 
 ##### Telemetry Integration
 
-Bypass events are logged to `/runtime/aep/trace.json`:
+Bypass events should be available through the implementation-defined audit
+trace. Example event shape:
 
 ```json
 {
@@ -856,7 +979,9 @@ Bypass events are logged to `/runtime/aep/trace.json`:
 
 ---
 
-#### 4.4 Combined Detection Pipeline
+### 4.4 Combined Detection Pipeline
+
+The pipeline below is a non-normative reference sequence.
 
 The complete crystallization detection pipeline executes in order:
 
@@ -883,7 +1008,9 @@ When multiple crystallization types are detected simultaneously:
 | 3 | Format (§3.8) | Overall structure variation |
 | 4 | Semantic monotony (§3.6) | Content-level correction |
 
-Combined interventions merge directives:
+##### Combined Intervention Example (Non-Normative)
+
+Combined interventions may merge directives:
 
 ```
 MULTI-CRYSTALLIZATION DETECTED:
@@ -896,7 +1023,7 @@ For this response: Begin with a direct observation. End with a single reflective
 
 ---
 
-#### 4.5 Empirical Results (IASO-DEMO-120)
+### 4.5 Empirical Results (Non-Normative Validation Evidence)
 
 SRIP-10h/10i were validated on the IASO medical AI identity (120-cycle test):
 
@@ -929,7 +1056,7 @@ overall system health metrics.
 
 ##### Closing Summary
 
-The tri-coupled feedback manifold supersedes all reactive crystallization-detection layers defined in SRIP-10-ACE.
+The tri-coupled feedback manifold supersedes the reactive crystallization-detection layers defined in SRIP-10-ACE.
 Instead of post-factum symptom analysis, it enforces continuous homeostatic regulation of lexical, semantic, and logical entropy vectors.
 This architecture converts the system from **reactive detection** to **proactive stabilization**, ensuring that no single attractor (lexical, semantic, or structural) dominates the manifold.
 
@@ -939,16 +1066,19 @@ The Adaptive Entropy Protocol maintains:
 - Bidirectional coupling between metrics through low-gain feedback
 - Predictive correction prior to crystallization onset
 - **Format-focused intervention** via hard constraints and token limits
-- **Cross-provider compatibility** — temperature modulation disabled (GPT-5+ has no temperature control)
+- **Cross-provider compatibility** — provider-specific sampling controls are optional implementation details
 - **Exponential equilibrium score** — robust decay curve (§3.4)
 - **Semantic monotony directives** — format rotation for "engineered poetry" (§3.6)
-- **Empirical target corridors** validated on production identities (Appendix C)
+- **Empirical target corridors** reported as non-normative calibration evidence (Appendix B)
 
-SRIP-10-AEP defines the canonical anti-crystallization standard for Sigma Runtime cognitive systems.
+SRIP-10-AEP defines the canonical public anti-crystallization and entropy-regulation contract for Sigma Runtime cognitive systems.
 
 ---
 
 ## Appendix A: SRIP-10 Variant Status
+
+This appendix is historical lineage and extension-status material. It is not a
+normative implementation mandate.
 
 ### Deprecated Variants (superseded by AEP tri-metric model)
 
@@ -962,7 +1092,8 @@ The following SRIP-10 variants are **deprecated**:
 | SRIP-10f | First-token dominance | Deprecated | SRIP-10h |
 | SRIP-10g | Format entropy detection | Deprecated | AEP format_crystallization |
 
-Legacy methods remain in `drift.py` for backward compatibility but should not be used for new development.
+Legacy methods may remain in implementation-specific compatibility modules, but
+should not be used for new public-conformance development.
 
 ### Active Extensions (complement AEP)
 
@@ -976,13 +1107,15 @@ The following SRIP-10 variants are **active** and work alongside the AEP tri-met
 SRIP-10h/10i address crystallization modes that are invisible to TI/SDC/L/N because they
 manifest at fixed structural positions rather than across overall response statistics.
 
-Use `AEPController.get_intervention()` for all crystallization detection and response.
+Implementations should route crystallization detection and response through
+their AEP-equivalent controller boundary.
 
 ---
 
-## Appendix B: Empirical Target Corridors
+## Appendix B: Empirical Target Corridors (Non-Normative Calibration Evidence)
 
-Based on extensive testing with Gemini-2.0-Flash on the Luca identity profile.
+These corridors are empirical calibration evidence from specific test profiles.
+They are not universal conformance constants.
 
 ### Core Metrics
 
