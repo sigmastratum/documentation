@@ -86,7 +86,7 @@ This allows the standard to scale without breaking citations or historical conti
 | SRIP | Title | Status | Date | Maintainer |
 |------|--------|---------|------|-------------|
 | [SRIP-09-LTM](/srs/registry/SRIP-09-LTM) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | **Active Proposal / Partial Implementation** | 2026-04-11 | SSRG |
-| [SRIP-10-AEP](/srs/registry/SRIP-10-AEP) | Adaptive Entropy Protocol (AEP) | **Active (Production)** | 2026-01-25 | SSRG |
+| [SRIP-10-AEP](/srs/registry/SRIP-10-AEP) | Adaptive Entropy Protocol (AEP) | **Public Draft v0.2 / Partial Implementation** | 2026-05-20 | SSRG |
 | [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) | Compression & Memory Topology (CMT) | **Active (v0.5.3)** | 2026-02-04 | SSRG |
 | [SRIP-12-CDS](/srs/registry/SRIP-12-CDS) | Commerce Decision State Layer (CDS) | **Draft / Implementation Pending** | 2026-04-11 | SSRG |
 | [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) | Relational Identity Stabilization (RIS) | **Active Proposal** | 2026-04-11 | SSRG |
