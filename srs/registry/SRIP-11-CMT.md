@@ -1,19 +1,30 @@
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - License Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)**.
+> It is licensed under **Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)**.
 >
-> The license for this specific document is authoritative.  
+> The license for this specific document is authoritative.
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
-# SRIP-11: Compression & Memory Topology
-**Version:** 1.0
-**Status:** Active
-**Applies to:** SIGMA Runtime ≥ v0.5.3
-**Depends on:** SRIP-09 (LTM), SRIP-10 (AEP)
-**Author:** Sigma Stratum Research Group
-**Date:** 2026-01-30
-**License:** CC BY-NC 4.0 / Canon CIL Applicable
+# SRIP-11: Compression and Memory Topology (CMT)
 
+| Field | Value |
+| --- | --- |
+| SRIP | SRIP-11 |
+| Title | Compression and Memory Topology (CMT) |
+| Version | 1.0 |
+| Status | Active |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Memory / Compression / Topological Recall |
+| Parent Specs | SRIP-09, SRIP-10 |
+| Related Specs | None declared |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines a memory compression and topology contract. It does not mandate a specific vector store, graph store, compression scheduler, or recall product. |
+| Conformance Level | Partial Conformance / Bounded Implementation |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Active spec with historical applicability to SIGMA Runtime >= v0.5.3; no full runtime enablement claim is made by this document alone. |
 
 ---
 

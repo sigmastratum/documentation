@@ -1,13 +1,3 @@
----
-title: SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)
-description: Defines the Sigma Runtime long-horizon memory architecture for semantic recall, structural lineage, and temporal traceability.
-published: true
-date: 2026-04-24T00:00:00.000Z
-tags:
-editor: markdown
-dateCreated: 2025-12-31T09:50:13.465Z
----
-
 > **Sigma Runtime Standard - License Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)**.
 > It is licensed under **Creative Commons Attribution-NonCommercial 4.0 (CC BY-NC 4.0)**.
@@ -18,13 +8,24 @@ dateCreated: 2025-12-31T09:50:13.465Z
 # SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)
 **Semantic Memory, Structural Lineage, and Temporal Traceability**
 
-**Version:** Draft v0.4  
-**Status:** Active Proposal / Partial Implementation  
-**Author:** Sigma Stratum Research Group (SSRG)  
-**Date:** 2026-04-24  
-**Parent Spec:** SRIP-04 — Memory Layer Architecture  
-**Related Specs:** SRIP-08, SRIP-10, SRIP-11, SRIP-13  
-**License:** CC BY-NC 4.0 / Canon CIL Applicable
+| Field | Value |
+| --- | --- |
+| SRIP | SRIP-09 |
+| Title | Long-Term Memory and Structural Coherence Layer (LTM-SC) |
+| Version | Draft v0.4 |
+| Status | Active Proposal / Partial Implementation |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Memory / Structural Coherence / Traceability |
+| Parent Specs | SRIP-04 |
+| Related Specs | SRIP-08, SRIP-10, SRIP-11, SRIP-13 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines a long-term memory and structural-coherence contract. It does not require a specific vector database, graph database, trace-ledger product, or cross-user memory authority. |
+| Conformance Level | Partial Conformance / Bounded Implementation |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Active proposal with partial implementation; no full graph or trace-ledger production claim is made by this document alone. |
 
 ---
 
