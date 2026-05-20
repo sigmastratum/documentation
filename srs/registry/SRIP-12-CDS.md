@@ -6,13 +6,25 @@
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 # SRIP-12: Commerce Decision State Layer (CDS)
-**Version:** 1.2  
-**Status:** Active Proposal / Partial Implementation  
-**Depends on:** SRIP-09 (LTM), SRIP-10 (AEP), SRIP-11 (CMT)  
-**Related Specs:** SRIP-13 (RIS)  
-**Author:** Sigma Stratum Research Group  
-**Date:** 2026-04-24  
-**License:** CC BY-NC 4.0 / Canon CIL Applicable
+
+| Field | Value |
+| --- | --- |
+| SRIP | SRIP-12 |
+| Title | Commerce Decision State Layer (CDS) |
+| Version | 1.2 |
+| Status | Active Proposal / Partial Implementation |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Commerce / Runtime Business Control / Decision State |
+| Parent Specs | SRIP-09, SRIP-10, SRIP-11 |
+| Related Specs | SRIP-13 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines a deterministic commerce decision-state control contract. It does not define pricing engines, payment processing, transactional execution, or autonomous commerce authority. |
+| Conformance Level | Partial Conformance / Bounded Implementation |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Active proposal with partial implementation; no broader production commerce capability is claimed by this document alone. |
 
 ---
 

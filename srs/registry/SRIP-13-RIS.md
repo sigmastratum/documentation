@@ -8,14 +8,24 @@
 # SRIP-13: Relational Identity Stabilization
 **Session-Scoped Relational Semantics and Boundary Integrity**
 
-**Version:** Draft v0.4  
-**Status:** Active Proposal  
-**Applies to:** SIGMA Runtime >= v0.6.7  
-**Depends on:** SRIP-04, SRIP-06, SRIP-08  
-**Related Specs:** SRIP-09, SRIP-10, SRIP-11, SRIP-12  
-**Author:** Sigma Stratum Research Group (SSRG)  
-**Date:** 2026-04-11  
-**License:** CC BY-NC 4.0 / Canon CIL Applicable
+| Field | Value |
+| --- | --- |
+| SRIP | SRIP-13 |
+| Title | Relational Identity Stabilization (RIS) |
+| Version | Public Draft v0.4 |
+| Status | Active Proposal |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Identity / Safety Boundary / Relational Stabilization |
+| Parent Specs | SRIP-04, SRIP-06, SRIP-08 |
+| Related Specs | SRIP-09, SRIP-10, SRIP-11, SRIP-12 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines a session-scoped identity and relational-boundary stabilization contract. It is not a style normalizer, censorship layer, or canonical-identity mutation path. |
+| Conformance Level | Public Draft |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Active proposal; no full runtime enablement or universal user-facing control claim is made by this document alone. |
 
 ---
 
