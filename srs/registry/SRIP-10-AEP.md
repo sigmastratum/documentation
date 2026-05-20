@@ -7,15 +7,27 @@
 
 ---
 
-# SRIP-10 — AEP: Adaptive Entropy Protocol  
-**Proactive Cognitive Equilibrium Regulation in ALICE Systems**
+# SRIP-10 — Adaptive Entropy Protocol (AEP)
+**Proactive Cognitive Equilibrium Regulation for Runtime Control Systems**
 
-**Version:** v1.2
-**Status:** Production Ready
-**Author:** Sigma Stratum Research Group (SSRG)
-**Date:** 2026-02-05  
-**Parent Specs:** SRIP-03, SRIP-04, SRIP-06, SRIP-08  
-**License:** CC BY-NC 4.0 / Canon CIL Applicable
+| Field | Value |
+| --- | --- |
+| SRIP | SRIP-10 |
+| Title | Adaptive Entropy Protocol (AEP) |
+| Version | Public Draft v0.2 (legacy internal v1.2 retained for lineage) |
+| Status | Public Draft v0.2 / Partial Implementation |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Runtime Control / Attractor Regulation / Entropy Control |
+| Parent Specs | SRIP-03, SRIP-04, SRIP-06, SRIP-08 |
+| Related Specs | SRIP-09, SRIP-11, SRIP-13, SRIP-14, SRIP-15, SRIP-18 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | Mixed SRS+SRD |
+| Normative Status | Defines the public AEP control contract for bounded entropy regulation and anti-crystallization objectives. It does not mandate provider-specific API controls, private runtime paths, exact prompt-injection recipes, or benchmark outcomes as conformance evidence. |
+| Conformance Level | Partial Conformance / Bounded Implementation |
+| SRD Synchronization Action | Deferred follow-up synchronization for public AEP explanation, format-control behavior, and positional crystallization extension boundaries. |
+| Release Alignment Status | Public draft with bounded implementation evidence; no full production conformance claim. |
 
 ---
 
