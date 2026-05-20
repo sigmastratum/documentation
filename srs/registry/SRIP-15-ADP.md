@@ -10,16 +10,20 @@
 
 | Field | Value |
 | --- | --- |
+| SRIP | SRIP-15 |
+| Title | Attractor Dynamics and Controlled Perturbation Layer (ADP) |
 | Version | Public Draft v0.2 |
 | Status | Public Draft |
-| Author | Sigma Stratum Research Group (SSRG) |
-| Date | 2026-04-28 |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Runtime Control / Attractor Dynamics / Controlled Perturbation |
 | Parent Specs | SRIP-01, SRIP-03, SRIP-07 |
 | Related Specs | SRIP-06, SRIP-09, SRIP-10, SRIP-13, SRIP-14 |
 | License | CC BY-NC 4.0 / Canon CIL Applicable |
 | Information Class | Open |
 | Change Class | SRS-only |
-| Normative Impact | Defines controlled perturbation as an optional runtime-governed transition layer for escaping attractor fixation without violating safety, drift, density, identity, memory, or retrieval constraints. |
+| Normative Status | Defines controlled perturbation as an optional runtime-governed transition layer for escaping attractor fixation without violating safety, drift, density, identity, memory, or retrieval constraints. |
+| Conformance Level | Public Draft |
 | SRD Synchronization Action | Completed in `/srd/attractors.md`, with supporting memory-language alignment in `/srd/memory.md`. |
 | Release Alignment Status | aligned |
 

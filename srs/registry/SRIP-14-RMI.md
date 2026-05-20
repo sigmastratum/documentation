@@ -10,16 +10,20 @@
 
 | Field | Value |
 | --- | --- |
-| Version | Draft v0.3 |
+| SRIP | SRIP-14 |
+| Title | Retrieval and Memory Integration Layer (RMI) |
+| Version | Public Draft v0.3 |
 | Status | Active Proposal / Partial Implementation |
-| Author | Sigma Stratum Research Group (SSRG) |
-| Date | 2026-04-28 |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Memory / Retrieval / Runtime Governance |
 | Parent Specs | SRIP-09, SRIP-11 |
 | Related Specs | SRIP-01, SRIP-03, SRIP-04, SRIP-06, SRIP-07, SRIP-10, SRIP-12, SRIP-13 |
 | License | CC BY-NC 4.0 / Canon CIL Applicable |
 | Information Class | Open |
 | Change Class | SRS-only |
-| Normative Impact | Adds perturbation-oriented retrieval as an optional, runtime-governed RMI mode under existing stability, identity, and semantic-load constraints. |
+| Normative Status | Defines the RMI contract for runtime-governed recall, bounded memory injection, provenance, compression, and optional external retrieval. It does not require a specific vector database, embedding model, or provider. |
+| Conformance Level | Partial Conformance / Bounded Implementation |
 | SRD Synchronization Action | Completed in `/srd/memory.md` and `/srd/attractors.md`. |
 | Release Alignment Status | aligned |
 

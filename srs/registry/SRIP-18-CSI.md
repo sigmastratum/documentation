@@ -11,18 +11,22 @@
 
 | Field | Value |
 | --- | --- |
-| **Version** | Public Draft v0.3 |
-| **Status** | Public Draft / Implementation-Ready Architecture |
-| **Author(s)** | Vladimir Ryabinskiy; Sigma Stratum Research Group (SSRG) |
-| **Date** | 2026-05-14 |
-| **Parent Specs** | SRIP-09, SRIP-11, SRIP-14 |
-| **Related Specs** | SRIP-03, SRIP-06, SRIP-07, SRIP-10, SRIP-12, SRIP-13, SRIP-15, SRIP-16, SRIP-17 |
-| **License** | CC BY-NC 4.0 / Canon CIL Applicable |
-| **Information Class** | Open |
-| **Change Class** | Mixed SRS+SRD |
-| **Normative Impact** | Defines a bounded semantic integration layer and implementation-ready architecture contract for commerce-oriented runtime retrieval. It does not define commerce decision authority, pricing engines, transactional execution, or unrestricted reasoning governance. |
-| **SRD Synchronization Action** | Deferred follow-up synchronization for retrieval architecture, runtime bundle documentation, and deployment topology explanation. |
-| **Release Alignment Status** | Implementation-ready public draft; no production deployment, synchronization, freshness, or runtime enablement guarantee is claimed. |
+| SRIP | SRIP-18 |
+| Title | Commerce Semantic Integration Layer (CSI) |
+| Version | Public Draft v0.3 |
+| Status | Public Draft / Implementation-Ready Architecture |
+| Date | 2026-05-20 |
+| Authors / Contributors | Vladimir Ryabinskiy; Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Commerce / Semantic Integration / Memory-Retrieval Boundary |
+| Parent Specs | SRIP-09, SRIP-11, SRIP-14 |
+| Related Specs | SRIP-03, SRIP-06, SRIP-07, SRIP-10, SRIP-12, SRIP-13, SRIP-15, SRIP-16, SRIP-17 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | Mixed SRS+SRD |
+| Normative Status | Defines a bounded semantic integration layer and implementation-ready architecture contract for commerce-oriented runtime retrieval. It does not define commerce decision authority, pricing engines, transactional execution, or unrestricted reasoning governance. |
+| Conformance Level | Implementation-Ready Architecture |
+| SRD Synchronization Action | Deferred follow-up synchronization for retrieval architecture, runtime bundle documentation, and deployment topology explanation. |
+| Release Alignment Status | Implementation-ready public draft; no production deployment, synchronization, freshness, or runtime enablement guarantee is claimed. |
 
 ---
 

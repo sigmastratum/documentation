@@ -9,19 +9,23 @@
 **Bounded Cross-Runtime Exchange, Provenance, and Multi-Agent Continuity**
 
 | Field | Value |
-|---|---|
-| **Version** | Public Draft v0.2 |
-| **Status** | Public Draft |
-| **Author** | Sigma Stratum Research Group (SSRG) |
-| **Date** | 2026-05-14 |
-| **Parent Specs** | SRIP-03, SRIP-05, SRIP-06, SRIP-08, SRIP-09, SRIP-10, SRIP-11 |
-| **Related Specs** | SRIP-13, SRIP-14, SRIP-15, SRIP-16 |
-| **License** | CC BY-NC 4.0 / Canon CIL Applicable |
-| **Information Class** | Open |
-| **Change Class** | SRS + SRD synchronization |
-| **Normative Impact** | Defines a bounded public proposal for multi-agent exchange between Sigma-compatible runtimes. It does not define an always-on mesh, shared hidden memory, autonomous collective agency, or a production deployment claim. |
-| **SRD Synchronization Action** | Completed in `/srd/architecture.md`, `/srd/memory.md`, `/srd/safety.md`, `/srd/runtime-loop.md`, and `/srd/faq.md`. |
-| **Release Alignment Status** | Draft; no runtime enablement claim. |
+| --- | --- |
+| SRIP | SRIP-17 |
+| Title | Multi-Agent Exchange (MAE) |
+| Version | Public Draft v0.2 |
+| Status | Public Draft |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Interoperability / Multi-Agent Exchange / Provenance Boundary |
+| Parent Specs | SRIP-03, SRIP-05, SRIP-06, SRIP-08, SRIP-09, SRIP-10, SRIP-11 |
+| Related Specs | SRIP-13, SRIP-14, SRIP-15, SRIP-16 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | Mixed SRS+SRD |
+| Normative Status | Defines a bounded public proposal for multi-agent exchange between Sigma-compatible runtimes. It does not define an always-on mesh, shared hidden memory, autonomous collective agency, or a production deployment claim. |
+| Conformance Level | Public Draft |
+| SRD Synchronization Action | Completed in `/srd/architecture.md`, `/srd/memory.md`, `/srd/safety.md`, `/srd/runtime-loop.md`, and `/srd/faq.md`. |
+| Release Alignment Status | Draft; no runtime enablement claim. |
 
 ---
 

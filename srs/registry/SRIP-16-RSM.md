@@ -9,19 +9,23 @@
 **Runtime Self-Model, Meta-Stability, and Reflective Control Evidence**
 
 | Field | Value |
-|---|---|
-| **Version** | Public Draft v0.2 |
-| **Status** | Public Draft |
-| **Author** | Sigma Stratum Research Group (SSRG) |
-| **Date** | 2026-05-14 |
-| **Parent Specs** | SRIP-03, SRIP-06, SRIP-08, SRIP-09, SRIP-10, SRIP-11 |
-| **Related Specs** | SRIP-13, SRIP-14, SRIP-15 |
-| **License** | CC BY-NC 4.0 / Canon CIL Applicable |
-| **Information Class** | Open |
-| **Change Class** | SRS + SRD synchronization |
-| **Normative Impact** | Defines bounded runtime self-modeling as an internal evidence layer for meta-stability, reflective telemetry, and control proposals. It does not grant autonomous self-modification authority. |
-| **SRD Synchronization Action** | Completed in `/srd/architecture.md`, `/srd/runtime-loop.md`, `/srd/memory.md`, `/srd/attractors.md`, `/srd/safety.md`, and `/srd/core-concepts.md`. |
-| **Release Alignment Status** | Draft; no runtime enablement claim. |
+| --- | --- |
+| SRIP | SRIP-16 |
+| Title | Recursive Self-Modeling (RSM) |
+| Version | Public Draft v0.2 |
+| Status | Public Draft |
+| Date | 2026-05-20 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Owning Layer | Runtime Control / Meta-Observability / Reflective Evidence |
+| Parent Specs | SRIP-03, SRIP-06, SRIP-08, SRIP-09, SRIP-10, SRIP-11 |
+| Related Specs | SRIP-13, SRIP-14, SRIP-15 |
+| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Information Class | Open |
+| Change Class | Mixed SRS+SRD |
+| Normative Status | Defines bounded runtime self-modeling as an internal evidence layer for meta-stability, reflective telemetry, and control proposals. It does not grant autonomous self-modification authority. |
+| Conformance Level | Public Draft |
+| SRD Synchronization Action | Completed in `/srd/architecture.md`, `/srd/runtime-loop.md`, `/srd/memory.md`, `/srd/attractors.md`, `/srd/safety.md`, and `/srd/core-concepts.md`. |
+| Release Alignment Status | Draft; no runtime enablement claim. |
 
 ---
 

@@ -2,7 +2,7 @@
 title: SRIP Process
 description: Formal definition of the Sigma Runtime Improvement Proposal lifecycle.
 published: true
-date: 2026-05-14T00:00:00.000Z
+date: 2026-05-20T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-11-30T04:52:16.687Z
@@ -61,7 +61,7 @@ Before advancement, the draft must pass:
 1. information-boundary classification as `Open` or `Derived-Public`;
 2. SRS/SRD impact classification as `SRS-only`, `SRD-only`, or `Mixed SRS+SRD`;
 3. affected-artifact identification;
-4. normative-impact summary;
+4. normative status and impact summary;
 5. SRD synchronization decision;
 6. release-alignment status declaration.
 
@@ -82,6 +82,30 @@ To advance from `v0.1` to `Public Draft v0.2`, editors must ensure that:
 - conformance scope and non-goals are present;
 - implementation maturity is not overclaimed;
 - release alignment is truthful.
+
+Canonical metadata checklist for `Public Draft v0.2+`:
+
+| Field | Required Meaning |
+| --- | --- |
+| SRIP | immutable proposal identifier |
+| Title | public title |
+| Version | public draft or accepted version |
+| Status | lifecycle status from this process |
+| Date | ISO date of the current public revision |
+| Authors / Contributors | public authorship and contributor attribution |
+| Owning Layer | standards layer or architecture domain |
+| Parent Specs | normative dependencies |
+| Related Specs | non-parent related specifications |
+| License | documentation license plus implementation covenant applicability |
+| Information Class | `Open` or `Derived-Public` |
+| Change Class | `SRS-only`, `SRD-only`, or `Mixed SRS+SRD` |
+| Normative Status | what the document binds, if anything |
+| Conformance Level | maturity or conformance level |
+| SRD Synchronization Action | completed, deferred with target, or not applicable |
+| Release Alignment Status | truthful release or public-documentation alignment claim |
+
+Wiki frontmatter may remain for the publishing platform, but it does not
+replace the public SRIP metadata table.
 
 After `Public Draft v0.2`, later draft versions may refine terminology,
 conformance, examples, or synchronization evidence, but they must not remove the
@@ -197,10 +221,10 @@ This compatibility discipline helps reviewers identify gaps without making the S
 Every SRIP proposal must include the following minimum traceability data:
 
 - information class: `Open` or `Derived-Public`
-- change class: `SRS-only` or `Mixed SRS+SRD`
+- change class: `SRS-only`, `SRD-only`, or `Mixed SRS+SRD`
 - affected SRS artifact(s)
 - affected SRD artifact(s), if any
-- normative impact summary
+- normative status and impact summary
 - SRD synchronization action
 - release alignment status
 
@@ -211,6 +235,40 @@ Allowed release alignment status values:
 - `no public-doc impact`
 
 If a proposal cannot truthfully declare these fields, it is not ready for review.
+
+### 3A. Conformance Vocabulary
+
+Use these terms consistently in public SRIPs:
+
+| Term | Meaning |
+| --- | --- |
+| `Conceptual` | Defines vocabulary, theory, or framing only. |
+| `Public Draft` | Suitable for public review, not implementation authority by itself. |
+| `Implementation-Ready Architecture` | Mature enough to guide implementation planning without claiming production deployment. |
+| `Bounded Implementation` | A partial implementation satisfies a named subset of the SRIP. |
+| `Partial Conformance` | Implementation covers a bounded subset of normative requirements. |
+| `Minimum Conformance` | Implementation satisfies the minimum public contract. |
+| `Full Conformance` | Implementation satisfies the full normative contract. |
+| `Production-Claimed` | A named implementation claims production conformance and must provide evidence. |
+
+Avoid using `Production Ready` as a document status unless it is tied to a
+specific implementation conformance claim and evidence record.
+
+### 3B. Normative Boundary
+
+Public SRIPs must clearly separate:
+
+- normative requirements;
+- non-normative rationale;
+- implementation notes;
+- examples;
+- empirical or benchmark claims;
+- historical lineage;
+- open questions and deferred work.
+
+Provider-specific examples, code snippets, deployment topology, and runtime
+implementation details are non-normative unless the SRIP explicitly defines a
+public protocol or schema.
 
 ---
 

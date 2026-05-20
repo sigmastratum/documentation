@@ -2,7 +2,7 @@
 title: SRIP-TEMPLATE
 description: Standard template for Sigma Runtime Improvement Proposals.
 published: true
-date: 2026-05-14T00:00:00.000Z
+date: 2026-05-20T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-12-02T02:16:31.900Z
@@ -19,23 +19,25 @@ dateCreated: 2025-12-02T02:16:31.900Z
 > For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
 
 # SRIP-XX - [Title of Proposal]
-*Status: Candidate / Formation Draft v0.1 / Public Draft v0.2+ / Implementation-Ready Architecture / Active Proposal / Partial Implementation / Aligned / Superseded / Deprecated*
-*Author(s): [Name, Affiliation, Contact]*
-*Date: [YYYY-MM-DD]*
-*Version: 0.1*
-*Target Standard Version: [SRS vX.Y]*
-*Information Class: Open / Derived-Public*
-*Change Class: SRS-only / Mixed SRS+SRD*
-*Track: Foundational / Runtime Control / Memory-Retrieval / Commerce / Multi-Agent / Observability / Safety / Privacy / Governance / Other*
-*Architecture Layer: Business / Data / Application / Runtime / Control / Integration / Telemetry / Governance*
-*Parent Specs: [mandatory normative dependencies]*
-*Related Specs: [relevant non-parent specs]*
-*Extends: [SRIPs extended by this proposal or none]*
-*Amends: [SRIPs normatively changed by this proposal or none]*
-*Supersedes: [SRIPs replaced by this proposal or none]*
-*Affected SRS Artifacts: [list]*
-*Affected SRD Artifacts: [list or none]*
-*Release Alignment Status: aligned / aligned with deferred SRD sync / no public-doc impact*
+
+| Field | Value |
+| --- | --- |
+| SRIP | SRIP-XX |
+| Title | [Title of Proposal] |
+| Version | Formation Draft v0.1 / Public Draft v0.2+ / Implementation-Ready Architecture / Accepted v1.0 |
+| Status | Candidate / Formation Draft v0.1 / Public Draft v0.2+ / Implementation-Ready Architecture / Active Proposal / Partial Implementation / Aligned / Superseded / Deprecated |
+| Date | [YYYY-MM-DD] |
+| Authors / Contributors | [Name, affiliation, contact] |
+| Owning Layer | Foundational / Runtime Control / Memory-Retrieval / Commerce / Multi-Agent / Observability / Safety / Privacy / Governance / Other |
+| Parent Specs | [mandatory normative dependencies] |
+| Related Specs | [relevant non-parent specs] |
+| License | CC BY-NC 4.0 / Canon CIL Applicable or not applicable |
+| Information Class | Open / Derived-Public |
+| Change Class | SRS-only / SRD-only / Mixed SRS+SRD |
+| Normative Status | [what this document binds, if anything] |
+| Conformance Level | Conceptual / Public Draft / Implementation-Ready Architecture / Bounded Implementation / Partial Conformance / Minimum Conformance / Full Conformance / Production-Claimed |
+| SRD Synchronization Action | completed / deferred with target / not applicable |
+| Release Alignment Status | aligned / aligned with deferred SRD sync / no public-doc impact |
 
 ---
 
