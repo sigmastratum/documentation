@@ -142,7 +142,29 @@ remains subordinate to the runtime control stack.
 
 ---
 
-## 9. Self-Modeling and Attractor Evolution
+## 9. AEP and Attractor Rigidity
+
+SRIP-10 AEP adds a public way to reason about whether attractor persistence is
+still adaptive.
+
+In attractor terms, AEP helps distinguish:
+
+- **healthy persistence** — a pattern continues to support coherence and user
+  continuity;
+- **over-rigidification** — a pattern becomes too fixed, repetitive, or
+  self-reinforcing;
+- **fragmentation** — variation becomes too loose to preserve stable
+  interaction;
+- **controlled perturbation** — limited variation is introduced without
+  breaking the return path to stability.
+
+AEP is not a mechanism for arbitrary novelty or uncontrolled style churn. Its
+role is to provide bounded evidence about when the attractor field may need to
+soften, narrow, recover, or transition.
+
+---
+
+## 10. Self-Modeling and Attractor Evolution
 
 SRIP-16 adds a bounded self-modeling view over attractor evolution.
 RSM may observe when an attractor becomes too rigid, too diffuse, or too
@@ -154,7 +176,7 @@ by itself that a change should be persisted, amplified, or exposed to the user.
 
 ---
 
-## 10. Telemetry and Analysis
+## 11. Telemetry and Analysis
 At a public level, attractor analysis is valuable when it helps answer questions like:
 
 - which motifs are stabilizing continuity,
@@ -163,6 +185,8 @@ At a public level, attractor analysis is valuable when it helps answer questions
 - whether a recovery path is narrowing or restoring the interaction,
 - whether controlled perturbation helped produce useful exploration without
   destabilizing the field.
+- whether entropy regulation is preserving adaptability without dissolving the
+  attractor.
 
 Exact internal telemetry may evolve, but the explanatory role remains the same:
 attractor analysis helps distinguish stable continuity from unstable amplification.

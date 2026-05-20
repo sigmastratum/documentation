@@ -119,7 +119,29 @@ This is what allows the runtime to treat interaction as a controlled field rathe
 
 ---
 
-## 5. Timing and Feedback
+## 5. AEP Evidence In The Loop
+
+The **Adaptive Entropy Protocol (AEP)** contributes bounded entropy-regulation
+evidence to the runtime loop.
+
+At the SRD level, AEP should be understood as a control companion to the
+stabilization, verification, and recovery stages. It helps the loop distinguish
+between:
+
+- healthy variation that keeps interaction adaptive,
+- excessive rigidity that can crystallize into repetitive or over-fixed behavior,
+- fragmentation that weakens continuity,
+- and recursive pressure that should trigger narrowing or recovery.
+
+AEP evidence may influence context shaping, output verification, and recovery
+posture, but it does not replace memory, safety, identity, or runtime authority.
+It also does not require a public implementation to expose formulas, prompts, or
+private telemetry paths. The public requirement is that AEP-related control
+claims remain bounded, inspectable, and traceable.
+
+---
+
+## 6. Timing and Feedback
 
 The loop is not purely synchronous in the intuitive sense.
 It has to reconcile:
@@ -134,7 +156,7 @@ They emerge only when the next cycle inherits the consequences of the previous o
 
 ---
 
-## 6. Cross-Runtime Exchange Timing
+## 7. Cross-Runtime Exchange Timing
 
 SRIP-17 exchange does not bypass the runtime loop. Incoming exchange artifacts
 enter the receiving runtime as external evidence and must pass authorization,
@@ -149,7 +171,7 @@ external artifacts to rewrite the field directly.
 
 ---
 
-## 7. Telemetry and Metrics
+## 8. Telemetry and Metrics
 
 Publicly, the runtime loop is best understood as producing evidence in several families:
 
@@ -158,6 +180,7 @@ Publicly, the runtime loop is best understood as producing evidence in several f
 - attractor-field and control-state signals
 - recovery and degradation signals
 - output-verification signals
+- entropy-regulation and crystallization-risk signals
 - self-modeling and reflection-budget signals
 - exchange provenance and cross-runtime drift-impact signals
 
@@ -169,7 +192,7 @@ The exact implementation details may evolve, but the public contract remains:
 
 ---
 
-## 8. Summary
+## 9. Summary
 
 The **SIGMA Runtime Loop** turns recursive interaction into a bounded control process.
 By combining context assembly, drift-aware shaping, memory integration, verification, and field update, the loop supports:

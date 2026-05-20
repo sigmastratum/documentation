@@ -112,11 +112,36 @@ Publicly, one of the most important stabilization questions is whether a recurri
 
 ---
 
-## 7. Telemetry and Post-Analysis
+## 7. AEP and Entropy Regulation
+
+SRIP-10 AEP complements drift control by describing how the runtime can preserve
+adaptability without letting interaction become either too rigid or too loose.
+
+Publicly, AEP helps distinguish three related but different conditions:
+
+- **drift** — the field moves away from the intended coherence envelope;
+- **crystallization** — the field becomes too fixed, repetitive, or
+  self-reinforcing;
+- **fragmentation** — the field loses enough structure that continuity weakens.
+
+This distinction matters because the correct response is not always the same.
+Some states call for narrowing, some for recovery, and some for controlled
+variation that restores adaptability.
+
+AEP should be understood as evidence-based regulation, not as a list of
+forbidden phrases. The public requirement is that any entropy-regulation claim
+remain bounded, auditable, and subordinate to the runtime's safety and recovery
+layers.
+
+---
+
+## 8. Telemetry and Post-Analysis
 Drift management is only credible if it can be inspected afterwards.  
 Publicly, post-analysis should help answer:
 
 - what kind of drift occurred,
+- whether the issue was drift, crystallization, fragmentation, or a mixed
+  pressure state,
 - whether recovery actually happened,
 - whether repeated failures formed a cascade,
 - and whether the interaction returned to a stable envelope or stayed degraded.
@@ -125,7 +150,7 @@ This is one reason Sigma Runtime treats observability and evidence as part of th
 
 ---
 
-## 8. Summary
+## 9. Summary
 Drift in Sigma Runtime is a governed instability signal.  
 The system does not assume that long interaction remains stable by default.  
 Instead, it uses drift awareness, bounded control, verification, and recovery to keep interaction interpretable, recoverable, and safer under pressure.

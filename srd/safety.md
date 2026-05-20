@@ -91,7 +91,31 @@ The point is that Sigma Runtime prefers **recoverable correction** over silent c
 
 ---
 
-## 5. The Fail-Safe Envelope
+## 5. AEP as Safety-Adjacent Control Evidence
+
+SRIP-10 AEP is safety-adjacent, but it is not itself the safety policy
+authority.
+
+At the public architecture level, AEP can provide evidence that recursive
+pressure is becoming too rigid, too fragmented, or too self-reinforcing. That
+evidence may support a safety or recovery decision, but it must not bypass the
+safety layer, rewrite policy, or expose private system internals as user-facing
+truth.
+
+Any AEP-informed intervention should remain:
+
+- **bounded** — limited to the relevant operating envelope;
+- **reversible** — able to return to stable interaction when pressure falls;
+- **traceable** — recorded as control evidence rather than hidden behavior;
+- **subordinate** — routed through the relevant runtime, verification, and
+  safety layers.
+
+This keeps entropy regulation useful for stability without turning it into an
+unbounded control channel.
+
+---
+
+## 6. The Fail-Safe Envelope
 
 | Condition | Trigger | Response |
 |:-----------|:----------|:-----------|
@@ -102,9 +126,11 @@ The point is that Sigma Runtime prefers **recoverable correction** over silent c
 
 ---
 
-## 6. Safety Infrastructure
+## 7. Safety Infrastructure
 - **Boundary Verification:** evaluates whether output remains inside the runtime envelope.
 - **Drift Monitor:** quantifies semantic and symbolic instability.
+- **Entropy Regulation Evidence:** contributes bounded signals about rigidity,
+  fragmentation, and recursive pressure.
 - **Threshold Registry:** defines adaptive tolerance bands.
 - **Integrity Ledger:** stores logs of containment events and recovery sequences.
 - **Recovery Hooks:** bounded system routines for reset, dissolve, quarantine, and recovery transitions.
@@ -113,7 +139,7 @@ Safety functions as an *embedded supervisor*, not as an external afterthought.
 
 ---
 
-## 7. Risk Classes
+## 8. Risk Classes
 
 | Class | Description | Mitigation |
 |:--------|:--------------|:-------------|
@@ -125,7 +151,7 @@ Safety functions as an *embedded supervisor*, not as an external afterthought.
 
 ---
 
-## 8. Recovery Workflow
+## 9. Recovery Workflow
 
 1. Suspend or narrow unstable continuation.
 2. Enter a recovery-oriented control posture.
@@ -138,7 +164,7 @@ This ensures graceful, reversible recovery without full field dissolution or sem
 
 ---
 
-## 9. Recursive Self-Modeling Boundary
+## 10. Recursive Self-Modeling Boundary
 
 SRIP-16 introduces runtime self-modeling as a bounded safety-relevant evidence
 layer. It may help identify repeated recovery, excessive self-reference,
@@ -158,7 +184,7 @@ uncontrolled recursive process.
 
 ---
 
-## 10. Multi-Agent Exchange Boundary
+## 11. Multi-Agent Exchange Boundary
 
 SRIP-17 adds a safety boundary for cross-runtime or multi-agent exchange.
 External artifacts must be treated as untrusted until the receiving runtime
@@ -177,7 +203,7 @@ unbounded cross-agent contamination.
 
 ---
 
-## 11. Summary
+## 12. Summary
 Sigma Runtime safety transforms recursive interaction from an unbounded process into a governed one.
 By coupling containment, verification, and recovery, the runtime gains:
 
