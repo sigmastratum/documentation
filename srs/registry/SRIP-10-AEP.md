@@ -1,7 +1,9 @@
 > **Sigma Runtime Standard – License Notice**  
 > This document is part of the **Sigma Runtime Standard (SRS)**.  
-> Licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
-> See `/legal/IP-Policy` for repository-wide licensing details.
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+>
+> The license for this specific document is authoritative.  
+> See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 ---
 

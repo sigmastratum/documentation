@@ -1,22 +1,9 @@
----
-title: SRIP-TEMPLATE
-description: Standard template for Sigma Runtime Improvement Proposals.
-published: true
-date: 2026-05-20T00:00:00.000Z
-tags:
-editor: markdown
-dateCreated: 2025-12-02T02:16:31.900Z
----
-
-> **Sigma Stratum Documentation – License Notice**
-> This document is part of the **Sigma Runtime Standard (SRS)** and the
-> **Sigma Stratum Documentation Set (SRD)**.
+> **Sigma Runtime Standard – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)**.  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
 >
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0
-> (CC BY-NC 4.0)**.
->
-> The license for this specific document is authoritative.
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> The license for this specific document is authoritative.  
+> See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 # SRIP-XX - [Title of Proposal]
 

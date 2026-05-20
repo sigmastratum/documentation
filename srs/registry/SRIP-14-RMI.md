@@ -1,8 +1,8 @@
-> **Sigma Runtime Standard – License Notice**
-> This document is part of the **Sigma Runtime Standard (SRS)**.
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.
+> **Sigma Runtime Standard – License Notice**  
+> This document is part of the **Sigma Runtime Standard (SRS)**.  
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
 >
-> The license for this specific document is authoritative.
+> The license for this specific document is authoritative.  
 > See `/legal/IP-Policy` for the full repository-wide licensing framework.
 
 # SRIP-14 — Retrieval and Memory Integration Layer (RMI)
