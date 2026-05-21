@@ -95,7 +95,8 @@ Use this path for control, drift, stability, and response-shaping behavior:
 5. [SRIP-10-AEP](/srs/registry/SRIP-10-AEP) — Adaptive Entropy Protocol
 6. [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) — Relational Identity Stabilization
 7. [SRIP-15-ADP](/srs/registry/SRIP-15-ADP) — Attractor Dynamics and Controlled Perturbation Layer
-8. [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) — Recursive Self-Modeling
+8. [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) — Recursive Contradiction Buffering
+9. [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) — Recursive Self-Modeling
 
 ---
 
@@ -105,6 +106,7 @@ Use this path for system integration, agent exchange, and multi-agent coordinati
 
 1. [SRIP-05](/srs/srip-05) — Interoperability Interface
 2. [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) — Multi-Agent Exchange
+3. [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
 
 ---
 
@@ -115,4 +117,3 @@ SRIPs may be reviewed as architecture design artifacts when they define boundari
 TOGAF and similar enterprise architecture frameworks may be used as non-normative review lenses. They are not required dependencies for writing, citing, or implementing SRIPs.
 
 The Sigma Runtime Standard remains open-standard-first and framework-independent.
-

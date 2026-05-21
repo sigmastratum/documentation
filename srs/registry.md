@@ -55,6 +55,7 @@ Each SRIP is registered as a standalone entry:
 /srs/registry/SRIP-16-RSM.md
 /srs/registry/SRIP-17-MAE.md
 /srs/registry/SRIP-18-CSI.md
+/srs/registry/SRIP-19-RCB.md
 ```
 Each file must include:
 - metadata block including title, version, date, status, author, information class, change class, parent specs, related specs, and release alignment status;
@@ -95,6 +96,7 @@ This allows the standard to scale without breaking citations or historical conti
 | [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) | Recursive Self-Modeling (RSM) | **Public Draft** | 2026-05-14 | SSRG |
 | [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) | Multi-Agent Exchange (MAE) | **Public Draft** | 2026-05-14 | SSRG |
 | [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) | Commerce Semantic Integration Layer (CSI) | **Public Draft / Implementation-Ready Architecture** | 2026-05-14 | SSRG |
+| [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) | Recursive Contradiction Buffering (RCB) | **Public Draft** | 2026-05-21 | SSRG |
 
 ---
 
