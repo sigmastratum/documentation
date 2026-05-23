@@ -1,13 +1,3 @@
----
-title: SRIP-07 - Symbolic Density Layer
-description: Defines the symbolic density model and its role in semantic stability and attractor formation.
-published: true
-date: 2026-04-17T00:00:00.000Z
-tags:
-editor: markdown
-dateCreated: 2025-11-30T04:45:28.441Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -22,15 +12,20 @@ dateCreated: 2025-11-30T04:45:28.441Z
 
 # SRIP-07 — Symbolic Density Layer
 **Sigma Runtime Improvement Proposal**
-**Category:** Cognitive Semantics
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2025-12-26
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-07 |
+| Title | Symbolic Density Layer |
+| Version | Foundational Draft |
+| Status | Draft |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Cognitive Semantics |
+| Parent Specs | SRIP-02, SRIP-03 |
+| Related Specs | SRIP-04, SRIP-06, SRIP-10, SRIP-15 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -38,6 +33,12 @@ dateCreated: 2025-11-30T04:45:28.441Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines the public symbolic-density concept and its role in semantic stability and attractor formation. |
+| Conformance Level | Public Draft / Foundational |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational draft; no production conformance claim is made by this document alone. |
 
 ---
 

@@ -1,13 +1,3 @@
----
-title: SRIP-02 - Attractor State Model & Metadata
-description: Defines the structure, lifecycle, and metadata schema of attractors within the runtime.
-published: true
-date: 2026-04-17
-tags:
-editor: markdown
-dateCreated: 2025-11-30T04:41:44.566Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -22,15 +12,20 @@ dateCreated: 2025-11-30T04:41:44.566Z
 
 # SRIP-02 — Attractor State Model & Metadata
 **Sigma Runtime Improvement Proposal**
-**Category:** Cognitive Structures / Data Model
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2026-04-17
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-02 |
+| Title | Attractor State Model & Metadata |
+| Version | Foundational Draft |
+| Status | Draft |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Cognitive Structures / Data Model |
+| Parent Specs | SRIP-00, SRIP-01 |
+| Related Specs | SRIP-03, SRIP-04, SRIP-07, SRIP-09 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -38,6 +33,12 @@ dateCreated: 2025-11-30T04:41:44.566Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines the public attractor state model and metadata vocabulary for interoperable attractor representation. |
+| Conformance Level | Public Draft / Foundational |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational draft; no production conformance claim is made by this document alone. |
 
 > **Public Note:**
 > This foundational document uses version-light public vocabulary for attractor lifecycle, telemetry, and recovery semantics.
@@ -165,4 +166,3 @@ Planned extensions include:
 
 > **References**
 > Tsaliev, E. (2025). *Attractor Architectures in LLM-Mediated Cognitive Fields* — DOI [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)
-

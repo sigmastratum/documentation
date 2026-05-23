@@ -1,13 +1,3 @@
----
-title: SRIP-08 — Phase-Regulating Runtime Module (ALICE Externalization)
-description: Defines the externalized telemetry and control interface for the ALICE Phase Controller. Introduces the Phase-Regulating Module (PRM) for distributed phase synchronization, drift telemetry, and safety hooks across Sigma runtimes.
-published: true
-date: 2026-04-17
-tags:
-editor: markdown
-dateCreated: 2025-12-28T10:15:00.803Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -22,15 +12,20 @@ dateCreated: 2025-12-28T10:15:00.803Z
 
 # SRIP-08 — Phase Vector Model & PRM (Phase-Regulating Runtime Module)
 **Sigma Runtime Improvement Proposal**
-**Category:** Control Layer / Telemetry / Mathematics
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2026-04-17
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-08 |
+| Title | Phase Vector Model & PRM (Phase-Regulating Runtime Module) |
+| Version | Foundational Draft |
+| Status | Draft / Foundational Lineage |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Control Layer / Telemetry / Mathematics |
+| Parent Specs | SRIP-03, SRIP-05, SRIP-06 |
+| Related Specs | SRIP-09, SRIP-10, SRIP-11, SRIP-15 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -38,6 +33,12 @@ dateCreated: 2025-12-28T10:15:00.803Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Retained as foundational lineage with status note; not the active public control baseline unless introduced through an explicit successor reference or new proposal path. |
+| Conformance Level | Conceptual / Foundational Lineage |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational lineage; no active production control conformance claim is made by this document alone. |
 
 > **Public Status Note**
 > This document is retained as **foundational lineage with status note**, not as the active public control baseline.

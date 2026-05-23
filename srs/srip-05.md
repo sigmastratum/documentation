@@ -1,13 +1,3 @@
----
-title: SRIP-05 - Interoperability Interface v1.0
-description: Specifies schemas, APIs, and exchange formats for multi-system interoperability.
-published: true
-date: 2026-04-17
-tags:
-editor: markdown
-dateCreated: 2025-11-30T04:43:59.986Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -22,15 +12,20 @@ dateCreated: 2025-11-30T04:43:59.986Z
 
 # SRIP-05 — Interoperability Interface v1.0
 **Sigma Runtime Improvement Proposal**
-**Category:** Interoperability / Safety Hooks
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2026-04-17
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-05 |
+| Title | Interoperability Interface v1.0 |
+| Version | Foundational Draft |
+| Status | Draft / Foundational Lineage |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Interoperability / Safety Hooks |
+| Parent Specs | SRIP-02, SRIP-03, SRIP-04, SRIP-06 |
+| Related Specs | SRIP-09, SRIP-14, SRIP-17 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -38,6 +33,12 @@ dateCreated: 2025-11-30T04:43:59.986Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Retained as foundational lineage with status note; not the active public interoperability contract unless introduced through an explicit successor reference or new proposal path. |
+| Conformance Level | Conceptual / Foundational Lineage |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational lineage; no active production interoperability conformance claim is made by this document alone. |
 
 > **Public Status Note**
 > This document is retained as **foundational lineage with status note**, not as the active public interoperability baseline.

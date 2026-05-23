@@ -1,13 +1,3 @@
----
-title: SRIP-01 - Canonical Runtime Loop
-description: Specifies the execution semantics and ordered stages of the Sigma Runtime loop.
-published: true
-date: 2026-04-17
-tags:
-editor: markdown
-dateCreated: 2025-11-30T04:40:56.340Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -22,15 +12,20 @@ dateCreated: 2025-11-30T04:40:56.340Z
 
 # SRIP-01 — Canonical Runtime Loop
 **Sigma Runtime Improvement Proposal**
-**Category:** Architectural / Runtime Semantics
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2026-04-17
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-01 |
+| Title | Canonical Runtime Loop |
+| Version | Foundational Draft |
+| Status | Draft |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Architectural / Runtime Semantics |
+| Parent Specs | SRIP-00 |
+| Related Specs | SRIP-02, SRIP-03, SRIP-04, SRIP-06, SRIP-08 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -38,6 +33,12 @@ dateCreated: 2025-11-30T04:40:56.340Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines the public canonical runtime loop and ordered execution phases without mandating a provider-specific backend implementation. |
+| Conformance Level | Public Draft / Foundational |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational draft; no production conformance claim is made by this document alone. |
 
 > **Public Note**
 > This foundational document uses version-light runtime-boundary language.

@@ -1,13 +1,3 @@
----
-title: SRIP-06 - Safety & Recursion Boundaries
-description: Establishes foundational safety constraints, recursion boundaries, and recovery enforcement for Sigma Runtime.
-published: true
-date: 2026-04-17
-tags:
-editor: markdown
-dateCreated: 2025-11-30T04:44:44.181Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -22,15 +12,20 @@ dateCreated: 2025-11-30T04:44:44.181Z
 
 # SRIP-06 — Safety & Recursion Boundaries
 **Sigma Runtime Improvement Proposal**
-**Category:** Safety / Stability
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2026-04-17
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-06 |
+| Title | Safety & Recursion Boundaries |
+| Version | Foundational Draft |
+| Status | Draft |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Safety / Stability |
+| Parent Specs | SRIP-00, SRIP-03 |
+| Related Specs | SRIP-10, SRIP-12, SRIP-13 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -38,7 +33,12 @@ dateCreated: 2025-11-30T04:44:44.181Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
-**Related Specs:** SRIP-10 (AEP), SRIP-12 (CDS), SRIP-13 (RIS)
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines the public safety and recursion-boundary vocabulary for bounded runtime operation and recoverable control transitions. |
+| Conformance Level | Public Draft / Foundational |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational draft; no production conformance claim is made by this document alone. |
 
 > **Public Note**
 > This foundational document uses version-light public safety language.

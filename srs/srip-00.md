@@ -1,13 +1,3 @@
----
-title: SRIP-00 - Foundations and Scope
-description: Defines the foundational vocabulary, architectural scope, and invariants of the Sigma Runtime Standard.
-published: true
-date: 2026-04-17T00:00:00.000Z
-tags:
-editor: markdown
-dateCreated: 2025-11-30T04:39:52.677Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -23,15 +13,20 @@ dateCreated: 2025-11-30T04:39:52.677Z
 
 # SRIP-00 - Foundations and Scope
 **Sigma Runtime Improvement Proposal**
-**Category:** Foundational / Architectural
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2025-11-29
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-00 |
+| Title | Foundations and Scope |
+| Version | Foundational Draft |
+| Status | Draft |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Foundational / Architectural |
+| Parent Specs | None |
+| Related Specs | SRIP-01, SRIP-02, SRIP-03, SRIP-04, SRIP-05, SRIP-06, SRIP-07, SRIP-08 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -39,6 +34,12 @@ dateCreated: 2025-11-30T04:39:52.677Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines the foundational vocabulary, architectural scope, and invariants for the public Sigma Runtime Standard. |
+| Conformance Level | Public Draft / Foundational |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational draft; no production conformance claim is made by this document alone. |
 
 ---
 

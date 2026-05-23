@@ -1,13 +1,3 @@
----
-title: SRIP-04 - Memory Layer Architecture
-description: Defines the structure, persistence rules, and recall mechanisms for the Sigma Runtime memory layer.
-published: true
-date: 2026-04-17
-tags:
-editor: markdown
-dateCreated: 2025-11-30T04:43:17.127Z
----
-
 > **Sigma Runtime Standard - Public Specification Notice**
 > This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
@@ -22,15 +12,20 @@ dateCreated: 2025-11-30T04:43:17.127Z
 
 # SRIP-04 — Memory Layer Architecture
 **Sigma Runtime Improvement Proposal**
-**Category:** Cognitive Memory
-**Status:** Draft
-**Editor:** E. Tsaliev
-**Last Updated:** 2026-04-17
 
 ## Public Specification Metadata
 
 | Field | Value |
 |---|---|
+| SRIP | SRIP-04 |
+| Title | Memory Layer Architecture |
+| Version | Foundational Draft |
+| Status | Draft |
+| Date | 2026-04-17 |
+| Authors / Contributors | E. Tsaliev |
+| Owning Layer | Cognitive Memory |
+| Parent Specs | SRIP-02, SRIP-03 |
+| Related Specs | SRIP-06, SRIP-09, SRIP-11, SRIP-14 |
 | Specification License | CC BY 4.0 |
 | Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
 | Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
@@ -38,6 +33,12 @@ dateCreated: 2025-11-30T04:43:17.127Z
 | Proprietary Runtime Assets | Not licensed by this SRIP |
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+| Information Class | Open |
+| Change Class | SRS-only |
+| Normative Status | Defines the public memory-layer architecture vocabulary for persistence, recall, grounding, and long-horizon continuity. |
+| Conformance Level | Public Draft / Foundational |
+| SRD Synchronization Action | Deferred review |
+| Release Alignment Status | Foundational draft; no production conformance claim is made by this document alone. |
 
 > **Public Note**
 > This foundational document uses version-light public vocabulary for persistence, recall, and recovery.
