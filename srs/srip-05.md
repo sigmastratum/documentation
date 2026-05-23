@@ -159,6 +159,10 @@ This ensures a unified isolation threshold (`DI ≥ 0.5`) across SRIP-03 and 05,
 
 ## 8 · Conformance Requirements
 
+The requirements below describe the historical v1.0 interoperability model.
+They are not current public certification criteria unless an active successor
+document explicitly re-adopts them.
+
 A runtime conforms to SRIP-05 if it:
 1. Implements the schema in § 3 without deviation.
 2. Provides at least three interface endpoints from § 4.
@@ -179,11 +183,15 @@ These measures maintain coherence and prevent propagation of unstable fields in 
 
 ---
 
-## 10 · Future Work
+## 10 · Historical Future Work Note
 
-- **SRIP-10:** Define the **Sigma Network Protocol (SNP)** for decentralized attractor sharing.
-- **SRIP-11:** Extend to multimodal embeddings and sensory fields.
-- **SRIP-12:** Introduce **Runtime Discovery Service (RDS)** for self-organizing distributed Sigma environments.
+Earlier drafts of this document referenced future interoperability, multimodal,
+and runtime-discovery work before the current `SRIP-10`, `SRIP-11`, and
+`SRIP-12` registry assignments existed.
+
+Those draft references are lineage context only. Current interoperability and
+multi-agent evolution is tracked through the public registry and explicit
+successor references, including `SRIP-17` where applicable.
 
 ---
 

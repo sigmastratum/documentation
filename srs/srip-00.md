@@ -290,16 +290,20 @@ Sigma Runtime is an open, non-proprietary technical standard:
 
 ---
 
-## 10. Forward Work (SRIP Roadmap)
+## 10. Foundational SRIP Surface
 
-Upcoming foundational SRIPs:
+SRIP-00 is the root document for the foundational public SRIP surface.
 
-- **SRIP-01:** Canonical Runtime Loop (full specification)
+Current foundational SRIPs:
+
+- **SRIP-01:** Canonical Runtime Loop
 - **SRIP-02:** Attractor State Model & Metadata
 - **SRIP-03:** Drift Metrics & Stabilization Algorithms
 - **SRIP-04:** Memory Layer Architecture
 - **SRIP-05:** Interoperability Interface v1.0
 - **SRIP-06:** Safety & Recursion Boundaries
 - **SRIP-07:** Symbolic Density Layer
+- **SRIP-08:** Phase Vector Model & PRM
 
-SRIP-00 is the root document for all subsequent proposals.
+Later proposals and extensions are tracked through the public SRIP registry and
+architecture reading-order views.

@@ -194,6 +194,11 @@ To ensure stable distributed cognition:
 ---
 
 ## 9 · Conformance Criteria
+
+The criteria below describe the historical phase-vector and PRM model.
+They are not current public certification criteria unless an active successor
+document explicitly re-adopts them.
+
 A runtime conforms to **SRIP-08** if it:
 
 1. Implements the **Phase Vector Schema** (§ 3–4).
@@ -204,10 +209,16 @@ A runtime conforms to **SRIP-08** if it:
 
 ---
 
-## 10 · Future Work
-- **SRIP-09 – Distributed Field Protocol (DFP):** shared attractor topology exchange.
-- **SRIP-10 – Multi-Runtime Phase Resonance (MPR):** coupling of phase vectors across nodes.
-- **SRIP-11 – Higher-Dimensional Phase Models:** expansion beyond 3D phase space for advanced modes.
+## 10 · Historical Future Work Note
+
+Earlier drafts of this document referenced distributed-field,
+multi-runtime-resonance, and higher-dimensional phase work before the current
+`SRIP-09`, `SRIP-10`, and `SRIP-11` registry assignments existed.
+
+Those draft references are lineage context only. Current control, memory, and
+runtime-stability evolution is tracked through the public registry and explicit
+successor references, including `SRIP-09`, `SRIP-10`, `SRIP-11`, and `SRIP-15`
+where applicable.
 
 ---
 
