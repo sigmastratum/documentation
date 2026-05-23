@@ -1,9 +1,14 @@
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 # SRIP-XX - [Title of Proposal]
 
@@ -18,7 +23,13 @@
 | Owning Layer | Foundational / Runtime Control / Memory-Retrieval / Commerce / Multi-Agent / Observability / Safety / Privacy / Governance / Other |
 | Parent Specs | [mandatory normative dependencies] |
 | Related Specs | [relevant non-parent specs] |
-| License | CC BY-NC 4.0 / Canon CIL Applicable or not applicable |
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 | Information Class | Open / Derived-Public |
 | Change Class | SRS-only / SRD-only / Mixed SRS+SRD |
 | Normative Status | [what this document binds, if anything] |
@@ -28,21 +39,31 @@
 
 ---
 
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
+
+---
+
 ## 1. Summary
 
-A concise overview (2–4 sentences) describing **what this proposal changes or adds** to the Sigma Runtime Standard.
+A concise overview (2-4 sentences) describing **what this proposal changes or adds** to the Sigma Runtime Standard.
 Include the primary motivation and intended scope of impact.
 
-> Example: “This SRIP defines the interface schema for the Attractor Lifecycle Manager (ALICE) within the Control Layer.”
+> Example: "This SRIP defines the interface schema for the Attractor Lifecycle Manager (ALICE) within the Control Layer."
 
 ---
 
 ## 2. Motivation
 
-Explain **why this proposal is necessary** — the current problem or limitation it resolves.
+Explain **why this proposal is necessary** - the current problem or limitation it resolves.
 Include links or citations to SRD/SRS documents or research references.
 
-> Example: “Current drift regulation lacks a formal attractor transition mechanism across cycles; this SRIP introduces such a framework.”
+> Example: "Current drift regulation lacks a formal attractor transition mechanism across cycles; this SRIP introduces such a framework."
 
 ---
 
@@ -50,13 +71,13 @@ Include links or citations to SRD/SRS documents or research references.
 
 State the following explicitly:
 
-1. whether the source material is `Open` or `Derived-Public`
-2. whether any proprietary origin context was abstracted before publication
-3. which `SRS` artifacts are affected
-4. which `SRD` artifacts are affected
-5. whether SRD synchronization is required in the same change set or as a linked follow-up
-6. which track and architecture layer the proposal belongs to
-7. which SRIPs it extends, amends, supersedes, depends on, or only relates to
+1. whether the source material is `Open` or `Derived-Public`;
+2. whether any proprietary origin context was abstracted before publication;
+3. which `SRS` artifacts are affected;
+4. which `SRD` artifacts are affected;
+5. whether SRD synchronization is required in the same change set or as a linked follow-up;
+6. which track and architecture layer the proposal belongs to;
+7. which SRIPs it extends, amends, supersedes, depends on, or only relates to.
 
 This section is mandatory for review readiness.
 
@@ -100,23 +121,20 @@ Indicate backward compatibility considerations and migration notes if applicable
 | SRIP-00 | Foundational | Required for procedural consistency |
 | SRIP-01 | Runtime Loop | Integration with execution cycle |
 
-If the proposal changes the normative meaning of an existing SRIP, list it under
-`Amends`. If it only builds on an existing SRIP without changing it, list it
-under `Extends` or `Related Specs`.
+If the proposal changes the normative meaning of an existing SRIP, list it under `Amends`.
+If it only builds on an existing SRIP without changing it, list it under `Extends` or `Related Specs`.
 
-SRIP numbers are immutable proposal identifiers. Do not request renumbering to
-match logical reading order. Use architecture reading-order indexes for reader
-navigation.
+SRIP numbers are immutable proposal identifiers. Do not request renumbering to match logical reading order.
+Use architecture reading-order indexes for reader navigation.
 
 ---
 
 ## 7. Safety and Alignment Review
 
 Explain how this change aligns with the public safety, boundary, and recoverability requirements of the standard.
-Identify potential risks (e.g., recursive instability, symbolic overload, drift amplification)
-and how they are mitigated by design.
+Identify potential risks (e.g., recursive instability, symbolic overload, drift amplification) and how they are mitigated by design.
 
-> Example: “This SRIP enforces bounded attractor transitions to prevent phase instability.”
+> Example: "This SRIP enforces bounded attractor transitions to prevent phase instability."
 
 ---
 
@@ -124,9 +142,9 @@ and how they are mitigated by design.
 
 If the proposal changes anything that readers must understand differently in public explanatory documentation, specify:
 
-- affected `SRD` pages,
-- whether the update is same-change or deferred follow-up,
-- and what release alignment state remains truthful until that sync is complete.
+- affected `SRD` pages;
+- whether the update is same-change or deferred follow-up;
+- what release alignment state remains truthful until that sync is complete.
 
 If there is no `SRD` impact, say so explicitly.
 
@@ -146,22 +164,36 @@ This may include validation procedures, reference code, or dataset alignment cri
 Specify how the proposed change affects existing implementations or SRS versions.
 Include migration steps or compatibility flags if relevant.
 
-> Example: “Backwards-compatible — does not alter interface definitions in SRIP-01.”
+> Example: "Backwards-compatible - does not alter interface definitions in SRIP-01."
 
 ---
 
-## 11. References
+## 11. Author Checklist
+
+- [ ] Normative requirements are separated from examples.
+- [ ] Proprietary runtime implementation details are not disclosed.
+- [ ] Certification claims are not implied.
+- [ ] SRS/SRIP version dependencies are listed.
+- [ ] License fields are complete.
+- [ ] Public/proprietary boundary has been reviewed.
+- [ ] SRD synchronization impact has been reviewed.
+- [ ] Conformance level impact has been reviewed.
+- [ ] Marks and certification impact has been reviewed.
+
+---
+
+## 12. References
 
 List related Sigma Stratum publications, SRIPs, or external research.
 Use DOI or repository links.
 
 > Example:
-> - Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** — DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)
-> - Tsaliev, E. (2025). **Attractor Architectures in LLM-Mediated Cognitive Fields** — DOI: [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)
+> - Tsaliev, E. (2025). **SIGMA Runtime Architecture v0.1** - DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)
+> - Tsaliev, E. (2025). **Attractor Architectures in LLM-Mediated Cognitive Fields** - DOI: [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)
 
 ---
 
-## 12. Change Log
+## 13. Change Log
 
 | Version | Date | Author | Description |
 |----------|------|---------|--------------|
@@ -171,6 +203,6 @@ Use DOI or repository links.
 
 ---
 
-**Template Version:** 1.1 (May 2026)
+**Template Version:** 1.2 (May 2026)
 Maintained by the **Sigma Stratum Research Group (SSRG)**
 For procedural guidance, see [`/team/srip-process.md`](https://github.com/sigmastratum/documentation/blob/main/team/srip-process.md)

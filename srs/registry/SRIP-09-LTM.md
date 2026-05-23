@@ -1,9 +1,14 @@
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 # SRIP-09 — Long-Term Memory and Structural Coherence Layer (LTM-SC)
 **Semantic Memory, Structural Lineage, and Temporal Traceability**
@@ -19,7 +24,13 @@
 | Owning Layer | Memory / Structural Coherence / Traceability |
 | Parent Specs | SRIP-04 |
 | Related Specs | SRIP-08, SRIP-10, SRIP-11, SRIP-13 |
-| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 | Information Class | Open |
 | Change Class | SRS-only |
 | Normative Status | Defines a long-term memory and structural-coherence contract. It does not require a specific vector database, graph database, trace-ledger product, or cross-user memory authority. |
@@ -28,6 +39,14 @@
 | Release Alignment Status | Active proposal with partial implementation; no full graph or trace-ledger production claim is made by this document alone. |
 
 ---
+
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 ## I. Purpose
 
@@ -303,7 +322,8 @@ Implementations must:
 - avoid embedding or serializing unnecessary raw sensitive text;
 - apply encryption and access controls in distributed or cloud deployments;
 - preserve auditability for governed export or deletion workflows;
-- comply with Canon attribution and commercial implementation requirements.
+- preserve attribution, public specification license, proprietary runtime boundary,
+  marks/certification, and CC BY-NC commercial-use requirements.
 
 ---
 

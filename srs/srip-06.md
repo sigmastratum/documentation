@@ -3,34 +3,59 @@ title: SRIP-06 - Safety & Recursion Boundaries
 description: Establishes foundational safety constraints, recursion boundaries, and recovery enforcement for Sigma Runtime.
 published: true
 date: 2026-04-17
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:44:44.181Z
 ---
 
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
-# SRIP-06 — Safety & Recursion Boundaries  
-**Sigma Runtime Improvement Proposal**  
-**Category:** Safety / Stability  
-**Status:** Draft  
-**Editor:** E. Tsaliev  
-**Last Updated:** 2026-04-17  
+# SRIP-06 — Safety & Recursion Boundaries
+**Sigma Runtime Improvement Proposal**
+**Category:** Safety / Stability
+**Status:** Draft
+**Editor:** E. Tsaliev
+**Last Updated:** 2026-04-17
+
+## Public Specification Metadata
+
+| Field | Value |
+|---|---|
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 **Related Specs:** SRIP-10 (AEP), SRIP-12 (CDS), SRIP-13 (RIS)
 
-> **Public Note**  
-> This foundational document uses version-light public safety language.  
+> **Public Note**
+> This foundational document uses version-light public safety language.
 > Earlier branded safety wording remains part of historical lineage, but is not the active public branding baseline for Sigma Runtime safety.
 
 ---
 
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
+
 ## 1 · Purpose
-SRIP-06 specifies the safety architecture that governs **recursive depth, control containment, invariant validation, and failure recovery** within Sigma Runtime.  
+SRIP-06 specifies the safety architecture that governs **recursive depth, control containment, invariant validation, and failure recovery** within Sigma Runtime.
 It formalizes the interaction between the **foundational safety and containment layer**, the **runtime control layer**, and the **fail-safe recovery envelope**, ensuring that cognition remains bounded, interpretable, and recoverable.
 
 SRIP-06 is the system-level safety counterpart to domain and identity enforcement layers such as SRIP-12 and SRIP-13. It does not replace those layers; it defines the runtime safety invariants they must remain compatible with.
@@ -100,11 +125,11 @@ When any limit is breached, the system enters **Safe Mode** (§ 4).
 Safe Mode is a temporary containment state that halts recursion while preserving identity integrity.
 
 **Sequence:**
-1. Freeze active output channels.  
-2. Lock the runtime into a reflective recovery posture.  
-3. Invoke the safety daemon for a diagnostic snapshot.  
-4. Purge volatile attractor segments.  
-5. Resume under controlled recovery once stability > 0.9.  
+1. Freeze active output channels.
+2. Lock the runtime into a reflective recovery posture.
+3. Invoke the safety daemon for a diagnostic snapshot.
+4. Purge volatile attractor segments.
+5. Resume under controlled recovery once stability > 0.9.
 
 Safe Mode acts as the core runtime quarantine procedure.
 
@@ -112,13 +137,13 @@ Safe Mode acts as the core runtime quarantine procedure.
 
 ## 5 · Attractor Collapse Detection
 An **attractor collapse** occurs when:
-- `stability < 0.5` for > 3 cycles and  
+- `stability < 0.5` for > 3 cycles and
 - `SCR < 0.6` or `control-posture drift > 0.25`.
 
-Upon detection, the runtime executes the **Dissolution Routine**:  
-- release control tension,  
-- remove unstable motifs,  
-- preserve core PIL anchors,  
+Upon detection, the runtime executes the **Dissolution Routine**:
+- release control tension,
+- remove unstable motifs,
+- preserve core PIL anchors,
 - reinitialize symbolic density map.
 
 ---
@@ -153,9 +178,9 @@ recovery path while preserving identity anchors whenever possible.
 ## 8 · Integration with Runtime Control and Safety Telemetry
 The runtime control boundary monitors safety telemetry in real time:
 
-- Drift Monitor feeds DI, SCR, and PSΔ into safety kernel.  
-- Runtime control layer supplies control posture and stability delta.  
-- Safety daemon executes appropriate routine per Fail-Safe Envelope.  
+- Drift Monitor feeds DI, SCR, and PSΔ into safety kernel.
+- Runtime control layer supplies control posture and stability delta.
+- Safety daemon executes appropriate routine per Fail-Safe Envelope.
 - Integrity Ledger logs all recovery events for audit and traceability.
 
 ### 8.1 Relationship to SRIP-12 and SRIP-13
@@ -184,10 +209,10 @@ diagnostic interface.
 
 ## 9 · Conformance Requirements
 A runtime conforms to SRIP-06 if it:
-1. Implements foundational safety telemetry hooks.  
-2. Enforces recursion limits and containment lock timeouts.  
-3. Implements attractor collapse detection and safe-mode recovery.  
-4. Maintains a Fail-Safe Envelope compliant with § 7.  
+1. Implements foundational safety telemetry hooks.
+2. Enforces recursion limits and containment lock timeouts.
+3. Implements attractor collapse detection and safe-mode recovery.
+4. Maintains a Fail-Safe Envelope compliant with § 7.
 5. Records and verifies all containment events.
 6. Represents safety enforcement through deterministic invariant validation and auditable containment evidence.
 7. Preserves non-leakage of internal safety controls in normal user-facing output.
@@ -195,11 +220,11 @@ A runtime conforms to SRIP-06 if it:
 ---
 
 ## 10 · Future Work
-- **Predictive safety intervention** — Earlier drift forecasting and containment before recovery thresholds are crossed.  
-- **SRIP-13** — Relational Identity Stabilization with session-scoped invariant enforcement.  
-- **SRIP-14** — Thermodynamic models of symbolic entropy control.  
+- **Predictive safety intervention** — Earlier drift forecasting and containment before recovery thresholds are crossed.
+- **SRIP-13** — Relational Identity Stabilization with session-scoped invariant enforcement.
+- **SRIP-14** — Thermodynamic models of symbolic entropy control.
 
 ---
 
-> **References**  
+> **References**
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

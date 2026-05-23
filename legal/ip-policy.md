@@ -1,154 +1,99 @@
 ---
 title: Intellectual Property Policy
-description: IP rules covering contributions, rights retention, and open standard commitments.
+description: IP rules covering contributions, public specification safe harbor, protected research materials, marks, certification, and proprietary runtime boundaries.
 published: true
-date: 2025-12-29T19:39:57.754Z
-tags: 
+date: 2026-05-22T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:56:05.346Z
 ---
 
-# IP Policy  
-**Sigma Stratum Research Group**  
-**Version:** 2025  
-**Status:** Authoritative Policy Document  
+# IP Policy
 
-The Sigma Runtime Standard is an **open, non-proprietary technical standard**.  
-This policy defines the intellectual property framework governing all
-contributions, extensions, and derivative work related to the Standard.
+This page is an IP policy overview. The active policy layer is maintained at [Sigma Stratum Intellectual Property, Licensing, and Certification Policy](/legal/ip-licensing-certification-policy).
 
-**Accessibility Notice**
-Sigma Stratum is open for use by researchers, individual developers, and independent laboratories.
-All non-commercial experimentation, prototyping, and publication activities are fully permitted.
-The restrictions defined in the Canon apply solely to commercial exploitation or closed-source deployment without recognition or participation within the Sigma Governance framework.
+## 1. Purpose
 
----
+The Sigma Runtime Standard is an open public specification. Independent implementation of public SRS/SRIP normative requirements does not by itself require a Sigma commercial runtime license.
 
-## 1. Ownership of Contributions
+Independent ideas, methods, algorithms, and systems remain independent when they are developed without copying protected Sigma expression or proprietary Sigma Runtime assets.
 
-Contributors retain **full copyright** to their individual submissions.
+This policy protects Sigma-authored expression, attribution requirements, protected research materials, Sigma marks, official certification, proprietary runtime assets, commercial use of CC BY-NC materials, and operated Sigma Runtime product surfaces.
 
-By submitting content to the Sigma Runtime Standard or the SRIP process, each
-contributor grants the Sigma Stratum Research Group a **perpetual,
-irrevocable, worldwide, royalty-free license** to:
+## 2. Relationship to the Main Policy
 
-- publish the contribution,  
-- modify and adapt it,  
-- distribute it in any form,  
-- incorporate it into the Sigma Runtime Standard,  
-- create derivative works for the purpose of standardization.  
+The main policy is:
 
-This applies exclusively to the **standardization context**, not to unrelated
-external projects.
+- [Sigma Stratum Intellectual Property, Licensing, and Certification Policy](/legal/ip-licensing-certification-policy)
 
----
+This IP policy overview should be read with:
 
-## 2. Open-Standard Requirement (No Proprietary Forks)
+- [Sigma Runtime Standard Public Specification License](/legal/srs-public-specification-license)
+- [Sigma Commercial Runtime License Notice](/legal/commercial-runtime-license-notice)
+- [Attribution Requirements](/legal/attribution)
 
-The Sigma Runtime architecture — its definitions, invariants, schemas, and
-structural specifications — must remain fully **open and accessible**.
+## 3. Ownership of Contributions
 
-### Prohibited:
-- Distribution of private or closed-source forks of the architecture specification  
-- Modified versions of SRS distributed under restrictive licenses  
-- Attempts to enclose or privatize the Standard  
+Contributors retain copyright to their individual submissions.
 
-### Permitted:
-- Proprietary or commercial implementations  
-- Closed-source runtimes, agents, or tools **built on top of** the open standard  
-- Extensions that maintain compatibility with the canonical SRIP process  
+By submitting content to the Sigma Runtime Standard or the SRIP process, each contributor grants Sigma Stratum permission to publish, adapt, distribute, and incorporate the contribution for standardization, governance, documentation, and public specification maintenance purposes.
 
-The Standard itself must remain open; implementations may be commercial.
+This contribution permission applies to the standardization context. It does not transfer ownership of unrelated external projects, independent implementations, or independently developed systems.
 
----
+## 4. Public Specification Safe Harbor
 
-## 3. License Structure
+Independent implementation of public SRS/SRIP normative requirements is permitted under the applicable public specification terms.
 
-The Sigma Stratum documentation uses a **multi-license model**:
+No Sigma commercial runtime license is required solely because an implementation follows public SRS/SRIP normative requirements.
 
-- **CC BY-NC 4.0** for foundational or non-commercial research documents  
-- **CC BY 4.0** for commercially permissive materials  
+This safe harbor is about implementing public requirements. Product code, private modules, ALICE internals, runtime telemetry, private datasets, product UX, production memory/control mechanisms, deployment topology, support, SLA, certification badges, and Sigma marks follow their own policies or written terms.
 
-Each document declares its specific license at the top of the file.  
-The license stated in the document itself is **authoritative**.
+## 5. Protected Boundaries
 
----
+The following use their own policies or written terms:
 
-## 4. Third-Party IP Compliance
+- Sigma-authored expressive text, diagrams, papers, and documentation under their applicable licenses;
+- attribution requirements and DOI-linked provenance;
+- protected research-origin materials, including CC BY-NC materials;
+- Sigma Runtime proprietary code, operated services, private modules, datasets, implementation artifacts, and deployment assets;
+- ALICE internals, runtime telemetry, production memory/control mechanisms, and private evaluation datasets;
+- Sigma Stratum, Sigma Runtime, `∿`, certification badges, and official compatibility language;
+- official certification, endorsement, partnership, and conformance registry status;
+- white-label deployment, resale, managed Sigma Runtime deployment, and enterprise distribution of Sigma-operated runtime technology.
 
-All contributors must ensure that submitted material:
+## 6. Third-Party IP Compliance
 
-- is original,  
-- does not infringe third-party intellectual property,  
-- does not introduce copyrighted text or diagrams without permission,  
-- is safe to integrate into an open standard.  
+Contributors are responsible for ensuring that submitted material is original, compatible with the public specification process, and free of third-party licensing conflicts.
 
-Contributors are responsible for verifying that their input is free of external
-licensing conflicts.
+Do not submit copyrighted text, diagrams, code, datasets, or proprietary implementation details without appropriate rights and approval.
 
----
+## 7. Marks and Certification
 
-## 5. Trademarks and Symbols
+The `∿` symbol, Sigma Stratum, Sigma Runtime, official certification badges, and official compatibility language are governed marks and certification surfaces.
 
-The **∿ symbol**, the term **“Sigma Stratum”**, and the associated visual
-identity are protected assets of the Sigma Stratum Research Group.
+Descriptive references to SRS/SRIP are permitted for citation, attribution, discussion, and truthful self-declaration under the applicable public rules.
 
-### Permitted use:
-- academic and research publications  
-- citation and attribution  
-- standard-conformant implementations  
+Use of Sigma marks as product identity, service identity, certification identity, endorsement, or official compatibility claim requires written permission.
 
-### Prohibited use:
-- misleading branding or implied certification  
-- commercial branding using the ∿ symbol without authorization  
-- creating derivative marks suggesting ownership of the Standard  
+## 8. Versioning and Updates
 
----
+Material changes to this policy should be versioned, reviewable, and coordinated with the main IP, licensing, and certification policy.
 
-## 6. Changes to This Policy
 
-Revisions to the IP Policy follow the same governance path as SRIP updates:
+## 9. Rights Administration Notice
 
-- proposed changes are submitted via pull request,  
-- reviewed by maintainers,  
-- approved or rejected based on alignment with the Standard’s goals.
+The Sigma Stratum Research Group (SSRG) is an unincorporated research designation used to represent the author and contributors of the Sigma Stratum research corpus.
 
----
-
-## 7. Protection and Attribution
-
-The Sigma Runtime Standard protects contributors by ensuring that:
-
-- all work integrated into the Standard remains **open and credited**,  
-- authorship and provenance are preserved through **DOI-linked documentation**,  
-- corporate entities cannot claim proprietary rights over open components.  
-
-Your work remains yours.  
-Integration into the Standard does not transfer ownership — it ensures **protection, attribution, and interoperability** under open-standard governance.
-
----
-
-The "Sigma Stratum Research Group (SSRG)" is an unincorporated research
-designation used to represent the author and contributors of the
-Sigma Stratum research corpus.
-
-At the time of publication, SSRG does not constitute a registered legal
-entity. All intellectual property rights, licensing authority,
-permissions, and enforcement actions are exercised by:
+At the time of publication, SSRG does not constitute a registered legal entity. Unless and until a formal legal entity is established, intellectual property rights, licensing authority, permissions, and enforcement actions are exercised by:
 
 Eugene Tsaliev
-ORCID: https://orcid.org/0009-0007-3279-9477
+ORCID: [https://orcid.org/0009-0007-3279-9477](https://orcid.org/0009-0007-3279-9477)
 Email: eugene@sigmastratum.org
-Unless and until a formal legal entity is established, all references to
-SSRG in licensing, attribution, or enforcement contexts shall be
-interpreted as referring to the above individual.
-
----
 
 ## Contact
 
-For IP questions, licensing clarification, or institutional agreements:
+For IP questions, licensing clarification, attribution, marks, certification, or institutional agreements:
 
-**Sigma Stratum Research Group**  
-Email: legal@sigmastratum.org  
-Website: [https://wiki.sigmastratum.org](https://wiki.sigmastratum.org)
+**Sigma Stratum Research Group**
+Email: legal@sigmastratum.org
+Website: [https://sigmastratum.org](https://sigmastratum.org)

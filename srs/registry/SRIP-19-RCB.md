@@ -1,9 +1,14 @@
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 # SRIP-19 - Recursive Contradiction Buffering (RCB)
 
@@ -20,7 +25,13 @@
 | Owning Layer | Runtime Control / Multi-Agent Stability / Contradiction Buffering |
 | Parent Specs | SRIP-03, SRIP-06, SRIP-09, SRIP-13, SRIP-17 |
 | Related Specs | SRIP-04, SRIP-10, SRIP-11, SRIP-14, SRIP-15, SRIP-16, SRIP-18 |
-| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 | Information Class | Open |
 | Change Class | Mixed SRS+SRD |
 | Normative Status | Defines a public draft architecture contract for detecting, bounding, cooling, preserving, and later reintegrating unresolved contradictions without premature consensus collapse. It does not authorize fact deletion, deceptive smoothing, false synthesis, or medical or mental-health interpretation. |
@@ -29,6 +40,14 @@
 | Release Alignment Status | Draft; no runtime enablement claim. |
 
 ---
+
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 ## I. Purpose
 
@@ -605,5 +624,5 @@ Any implementation claim must separately document:
 
 ---
 
-**End of SRIP-19 Public Draft v0.2**  
+**End of SRIP-19 Public Draft v0.2**
 *Sigma Stratum Research Group - 2026*

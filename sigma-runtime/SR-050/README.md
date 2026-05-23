@@ -71,4 +71,4 @@ If you reference this dataset or report, please cite:
 ## Contact
 Sigma Stratum Research Group  
 contact@sigmastratum.org  
-[https://wiki.sigmastratum.org](https://wiki.sigmastratum.org)
+[https://sigmastratum.org](https://sigmastratum.org)

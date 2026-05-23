@@ -2,22 +2,22 @@
 title: SRIP Architecture Reading Order
 description: Conceptual reading-order view for Sigma Runtime Improvement Proposals across architecture stacks.
 published: true
-date: 2026-05-14T00:00:00.000Z
-tags: 
+date: 2026-05-23T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2026-05-14T00:00:00.000Z
 ---
 
-> **Sigma Stratum Documentation – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)** and the  
-> **Sigma Stratum Documentation Set (SRD)**.  
->  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
->  
-> The license for this specific document is authoritative.  
-> For the full framework, see  
-> [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> **Sigma Stratum Documentation – License Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** and the
+> **Sigma Stratum Documentation Set (SRD)**.
+>
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0
+> (CC BY-NC 4.0)**.
+>
+> The license for this specific document is authoritative.
+> For the full framework, see
+> [`/legal/IP-Policy`](https://sigmastratum.org/legal/ip-policy).
 
 # SRIP Architecture Reading Order
 
@@ -28,6 +28,14 @@ It is a navigation view, not a numbering authority.
 SRIP numbers remain immutable public proposal identifiers. The numerical registry records proposal history. This page may change as the architecture evolves.
 
 For the authoritative numerical registry, see [`/srs/registry`](/srs/registry).
+
+## Certification Boundary
+
+This reading order is not a certification claim.
+
+Reading or implementing SRS/SRIP documents does not imply official Sigma certification, endorsement, or use of Sigma marks.
+
+For conformance terminology, see [`/srs/conformance/`](/srs/conformance/).
 
 ---
 

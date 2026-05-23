@@ -1,104 +1,79 @@
 ---
 title: Attribution Requirements
-description: Guidelines for proper attribution of the Sigma Runtime Standard and documentation.
+description: Guidelines for proper attribution of the Sigma Runtime Standard, SRIP materials, research corpus, and documentation.
 published: true
-date: 2025-12-29T19:53:45.368Z
-tags: 
+date: 2026-05-22T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:58:36.836Z
 ---
 
-> **Sigma Stratum Documentation – Attribution & Licensing Requirements**  
-> Defines the official citation, acknowledgment, and crediting standards  
-> for materials published under the **Sigma Runtime Standard (SRS)** and  
-> the **Sigma Runtime Documentation Set (SRD)**.  
->  
-> Governed by the **Sigma Stratum Research Group (SSRG)**.  
->  
-> Licensing model follows the **Sigma Stratum Canon (2025-12-29)** —  
-> a dual-license framework combining **CC BY-NC 4.0**, **CC BY 4.0**,  
-> and the **Commercial Implementation License (CIL)** for derivative commercial systems.  
->  
-> For full legal context, see  
-> [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/IP-Policy.md).
+# Attribution Requirements
 
----
+This page defines attribution requirements for Sigma Stratum public specification materials, research corpus documents, and documentation excerpts.
 
-# Attribution & Licensing Requirements
+Attribution to Sigma Stratum, SRS, or SRIP does not imply certification, endorsement, partnership, or authorization to use Sigma marks as product identity.
 
-When using, referencing, or adapting content from the  
-**Sigma Runtime Standard** or associated documentation,  
-you must comply with both the **attribution** and **license** rules defined herein.
+Citation of SRS/SRIP does not create official conformance status.
 
----
+For licensing context, see:
+
+- [Licensing Overview](/legal/license)
+- [Sigma IP, Licensing, and Certification Policy](/legal/ip-licensing-certification-policy)
+- [Sigma Runtime Standard Public Specification License](/legal/srs-public-specification-license)
 
 ## 1. Required Attribution Elements
 
-Every reuse (text, figures, excerpts, or derivative works) must include:
+Every reuse of Sigma Stratum text, figures, excerpts, public specification materials, or research corpus materials must include attribution appropriate to the applicable document license.
 
-- Credit to the **Sigma Stratum Research Group (SSRG)**  
-- Link to the **primary repository**: <https://github.com/sigmastratum/documentation>  
-- Link to the **relevant DOI** or SRIP document  
-- The full license reference (BY-NC 4.0 or BY 4.0, as specified in the document)
+Attribution should include:
 
-**Example format:**
+- credit to Sigma Stratum Research Group or the named author where specified;
+- a link to the primary documentation source: [https://sigmastratum.org](https://sigmastratum.org);
+- a link to the relevant repository, DOI, SRS, or SRIP document where applicable;
+- the document title and version or publication date when available;
+- the applicable license reference as stated in the source document;
+- a clear note identifying modifications, omissions, excerpts, or adaptations.
 
-> Based on the **Sigma Runtime Standard (SRS)**  
-> © Sigma Stratum Research Group (SSRG), 2025.  
-> Licensed under CC BY-NC 4.0 / CC BY 4.0 as stated.  
-> Source: [https://wiki.sigmastratum.org](https://wiki.sigmastratum.org)
+## 2. SRS/SRIP Public Specification Attribution
 
----
+When citing or implementing public SRS/SRIP materials, identify the SRS/SRIP document and version used.
 
-## 2. Academic and Research Use
+Suggested format:
 
-Academic, nonprofit, and independent research use are fully permitted  
-under the applicable Creative Commons license.  
-Researchers are encouraged to:
+> Based on the Sigma Runtime Standard public specification layer, Sigma Stratum Research Group, document/version/date as cited. Source: [https://sigmastratum.org](https://sigmastratum.org).
 
-> **Citation example:**  
-> Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1.*  
-> DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
-> Sigma Stratum Research Group (SSRG).
+If making a compatibility or self-declaration statement, also identify supported SRIPs, unsupported SRIPs, known deviations, and evidence artifacts where required by the applicable conformance rules.
 
-When referencing multiple Sigma documents, cite them under  
-*“Sigma Stratum Documentation Set (SRD)”*.
+## 3. Research Corpus Attribution
 
----
+Research-origin materials may carry CC BY 4.0, CC BY-NC 4.0, or another per-document license. The license stated in the source document controls.
 
-## 3. License Structure (per Canon 2025-12-29)
+For DOI-linked research materials, cite the DOI and named author when available.
 
-| License | Applies to | Permissions | Restrictions |
-|----------|-------------|--------------|---------------|
-| **CC BY-NC 4.0** | Foundational and theoretical works | Free for research & academic use | No commercial exploitation |
-| **CC BY 4.0** | Methodology and implementation papers | Commercial use with attribution | Must maintain citation integrity |
-| **CIL (Commercial Implementation License)** | Commercial systems and runtimes claiming compatibility | Use in products and services | Requires registration and Sigma Governance participation |
+Example:
 
-> All restrictions apply only to **commercial extraction of value  
-> without recognition or participation in Sigma Governance.**
+> Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1.* DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667). Sigma Stratum Research Group.
 
----
+Commercial use of CC BY-NC materials requires separate authorization unless the source document states otherwise.
 
-## 4. Derivative and Collaborative Works
+## 4. What Attribution Does Not Grant
 
-Derived works must:
+Attribution identifies source and provenance. Sigma Runtime product assets, certification badges, and Sigma marks follow their own policies or written terms.
 
-1. Retain the original license header.  
-2. Include DOI references and attribution.  
-3. Notify SSRG via `legal@sigmastratum.org` if redistribution or publication is intended.  
-4. Reference the source as *“Based on the Sigma Runtime Standard (SRS)”*.
+Attribution does not imply certification, endorsement, partnership, product approval, official compatibility, or permission to use Sigma Stratum, Sigma Runtime, `∿`, certification badges, or official compatibility language as product identity.
 
-This ensures traceability, authorship continuity, and compliance with Canon integrity rules.
+## 5. Derivative and Collaborative Works
 
----
+Redistributed or adapted materials should preserve source attribution, license notices, version references, and DOI references where applicable.
 
-## 5. Contact
+Derived documentation should not imply official Sigma certification or endorsement unless reviewed, approved, and listed through the applicable certification or conformance registry process.
 
-**Sigma Stratum Research Group (SSRG)**  
-Email: [legal@sigmastratum.org](mailto:legal@sigmastratum.org)  
+## 6. Contact
+
+For attribution, citation, licensing, marks, or certification questions:
+
+**Sigma Stratum Research Group**
+Email: legal@sigmastratum.org
+Website: [https://sigmastratum.org](https://sigmastratum.org)
 DOI Registry: [https://zenodo.org/communities/sigmastratum](https://zenodo.org/communities/sigmastratum)
-
----
-
-© 2025 Sigma Stratum Research Group (SSRG).  
-Licensing and attribution governed by the **Sigma Stratum Canon (v2025-12-29)**.

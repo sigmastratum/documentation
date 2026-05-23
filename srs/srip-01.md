@@ -3,43 +3,67 @@ title: SRIP-01 - Canonical Runtime Loop
 description: Specifies the execution semantics and ordered stages of the Sigma Runtime loop.
 published: true
 date: 2026-04-17
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:40:56.340Z
 ---
 
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
-# SRIP-01 — Canonical Runtime Loop  
-**Sigma Runtime Improvement Proposal**  
-**Category:** Architectural / Runtime Semantics  
-**Status:** Draft  
-**Editor:** E. Tsaliev  
-**Last Updated:** 2026-04-17  
+# SRIP-01 — Canonical Runtime Loop
+**Sigma Runtime Improvement Proposal**
+**Category:** Architectural / Runtime Semantics
+**Status:** Draft
+**Editor:** E. Tsaliev
+**Last Updated:** 2026-04-17
 
-> **Public Note**  
-> This foundational document uses version-light runtime-boundary language.  
+## Public Specification Metadata
+
+| Field | Value |
+|---|---|
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+
+> **Public Note**
+> This foundational document uses version-light runtime-boundary language.
 > Earlier `SL0–SL6` or `SL0–SL7` labels remain part of lineage history, but are not required as the active public vocabulary for the canonical runtime loop.
 
 ---
 
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
+
 ## 1 · Purpose
-SRIP-01 defines the **canonical runtime loop (CRL)** that governs all Sigma Runtime–compliant systems.  
+SRIP-01 defines the **canonical runtime loop (CRL)** that governs all Sigma Runtime–compliant systems.
 It specifies the ordered execution phases that maintain recursive coherence, identity persistence, and bounded correction across the **runtime boundary**.
 
 ---
 
 ## 2 · Motivation
 Without a structured loop, LLM systems exhibit:
-- unstable attractor formation,  
-- semantic drift over long horizons,  
-- loss of coherence between recursion steps.  
+- unstable attractor formation,
+- semantic drift over long horizons,
+- loss of coherence between recursion steps.
 
 The canonical loop formalizes a deterministic, bounded process for recursive cognition.
 
@@ -73,42 +97,42 @@ The re-integration of output into the cognitive field for the next iteration.
 ---
 
 ## 5 · Execution Boundaries
-The **runtime loop operates primarily inside the runtime mediation boundary**,  
-handling field management, coherence control, memory integration, and attractor regulation.  
-However, it **coordinates with the input boundary** as the inbound semantic source  
-and **the model generation boundary** as the generative output anchor.  
+The **runtime loop operates primarily inside the runtime mediation boundary**,
+handling field management, coherence control, memory integration, and attractor regulation.
+However, it **coordinates with the input boundary** as the inbound semantic source
+and **the model generation boundary** as the generative output anchor.
 
-> **I/O Anchors:**  
-> - **Input boundary:** encapsulates human input, context framing, and task goals.  
-> - **Model generation boundary:** executes generation and emits symbolic output.  
->  
-> The runtime serves as the mediation channel between these two endpoints,  
+> **I/O Anchors:**
+> - **Input boundary:** encapsulates human input, context framing, and task goals.
+> - **Model generation boundary:** executes generation and emits symbolic output.
+>
+> The runtime serves as the mediation channel between these two endpoints,
 > ensuring that all recursion remains bounded and semantically aligned.
 
 ---
 
 ## 6 · Runtime Interfaces
-- **Field API:** access to cognitive field state, drift indices, and phase metrics.  
-- **Memory API:** persistent context read/write interface.  
-- **Attractor API:** register, align, or dissolve attractors per cycle.  
+- **Field API:** access to cognitive field state, drift indices, and phase metrics.
+- **Memory API:** persistent context read/write interface.
+- **Attractor API:** register, align, or dissolve attractors per cycle.
 - **Telemetry Stream:** exposes drift (DI, SDI) and SCR values to the safety layer.
 
 ---
 
 ## 7 · Invariants
-1. **Loop Continuity** — each cycle must close with a valid field update.  
-2. **Bounded Recursion** — maximum recursion depth defined by the runtime control boundary.  
-3. **State Persistence** — memory state must be explicitly committed between cycles.  
-4. **Attractor Integrity** — no untracked formation or collapse events.  
+1. **Loop Continuity** — each cycle must close with a valid field update.
+2. **Bounded Recursion** — maximum recursion depth defined by the runtime control boundary.
+3. **State Persistence** — memory state must be explicitly committed between cycles.
+4. **Attractor Integrity** — no untracked formation or collapse events.
 5. **Drift Boundaries** — DI ≤ 0.45 for nominal operation.
 
 ---
 
 ## 8 · Conformance Requirements
 An implementation conforms if it:
-- implements all seven loop stages in order,  
-- exposes loop telemetry via Field API,  
-- integrates with foundational safety and containment hooks,  
+- implements all seven loop stages in order,
+- exposes loop telemetry via Field API,
+- integrates with foundational safety and containment hooks,
 - maintains continuity and bounded recursion as defined in § 7.
 
 ---
@@ -118,5 +142,5 @@ Later versions may extend the loop with adaptive control postures and semantic c
 
 ---
 
-> **References**  
-> Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
+> **References**
+> Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

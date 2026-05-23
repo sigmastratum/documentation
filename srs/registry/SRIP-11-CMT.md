@@ -1,9 +1,14 @@
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 # SRIP-11: Compression and Memory Topology (CMT)
 
@@ -18,7 +23,13 @@
 | Owning Layer | Memory / Compression / Topological Recall |
 | Parent Specs | SRIP-09, SRIP-10 |
 | Related Specs | None declared |
-| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 | Information Class | Open |
 | Change Class | SRS-only |
 | Normative Status | Defines a memory compression and topology contract. It does not mandate a specific vector store, graph store, compression scheduler, or recall product. |
@@ -28,14 +39,22 @@
 
 ---
 
-## I. Purpose  
-SRIP-11 defines the architecture of *structural memory compression* and *semantic topology* within Sigma Runtime.  
-Its goal is to reduce redundancy in long-term storage while preserving continuity of reasoning across extended cycles (≥ 500–5000).  
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
+
+## I. Purpose
+SRIP-11 defines the architecture of *structural memory compression* and *semantic topology* within Sigma Runtime.
+Its goal is to reduce redundancy in long-term storage while preserving continuity of reasoning across extended cycles (≥ 500–5000).
 Memory becomes *topological*: a self-organizing lattice of semantic nodes connected by relational weight rather than linear order.
 
 ---
 
-## II. Core Concepts  
+## II. Core Concepts
 
 | Term | Description |
 |------|--------------|
@@ -49,27 +68,27 @@ Memory becomes *topological*: a self-organizing lattice of semantic nodes connec
 
 ---
 
-## III. System Functions  
+## III. System Functions
 
-### 1. Dynamic Compression Loop  
-Every N cycles (default = 10 or 50):  
-- Compute semantic centroid of the last N embeddings.  
-- Estimate symbolic density and entropy.  
-- Generate a compressed representation (text + vector).  
+### 1. Dynamic Compression Loop
+Every N cycles (default = 10 or 50):
+- Compute semantic centroid of the last N embeddings.
+- Estimate symbolic density and entropy.
+- Generate a compressed representation (text + vector).
 - Store as Rib Point in the vector store and connect to its parents in the graph store.
 ```
 Cycle → Embedding → Centroid → Rib Point → Cluster
 ```
-### 2. Adaptive Retention  
-Compression is not uniform:  
-records with high density and low redundancy are retained longer;  
-ephemeral ones are merged or pruned.  
+### 2. Adaptive Retention
+Compression is not uniform:
+records with high density and low redundancy are retained longer;
+ephemeral ones are merged or pruned.
 Retention weight = `(density × coherence) / entropy`.
 
-### 3. Topological Retrieval  
+### 3. Topological Retrieval
 Recall operates through graph propagation rather than flat similarity:
-- Input query → encode vector  
-- Find nearest rib points → expand through connected edges weighted by phase lineage  
+- Input query → encode vector
+- Find nearest rib points → expand through connected edges weighted by phase lineage
 - Return contextual subgraph as memory summary.
 
 ### 4. Phase-Aware Recall
@@ -251,7 +270,7 @@ class Cluster:
 
 ---
 
-## V. Compression Policies  
+## V. Compression Policies
 
 | Policy | Description |
 |---------|--------------|
@@ -262,7 +281,7 @@ class Cluster:
 
 ---
 
-## VI. Metrics and Monitoring  
+## VI. Metrics and Monitoring
 
 | Metric | Definition | Purpose |
 |---------|-------------|----------|
@@ -276,11 +295,11 @@ class Cluster:
 
 ---
 
-## VII. Expected Outcomes  
+## VII. Expected Outcomes
 
-- 10× reduction in token footprint for sessions > 500 cycles  
-- Improved semantic continuity without context overflow  
-- Dynamic memory lattice capable of autonomous reasoning summaries  
+- 10× reduction in token footprint for sessions > 500 cycles
+- Improved semantic continuity without context overflow
+- Dynamic memory lattice capable of autonomous reasoning summaries
 - Reliable recall of anchor facts without domain-specific hardcoding
 
 ---

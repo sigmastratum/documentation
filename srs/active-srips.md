@@ -2,22 +2,22 @@
 title: Active SRIPs — Sigma Runtime Standard
 description: Public index of the active Sigma Runtime Improvement Proposal surface, including foundational SRIPs and later registry proposals.
 published: true
-date: 2026-05-14T00:00:00.000Z
-tags: 
+date: 2026-05-23T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2025-12-28T09:46:38.133Z
 ---
 
-> **Sigma Stratum Documentation – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)** and the  
-> **Sigma Stratum Documentation Set (SRD)**.  
->  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
->  
-> The license for this specific document is authoritative.  
-> For the full framework, see  
-> [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> **Sigma Stratum Documentation – License Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** and the
+> **Sigma Stratum Documentation Set (SRD)**.
+>
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0
+> (CC BY-NC 4.0)**.
+>
+> The license for this specific document is authoritative.
+> For the full framework, see
+> [`/legal/IP-Policy`](https://sigmastratum.org/legal/ip-policy).
 
 # Active SRIPs — Sigma Runtime Standard
 
@@ -25,6 +25,20 @@ This page indexes the currently active public `SRIP` surface.
 
 It is intentionally version-light.
 Readers should use this page as a public navigation layer, while consulting each individual SRIP for its own exact status, date, and scope.
+
+## Licensing And Conformance Summary
+
+SRS/SRIP documents are part of the Sigma Runtime Standard public specification layer.
+
+Independent implementation of public SRS/SRIP normative requirements is permitted under the public specification terms.
+
+Independent implementations are welcome. Sigma Runtime product assets, official certification, Sigma marks, white-label deployment, managed Sigma deployment, resale, and CC BY-NC commercial use use their own published policies or written terms.
+
+References:
+
+- [SRS Public Specification License](/legal/srs-public-specification-license)
+- [Sigma IP, Licensing, and Certification Policy](/legal/ip-licensing-certification-policy)
+- [SRS Conformance](/srs/conformance/)
 
 ---
 
@@ -60,6 +74,7 @@ Later proposals and extensions are tracked in the public registry:
 | [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) | Recursive Self-Modeling | Consult document header |
 | [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) | Multi-Agent Exchange | Consult document header |
 | [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) | Commerce Semantic Integration Layer | Consult document header |
+| [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) | Recursive Contradiction Buffering | Consult document header |
 
 Deprecated or superseded entries remain traceable through the registry as part of the public historical record.
 
@@ -77,5 +92,5 @@ Deprecated or superseded entries remain traceable through the registry as part o
 
 ## Reference
 
-> Tsaliev, E. (2025). **Sigma Runtime Standard v0.1** — *Attractor-Based Cognitive Architecture for Long-Horizon Reasoning*  
+> Tsaliev, E. (2025). **Sigma Runtime Standard v0.1** — *Attractor-Based Cognitive Architecture for Long-Horizon Reasoning*
 > DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

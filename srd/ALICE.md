@@ -16,7 +16,7 @@ dateCreated: 2025-12-01T07:42:12.692Z
 > (CC BY-NC 4.0)**.  
 >  
 > The license for this specific document is authoritative.  
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> For the full framework, see [`/legal/IP-Policy`](https://sigmastratum.org/legal/ip-policy).
 
 # ALICE — Attractor Layer for Integrated Cognitive Emergence
 

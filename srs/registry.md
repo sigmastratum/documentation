@@ -2,24 +2,27 @@
 title: Sigma Stratum Registry
 description: Authoritative registry tracking post-core Sigma Runtime Improvement Proposals (SRIP-09+) — experimental extensions, governance updates, and long-term evolution of the Sigma Runtime architecture.
 published: true
-date: 2026-05-14T00:00:00.000Z
+date: 2026-05-22T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-12-31T09:55:42.132Z
 ---
 
-> **Sigma Stratum Documentation – License Notice**
-> This document is part of the **Sigma Stratum Registry** under the
-> **Sigma Runtime Standard (SRS)** and **Sigma Stratum Documentation Set (SRD)**.
+> **Sigma Stratum Documentation - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public
+> specification registry and the **Sigma Stratum Documentation Set (SRD)**.
 >
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**,
-> unless otherwise noted within specific SRIP entries.
+> Independent implementation of public SRS/SRIP normative requirements is
+> permitted under the applicable public specification terms.
 >
-> Registry entries describing commercial or derivative extensions may
-> invoke the **Commercial Implementation License (CIL)** as defined in the Canon.
+> This registry does not license Sigma Runtime proprietary product assets,
+> official certification, Sigma marks, white-label deployment, resale, managed
+> Sigma Runtime deployment, enterprise deployment assets, or commercial use of
+> CC BY-NC materials without separate authorization.
 >
-> For the full legal framework, see
-> [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> For the active policy layer, see [Sigma IP, Licensing, and Certification
+> Policy](/legal/ip-licensing-certification-policy) and [SRS Public
+> Specification License](/legal/srs-public-specification-license).
 
 # Sigma Stratum Registry
 
@@ -36,8 +39,7 @@ This registry ensures:
 - Reference linkage to **Zenodo DOIs** and **governance decisions**
 - Persistent identifiers for each experimental proposal
 
-All documents registered here form the **living layer** of the Sigma Stratum Canon —
-a space where research evolves while preserving canonical lineage.
+All documents registered here form the **living layer** of the Sigma Runtime Standard public specification - a space where research evolves while preserving versioned specification lineage.
 
 ---
 

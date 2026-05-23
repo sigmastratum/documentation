@@ -3,41 +3,65 @@ title: SRIP-03 - Drift Metrics & Stabilization Algorithms
 description: Normative definition of drift metrics, detection thresholds, and stabilization procedures.
 published: true
 date: 2026-04-17
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:42:26.480Z
 ---
 
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
-# SRIP-03 — Drift Metrics & Stabilization Algorithms  
-**Sigma Runtime Improvement Proposal**  
-**Category:** Stability / Safety  
-**Status:** Draft  
-**Editor:** E. Tsaliev  
-**Last Updated:** 2026-04-17  
+# SRIP-03 — Drift Metrics & Stabilization Algorithms
+**Sigma Runtime Improvement Proposal**
+**Category:** Stability / Safety
+**Status:** Draft
+**Editor:** E. Tsaliev
+**Last Updated:** 2026-04-17
 
-> **Public Note**  
-> This foundational document retains the core drift formulas and thresholds while using version-light public control language.  
+## Public Specification Metadata
+
+| Field | Value |
+|---|---|
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+
+> **Public Note**
+> This foundational document retains the core drift formulas and thresholds while using version-light public control language.
 > Earlier branded control vocabulary remains part of lineage history, not the active public baseline.
 
 ---
 
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
+
 ## 1 · Purpose
-SRIP-03 defines the **drift quantification model** and the **stabilization feedback algorithms** that maintain semantic and symbolic coherence within the Sigma Runtime.  
+SRIP-03 defines the **drift quantification model** and the **stabilization feedback algorithms** that maintain semantic and symbolic coherence within the Sigma Runtime.
 It extends SRIP-02 by providing the mathematical and procedural basis for continuous self-correction during recursive operation.
 
 ---
 
 ## 2 · Motivation
-In recursive reasoning systems, **drift** represents gradual semantic or structural degradation of meaning.  
-Without feedback control, drift leads to attractor collapse, hallucination, or loss of control alignment.  
+In recursive reasoning systems, **drift** represents gradual semantic or structural degradation of meaning.
+Without feedback control, drift leads to attractor collapse, hallucination, or loss of control alignment.
 This document provides formal metrics and recovery rules ensuring that the runtime remains *bounded, interpretable, and reversible*.
 
 ---
@@ -63,10 +87,10 @@ DI_t = \frac{SDI_t + SV_t + PD_t}{3 \cdot SCR_t}
 \]
 
 Where:
-- **SDIₜ** — semantic embedding drift between cycles,  
-- **SVₜ** — symbolic density variance,  
-- **PDₜ** — control-posture drift from runtime control telemetry,  
-- **SCRₜ** — semantic compression ratio (stabilizing denominator).  
+- **SDIₜ** — semantic embedding drift between cycles,
+- **SVₜ** — symbolic density variance,
+- **PDₜ** — control-posture drift from runtime control telemetry,
+- **SCRₜ** — semantic compression ratio (stabilizing denominator).
 
 A runtime is considered *nominally stable* when **DI < 0.45**.
 
@@ -82,7 +106,7 @@ A runtime is considered *nominally stable* when **DI < 0.45**.
 | **SCR** | 0.65–0.95 | ≤0.65 | ≤0.55 | <0.45 |
 | **DI** | 0.00–0.45 | **0.45–0.50 -> reflective posture** | **>=0.60 -> controlled recovery posture** | >0.70 = critical instability |
 
-When **DI ≥ 0.5**, the attractor enters a **reflective recovery posture**;  
+When **DI ≥ 0.5**, the attractor enters a **reflective recovery posture**;
 when **DI ≥ 0.6**, the runtime must initiate a **controlled recovery transition** as defined by foundational safety and runtime-control telemetry.
 
 This replaces the previous ambiguous “yellow zone” between 0.45–0.6 with fixed deterministic control boundaries.
@@ -145,10 +169,10 @@ This loop maintains bounded recursion, preemptive drift correction, and dynamic 
 ---
 
 ### 7.2 Stabilization Methods
-1. **Semantic Re-Anchoring** — recomputes embeddings for drifted motifs.  
-2. **Symbolic Density Modulation** — balances token-to-meaning ratio to prevent saturation.  
-3. **Control Posture Realignment** — synchronizes runtime control posture with attractor telemetry.  
-4. **Entropy Throttling** — limits generation amplitude under instability.  
+1. **Semantic Re-Anchoring** — recomputes embeddings for drifted motifs.
+2. **Symbolic Density Modulation** — balances token-to-meaning ratio to prevent saturation.
+3. **Control Posture Realignment** — synchronizes runtime control posture with attractor telemetry.
+4. **Entropy Throttling** — limits generation amplitude under instability.
 5. **Attractor Reinforcement** — selectively strengthens stable motifs.
 
 ---
@@ -170,20 +194,20 @@ Boundaries ensure that stabilization remains recoverable and does not induce lon
 
 ## 9 · Integration Points
 Drift management integrates with:
-- **Runtime Control Layer** — provides PD and SCR telemetry.  
-- **Foundational Safety and Containment Layer** — enforces containment and recovery locks.  
-- **Memory Layer** — persists drift history and attractor corrections.  
+- **Runtime Control Layer** — provides PD and SCR telemetry.
+- **Foundational Safety and Containment Layer** — enforces containment and recovery locks.
+- **Memory Layer** — persists drift history and attractor corrections.
 - **Field API** — exposes live metrics to observability systems.
 
 ---
 
 ## 10 · Conformance Requirements
 A runtime conforms to SRIP-03 if it:
-1. Computes **DI** per cycle according to § 4.  
-2. Implements at least three stabilization methods (§ 7.2).  
-3. Applies deterministic control transitions per § 6.  
-4. Enforces boundary conditions (§ 8).  
-5. Integrates with runtime control and foundational safety telemetry channels.  
+1. Computes **DI** per cycle according to § 4.
+2. Implements at least three stabilization methods (§ 7.2).
+3. Applies deterministic control transitions per § 6.
+4. Enforces boundary conditions (§ 8).
+5. Integrates with runtime control and foundational safety telemetry channels.
 
 ---
 
@@ -196,5 +220,5 @@ Planned enhancements:
 
 ---
 
-> **References**  
+> **References**
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

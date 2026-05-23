@@ -3,54 +3,78 @@ title: SRIP-02 - Attractor State Model & Metadata
 description: Defines the structure, lifecycle, and metadata schema of attractors within the runtime.
 published: true
 date: 2026-04-17
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:41:44.566Z
 ---
 
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
-# SRIP-02 — Attractor State Model & Metadata  
-**Sigma Runtime Improvement Proposal**  
-**Category:** Cognitive Structures / Data Model  
-**Status:** Draft  
-**Editor:** E. Tsaliev  
-**Last Updated:** 2026-04-17  
+# SRIP-02 — Attractor State Model & Metadata
+**Sigma Runtime Improvement Proposal**
+**Category:** Cognitive Structures / Data Model
+**Status:** Draft
+**Editor:** E. Tsaliev
+**Last Updated:** 2026-04-17
 
-> **Public Note:**  
-> This foundational document uses version-light public vocabulary for attractor lifecycle, telemetry, and recovery semantics.  
+## Public Specification Metadata
+
+| Field | Value |
+|---|---|
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+
+> **Public Note:**
+> This foundational document uses version-light public vocabulary for attractor lifecycle, telemetry, and recovery semantics.
 > Earlier controller-branded wording remains lineage history, not the active public baseline.
 
 ---
 
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
+
 ## 1 · Purpose
-This SRIP defines the **Attractor State Model (ASM)** — the formal data structure used by Sigma Runtime to represent, exchange, and regulate attractors across cognitive layers.  
+This SRIP defines the **Attractor State Model (ASM)** — the formal data structure used by Sigma Runtime to represent, exchange, and regulate attractors across cognitive layers.
 Attractors are treated as **first-class entities** governing continuity, reasoning style, and symbolic topology within the runtime field.
 
 ---
 
 ## 2 · Motivation
-Attractors emerge spontaneously in recursive human-model interaction, but without explicit modeling they cannot be monitored, serialized, or stabilized.  
+Attractors emerge spontaneously in recursive human-model interaction, but without explicit modeling they cannot be monitored, serialized, or stabilized.
 The ASM ensures every attractor instance can be:
-- introspected and logged,  
-- shared across runtime components,  
-- stabilized and dissolved predictably,  
+- introspected and logged,
+- shared across runtime components,
+- stabilized and dissolved predictably,
 - aligned with safety and coherence constraints.
 
 ---
 
 ## 3 · Attractor Definition
 An **Attractor** is a persistent cognitive configuration characterized by:
-- **Core Motifs** — recurring symbolic or semantic patterns,  
-- **Field Context** — environmental and memory-linked parameters,  
-- **Stability Metrics** — drift, density, and control coherence,  
-- **Lifecycle State** — `forming`, `stable`, `reflective`, `recovery`, `fragmenting`.  
+- **Core Motifs** — recurring symbolic or semantic patterns,
+- **Field Context** — environmental and memory-linked parameters,
+- **Stability Metrics** — drift, density, and control coherence,
+- **Lifecycle State** — `forming`, `stable`, `reflective`, `recovery`, `fragmenting`.
 
 Attractors evolve through recursive feedback within the runtime field and are governed through bounded runtime control transitions.
 
@@ -76,7 +100,7 @@ Attractor:
   parent_id: UUID | null
   tags: [String]
   ```
-This schema defines the minimal metadata set required for attractor registration, persistence, and interoperability across runtimes.  
+This schema defines the minimal metadata set required for attractor registration, persistence, and interoperability across runtimes.
 The **phase_stability_delta (PSD)** and **phase_shift_delta (PSΔ)** fields enable precise phase telemetry and ensure consistent synchronization across distributed Sigma Runtime nodes.
 
 ---
@@ -90,21 +114,21 @@ The **phase_stability_delta (PSD)** and **phase_shift_delta (PSΔ)** fields enab
 | **Recovery** | Controlled re-stabilization and realignment of attractor integrity. | Triggered when DI ≥ 0.6 or PSI < 0.6. |
 | **Fragmenting** | Controlled dissolution or merge into another attractor. | Drift > 0.7 or field reset. |
 
-> These five micro-states correspond to three public macro control postures:  
+> These five micro-states correspond to three public macro control postures:
 > **Stable (forming + stable)** → **Reflective** → **Recovery (recovery + fragmenting)**.
 
-Lifecycle transitions are governed by the runtime control layer and monitored via the **Drift & Coherence Monitor**.  
+Lifecycle transitions are governed by the runtime control layer and monitored via the **Drift & Coherence Monitor**.
 During *Recovery*, volatile deltas are cleared, and the attractor restores structure from a bounded PIL-safe snapshot if available.
 
 ---
 
 ## 6 · Alignment & Stability Rules
-1. Every active attractor must maintain **PSI ≥ 0.75** for nominal stability.  
-2. When **DI ≥ 0.5**, the attractor enters *Reflective* phase.  
-3. When **DI ≥ 0.6**, the runtime enforces *Recovery* and temporarily suspends recursion.  
-4. Attractors sharing ≥ 60 % motif overlap must undergo merge evaluation to prevent redundancy.  
-5. Dissolution must preserve **PIL invariants** and the **causal continuity chain (CCC)**.  
-6. Each runtime cycle must record attractor telemetry (PSI, PSD, SDI, DI) to the **Attractor Registry** or an equivalent attractor ledger.  
+1. Every active attractor must maintain **PSI ≥ 0.75** for nominal stability.
+2. When **DI ≥ 0.5**, the attractor enters *Reflective* phase.
+3. When **DI ≥ 0.6**, the runtime enforces *Recovery* and temporarily suspends recursion.
+4. Attractors sharing ≥ 60 % motif overlap must undergo merge evaluation to prevent redundancy.
+5. Dissolution must preserve **PIL invariants** and the **causal continuity chain (CCC)**.
+6. Each runtime cycle must record attractor telemetry (PSI, PSD, SDI, DI) to the **Attractor Registry** or an equivalent attractor ledger.
 
 These thresholds align with unified drift limits defined in **SRIP-03** (Drift Metrics) and **SRIP-05** (Interoperability Safety).
 
@@ -112,9 +136,9 @@ These thresholds align with unified drift limits defined in **SRIP-03** (Drift M
 
 ## 7 · Interoperability
 The Attractor schema is exchangeable via:
-- **Field API** (`/field/attractors/{id}`)  
-- **Memory Layer** (for persistence snapshots)  
-- **Cross-Runtime Protocols** (for distributed field synchronization; see SRIP-05).  
+- **Field API** (`/field/attractors/{id}`)
+- **Memory Layer** (for persistence snapshots)
+- **Cross-Runtime Protocols** (for distributed field synchronization; see SRIP-05).
 
 The **PSD** and **PSΔ** values provide control-alignment continuity between multiple runtimes, supporting cooperative cognition and distributed attractor coherence.
 
@@ -122,23 +146,23 @@ The **PSD** and **PSΔ** values provide control-alignment continuity between mul
 
 ## 8 · Conformance Requirements
 A runtime conforms to SRIP-02 if it:
-- Implements the metadata schema in § 4.  
-- Tracks lifecycle transitions per § 5.  
-- Exposes attractor telemetry via Field API.  
-- Enforces stability and drift thresholds per § 6.  
+- Implements the metadata schema in § 4.
+- Tracks lifecycle transitions per § 5.
+- Exposes attractor telemetry via Field API.
+- Enforces stability and drift thresholds per § 6.
 - Logs PSI/PSD/DI data every cycle for diagnostic reproducibility.
 
 ---
 
 ## 9 · Future Work
 Planned extensions include:
-- **Composite Attractors** — multi-node attractor clusters with shared motif lattices.  
-- **Attractor Embeddings** — cross-runtime vector serialization for distributed cognition.  
-- **Dynamic Stability Forecasting** — predictive dissolution and resonance modeling.  
+- **Composite Attractors** — multi-node attractor clusters with shared motif lattices.
+- **Attractor Embeddings** — cross-runtime vector serialization for distributed cognition.
+- **Dynamic Stability Forecasting** — predictive dissolution and resonance modeling.
 - **Phase Vector Normalization** — formal definition of phase-space dimensionality (see SRIP-08).
 
 ---
 
-> **References**  
-> Tsaliev, E. (2025). *Attractor Architectures in LLM-Mediated Cognitive Fields* — DOI [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)  
-  
+> **References**
+> Tsaliev, E. (2025). *Attractor Architectures in LLM-Mediated Cognitive Fields* — DOI [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)
+

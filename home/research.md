@@ -16,7 +16,7 @@ dateCreated: 2025-11-30T04:22:30.902Z
 > (CC BY-NC 4.0)**.  
 >  
 > The license for this specific document is authoritative.  
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> For the full framework, see [`/legal/IP-Policy`](https://sigmastratum.org/legal/ip-policy).
 
 # Research Notes & Publications
 

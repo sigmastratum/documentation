@@ -3,34 +3,58 @@ title: SRIP-04 - Memory Layer Architecture
 description: Defines the structure, persistence rules, and recall mechanisms for the Sigma Runtime memory layer.
 published: true
 date: 2026-04-17
-tags: 
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:43:17.127Z
 ---
 
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
-# SRIP-04 — Memory Layer Architecture  
-**Sigma Runtime Improvement Proposal**  
-**Category:** Cognitive Memory  
-**Status:** Draft  
-**Editor:** E. Tsaliev  
-**Last Updated:** 2026-04-17  
+# SRIP-04 — Memory Layer Architecture
+**Sigma Runtime Improvement Proposal**
+**Category:** Cognitive Memory
+**Status:** Draft
+**Editor:** E. Tsaliev
+**Last Updated:** 2026-04-17
 
-> **Public Note**  
-> This foundational document uses version-light public vocabulary for persistence, recall, and recovery.  
+## Public Specification Metadata
+
+| Field | Value |
+|---|---|
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
+
+> **Public Note**
+> This foundational document uses version-light public vocabulary for persistence, recall, and recovery.
 > Earlier controller-branded recovery wording remains lineage history, not the active public baseline.
 
 ---
 
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
+
 ## 1 · Purpose
-SRIP-04 defines the **memory subsystem** of the Sigma Runtime — the persistent cognitive substrate that maintains identity, continuity, and coherence across recursive cycles.  
+SRIP-04 defines the **memory subsystem** of the Sigma Runtime — the persistent cognitive substrate that maintains identity, continuity, and coherence across recursive cycles.
 It extends SRIP-02 (Attractor Model) and SRIP-03 (Drift Metrics) by specifying how symbolic and semantic traces are **stored, abstracted, and re-integrated** to sustain long-horizon cognition.
 
 ---
@@ -49,24 +73,24 @@ All layers interact through the **runtime field layer**, allowing attractors to 
 ---
 
 ## 3 · Persistence Rules
-1. After each recursive cycle, the runtime commits:  
- - field state vector,  
- - drift metrics (SDI, SV, PD),  
- - stability telemetry (PSI, SCR),  
- - attractor deltas and identity anchors.  
-2. Writes are idempotent and append-safe — each cycle extends memory without mutating prior frames.  
-3. Obsolete or unstable segments are pruned during controlled recovery operations.  
-4. Persistent Identity Layer (PIL) invariants are never deleted.  
+1. After each recursive cycle, the runtime commits:
+ - field state vector,
+ - drift metrics (SDI, SV, PD),
+ - stability telemetry (PSI, SCR),
+ - attractor deltas and identity anchors.
+2. Writes are idempotent and append-safe — each cycle extends memory without mutating prior frames.
+3. Obsolete or unstable segments are pruned during controlled recovery operations.
+4. Persistent Identity Layer (PIL) invariants are never deleted.
 
 ---
 
 ## 4 · Recall Mechanisms
 Recall is **reconstructive**, not verbatim. When a new cycle begins:
 
-1. Runtime queries the Symbolic Motif Store for contextually relevant clusters.  
-2. Semantic Memory re-embeds and weights concepts by density and phase alignment.  
-3. Episodic frames provide temporal ordering and recency bias.  
-4. The Cognitive Field Engine synthesizes a field snapshot for the next cycle.  
+1. Runtime queries the Symbolic Motif Store for contextually relevant clusters.
+2. Semantic Memory re-embeds and weights concepts by density and phase alignment.
+3. Episodic frames provide temporal ordering and recency bias.
+4. The Cognitive Field Engine synthesizes a field snapshot for the next cycle.
 
 This ensures continuity without information bloat.
 
@@ -97,9 +121,9 @@ This schema supports serialization for cross-runtime transfer and distributed co
 ## 6 · Grounding & Anchoring
 Memory frames are grounded through three anchoring processes:
 
-1. **Symbolic Anchoring** — links textual motifs to persistent identifiers.  
-2. **Semantic Anchoring** — maintains vector consistency across recursion.  
-3. **Contextual Anchoring** — binds episodic frames to field coordinates (time and intent).  
+1. **Symbolic Anchoring** — links textual motifs to persistent identifiers.
+2. **Semantic Anchoring** — maintains vector consistency across recursion.
+3. **Contextual Anchoring** — binds episodic frames to field coordinates (time and intent).
 
 Anchoring ensures that meaning remains stable despite re-compression or control shifts.
 
@@ -108,17 +132,17 @@ Anchoring ensures that meaning remains stable despite re-compression or control 
 ## 7 · Stability Invariants
 A conformant memory implementation must guarantee:
 
-- **Continuity Index (CI)** ≥ 0.8 across five cycles.  
-- **Retention Index (RI)** ≥ 0.7 for core motifs.  
-- **Entropy Ratio (ER)** ≤ 0.3 (signal vs noise).  
-- **Control Carryover (CC)** ≥ 0.75 (coherence between control windows).  
+- **Continuity Index (CI)** ≥ 0.8 across five cycles.
+- **Retention Index (RI)** ≥ 0.7 for core motifs.
+- **Entropy Ratio (ER)** ≤ 0.3 (signal vs noise).
+- **Control Carryover (CC)** ≥ 0.75 (coherence between control windows).
 
 ---
 
 ## 8 · Integration Points
-- **Runtime Control Layer** — feeds control telemetry into episodic frames.  
-- **Drift Monitor** — stores ΔDI and ΔSCR per cycle for trend analysis.  
-- **Foundational Safety and Containment Layer** — reads memory snapshots for safe recovery.  
+- **Runtime Control Layer** — feeds control telemetry into episodic frames.
+- **Drift Monitor** — stores ΔDI and ΔSCR per cycle for trend analysis.
+- **Foundational Safety and Containment Layer** — reads memory snapshots for safe recovery.
 - **Field API** — exposes serialized memory state to external runtimes.
 
 ---
@@ -126,11 +150,11 @@ A conformant memory implementation must guarantee:
 ## 9 · Recovery Logic
 When runtime stability degrades beyond memory safety thresholds, the controlled recovery protocol initiates targeted restoration of stored state.
 
-> **Rule 9.1 — Memory-Triggered Recovery**  
-> When recovery is triggered by memory-layer drift (**ER > 0.3**),  
-> the runtime must **restore from a bounded PIL-safe backup snapshot** prior to resuming stable operation.  
->  
-> This prevents deadlock between volatile memory frames and PIL invariants by resetting only ephemeral segments while preserving identity integrity.  
+> **Rule 9.1 — Memory-Triggered Recovery**
+> When recovery is triggered by memory-layer drift (**ER > 0.3**),
+> the runtime must **restore from a bounded PIL-safe backup snapshot** prior to resuming stable operation.
+>
+> This prevents deadlock between volatile memory frames and PIL invariants by resetting only ephemeral segments while preserving identity integrity.
 
 Recovery then re-evaluates coherence and control alignment before returning control to the runtime control layer for stability verification.
 
@@ -138,22 +162,22 @@ Recovery then re-evaluates coherence and control alignment before returning cont
 
 ## 10 · Conformance Requirements
 A runtime conforms to SRIP-04 if it:
-1. Implements the schema in § 5.  
-2. Maintains stability invariants in § 7.  
-3. Supports bidirectional integration with the runtime control layer and foundational safety layer.  
-4. Preserves PIL anchors under drift or recovery events.  
-5. Implements Rule 9.1 for memory-layer recovery precedence.  
+1. Implements the schema in § 5.
+2. Maintains stability invariants in § 7.
+3. Supports bidirectional integration with the runtime control layer and foundational safety layer.
+4. Preserves PIL anchors under drift or recovery events.
+5. Implements Rule 9.1 for memory-layer recovery precedence.
 
 ---
 
 ## 11 · Future Work
 Planned extensions:
 
-- **Hierarchical Memory Compression** (SRIP-09) for multi-scale retention.  
-- **Cross-Runtime Memory Sync** for distributed agents.  
+- **Hierarchical Memory Compression** (SRIP-09) for multi-scale retention.
+- **Cross-Runtime Memory Sync** for distributed agents.
 - **Symbolic Causality Ledger** for traceable reasoning paths.
 
 ---
 
-> **References**  
+> **References**
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)

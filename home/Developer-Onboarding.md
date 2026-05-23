@@ -2,23 +2,23 @@
 title: Developer Onboarding
 description: Concise developer onboarding for the Sigma Runtime architecture. Explains core concepts, runtime loop, memory model, attractors, drift control, and integration patterns for building conformant runtime implementations.
 published: true
-date: 2025-12-28T10:24:35.871Z
-tags: 
+date: 2026-05-23T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2025-11-30T10:23:15.634Z
 ---
 
-> **Sigma Stratum Documentation – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)** and the  
-> **Sigma Stratum Documentation Set (SRD)**.  
->  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0  
-> (CC BY-NC 4.0)**.  
->  
-> The license for this specific document is authoritative.  
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> **Sigma Stratum Documentation – License Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** and the
+> **Sigma Stratum Documentation Set (SRD)**.
+>
+> It is licensed under **Creative Commons Attribution–NonCommercial 4.0
+> (CC BY-NC 4.0)**.
+>
+> The license for this specific document is authoritative.
+> For the full framework, see [`/legal/IP-Policy`](https://sigmastratum.org/legal/ip-policy).
 
-# Sigma Runtime — Developer Onboarding v1.0  
+# Sigma Runtime — Developer Onboarding v1.0
 *A practical engineering introduction to building Sigma Runtime systems.*
 
 This document explains Sigma Runtime **in plain engineering terms**, without
@@ -26,6 +26,16 @@ theoretical language. It describes what it is, how it works, and how developers
 can implement a minimal version.
 
 If you can write Python and call an LLM API — you can build this.
+
+## How to Implement SRS Without Using Sigma Runtime
+
+Developers may independently implement the public SRS/SRIP specification.
+
+Independent implementation does not imply official certification, endorsement, partnership, or permission to use Sigma marks as product identity.
+
+Use the [Self-Declaration Policy](/srs/conformance/self-declaration-policy) for non-official conformance claims and the [Certification Policy](/srs/conformance/certification-policy) for official Sigma certification.
+
+For licensing context, see the [SRS Public Specification License](/legal/srs-public-specification-license), [Sigma IP, Licensing, and Certification Policy](/legal/ip-licensing-certification-policy), and [Sigma Marks and Certification Policy](/legal/marks-and-certification-policy).
 
 ---
 
@@ -35,11 +45,11 @@ If you can write Python and call an LLM API — you can build this.
 
 It wraps an LLM with:
 
-- a *state object*  
-- a *memory system*  
-- a *recursive control loop (RCL)*  
-- an *attractor monitor*  
-- a *drift detector*  
+- a *state object*
+- a *memory system*
+- a *recursive control loop (RCL)*
+- an *attractor monitor*
+- a *drift detector*
 - a *prompt builder*
 
 The goal is simple:
@@ -47,8 +57,8 @@ The goal is simple:
 > Keep the model coherent, consistent, resistant to drift, and stable across
 > hundreds of recursive steps.
 
-This is *not* a new model.  
-This is *not* fine-tuning.  
+This is *not* a new model.
+This is *not* fine-tuning.
 This is an **external runtime layer**.
 
 ---
@@ -59,22 +69,22 @@ LLMs are **stateless token generators**.
 
 When used in long dialogs, they gradually:
 
-- lose consistency  
-- rewrite earlier meaning  
-- drift off-topic  
-- break persona  
-- contradict themselves  
-- lose task constraints  
+- lose consistency
+- rewrite earlier meaning
+- drift off-topic
+- break persona
+- contradict themselves
+- lose task constraints
 
 Sigma Runtime fixes this by running an external loop that:
 
-- detects drift early  
-- reinforces stable patterns (“attractors”)  
-- keeps memory consistent  
-- reconstructs context every turn  
-- controls the recursion  
+- detects drift early
+- reinforces stable patterns (“attractors”)
+- keeps memory consistent
+- reconstructs context every turn
+- controls the recursion
 
-Think of it as:  
+Think of it as:
 **middleware for cognition**.
 
 ---
@@ -83,16 +93,16 @@ Think of it as:
 
 Every step of interaction runs through the **same canonical loop**:
 
-1. **Ingest user input**  
-2. **Update State**  
-3. **Retrieve relevant memory**  
-4. **Analyze symbols & patterns**  
-5. **Detect drift**  
-6. **Update attractor state**  
-7. **Build prompt**  
-8. **Call LLM**  
-9. **Post-process output**  
-10. **Store memory**  
+1. **Ingest user input**
+2. **Update State**
+3. **Retrieve relevant memory**
+4. **Analyze symbols & patterns**
+5. **Detect drift**
+6. **Update attractor state**
+7. **Build prompt**
+8. **Call LLM**
+9. **Post-process output**
+10. **Store memory**
 11. **Return response**
 
 This is the *entire runtime* in one diagram:
@@ -124,21 +134,21 @@ Return Response
 ### 4.1 Runtime State
 Stores everything the LLM itself cannot:
 
-- last N turns  
-- extracted symbols  
-- active attractor  
-- drift score  
-- task info  
-- identity constraints  
+- last N turns
+- extracted symbols
+- active attractor
+- drift score
+- task info
+- identity constraints
 
 It’s just a Python dict or class.
 
 ### 4.2 Memory
 Three simple layers:
 
-- **episodic** (previous turns or summaries)  
-- **semantic** (embeddings / facts)  
-- **symbolic motifs** (recurrent patterns)  
+- **episodic** (previous turns or summaries)
+- **semantic** (embeddings / facts)
+- **symbolic motifs** (recurrent patterns)
 
 Memory retrieval = pull whatever is relevant.
 
@@ -147,33 +157,33 @@ Tracks stable patterns that recur across turns.
 
 Implementation is simple:
 
-- detect recurring motifs  
-- measure stability  
-- detect phase changes  
-- reinforce when coherent  
-- reset when unstable  
+- detect recurring motifs
+- measure stability
+- detect phase changes
+- reinforce when coherent
+- reset when unstable
 
 No magic — it’s just pattern tracking.
 
 ### 4.4 Drift Detector
 Tracks divergence from stable behavior using:
 
-- embeddings  
-- semantic similarity  
-- style consistency  
-- constraint-check violations  
+- embeddings
+- semantic similarity
+- style consistency
+- constraint-check violations
 
 If drift exceeds thresholds → correction.
 
 ### 4.5 Prompt Builder
 Constructs a stable, minimal prompt every cycle:
 
-- system rules  
-- identity  
-- behavior constraints  
-- memory inserts  
-- active attractor cues  
-- user message  
+- system rules
+- identity
+- behavior constraints
+- memory inserts
+- active attractor cues
+- user message
 
 This keeps context consistent across 100+ turns.
 
@@ -287,17 +297,17 @@ It is not complicated — it’s just structured recursion.
 ---
 ## Further Reading
 
-For implementation details, runtime source code, and test scenarios, see:  
+For implementation details, runtime source code, and test scenarios, see:
 👉 [Sigma Runtime – Reference Implementations (RI & ERI)](https://github.com/sigmastratum/documentation/blob/main/runtime/reference/README.md)
 
 Additional engineering references and benchmark materials:
-- [Benchmark Report — Sigma Runtime v0.3.5 (SR-EI-03)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-03/benchmark_report_SR_v035.md)  
+- [Benchmark Report — Sigma Runtime v0.3.5 (SR-EI-03)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-03/benchmark_report_SR_v035.md)
 - [Control & Validation Report — Sigma Runtime v0.3.7 (SR-EI-037)](https://github.com/sigmastratum/documentation/blob/05a8dc7554813a5fc32169ac7d70e5584cc94782/sigma-runtime/SR-EI-037/SIGMA_Runtime_0_3_7_CVR.md)
 
 These documents include:
-- benchmark results and runtime performance profiles,  
-- validation data for drift and attractor stability,  
-- comparison of RI and ERI configurations,  
+- benchmark results and runtime performance profiles,
+- validation data for drift and attractor stability,
+- comparison of RI and ERI configurations,
 - and engineering notes from v0.3.x to v0.4.x migration.
 
 ⸻

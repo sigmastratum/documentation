@@ -1,9 +1,14 @@
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 # SRIP-12: Commerce Decision State Layer (CDS)
 
@@ -18,7 +23,13 @@
 | Owning Layer | Commerce / Runtime Business Control / Decision State |
 | Parent Specs | SRIP-09, SRIP-10, SRIP-11 |
 | Related Specs | SRIP-13 |
-| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 | Information Class | Open |
 | Change Class | SRS-only |
 | Normative Status | Defines a deterministic commerce decision-state control contract. It does not define pricing engines, payment processing, transactional execution, or autonomous commerce authority. |
@@ -27,6 +38,14 @@
 | Release Alignment Status | Active proposal with partial implementation; no broader production commerce capability is claimed by this document alone. |
 
 ---
+
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 ## I. Purpose
 SRIP-12 defines a deterministic **Commerce Decision State Layer (CDS)** for product-selection dialogues.
@@ -106,11 +125,11 @@ acceptance.
 | `transition` | Constraint change detected; re-evaluate anchor validity deterministically. |
 
 ### 2. Valid Transitions
-1. `discovery -> narrowing` when minimum constraint threshold is met.  
-2. `narrowing -> anchored` when primary candidate is selected and valid.  
-3. `anchored -> reinforced` when user refines context without rejection or invalidation.  
-4. `anchored|reinforced -> transition` on explicit constraint change.  
-5. `transition -> anchored` if anchor remains valid.  
+1. `discovery -> narrowing` when minimum constraint threshold is met.
+2. `narrowing -> anchored` when primary candidate is selected and valid.
+3. `anchored -> reinforced` when user refines context without rejection or invalidation.
+4. `anchored|reinforced -> transition` on explicit constraint change.
+5. `transition -> anchored` if anchor remains valid.
 6. `transition -> narrowing` if anchor is rejected or invalidated.
 
 ### 3. Anchor Selection Rule (Mandatory)
@@ -126,9 +145,9 @@ If user does not explicitly choose, first candidate is considered selected by de
 For identical constraints and identical pool inputs, candidate ordering must be identical.
 
 Deterministic ordering contract:
-1. sort by candidate score (descending);  
-2. tie-break by normalized brand (ascending);  
-3. tie-break by normalized model_id (ascending).  
+1. sort by candidate score (descending);
+2. tie-break by normalized brand (ascending);
+3. tie-break by normalized model_id (ascending).
 
 Ordering metadata such as `ordering_version` and `ordering_inputs_hash` must be persisted for replay parity.
 
@@ -227,14 +246,14 @@ Additional constraints:
 
 A bounded deterministic CDS path may follow this sequence:
 
-1. load decision state for session  
-2. parse and merge user constraints  
-3. detect rejection, invalidation, and off-table/off-domain signals  
-4. transition state machine  
-5. derive `allowed_candidates`  
-6. build hidden commerce control instructions for generation  
-7. generate response  
-8. apply mention filtering, anchor/brand policy enforcement, and bounded rewrite or fallback behavior where needed  
+1. load decision state for session
+2. parse and merge user constraints
+3. detect rejection, invalidation, and off-table/off-domain signals
+4. transition state machine
+5. derive `allowed_candidates`
+6. build hidden commerce control instructions for generation
+7. generate response
+8. apply mention filtering, anchor/brand policy enforcement, and bounded rewrite or fallback behavior where needed
 9. persist updated decision state and decision evidence
 
 Reference flow:
@@ -406,15 +425,15 @@ Implementations should expose enough CDS telemetry to audit:
 
 A release-complete implementation of CDS is compliant only if all pass:
 
-1. no primary switch without explicit rejection or hard invalidation  
-2. no new brand after anchor lock unless unlock condition is satisfied  
-3. no constraint mutation without user input  
-4. off-table answers match explicit exclusions and rejections only  
-5. decision state survives restart and hydration without anchor loss  
-6. hidden guard logic does not leak into user-facing responses  
-7. same trace replay yields deterministic decision outcomes  
-8. anchor selection is reproducible and tied to deterministic candidate ordering  
-9. no secondary-to-primary auto-swap without explicit rejection or hard invalidation  
+1. no primary switch without explicit rejection or hard invalidation
+2. no new brand after anchor lock unless unlock condition is satisfied
+3. no constraint mutation without user input
+4. off-table answers match explicit exclusions and rejections only
+5. decision state survives restart and hydration without anchor loss
+6. hidden guard logic does not leak into user-facing responses
+7. same trace replay yields deterministic decision outcomes
+8. anchor selection is reproducible and tied to deterministic candidate ordering
+9. no secondary-to-primary auto-swap without explicit rejection or hard invalidation
 10. operator-visible CDS evidence is sufficient to audit decision transitions, violations, and rewrites
 
 Bounded implementations may satisfy subsets of these criteria before full

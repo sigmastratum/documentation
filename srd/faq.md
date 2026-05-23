@@ -2,7 +2,7 @@
 title: Frequently Asked Questions
 description: Common questions about Sigma Runtime, the public standard, SRIPs, safety, and bounded runtime control.
 published: true
-date: 2026-05-14T00:00:00.000Z
+date: 2026-05-23T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-11-30T04:32:28.176Z
@@ -16,11 +16,38 @@ dateCreated: 2025-11-30T04:32:28.176Z
 > (CC BY-NC 4.0)**.
 >
 > The license for this specific document is authoritative.
-> For the full framework, see [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> For the full framework, see [`/legal/IP-Policy`](https://sigmastratum.org/legal/ip-policy).
 
 # FAQ — Sigma Runtime
 
 ---
+
+---
+
+### Can I implement SRS/SRIP commercially?
+
+Yes. Independent implementation of the public SRS/SRIP normative requirements is permitted under the public specification terms. A Sigma commercial runtime license is not required solely for independent implementation.
+
+However, use of Sigma Runtime proprietary assets, official certification, Sigma marks, white-label deployment, managed Sigma Runtime deployment, resale, or commercial use of CC BY-NC materials requires separate permission.
+
+---
+
+### Can I call my product Sigma-compatible?
+
+Not without following the compatibility and certification rules. You may make truthful self-declarations under the [Self-Declaration Policy](/srs/conformance/self-declaration-policy), but official Sigma certification and certification badges require approval.
+
+---
+
+### Is Sigma Runtime open source?
+
+No. Sigma Runtime as an operated product is proprietary. SRS/SRIP is the open public specification layer.
+
+---
+
+### What happened to the "Canon" terminology?
+
+Earlier documents used the term "Canon" for the IP and licensing framework. The current public-facing term is "Sigma Stratum Intellectual Property, Licensing, and Certification Policy." The old term is retained only as a historical alias.
+
 
 **Is Sigma Runtime a model architecture?**
 No. It is not a neural model or training paradigm.

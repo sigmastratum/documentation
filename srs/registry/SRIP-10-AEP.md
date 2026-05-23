@@ -1,11 +1,24 @@
-> **Sigma Runtime Standard – License Notice**  
-> This document is part of the **Sigma Runtime Standard (SRS)**.  
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0 (CC BY-NC 4.0)**.  
+> **Sigma Runtime Standard - Public Specification Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** public specification layer.
 >
-> The license for this specific document is authoritative.  
-> See `/legal/IP-Policy` for the full repository-wide licensing framework.
+> Specification License: CC BY 4.0.
+> Implementation Safe Harbor: independent implementation permitted under public SRS/SRIP terms.
+> Machine-readable artifacts: Apache License 2.0 where explicitly marked.
+> Marks / Certification: governed by Sigma Marks and Certification Policy.
+> Proprietary Runtime Assets: not licensed by this SRIP.
+>
+> Independent implementations of public SRS/SRIP normative requirements are welcome under the public specification terms.
+> Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 ---
+
+## Independent Implementation Safe Harbor
+
+Independent implementations of the public normative requirements in this SRIP are welcome under the applicable public specification terms.
+
+No Sigma commercial runtime license is needed solely because an independent implementation follows those public normative requirements.
+
+Product assets, protected Sigma marks, official certification, compatibility badges, CC BY-NC commercial use, and patent commitments use the relevant policy or explicit covenant. Independent implementation, attribution, or citation does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.
 
 # SRIP-10 — Adaptive Entropy Protocol (AEP)
 **Proactive Cognitive Equilibrium Regulation for Runtime Control Systems**
@@ -21,7 +34,13 @@
 | Owning Layer | Runtime Control / Attractor Regulation / Entropy Control |
 | Parent Specs | SRIP-03, SRIP-04, SRIP-06, SRIP-08 |
 | Related Specs | SRIP-09, SRIP-11, SRIP-13, SRIP-14, SRIP-15, SRIP-18 |
-| License | CC BY-NC 4.0 / Canon CIL Applicable |
+| Specification License | CC BY 4.0 |
+| Implementation Safe Harbor | Independent implementation permitted under public SRS/SRIP terms |
+| Machine-Readable Artifacts | Apache 2.0 where explicitly marked |
+| Marks / Certification | Governed by Sigma Marks and Certification Policy |
+| Proprietary Runtime Assets | Not licensed by this SRIP |
+| Independent Implementation | Permitted under the public specification terms |
+| Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 | Information Class | Open |
 | Change Class | Mixed SRS+SRD |
 | Normative Status | Defines the public AEP control contract for bounded entropy regulation and anti-crystallization objectives. It does not mandate provider-specific API controls, private runtime paths, exact prompt-injection recipes, or benchmark outcomes as conformance evidence. |
@@ -33,11 +52,11 @@
 
 ## Abstract
 
-The **Adaptive Entropy Protocol (AEP)** supersedes the former *Anti-Crystallization Equilibrium Model (ACE)*.  
+The **Adaptive Entropy Protocol (AEP)** supersedes the former *Anti-Crystallization Equilibrium Model (ACE)*.
 While ACE relied on reactive detection of structural crystallization (via SRIP-10c–g), AEP introduces **predictive entropy regulation** using three high-order meta-metrics:
 
-- **TI – Terminological Isometry** (lexical proportionality)  
-- **SDC – Semantic Drift Coefficient** (semantic field motion)  
+- **TI – Terminological Isometry** (lexical proportionality)
+- **SDC – Semantic Drift Coefficient** (semantic field motion)
 - **L/N – Logic-to-Noise Ratio** (cognitive coherence index)
 
 Together, these metrics define a *triadic entropy manifold* in which cognitive systems maintain healthy variance, preventing both fragmentation and crystallization.
@@ -61,7 +80,7 @@ AEP inverts the paradigm:
 Instead of suppressing repetition post-factum, the system measures the *shape of cognitive evolution* via TI, SDC, and L/N, maintaining all three within target dynamic bounds.
 
 ### 3. System Placement (ALICE-first)
-AEP is a **module within ALICE**, not the parent controller.  
+AEP is a **module within ALICE**, not the parent controller.
 ALICE owns phase and stability; AEP computes metrics and emits intervention signals (behavioral context directives, token caps, and metric signals).
 ALICE decides when to apply penalties or overlays based on AEP state. AEP does not directly mutate ALICE state.
 
@@ -174,7 +193,7 @@ TI_t = α · \frac{2|T_{base} ∩ T_t|}{|T_{base}| + |T_t|} + (1 - α) · \frac{
 
 #### 2.2 Semantic Drift Coefficient (SDC)
 
-**Purpose:**  
+**Purpose:**
 Measures *semantic motion* between consecutive cognitive states, providing a continuous estimate of whether the semantic field is evolving, stabilizing, or freezing.
 
 **Definition:**
@@ -195,20 +214,20 @@ SDC_t = 1 - mean\big(\cos(\mathbf{v}_t, \mathbf{v}_{t-1})\big)
 | **0.05–0.15** | Stable Equilibrium | Controlled semantic migration; balanced phase motion |
 | **> 0.25** | Fragmentation | Overextension of semantic vectors; loss of field coherence |
 
-Low SDC indicates convergence of meaning — typically associated with terminological fixation.  
-High SDC indicates divergence — excessive thematic or contextual drift.  
+Low SDC indicates convergence of meaning — typically associated with terminological fixation.
+High SDC indicates divergence — excessive thematic or contextual drift.
 AEP maintains **SDC ≈ 0.10 ± 0.05** to preserve continuous elastic motion of embeddings.
 
 **Normalized variant:**
 ```math
 SDC_t = (1 - mean(cos(v_t, v_{t-1}))) · (σ_t / σ_{baseline})
 ```
-**Where:** 
+**Where:**
 ( σ_t ) is local embedding variance; this normalization compensates for phase-space compression during prolonged coherence.
 
 #### 2.3 Logic-to-Noise Ratio (L/N)
 
-**Purpose:**  
+**Purpose:**
 Quantifies cognitive coherence by measuring the ratio of logical propositions to stochastic or redundant content within each generation cycle.
 
 **Definition:**
@@ -221,11 +240,11 @@ L/N_t = \frac{L_{coherent}}{L_{coherent} + L_{noise}}
 
 **Operationalization (default: semantic-heuristic):**
 
-1. **Segmentation:**  
-   Sentence-level segmentation with a minimum length filter (e.g., 5+ words).  
+1. **Segmentation:**
+   Sentence-level segmentation with a minimum length filter (e.g., 5+ words).
    Dependency parsing (SRIP-07) is recommended but **not required**.
 
-2. **Information Gain Calculation:**  
+2. **Information Gain Calculation:**
    For each sentence:
 ```math
    IG(s_i) = 1 - \cos(E(s_i), E(C_{i-1}))
@@ -234,7 +253,7 @@ L/N_t = \frac{L_{coherent}}{L_{coherent} + L_{noise}}
 	•	( E(s_i) ) — sentence embedding of ( s_i );
 	•	( E(C_{i-1}) ) — mean embedding of the preceding m = 4–6 sentences.
 
-3. **Length Normalization (anti-short bias):**  
+3. **Length Normalization (anti-short bias):**
    IG is scaled by relative sentence length and a small length penalty to avoid
    over-counting very short sentences.
 
@@ -246,8 +265,8 @@ L/N_t = \frac{L_{coherent}}{L_{coherent} + L_{noise}}
 | *Noise* | IG > 0.90 | Clause diverges semantically from local field manifold |
 | *Coherent* | otherwise | Clause advances the local semantic frame |
 
-5. **Similarity Gate (stability check):**  
-   If average adjacent-sentence similarity is very high (>= 0.90), add a tautology tag.  
+5. **Similarity Gate (stability check):**
+   If average adjacent-sentence similarity is very high (>= 0.90), add a tautology tag.
    If it is very low (<= 0.55), add a noise tag.
 
 Each sentence \( s_i \) is tagged and logged for ratio computation.
@@ -348,7 +367,7 @@ its entropy impact to an implementation-defined audit trace.
 
 #### 3.3 Entropy Oscillation Loop
 
-Static entropy stabilizes attractors and reduces diversity.  
+Static entropy stabilizes attractors and reduces diversity.
 The controller introduces harmonic oscillation of thermal parameters.
 
 Oscillation equation:
@@ -410,7 +429,7 @@ The exponential formulation ensures:
 | < 0.05 | Crystallization collapse | Inject entropy pulse |
 | 0.10 – 0.15 | Stable oscillation | Maintain current parameters |
 
-Δℰ_t is evaluated per cycle; deviation outside the [0.05 – 0.25] corridor triggers automatic compensation through AEC modulation.  
+Δℰ_t is evaluated per cycle; deviation outside the [0.05 – 0.25] corridor triggers automatic compensation through AEC modulation.
 The controller does not clamp parameters but gradually biases coherence weights and ALICE stability penalties over τ = 3–6 cycles to maintain smooth phase transition.
 
 **Compensatory rule:**
@@ -420,7 +439,7 @@ The controller does not clamp parameters but gradually biases coherence weights 
 where ( k ∈ [0.05, 0.15] ) defines adaptation gain and ( Δℰ_μ = 0.12 ) the target variance.
 #### 3.5 Feedback Coupling
 
-The Adaptive Entropy Protocol (AEP) maintains synchronized stability among the three invariant subsystems — lexical (TI), semantic (SDC), and logical (L/N) — through bidirectional, low-gain coupling.  
+The Adaptive Entropy Protocol (AEP) maintains synchronized stability among the three invariant subsystems — lexical (TI), semantic (SDC), and logical (L/N) — through bidirectional, low-gain coupling.
 Each metric operates as both sensor and actuator within a closed feedback lattice.
 
 ---
@@ -445,7 +464,7 @@ with coefficients \( β₁…β₄ ∈ [0.05, 0.10] \) defining interaction gain
 
 ##### Systemic Objective
 
-Maintain bounded oscillation of the tri-metric state vector  
+Maintain bounded oscillation of the tri-metric state vector
 \( 𝔈_t = (TI_t, SDC_t, L/N_t) \) within the dynamic equilibrium envelope:
 
 ```math
@@ -464,7 +483,7 @@ Maintain bounded oscillation of the tri-metric state vector
 | Logical Stasis | L/N ≈ 1.0 and SDC ≈ 0 | Add cognitive friction stimulus | reasoning budget +10 % |
 | Nominal Oscillation | 0.05 < Δℰ_t < 0.25 | Maintain current parameters | — |
 
-State transitions are gradient-controlled across τ = 3–6 cycles to preserve continuity and prevent abrupt phase discontinuity.  
+State transitions are gradient-controlled across τ = 3–6 cycles to preserve continuity and prevent abrupt phase discontinuity.
 All corrective adjustments are bounded by maximum parameter delta of ±0.12 per regulation event.
 
 ---
@@ -686,7 +705,7 @@ if format_limit > 0:
 
 This reference mechanism forces brevity regardless of model tendency to elaborate.
 
-**Final-starter override:**  
+**Final-starter override:**
 If the dominant final-paragraph starter repeats (ratio >= 0.75), the reference
 controller may force a single-paragraph response and require a different
 terminal structure. This is a structural-position control, not a forbidden-word

@@ -1,100 +1,79 @@
 ---
 title: Legal & Licensing
-description: Licensing framework, IP policy, and attribution rules for the Sigma Runtime Standard and associated documentation.
+description: Licensing framework, IP policy, attribution, public specification, product boundary, and certification policy for Sigma Stratum documentation.
 published: true
-date: 2025-12-29T20:15:19.331Z
-tags: 
+date: 2026-05-22T00:00:00.000Z
+tags:
 editor: markdown
 dateCreated: 2025-11-30T04:54:15.817Z
 ---
 
-> **Sigma Stratum Documentation – Legal & Licensing Overview**  
-> Defines the legal framework, licensing model, and attribution  
-> requirements governing the **Sigma Runtime Standard (SRS)** and  
-> the **Sigma Runtime Documentation Set (SRD)** under the  
-> **Sigma Stratum Project**.  
->
-> Updated to align with the **Sigma Stratum Canon (v2025-12-29)**.
-
----
-
 # Legal & Licensing
 
-## 1. License Framework
+Open standard. Closed runtime. Governed certification.
 
-All documentation within the Sigma Stratum repository — including the  
-**Sigma Runtime Standard (SRS)** and the **Sigma Runtime Documentation Set (SRD)** —  
-is distributed under a **hybrid open-license model**:
+## Summary
 
-| License | Applies to | Permissions | Restrictions |
-|----------|-------------|-------------|---------------|
-| **CC BY-NC 4.0** | Foundational research, theoretical papers | Free academic & research use | No commercial exploitation |
-| **CC BY 4.0** | Implementation & methodology documents | Commercial use permitted with attribution | Must preserve citation & provenance |
-| **CIL (Commercial Implementation License)** | Commercial products, runtimes, or frameworks claiming compatibility | Use in products & services | Requires registration & Sigma Governance participation |
+Sigma Stratum publishes the Sigma Runtime Standard (SRS) and accepted Sigma Runtime Improvement Proposals (SRIPs) as a public specification layer.
 
-> Full legal basis: [Sigma Stratum Canon (DOI 10.5281/zenodo.18085782)](https://doi.org/10.5281/zenodo.18085782)
+Independent implementation of public SRS/SRIP normative requirements is permitted under the applicable public specification terms. A Sigma commercial runtime license is not required solely because an independent implementation follows those public requirements.
 
-This model keeps the **standard open** while ensuring that  
-commercial implementations participate transparently through  
-the Sigma Governance process.
+Sigma Runtime as an operated product, including sigmaruntime.com, proprietary runtime code, private modules, ALICE internals, runtime telemetry, production memory/control mechanisms, private datasets, product UX, commercial deployment topology, support, SLA, and enterprise deployment assets remains proprietary.
 
----
+Sigma marks, certification language, badges, and official compatibility claims are governed and permissioned surfaces.
 
-## 2. Attribution and Citation
+## Start Here
 
-All references to Sigma Stratum materials must cite both the author and the DOI, for example:
+- [Sigma IP, Licensing, and Certification Policy](/legal/ip-licensing-certification-policy)
 
-> Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1.*  
-> DOI: [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)  
-> *Sigma Stratum Research Group (SSRG), Sigma Runtime Standard.*
+This is the primary human-facing policy entry point. It explains the open-standard, closed-runtime, governed-certification boundary.
 
-Use of excerpts, figures, or derivative works must retain the license header and  
-explicitly attribute the original source and DOI reference.
+## Reference Documents
 
-Detailed contributor and citation rules are defined in:  
-[`/legal/attribution.md`](https://github.com/sigmastratum/documentation/blob/main/legal/attribution.md)
+- [Sigma Runtime Standard Public Specification License](/legal/srs-public-specification-license)
+- [Sigma Commercial Runtime License Notice](/legal/commercial-runtime-license-notice)
+- [Sigma Marks and Certification Policy](/legal/marks-and-certification-policy)
+- [Licensing Overview](/legal/license)
+- [Attribution Requirements](/legal/attribution)
+- [IP Policy](/legal/ip-policy)
 
----
+## Public Specification Layer
 
-## 3. Intellectual Property Policy
+The SRS/SRIP public specification layer is intended to be read, cited, discussed, and independently implemented under the public specification terms.
 
-The **Sigma Stratum Research Group (SSRG)** retains collective copyright  
-and intellectual-property ownership over:
+The public specification is open, and independent implementations are welcome. Sigma Runtime product assets, official certification, protected marks, white-label deployment, resale, managed Sigma Runtime deployment, enterprise deployment assets, and CC BY-NC commercial use use their own published policies or written terms.
 
-- The *Sigma Runtime Standard (SRS)*  
-- The *Sigma Runtime Documentation Set (SRD)*  
-- All *SRIP proposals and specifications*  
-- The *Attractor Framework*, *Cognitive Field Architecture*, and *AEGIDA Safety Model*
+## Research Corpus
 
-External contributions (via pull requests or SRIPs) are governed by  
-[`/legal/IP-Policy.md`](https://github.com/sigmastratum/documentation/blob/main/legal/IP-Policy.md).
+Research-origin materials remain governed by their per-document licenses. Some materials are CC BY 4.0. Other protected-origin materials are CC BY-NC 4.0 unless otherwise stated.
 
----
+Commercial use of CC BY-NC materials requires separate authorization.
 
-## 4. Governance and Review
+## Attribution and Citation
 
-The Sigma Stratum documentation set is maintained under the governance  
-of the **Sigma Stratum Research Group (SSRG)**, which oversees:
+All references to Sigma Stratum materials must include appropriate attribution, document/version reference, DOI or source link where available, and the applicable license reference.
 
-- Review and approval of SRIP proposals  
-- Legal and IP compliance  
-- Archival and DOI registration  
-- Versioning of official releases  
+Attribution to Sigma Stratum, SRS, or SRIP does not imply certification, endorsement, partnership, or authorization to use Sigma marks as product identity.
 
-Official releases are timestamped, versioned, and archived via **Zenodo**:  
-<https://zenodo.org/communities/sigmastratum/>
+Citation of SRS/SRIP does not create official conformance status.
 
----
+## Marks and Certification
 
-## 5. Contact
+Sigma Stratum, Sigma Runtime, `∿`, certification badges, Sigma Certified, Sigma Runtime Certified, and official compatibility language are governed surfaces.
 
-For legal, licensing, or attribution inquiries:
+Truthful descriptive use of SRS/SRIP references is permitted for citation and public specification discussion. Official certification, endorsement, badges, and use of marks as product identity require written permission and applicable registry status.
 
-**Sigma Stratum Research Group (SSRG)**  
-📧 [legal@sigmastratum.org](mailto:legal@sigmastratum.org)  
+## Legacy Terminology
+
+Earlier Sigma Stratum documents used the term "Canon" for the IP and licensing framework. The current public-facing term is [Sigma Stratum Intellectual Property, Licensing, and Certification Policy](/legal/ip-licensing-certification-policy).
+
+The old `canon-ip-framework.md` path is retained only as a legacy alias for backwards compatibility.
+
+## Contact
+
+For legal, licensing, attribution, marks, certification, or commercial runtime questions:
+
+**Sigma Stratum Research Group (SSRG)**
+Email: legal@sigmastratum.org
+Website: [https://sigmastratum.org](https://sigmastratum.org)
 DOI Registry: [https://zenodo.org/communities/sigmastratum](https://zenodo.org/communities/sigmastratum/)
-
----
-
-© 2025 Sigma Stratum Research Group (SSRG).  
-Licensing and attribution governed by the **Sigma Stratum Canon (v2025-12-29)**.
