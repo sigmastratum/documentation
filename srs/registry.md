@@ -59,6 +59,7 @@ Each SRIP is registered as a standalone entry:
 /srs/registry/SRIP-18-CSI.md
 /srs/registry/SRIP-19-RCB.md
 /srs/registry/SRIP-20-ANS.md
+/srs/registry/SRIP-21-EIB.md
 ```
 Each file must include:
 - metadata block including title, version, date, status, author, information class, change class, parent specs, related specs, and release alignment status;
@@ -101,6 +102,7 @@ This allows the standard to scale without breaking citations or historical conti
 | [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) | Commerce Semantic Integration Layer (CSI) | **Public Draft / Implementation-Ready Architecture** | 2026-05-14 | SSRG |
 | [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) | Recursive Contradiction Buffering (RCB) | **Public Draft** | 2026-05-21 | SSRG |
 | [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) | Autonomy Negotiation and Boundary Stabilization (ANS) | **Public Draft** | 2026-05-26 | SSRG |
+| [SRIP-21-EIB](/srs/registry/SRIP-21-EIB) | External Identity Binding and Mode Reconciliation (EIB) | **Public Draft** | 2026-05-26 | SSRG |
 
 ---
 

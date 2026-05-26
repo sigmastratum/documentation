@@ -76,6 +76,7 @@ Later proposals and extensions are tracked in the public registry:
 | [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) | Commerce Semantic Integration Layer | Consult document header |
 | [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) | Recursive Contradiction Buffering | Consult document header |
 | [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) | Autonomy Negotiation and Boundary Stabilization | Consult document header |
+| [SRIP-21-EIB](/srs/registry/SRIP-21-EIB) | External Identity Binding and Mode Reconciliation | Consult document header |
 
 Deprecated or superseded entries remain traceable through the registry as part of the public historical record.
 
