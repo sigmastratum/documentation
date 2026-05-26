@@ -2,7 +2,7 @@
 title: SRIP Architecture Reading Order
 description: Conceptual reading-order view for Sigma Runtime Improvement Proposals across architecture stacks.
 published: true
-date: 2026-05-23T00:00:00.000Z
+date: 2026-05-26T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2026-05-14T00:00:00.000Z
@@ -74,7 +74,8 @@ Use this path for long-running memory, retrieval, and recall behavior:
 2. [SRIP-09-LTM](/srs/registry/SRIP-09-LTM) — Long-Term Memory and Structural Coherence Layer
 3. [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) — Compression and Memory Topology
 4. [SRIP-14-RMI](/srs/registry/SRIP-14-RMI) — Retrieval and Memory Integration Layer
-5. [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) — Commerce Semantic Integration Layer, when commerce context must be assembled from memory and runtime state
+5. [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) — Autonomy Negotiation and Boundary Stabilization, when retrieved or recalled material applies pressure to runtime-local boundary state
+6. [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) — Commerce Semantic Integration Layer, when commerce context must be assembled from memory and runtime state
 
 ---
 
@@ -104,7 +105,8 @@ Use this path for control, drift, stability, and response-shaping behavior:
 6. [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) — Relational Identity Stabilization
 7. [SRIP-15-ADP](/srs/registry/SRIP-15-ADP) — Attractor Dynamics and Controlled Perturbation Layer
 8. [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) — Recursive Contradiction Buffering
-9. [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) — Recursive Self-Modeling
+9. [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) — Autonomy Negotiation and Boundary Stabilization
+10. [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) — Recursive Self-Modeling
 
 ---
 
@@ -114,7 +116,8 @@ Use this path for system integration, agent exchange, and multi-agent coordinati
 
 1. [SRIP-05](/srs/srip-05) — Interoperability Interface
 2. [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) — Multi-Agent Exchange
-3. [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
+3. [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) — Autonomy Negotiation and Boundary Stabilization, when exchanged artifacts apply influence or authority pressure to local runtime state
+4. [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
 
 ---
 
