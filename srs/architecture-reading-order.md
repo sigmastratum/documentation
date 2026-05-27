@@ -27,7 +27,7 @@ It is a navigation view, not a numbering authority.
 
 SRIP numbers remain immutable public proposal identifiers. The numerical registry records proposal history. This page may change as the architecture evolves.
 
-For the authoritative numerical registry, see [`/srs/registry`](/srs/registry).
+For the authoritative numerical registry, see [`/srs/registry`](registry.md).
 
 ## Certification Boundary
 
@@ -35,7 +35,7 @@ This reading order is not a certification claim.
 
 Reading or implementing SRS/SRIP documents does not imply official Sigma certification, endorsement, or use of Sigma marks.
 
-For conformance terminology, see [`/srs/conformance/`](/srs/conformance/).
+For conformance terminology, see [`/srs/conformance/`](conformance/README.md).
 
 ---
 
@@ -54,15 +54,15 @@ This preserves citation stability while still allowing readers to follow the arc
 
 Read these first when entering the public standard:
 
-1. [SRIP-00](/srs/srip-00) — Foundations and Scope
-2. [SRIP-01](/srs/srip-01) — Canonical Runtime Loop
-3. [SRIP-02](/srs/srip-02) — Attractor State Model and Metadata
-4. [SRIP-03](/srs/srip-03) — Drift Metrics and Stabilization Algorithms
-5. [SRIP-04](/srs/srip-04) — Memory Layer Architecture
-6. [SRIP-05](/srs/srip-05) — Interoperability Interface
-7. [SRIP-06](/srs/srip-06) — Safety and Recursion Boundaries
-8. [SRIP-07](/srs/srip-07) — Symbolic Density Layer
-9. [SRIP-08](/srs/srip-08) — Phase Vector Model and PRM
+1. [SRIP-00](srip-00.md) — Foundations and Scope
+2. [SRIP-01](srip-01.md) — Canonical Runtime Loop
+3. [SRIP-02](srip-02.md) — Attractor State Model and Metadata
+4. [SRIP-03](srip-03.md) — Drift Metrics and Stabilization Algorithms
+5. [SRIP-04](srip-04.md) — Memory Layer Architecture
+6. [SRIP-05](srip-05.md) — Interoperability Interface
+7. [SRIP-06](srip-06.md) — Safety and Recursion Boundaries
+8. [SRIP-07](srip-07.md) — Symbolic Density Layer
+9. [SRIP-08](srip-08.md) — Phase Vector Model and PRM
 
 ---
 
@@ -70,13 +70,13 @@ Read these first when entering the public standard:
 
 Use this path for long-running memory, retrieval, and recall behavior:
 
-1. [SRIP-04](/srs/srip-04) — Memory Layer Architecture
-2. [SRIP-09-LTM](/srs/registry/SRIP-09-LTM) — Long-Term Memory and Structural Coherence Layer
-3. [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) — Compression and Memory Topology
-4. [SRIP-14-RMI](/srs/registry/SRIP-14-RMI) — Retrieval and Memory Integration Layer
-5. [SRIP-21-EIB](/srs/registry/SRIP-21-EIB) — External Identity Binding and Mode Reconciliation, when retrieved or recalled material describes one external entity through conflicting observed modes
-6. [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) — Autonomy Negotiation and Boundary Stabilization, when retrieved or recalled material applies pressure to runtime-local boundary state
-7. [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) — Commerce Semantic Integration Layer, when commerce context must be assembled from memory and runtime state
+1. [SRIP-04](srip-04.md) — Memory Layer Architecture
+2. [SRIP-09-LTM](registry/SRIP-09-LTM.md) — Long-Term Memory and Structural Coherence Layer
+3. [SRIP-11-CMT](registry/SRIP-11-CMT.md) — Compression and Memory Topology
+4. [SRIP-14-RMI](registry/SRIP-14-RMI.md) — Retrieval and Memory Integration Layer
+5. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, when retrieved or recalled material describes one external entity through conflicting observed modes
+6. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, when retrieved or recalled material applies pressure to runtime-local boundary state
+7. [SRIP-18-CSI](registry/SRIP-18-CSI.md) — Commerce Semantic Integration Layer, when commerce context must be assembled from memory and runtime state
 
 ---
 
@@ -84,9 +84,9 @@ Use this path for long-running memory, retrieval, and recall behavior:
 
 Use this path for commerce-aware runtime behavior:
 
-1. [SRIP-14-RMI](/srs/registry/SRIP-14-RMI) — retrieval and memory governance
-2. [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) — semantic commerce context assembly
-3. [SRIP-12-CDS](/srs/registry/SRIP-12-CDS) — deterministic commerce decision state
+1. [SRIP-14-RMI](registry/SRIP-14-RMI.md) — retrieval and memory governance
+2. [SRIP-18-CSI](registry/SRIP-18-CSI.md) — semantic commerce context assembly
+3. [SRIP-12-CDS](registry/SRIP-12-CDS.md) — deterministic commerce decision state
 
 In this stack, CDS remains the deterministic authority for commerce state and transition decisions. CSI supplies bounded semantic context. RMI governs memory and retrieval boundaries used by the assembly process.
 
@@ -98,17 +98,17 @@ This order is conceptual. It does not change the public SRIP numbers.
 
 Use this path for control, drift, stability, and response-shaping behavior:
 
-1. [SRIP-03](/srs/srip-03) — Drift Metrics and Stabilization Algorithms
-2. [SRIP-06](/srs/srip-06) — Safety and Recursion Boundaries
-3. [SRIP-07](/srs/srip-07) — Symbolic Density Layer
-4. [SRIP-08](/srs/srip-08) — Phase Vector Model and PRM
-5. [SRIP-10-AEP](/srs/registry/SRIP-10-AEP) — Adaptive Entropy Protocol
-6. [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) — Relational Identity Stabilization
-7. [SRIP-21-EIB](/srs/registry/SRIP-21-EIB) — External Identity Binding and Mode Reconciliation, when identity/mode separation is needed before contradiction buffering
-8. [SRIP-15-ADP](/srs/registry/SRIP-15-ADP) — Attractor Dynamics and Controlled Perturbation Layer
-9. [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) — Recursive Contradiction Buffering
-10. [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) — Autonomy Negotiation and Boundary Stabilization
-11. [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) — Recursive Self-Modeling
+1. [SRIP-03](srip-03.md) — Drift Metrics and Stabilization Algorithms
+2. [SRIP-06](srip-06.md) — Safety and Recursion Boundaries
+3. [SRIP-07](srip-07.md) — Symbolic Density Layer
+4. [SRIP-08](srip-08.md) — Phase Vector Model and PRM
+5. [SRIP-10-AEP](registry/SRIP-10-AEP.md) — Adaptive Entropy Protocol
+6. [SRIP-13-RIS](registry/SRIP-13-RIS.md) — Relational Identity Stabilization
+7. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, when identity/mode separation is needed before contradiction buffering
+8. [SRIP-15-ADP](registry/SRIP-15-ADP.md) — Attractor Dynamics and Controlled Perturbation Layer
+9. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering
+10. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization
+11. [SRIP-16-RSM](registry/SRIP-16-RSM.md) — Recursive Self-Modeling
 
 ---
 
@@ -116,11 +116,11 @@ Use this path for control, drift, stability, and response-shaping behavior:
 
 Use this path for system integration, agent exchange, and multi-agent coordination:
 
-1. [SRIP-05](/srs/srip-05) — Interoperability Interface
-2. [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) — Multi-Agent Exchange
-3. [SRIP-21-EIB](/srs/registry/SRIP-21-EIB) — External Identity Binding and Mode Reconciliation, when agent disagreement describes the same external entity through conflicting observed modes
-4. [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) — Autonomy Negotiation and Boundary Stabilization, when exchanged artifacts apply influence or authority pressure to local runtime state
-5. [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
+1. [SRIP-05](srip-05.md) — Interoperability Interface
+2. [SRIP-17-MAE](registry/SRIP-17-MAE.md) — Multi-Agent Exchange
+3. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, when agent disagreement describes the same external entity through conflicting observed modes
+4. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, when exchanged artifacts apply influence or authority pressure to local runtime state
+5. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
 
 ---
 
