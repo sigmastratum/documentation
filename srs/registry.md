@@ -21,8 +21,8 @@ dateCreated: 2025-12-31T09:55:42.132Z
 > CC BY-NC materials without separate authorization.
 >
 > For the active policy layer, see [Sigma IP, Licensing, and Certification
-> Policy](/legal/ip-licensing-certification-policy) and [SRS Public
-> Specification License](/legal/srs-public-specification-license).
+> Policy](../legal/ip-licensing-certification-policy.md) and [SRS Public
+> Specification License](../legal/srs-public-specification-license.md).
 
 # Sigma Stratum Registry
 
@@ -91,20 +91,20 @@ This allows the standard to scale without breaking citations or historical conti
 
 | SRIP | Title | Status | Date | Maintainer |
 |------|--------|---------|------|-------------|
-| [SRIP-09-LTM](/srs/registry/SRIP-09-LTM) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | **Active Proposal / Partial Implementation** | 2026-04-11 | SSRG |
-| [SRIP-10-AEP](/srs/registry/SRIP-10-AEP) | Adaptive Entropy Protocol (AEP) | **Public Draft v0.2 / Partial Implementation** | 2026-05-20 | SSRG |
-| [SRIP-11-CMT](/srs/registry/SRIP-11-CMT) | Compression & Memory Topology (CMT) | **Active (v0.5.3)** | 2026-02-04 | SSRG |
-| [SRIP-12-CDS](/srs/registry/SRIP-12-CDS) | Commerce Decision State Layer (CDS) | **Draft / Implementation Pending** | 2026-04-11 | SSRG |
-| [SRIP-13-RIS](/srs/registry/SRIP-13-RIS) | Relational Identity Stabilization (RIS) | **Active Proposal** | 2026-04-11 | SSRG |
-| [SRIP-14-RMI](/srs/registry/SRIP-14-RMI) | Retrieval and Memory Integration Layer (RMI) | **Active Proposal / Partial Implementation** | 2026-04-28 | SSRG |
-| [SRIP-15-ADP](/srs/registry/SRIP-15-ADP) | Attractor Dynamics and Controlled Perturbation Layer (ADP) | **Public Draft** | 2026-04-28 | SSRG |
-| [SRIP-16-RSM](/srs/registry/SRIP-16-RSM) | Recursive Self-Modeling (RSM) | **Public Draft** | 2026-05-14 | SSRG |
-| [SRIP-17-MAE](/srs/registry/SRIP-17-MAE) | Multi-Agent Exchange (MAE) | **Public Draft** | 2026-05-14 | SSRG |
-| [SRIP-18-CSI](/srs/registry/SRIP-18-CSI) | Commerce Semantic Integration Layer (CSI) | **Public Draft / Implementation-Ready Architecture** | 2026-05-14 | SSRG |
-| [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) | Recursive Contradiction Buffering (RCB) | **Public Draft** | 2026-05-21 | SSRG |
-| [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) | Autonomy Negotiation and Boundary Stabilization (ANS) | **Public Draft** | 2026-05-26 | SSRG |
-| [SRIP-21-EIB](/srs/registry/SRIP-21-EIB) | External Identity Binding and Mode Reconciliation (EIB) | **Public Draft** | 2026-05-26 | SSRG |
-| [SRIP-22-GRC](/srs/registry/SRIP-22-GRC) | Governance Recursion and Collusion Boundary (GRC) | **Public Draft** | 2026-05-28 | SSRG |
+| [SRIP-09-LTM](registry/SRIP-09-LTM.md) | Long-Term Memory and Structural Coherence Layer (LTM-SC) | **Active Proposal / Partial Implementation** | 2026-04-11 | SSRG |
+| [SRIP-10-AEP](registry/SRIP-10-AEP.md) | Adaptive Entropy Protocol (AEP) | **Public Draft v0.2 / Partial Implementation** | 2026-05-20 | SSRG |
+| [SRIP-11-CMT](registry/SRIP-11-CMT.md) | Compression & Memory Topology (CMT) | **Active (v0.5.3)** | 2026-02-04 | SSRG |
+| [SRIP-12-CDS](registry/SRIP-12-CDS.md) | Commerce Decision State Layer (CDS) | **Draft / Implementation Pending** | 2026-04-11 | SSRG |
+| [SRIP-13-RIS](registry/SRIP-13-RIS.md) | Relational Identity Stabilization (RIS) | **Active Proposal** | 2026-04-11 | SSRG |
+| [SRIP-14-RMI](registry/SRIP-14-RMI.md) | Retrieval and Memory Integration Layer (RMI) | **Active Proposal / Partial Implementation** | 2026-04-28 | SSRG |
+| [SRIP-15-ADP](registry/SRIP-15-ADP.md) | Attractor Dynamics and Controlled Perturbation Layer (ADP) | **Public Draft** | 2026-04-28 | SSRG |
+| [SRIP-16-RSM](registry/SRIP-16-RSM.md) | Recursive Self-Modeling (RSM) | **Public Draft** | 2026-05-14 | SSRG |
+| [SRIP-17-MAE](registry/SRIP-17-MAE.md) | Multi-Agent Exchange (MAE) | **Public Draft** | 2026-05-14 | SSRG |
+| [SRIP-18-CSI](registry/SRIP-18-CSI.md) | Commerce Semantic Integration Layer (CSI) | **Public Draft / Implementation-Ready Architecture** | 2026-05-14 | SSRG |
+| [SRIP-19-RCB](registry/SRIP-19-RCB.md) | Recursive Contradiction Buffering (RCB) | **Public Draft** | 2026-05-21 | SSRG |
+| [SRIP-20-ANS](registry/SRIP-20-ANS.md) | Autonomy Negotiation and Boundary Stabilization (ANS) | **Public Draft** | 2026-05-26 | SSRG |
+| [SRIP-21-EIB](registry/SRIP-21-EIB.md) | External Identity Binding and Mode Reconciliation (EIB) | **Public Draft** | 2026-05-26 | SSRG |
+| [SRIP-22-GRC](registry/SRIP-22-GRC.md) | Governance Recursion and Collusion Boundary (GRC) | **Public Draft** | 2026-05-28 | SSRG |
 
 ---
 
@@ -112,7 +112,7 @@ This allows the standard to scale without breaking citations or historical conti
 
 | SRIP | Title | Status | Date | Maintainer |
 |------|--------|---------|------|-------------|
-| [SRIP-10-ACE](/srs/registry/SRIP-10-ACE) | Anti-Crystallization Equilibrium Model (ACE) | **Deprecated (Superseded by AEP)** | 2026-01-07 | SSRG |
+| [SRIP-10-ACE](registry/retired/SRIP-10-ACE.md) | Anti-Crystallization Equilibrium Model (ACE) | **Deprecated (Superseded by AEP)** | 2026-01-07 | SSRG |
 
 ### Governance
 
@@ -120,7 +120,7 @@ Registry entries are maintained by the **Sigma Stratum Research Group (SSRG)**.
 
 For conceptual navigation, see:
 
-- [`/srs/architecture-reading-order`](/srs/architecture-reading-order)
+- [`architecture-reading-order.md`](architecture-reading-order.md)
 
 For inquiries or submissions:
 [contact@sigmastratum.org](mailto:contact@sigmastratum.org)
