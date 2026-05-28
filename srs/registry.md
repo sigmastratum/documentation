@@ -2,7 +2,7 @@
 title: Sigma Stratum Registry
 description: Authoritative registry tracking post-core Sigma Runtime Improvement Proposals (SRIP-09+) — experimental extensions, governance updates, and long-term evolution of the Sigma Runtime architecture.
 published: true
-date: 2026-05-26T00:00:00.000Z
+date: 2026-05-28T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-12-31T09:55:42.132Z
@@ -60,6 +60,7 @@ Each SRIP is registered as a standalone entry:
 /srs/registry/SRIP-19-RCB.md
 /srs/registry/SRIP-20-ANS.md
 /srs/registry/SRIP-21-EIB.md
+/srs/registry/SRIP-22-GRC.md
 ```
 Each file must include:
 - metadata block including title, version, date, status, author, information class, change class, parent specs, related specs, and release alignment status;
@@ -103,6 +104,7 @@ This allows the standard to scale without breaking citations or historical conti
 | [SRIP-19-RCB](/srs/registry/SRIP-19-RCB) | Recursive Contradiction Buffering (RCB) | **Public Draft** | 2026-05-21 | SSRG |
 | [SRIP-20-ANS](/srs/registry/SRIP-20-ANS) | Autonomy Negotiation and Boundary Stabilization (ANS) | **Public Draft** | 2026-05-26 | SSRG |
 | [SRIP-21-EIB](/srs/registry/SRIP-21-EIB) | External Identity Binding and Mode Reconciliation (EIB) | **Public Draft** | 2026-05-26 | SSRG |
+| [SRIP-22-GRC](/srs/registry/SRIP-22-GRC) | Governance Recursion and Collusion Boundary (GRC) | **Public Draft** | 2026-05-28 | SSRG |
 
 ---
 

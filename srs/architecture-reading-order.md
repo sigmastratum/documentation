@@ -2,7 +2,7 @@
 title: SRIP Architecture Reading Order
 description: Conceptual reading-order view for Sigma Runtime Improvement Proposals across architecture stacks.
 published: true
-date: 2026-05-26T00:00:00.000Z
+date: 2026-05-28T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2026-05-14T00:00:00.000Z
@@ -108,7 +108,8 @@ Use this path for control, drift, stability, and response-shaping behavior:
 8. [SRIP-15-ADP](registry/SRIP-15-ADP.md) — Attractor Dynamics and Controlled Perturbation Layer
 9. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering
 10. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization
-11. [SRIP-16-RSM](registry/SRIP-16-RSM.md) — Recursive Self-Modeling
+11. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, when runtime control authority, certification, emergency override, or legitimacy state must be evaluated
+12. [SRIP-16-RSM](registry/SRIP-16-RSM.md) — Recursive Self-Modeling
 
 ---
 
@@ -121,6 +122,24 @@ Use this path for system integration, agent exchange, and multi-agent coordinati
 3. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, when agent disagreement describes the same external entity through conflicting observed modes
 4. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, when exchanged artifacts apply influence or authority pressure to local runtime state
 5. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
+6. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, when exchanged artifacts carry governance, certification, authority, or marks claims
+
+---
+
+## Governance, Certification, And Legitimacy Sequence
+
+Use this path for governance authority, certification integrity, marks boundary, emergency override, capture visibility, and fork/exit analysis:
+
+1. [SRIP-05](srip-05.md) — Interoperability Interface, for lineage and compatibility boundaries
+2. [SRIP-06](srip-06.md) — Safety and Recursion Boundaries, for non-bypassable safety constraints
+3. [SRIP-13-RIS](registry/SRIP-13-RIS.md) — Relational Identity Stabilization, for participant and identity-boundary continuity
+4. [SRIP-17-MAE](registry/SRIP-17-MAE.md) — Multi-Agent Exchange, for exchanged attestations and agent-origin evidence
+5. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering, for unresolved governance evidence conflicts
+6. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, for authority pressure on local runtime state
+7. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, for stable identity of governors, authorities, validators, auditors, certification bodies, forks, and legal entities
+8. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, for legitimacy states, collusion assumptions, capture handling, certification suspension, and fork/exit conditions
+
+This sequence does not imply certification or production implementation. It is a review path for public specification readers.
 
 ---
 
