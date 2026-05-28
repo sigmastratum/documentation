@@ -1,0 +1,95 @@
+{
+  "title": "Sigma Stratum Documentation: SRS/SRIP Public Specification and Research Corpus",
+  "upload_type": "publication",
+  "publication_type": "technicalnote",
+  "publication_date": "2026-05-28",
+  "description": "Public documentation snapshot for Sigma Stratum, including the Sigma Runtime Standard (SRS), active SRIP public specification materials, SRD explanatory materials, research-origin documentation, legal notices, templates, and governance documentation. This archive is a multi-license documentation and research corpus. The record-level license is CC BY-NC 4.0 as a conservative archive-level notice for the mixed corpus. Per-document license notices remain authoritative: SRS/SRIP public specification prose is licensed under CC BY 4.0 unless a specific document states otherwise; machine-readable artifacts are Apache 2.0 where explicitly marked; research-origin materials are governed by their per-document licenses, including CC BY 4.0 or CC BY-NC 4.0; Sigma Runtime product assets, protected Sigma marks, official certification, managed deployment, white-label deployment, resale, and commercial use of CC BY-NC materials are governed separately.",
+  "creators": [
+    {
+      "name": "Tsaliev, Eugene",
+      "affiliation": "Sigma Stratum Research Group",
+      "orcid": "0009-0007-3279-9477"
+    },
+    {
+      "name": "Ryabinskiy, Vladimir",
+      "affiliation": "Sigma Stratum Research Group",
+      "orcid": "0009-0006-3199-2155"
+    }
+  ],
+  "access_right": "open",
+  "license": "cc-by-nc-4.0",
+  "notes": "This Zenodo record archives the repository snapshot and does not replace file-level or document-level licensing. For reuse, consult LICENSE, legal/license.md, legal/srs-public-specification-license.md, and the license header in each document. Attribution to Sigma Stratum, SRS, or SRIP does not imply certification, endorsement, partnership, official compatibility, or permission to use Sigma marks as product identity.",
+  "keywords": [
+    "Sigma Stratum",
+    "Sigma Stratum Research Group",
+    "Sigma Runtime Standard",
+    "SRS",
+    "SRIP",
+    "public specification",
+    "open standard",
+    "technical standard",
+    "runtime architecture",
+    "recursive AI systems",
+    "AI governance",
+    "trajectory safety",
+    "bounded multiplicity",
+    "recursive cognition"
+  ],
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.15188527",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.15291356",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.17629926",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.17703667",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.17924120",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.18271591",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-report"
+    },
+    {
+      "identifier": "10.5281/zenodo.20325364",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.20325365",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-article"
+    },
+    {
+      "identifier": "10.5281/zenodo.20353713",
+      "relation": "references",
+      "scheme": "doi",
+      "resource_type": "publication-report"
+    }
+  ]
+}
