@@ -54,6 +54,7 @@ The active SRD set includes the following core sections:
 | **Architecture** | Details the layered runtime design, including the runtime loop, control surfaces, safety boundaries, and memory-bearing state. |
 | **ALICE** | Documents the Attractor Layer for Integrated Cognitive Emergence — the runtime’s phase controller and attractor governor. |
 | **Attractors** | Defines attractor formation, taxonomy, stability envelopes, and symbolic field interactions. |
+| **Runtime Attractor Design Guide** | Provides a design-facing guide for decomposing stable agents into identity, nucleus, traits, and RAG layers before implementation. |
 | **Drift** | Covers adaptive drift management, SCR integration, and phase drift telemetry. |
 | **Memory** | Explains the persistent, semantic, and symbolic memory systems, including reconstructive recall and Reintegration Efficiency. |
 | **Runtime Loop** | Defines the Recursive Control Loop (RCL) with phase-aware regulation, feedback synchronization, and cognitive field update steps. |

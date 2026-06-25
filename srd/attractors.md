@@ -193,5 +193,22 @@ attractor analysis helps distinguish stable continuity from unstable amplificati
 
 ---
 
+## 12. Design Guide
+
+For practical agent design guidance, see:
+
+- [`Runtime Attractor Design Guide`](https://github.com/sigmastratum/documentation/blob/main/srd/runtime-attractor-design-guide.md)
+
+The design guide translates the attractor concept into a non-normative design method for decomposing an agent into:
+
+- identity: what remains invariant;
+- nucleus: the direction of return;
+- traits: observable behavior;
+- RAG: knowledge without selfhood.
+
+It should be read as SRD explanatory guidance, not as a new normative SRS requirement.
+
+---
+
 > *References:*  
 > Tsaliev, E. (2025). **Attractor Architectures in LLM-Mediated Cognitive Fields** — DOI: [10.5281/zenodo.17629926](https://doi.org/10.5281/zenodo.17629926)
