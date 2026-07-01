@@ -141,6 +141,19 @@ It connects:
 
 In that role, Sigma Runtime is best understood as a stabilization and coordination layer for long-horizon interaction.
 
+## Semantic Evolution vs Environment Interaction
+
+Recent public SRIP drafts add vocabulary for two different layer families:
+
+- semantic evolution from preserved contradiction, covered by `SRIP-23 DGL`;
+- environment contact and boundary-crossing events, covered by `SRIP-24 EIL`
+  and `SRIP-25 IEM`.
+
+For the `SRIP-23 DGL` concept, see
+[Core Concepts](/srd/core-concepts). For the `SRIP-24 EIL` and `SRIP-25 IEM`
+boundary model, see
+[Environment Interaction and Events](/srd/environment-interaction-and-events).
+
 ---
 
 ## Summary

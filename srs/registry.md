@@ -2,7 +2,7 @@
 title: Sigma Stratum Registry
 description: Authoritative registry tracking post-core Sigma Runtime Improvement Proposals (SRIP-09+) — experimental extensions, governance updates, and long-term evolution of the Sigma Runtime architecture.
 published: true
-date: 2026-05-28T00:00:00.000Z
+date: 2026-06-27T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-12-31T09:55:42.132Z
@@ -61,6 +61,9 @@ Each SRIP is registered as a standalone entry:
 /srs/registry/SRIP-20-ANS.md
 /srs/registry/SRIP-21-EIB.md
 /srs/registry/SRIP-22-GRC.md
+/srs/registry/SRIP-23-DGL.md
+/srs/registry/SRIP-24-EIL.md
+/srs/registry/SRIP-25-IEM.md
 ```
 Each file must include:
 - metadata block including title, version, date, status, author, information class, change class, parent specs, related specs, and release alignment status;
@@ -105,6 +108,9 @@ This allows the standard to scale without breaking citations or historical conti
 | [SRIP-20-ANS](registry/SRIP-20-ANS.md) | Autonomy Negotiation and Boundary Stabilization (ANS) | **Public Draft** | 2026-05-26 | SSRG |
 | [SRIP-21-EIB](registry/SRIP-21-EIB.md) | External Identity Binding and Mode Reconciliation (EIB) | **Public Draft** | 2026-05-26 | SSRG |
 | [SRIP-22-GRC](registry/SRIP-22-GRC.md) | Governance Recursion and Collusion Boundary (GRC) | **Public Draft** | 2026-05-28 | SSRG |
+| [SRIP-23-DGL](registry/SRIP-23-DGL.md) | Dialectical Generation Layer (DGL) | **Public Draft** | 2026-06-27 | SSRG |
+| [SRIP-24-EIL](registry/SRIP-24-EIL.md) | Environment Interface Layer (EIL) | **Public Draft** | 2026-06-27 | SSRG |
+| [SRIP-25-IEM](registry/SRIP-25-IEM.md) | Interaction Event Model (IEM) | **Public Draft** | 2026-06-27 | SSRG |
 
 ---
 

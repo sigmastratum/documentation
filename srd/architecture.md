@@ -159,7 +159,26 @@ The architectural boundary includes:
 
 ---
 
-## 7. Implementation Guidelines
+## 7. Environment Interaction Boundary
+
+SRIP-24 and SRIP-25 add a public explanation for runtime-environment contact.
+
+At the architecture level:
+
+- behavior governs cognition;
+- EIL governs contact with external reality;
+- IEM defines interaction events as the semantic unit crossing that boundary.
+
+This should be read as a public explanatory model, not as a claim that any
+particular event bus, schema, SDK, provider integration, or production action
+system is implemented.
+
+For the reader-facing explanation, see
+[Environment Interaction and Events](/srd/environment-interaction-and-events).
+
+---
+
+## 8. Implementation Guidelines
 
 ### Runtime API Requirements
 - Expose stable runtime state and health metrics where publication is appropriate.
@@ -173,7 +192,7 @@ The architectural boundary includes:
 - Recursive stability maintained by bounded control.
 - Full transparency and introspective traceability.
 
-## 8. Cognitive Dynamics and Emergent Properties
+## 9. Cognitive Dynamics and Emergent Properties
 
 Across extended recursive operation, the architecture is designed to support:
 
@@ -187,7 +206,7 @@ These properties matter because they make long-horizon interaction governable ra
 
 ---
 
-## 9. Future Directions
+## 10. Future Directions
 
 1. richer public description of control and verification layers
 2. clearer public explanation of attractor-field evidence and drift families

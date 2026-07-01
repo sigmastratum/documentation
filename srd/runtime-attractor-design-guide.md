@@ -1,10 +1,30 @@
+---
+title: Runtime Attractor Design Guide
+description: Client-facing design guide for discovering and decomposing stable runtime attractors.
+published: true
+date: 2026-06-25T00:00:00.000Z
+tags:
+editor: markdown
+dateCreated: 2026-06-25T00:00:00.000Z
+---
+
+> **Sigma Stratum Documentation - License Notice**
+> This document is part of the **Sigma Runtime Standard (SRS)** and the
+> **Sigma Stratum Documentation Set (SRD)**.
+>
+> It is licensed under **Creative Commons Attribution-NonCommercial 4.0
+> (CC BY-NC 4.0)**.
+>
+> The license for this specific document is authoritative.
+> For the full framework, see [`/legal/IP-Policy`](https://sigmastratum.org/legal/ip-policy).
+
 # Runtime Attractor Design Guide
 
-**Client-facing design draft v0.2**  
-**Date:** 2026-06-25  
-**Use:** design partner guidance, agent setup, non-engineering review
+## Public Specification Boundary
 
----
+This SRD document provides public design guidance for discovering, describing,
+and reviewing runtime attractors. It does not license or disclose proprietary
+Sigma Runtime implementation assets unless explicitly marked.
 
 ## Core Idea
 
@@ -650,4 +670,3 @@ Every stable agent can eventually be decomposed into four independent layers:
 If those four layers remain separable, the attractor can be understood, reviewed, tested, evolved, and regenerated.
 
 This turns agent design from prompt writing into reproducible runtime architecture.
-

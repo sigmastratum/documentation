@@ -2,7 +2,7 @@
 title: SRIP Architecture Reading Order
 description: Conceptual reading-order view for Sigma Runtime Improvement Proposals across architecture stacks.
 published: true
-date: 2026-05-28T00:00:00.000Z
+date: 2026-06-27T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2026-05-14T00:00:00.000Z
@@ -109,7 +109,8 @@ Use this path for control, drift, stability, and response-shaping behavior:
 9. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering
 10. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization
 11. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, when runtime control authority, certification, emergency override, or legitimacy state must be evaluated
-12. [SRIP-16-RSM](registry/SRIP-16-RSM.md) — Recursive Self-Modeling
+12. [SRIP-23-DGL](registry/SRIP-23-DGL.md) — Dialectical Generation Layer, when preserved contradiction and attractor tension may generate non-canonical semantic candidates without deleting the source contradiction
+13. [SRIP-16-RSM](registry/SRIP-16-RSM.md) — Recursive Self-Modeling
 
 ---
 
@@ -118,11 +119,13 @@ Use this path for control, drift, stability, and response-shaping behavior:
 Use this path for system integration, agent exchange, and multi-agent coordination:
 
 1. [SRIP-05](srip-05.md) — Interoperability Interface
-2. [SRIP-17-MAE](registry/SRIP-17-MAE.md) — Multi-Agent Exchange
-3. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, when agent disagreement describes the same external entity through conflicting observed modes
-4. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, when exchanged artifacts apply influence or authority pressure to local runtime state
-5. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
-6. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, when exchanged artifacts carry governance, certification, authority, or marks claims
+2. [SRIP-24-EIL](registry/SRIP-24-EIL.md) — Environment Interface Layer, when external contact must be classified as observation or effect with source, target, scope, authority, and evidence continuity
+3. [SRIP-25-IEM](registry/SRIP-25-IEM.md) — Interaction Event Model, when the semantic unit crossing the environment boundary must be represented independently of transport or tool implementation
+4. [SRIP-17-MAE](registry/SRIP-17-MAE.md) — Multi-Agent Exchange
+5. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, when agent disagreement describes the same external entity through conflicting observed modes
+6. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, when exchanged artifacts apply influence or authority pressure to local runtime state
+7. [SRIP-19-RCB](registry/SRIP-19-RCB.md) — Recursive Contradiction Buffering, when exchanged evidence or agent disagreement must remain unresolved without forced consensus
+8. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, when exchanged artifacts carry governance, certification, authority, or marks claims
 
 ---
 
@@ -138,6 +141,25 @@ Use this path for governance authority, certification integrity, marks boundary,
 6. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, for authority pressure on local runtime state
 7. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, for stable identity of governors, authorities, validators, auditors, certification bodies, forks, and legal entities
 8. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, for legitimacy states, collusion assumptions, capture handling, certification suspension, and fork/exit conditions
+9. [SRIP-24-EIL](registry/SRIP-24-EIL.md) — Environment Interface Layer, for external governance surfaces, authority-bearing interaction, evidence continuity, and effect classification
+10. [SRIP-25-IEM](registry/SRIP-25-IEM.md) — Interaction Event Model, for event-level evidence, authority, trace, and effect semantics
+
+This sequence does not imply certification or production implementation. It is a review path for public specification readers.
+
+---
+
+## Environment Interaction And Effects Sequence
+
+Use this path when a runtime trajectory receives external material or may affect an external system, store, channel, participant, tool, provider, or governance surface:
+
+1. [SRIP-01](srip-01.md) — Canonical Runtime Loop, for trajectory continuation
+2. [SRIP-05](srip-05.md) — Interoperability Interface, for public interface boundaries
+3. [SRIP-14-RMI](registry/SRIP-14-RMI.md) — Retrieval and Memory Integration Layer, when retrieval, memory, or persistence is involved
+4. [SRIP-21-EIB](registry/SRIP-21-EIB.md) — External Identity Binding and Mode Reconciliation, when external participants, agents, sources, or referents must be bound
+5. [SRIP-20-ANS](registry/SRIP-20-ANS.md) — Autonomy Negotiation and Boundary Stabilization, when external material applies influence or authority pressure
+6. [SRIP-22-GRC](registry/SRIP-22-GRC.md) — Governance Recursion and Collusion Boundary, when authority, legitimacy, certification, or capture boundaries matter
+7. [SRIP-24-EIL](registry/SRIP-24-EIL.md) — Environment Interface Layer, for observation/effect classification and evidence-bearing contact with external reality
+8. [SRIP-25-IEM](registry/SRIP-25-IEM.md) — Interaction Event Model, for the public semantic unit of boundary-crossing contact
 
 This sequence does not imply certification or production implementation. It is a review path for public specification readers.
 

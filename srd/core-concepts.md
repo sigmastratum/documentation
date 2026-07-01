@@ -45,6 +45,22 @@ Drift explains why long interaction requires active stabilization rather than as
 
 ---
 
+## Preserved Contradiction And Semantic Candidates
+Some contradictions should not be flattened, hidden, or resolved too early.
+When a runtime lacks enough evidence, authority, or conceptual structure to
+resolve an incompatibility, the contradiction itself can remain useful.
+
+SRIP-23 DGL describes this public idea: preserved contradiction may generate a
+non-canonical semantic candidate, such as a missing distinction, bridge,
+hierarchy, or category proposal.
+
+This does not make the candidate true or canonical. It remains a reviewable
+proposal until other governance, memory, evidence, and identity layers decide
+whether it should remain provisional, be rejected, or become part of a stable
+runtime interpretation.
+
+---
+
 ## Symbolic Density
 A measure of how tightly meaning-bearing units (symbols, motifs, and structures)
 interlink within the field.
