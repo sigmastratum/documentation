@@ -329,7 +329,7 @@ Representation is not authorization.
 ## 8. SRD Synchronization Plan
 
 Initial SRD synchronization is provided by
-[Environment Interaction and Events](/srd/environment-interaction-and-events).
+[Environment Interaction and Events](../../srd/environment-interaction-and-events.md).
 
 Broader SRD synchronization is still required before any release or public
 communication claims full alignment with SRIP-25.
@@ -403,9 +403,9 @@ This draft does not deprecate or supersede existing SRIPs. It refines SRIP-24 EI
 - [SRIP-22 GRC](SRIP-22-GRC.md)
 - [SRIP-14 RMI](SRIP-14-RMI.md)
 - [SRIP-21 EIB](SRIP-21-EIB.md)
-- [SRIP Process](/team/srip-process)
-- [SRS-SRD Interaction Requirements](/team/srs-srd-interaction-requirements)
-- [Public-Proprietary Information Boundary Requirements](/team/public-proprietary-information-boundary-requirements)
+- [SRIP Process](../../team/srip-process.md)
+- [SRS-SRD Interaction Requirements](../../team/srs-srd-interaction-requirements.md)
+- [Public-Proprietary Information Boundary Requirements](../../team/public-proprietary-information-boundary-requirements.md)
 
 ---
 

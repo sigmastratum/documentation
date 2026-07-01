@@ -325,7 +325,7 @@ Required safety posture:
 ## 8. SRD Synchronization Plan
 
 Initial SRD synchronization is provided by
-[Environment Interaction and Events](/srd/environment-interaction-and-events).
+[Environment Interaction and Events](../../srd/environment-interaction-and-events.md).
 
 Broader SRD synchronization is still required before any release or public
 communication claims full alignment with SRIP-24.
@@ -397,9 +397,9 @@ This draft does not deprecate or supersede existing SRIPs. It introduces a publi
 - [SRIP-21 EIB](SRIP-21-EIB.md)
 - [SRIP-22 GRC](SRIP-22-GRC.md)
 - [SRIP-19 RCB](SRIP-19-RCB.md)
-- [SRIP Process](/team/srip-process)
-- [SRS-SRD Interaction Requirements](/team/srs-srd-interaction-requirements)
-- [Public-Proprietary Information Boundary Requirements](/team/public-proprietary-information-boundary-requirements)
+- [SRIP Process](../../team/srip-process.md)
+- [SRS-SRD Interaction Requirements](../../team/srs-srd-interaction-requirements.md)
+- [Public-Proprietary Information Boundary Requirements](../../team/public-proprietary-information-boundary-requirements.md)
 
 ---
 

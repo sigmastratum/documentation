@@ -319,7 +319,7 @@ Memory and identity layers must preserve provenance and boundaries.
 ## 8. SRD Synchronization Plan
 
 Initial SRD synchronization is provided by
-[Core Concepts](/srd/core-concepts).
+[Core Concepts](../../srd/core-concepts.md).
 
 Broader SRD synchronization is still required before any release or public
 communication claims full alignment with SRIP-23.
@@ -389,9 +389,9 @@ This draft does not deprecate or supersede existing SRIPs. It adds a semantic-ev
 - [SRIP-22 GRC](SRIP-22-GRC.md)
 - [SRIP-14 RMI](SRIP-14-RMI.md)
 - [SRIP-21 EIB](SRIP-21-EIB.md)
-- [SRIP Process](/team/srip-process)
-- [SRS-SRD Interaction Requirements](/team/srs-srd-interaction-requirements)
-- [Public-Proprietary Information Boundary Requirements](/team/public-proprietary-information-boundary-requirements)
+- [SRIP Process](../../team/srip-process.md)
+- [SRS-SRD Interaction Requirements](../../team/srs-srd-interaction-requirements.md)
+- [Public-Proprietary Information Boundary Requirements](../../team/public-proprietary-information-boundary-requirements.md)
 
 ---
 
