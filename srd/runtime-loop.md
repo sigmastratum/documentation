@@ -2,7 +2,7 @@
 title: Canonical Runtime Loop
 description: An explanatory guide to the Sigma Runtime execution cycle.
 published: true
-date: 2026-05-14T00:00:00.000Z
+date: 2026-09-23T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2025-11-30T04:31:53.414Z
@@ -77,6 +77,31 @@ This is what allows the runtime to treat interaction as a controlled field rathe
 ---
 
 ## 4. Operational Reading Of The Loop
+
+The loop commits accepted runtime-local state. That commit is not evidence that
+an external effect occurred.
+
+When a candidate proposes a consequential external effect, the operational
+reading becomes:
+
+```text
+candidate admission
+  -> prepare staged effect intent
+  -> accepted local-state commit bound to recoverable intent
+  -> current authority validation
+  -> effect release
+  -> outcome observation and verification
+```
+
+SRIP-01 owns accepted local-state commitment. SRIP-28 owns candidate admission.
+SRIP-24 owns effect staging and release. SRIP-25 owns the linked evidence for
+authorization, attempt, outcome, and verification. These transitions may share
+a trace but must not be collapsed into one success flag.
+
+Staged intent is identifiable no later than local commit. A crash between
+commit and release therefore leaves a recoverable intent, not permission to
+guess or repeat an external effect. Missing or unverifiable intent blocks
+release pending reconciliation.
 
 1. **State Initialization**
    - Retrieve prior field state and continuity anchors.

@@ -2,7 +2,7 @@
 title: Environment Interaction and Events
 description: Human-readable guide to SRIP-24 EIL and SRIP-25 IEM.
 published: true
-date: 2026-06-27T00:00:00.000Z
+date: 2026-09-23T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2026-06-27T00:00:00.000Z
@@ -193,6 +193,56 @@ Can it be audited, replayed, contested, or bounded?
 This shifts the public architecture from tool-centric execution toward
 event-centric governance.
 
+### One Effect, Several Linked Events
+
+An intended effect is not one status flag that moves from "allowed" to
+"successful." The public model keeps different claims separate:
+
+```text
+interaction candidate
+  -> authorization decision
+  -> effect attempt
+  -> outcome observation
+  -> verification decision
+```
+
+Each step adds a linked event. It does not rewrite the prior event. This makes
+it possible to say that an action was properly authorized, transport succeeded,
+and the external outcome is still unknown. It also preserves contradictory
+read-back without erasing the original authorization or attempt.
+
+Events bind to the authority and governing references applicable when they
+occurred. Later policy, delegation, schema, or profile changes do not rewrite
+their historical interpretation. Historical validity also does not grant
+permission to invoke the action again.
+
+The event lineage is evidence only. It does not execute retries, replay work,
+or authorize effects.
+
+### Semantic Effect Transaction
+
+SRIP-24 treats consequential external effects as a bounded semantic
+transaction. The runtime may commit accepted local state while keeping an
+external effect staged. Release requires current authority and applicable
+validation at the effect boundary.
+
+After release, failures are described honestly as missing acknowledgement,
+unknown or contradictory outcome, retry, compensation, or escalation. An
+irreversible effect is not called rolled back merely because local state was
+restored.
+
+Targets differ. Some support idempotency, read-back, or compensation and some
+do not. A declared profile exposes those limits rather than promising a
+universal transaction mechanism.
+
+An unknown outcome does not mean that nothing happened. Before retrying, the
+runtime reconciles the result or establishes applicable duplicate-effect
+protection. Otherwise it blocks automatic retry and escalates, except where
+current authority explicitly accepts a bounded retry with recorded duplication
+risk. Multiple successful receipts can describe one effect without duplicating
+that effect. Read-back is one source of outcome evidence, not the only one;
+a target completion receipt may suffice where its semantics support the claim.
+
 ---
 
 ## How The Two Layers Work Together
@@ -258,6 +308,9 @@ The write requires stronger authority and evidence.
 | --- | --- |
 | EIL is a tool framework. | EIL is a boundary layer for governed external contact. |
 | IEM is an event bus or schema. | IEM is a public semantic model for interaction events. |
+| Authorization means the effect happened. | Authorization, attempt, outcome observation, and verification are separate linked events. |
+| A previously valid delegation permits another call. | Historical validity is preserved, but every new invocation requires current authority. |
+| Restoring local state rolls back an external effect. | External reversal requires target-specific evidence; otherwise the result is retry, compensation, escalation, or an unresolved outcome. |
 | Observation means truth. | Observation means material entered the runtime boundary. |
 | Capability means permission. | Capability only means an action surface exists. |
 | Task success means governance success. | Governance success requires authority, scope, and evidence continuity. |

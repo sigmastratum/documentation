@@ -1,6 +1,6 @@
-schema_version: "0.2-review"
+schema_version: "0.3-review"
 status: non-normative-review-draft
-date: "2026-07-17"
+date: "2026-09-23"
 license: Apache-2.0
 information_class: Open
 authority:
@@ -176,13 +176,16 @@ integration_edges:
   - {from: SRIP-22, to: SRIP-23, type: governs, review: confirmed}
   - {from: SRIP-22, to: SRIP-24, type: constrains, review: confirmed}
   - {from: SRIP-22, to: SRIP-25, type: constrains, review: confirmed}
+  - {from: SRIP-20, to: SRIP-24, type: constrains, review: confirmed}
   - {from: SRIP-26, to: SRIP-20, type: feeds, review: inferred}
   - {from: SRIP-27, to: SRIP-28, type: provides_evidence_to, review: confirmed}
   - {from: SRIP-28, to: SRIP-23, type: governs, review: confirmed}
   - {from: SRIP-28, to: SRIP-26, type: feeds, review: confirmed}
+  - {from: SRIP-28, to: SRIP-24, type: feeds, review: confirmed}
 
 review_notes:
   - Canonical parent edges are complete for metadata available on 2026-07-17.
   - Integration edges are selected interpretations, not a complete control-flow graph.
   - No amends or supersedes edge is asserted.
   - SRIP-27 measures candidate membership; SRIP-28 owns pre-persistence admission.
+  - SRIP-28 admission can feed SRIP-24 effect review but never grants effect-release authority.

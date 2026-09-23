@@ -19,9 +19,9 @@
 | --- | --- |
 | SRIP | SRIP-24 |
 | Title | Environment Interface Layer (EIL) |
-| Version | Public Draft v0.2 |
+| Version | Public Draft v0.3 |
 | Status | Public Draft |
-| Date | 2026-06-27 |
+| Date | 2026-09-23 |
 | Authors / Contributors | Sigma Stratum Research Group (SSRG) |
 | Owning Layer | Integration Boundary / Runtime Control / Governance / External Interaction |
 | Parent Specs | SRIP-05, SRIP-14, SRIP-21, SRIP-22 |
@@ -274,6 +274,70 @@ A conformant EIL implementation must preserve these invariants:
 - external effects must remain reconstructable;
 - external interactions must preserve evidence continuity.
 
+### 5.8 Semantic Effect Transaction
+
+SRIP-24 owns the boundary for staging, validating, releasing, retrying,
+compensating, and escalating consequential external effects. A semantic effect
+transaction MUST bind, directly or by immutable reference:
+
+- task intent and affected object or target;
+- actor and current release authority;
+- capability, operation, resource, and sink;
+- accepted runtime-state dependency;
+- staged effect intent and evidence lineage;
+- idempotency or equivalent duplicate-effect protection where supported;
+- release, acknowledgement, outcome, retry, compensation, and escalation
+  semantics.
+
+External effects MUST remain staged until the applicable validation and current
+authority checks succeed. Historical authorization or a previously successful
+effect MUST NOT grant authority for a new release.
+
+Where a local commit depends on an effect intent, that intent MUST be staged
+and durably identifiable no later than the accepted local-state commit. Staging
+does not release the effect. If the committed intent cannot be recovered or
+its binding cannot be verified, release MUST be blocked pending reconciliation.
+
+Local state promotion and external effect release are distinct transitions.
+After an effect has been released, a later failure MUST be represented as a
+missing or contradictory outcome, retry, compensation, or escalation. It MUST
+NOT be represented as rollback unless the target actually provides and proves
+that reversal.
+
+Where idempotency, acknowledgement, read-back, or compensation is unsupported,
+the declared profile MUST expose that limitation. SRIP-25 owns the linked event
+representation for these transitions. SRIP-28 candidate admission does not
+authorize external effect release.
+
+An unknown outcome MUST NOT be treated as proof that no effect occurred.
+Before retrying an uncertain release, the runtime MUST reconcile the outcome
+or establish duplicate-effect protection valid for the same effect identity,
+target, payload, and retry interval. If neither is possible, automatic retry
+MUST be blocked and the unresolved effect escalated, unless current authority
+explicitly permits a bounded retry under a declared duplicate-risk policy.
+That exception MUST preserve the unknown prior outcome, record the accepted
+duplication risk and retry limit, and MUST NOT claim exactly-once execution.
+Every retry remains subject to current release-authority checks.
+
+Multiple attempts or receipts may refer to one external effect. Duplicate-effect
+protection concerns the external consequence, not the number of successful
+responses. Outcome evidence may include read-back or a target receipt whose
+declared semantics establish completion; a transport acknowledgement alone
+does not establish completion.
+
+### 5.9 Conformance Review Scenarios
+
+| Scenario | Required result |
+| --- | --- |
+| A rejected or held candidate proposes an effect | No effect is released and no successful effect event is created. |
+| Current release authority expired after local commit | The staged effect fails closed without rewriting the accepted local state. |
+| The same idempotent effect is retried | The retry has new attempt lineage linked to the same effect identity and does not produce a duplicate external effect within the declared protection scope. Multiple receipts for that effect remain distinct evidence. |
+| Outcome is unknown and duplicate-effect protection cannot be established | Automatic retry is blocked and escalated unless current authority explicitly admits a bounded duplicate-risk retry; the prior outcome remains unknown until resolved. |
+| A crash occurs after local commit but before release | The staged intent remains recoverable and bound to the commit; missing or unverifiable intent blocks release pending reconciliation. |
+| Transport succeeds but outcome evidence is absent | The attempt remains distinct and outcome is unknown. |
+| Read-back contradicts the intended effect | The contradiction is preserved beside authorization and attempt evidence. |
+| Compensation is unavailable for an irreversible effect | The limitation and residual state remain explicit; rollback is not claimed. |
+
 ---
 
 ## 6. Interoperability and Dependencies
@@ -397,3 +461,4 @@ This draft does not deprecate or supersede existing SRIPs. It introduces a publi
 | --- | --- | --- | --- |
 | 0.1 | 2026-06-27 | SSRG | Formation draft. |
 | 0.2 | 2026-06-27 | SSRG | Public draft normalization with boundary, dependency, non-goal, conformance, and SRD synchronization fields. |
+| 0.3 | 2026-09-23 | SSRG | Added the semantic effect transaction boundary and separated local commitment from external release, retry, compensation, and outcome evidence. |

@@ -19,9 +19,9 @@
 | --- | --- |
 | SRIP | SRIP-22 |
 | Title | Governance Recursion and Collusion Boundary (GRC) |
-| Version | Public Draft v0.3 |
+| Version | Public Draft v0.4 |
 | Status | Public Draft |
-| Date | 2026-07-17 |
+| Date | 2026-09-23 |
 | Authors / Contributors | Sigma Stratum Research Group (SSRG) |
 | Owning Layer | Governance / Runtime Authority / Constitutional Control / Collusion Boundary |
 | Parent Specs | SRIP-05, SRIP-06, SRIP-09, SRIP-13, SRIP-17, SRIP-19, SRIP-20 |
@@ -410,6 +410,38 @@ These profiles are illustrative. A deployment may use different profiles, but it
 ---
 
 ## 11. Governance State Model
+
+### 11.1 Governance Epoch
+
+A governance epoch is an immutable, addressable record of
+governance-relevant authority state. It MUST preserve, directly or by
+resolvable reference:
+
+- epoch identity, authority scope, and effective start;
+- constitutional or governing specification version;
+- policy bundle and authority-model references;
+- predecessor epoch reference;
+- canonicalization and integrity evidence.
+
+A material governance-relevant change to authority, delegation rules, root
+invariants, or governing policy MUST create a successor epoch. Ordinary build,
+model, or runtime-profile changes that do not alter governing authority remain
+versioned references and do not automatically create a new governance epoch.
+
+The effective interval may initially be open-ended. Its end MUST be established
+by an authorized, append-only closure or successor record referencing the
+original epoch and its effective end; the original object and digest remain
+unchanged. A successor's effective start closes its predecessor for the same
+authority scope. Interval reconstruction MUST use both the epoch and its
+closure or successor evidence. Unresolved conflicting boundaries or successors
+remain contested and MUST NOT silently establish current release authority.
+Closure records MUST preserve occurrence and recording times; later closure
+does not silently rewrite previously recorded event interpretations.
+
+An effective epoch MUST NOT be mutated retroactively. Its digest supports
+identity and integrity only and MUST NOT be presented as proof of legitimacy.
+Unavailable or unresolved epoch material lowers the evidence status according
+to the declared profile rather than being silently replaced by current state.
 
 Minimum GRC state:
 
@@ -1213,4 +1245,11 @@ forkable continuity
 
 ---
 
-End of SRIP-22 Public Draft v0.3.
+## 40. Change Log
+
+| Version | Date | Author | Description |
+| --- | --- | --- | --- |
+| 0.3 | 2026-07-17 | SSRG | Public governance architecture draft. |
+| 0.4 | 2026-09-23 | SSRG | Added immutable governance epochs for governance-relevant authority changes and bounded their evidentiary meaning. |
+
+End of SRIP-22 Public Draft v0.4.
