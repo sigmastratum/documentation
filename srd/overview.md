@@ -27,6 +27,12 @@ This SRD document explains the public SRS/SRIP specification layer. It does not 
 Independent implementation of public SRS/SRIP normative requirements is permitted under the public specification terms. Official certification, Sigma marks, product identity, white-label deployment, managed Sigma Runtime deployment, resale, and commercial use of CC BY-NC materials remain separately governed.
 
 
+## Governance-Facing Reading Guide
+
+For a descriptive reading path connecting runtime concepts to evidence,
+authority, accountability, and conformance questions, see the
+[Operational Governance Reader Guide](./operational-governance-reader-guide.md).
+
 ## Abstract
 The **SIGMA Runtime** defines a unified operational substrate for **attractor-based cognition** in large language models (LLMs).
 While contemporary LLMs exhibit generative fluency, they lack persistent identity and structural continuity across recursive interactions.
