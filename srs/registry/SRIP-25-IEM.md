@@ -19,10 +19,10 @@
 | --- | --- |
 | SRIP | SRIP-25 |
 | Title | Interaction Event Model (IEM) |
-| Version | Public Draft v0.2 |
+| Version | Public Draft v0.3 |
 | Status | Public Draft |
-| Date | 2026-06-27 |
-| Authors / Contributors | Sigma Stratum Research Group (SSRG) |
+| Date | 2026-09-23 |
+| Authors / Contributors | Sigma Stratum Research Group (SSRG); Alkama Eqbal (epoch-bound interaction-accountability contribution) |
 | Owning Layer | Integration Boundary / Event Semantics / Runtime Control / Governance |
 | Parent Specs | SRIP-05, SRIP-22, SRIP-24 |
 | Related Specs | SRIP-01, SRIP-04, SRIP-13, SRIP-14, SRIP-17, SRIP-19, SRIP-20, SRIP-21 |
@@ -239,7 +239,51 @@ Optional or future-extension fields may include:
 - witness status;
 - compression status.
 
-### 5.5 Architectural Invariants
+### 5.5 Event Anchor And Typed Lifecycle Evidence
+
+An authority-bearing or effect-bearing interaction event MUST preserve
+immutable references sufficient to reconstruct its historical interpretation.
+The semantic equivalent of the following fields is required; this is not a
+required serialization format:
+
+| Field group | Required meaning |
+| --- | --- |
+| Event identity | Event identifier and event category. |
+| Time | `occurred_at` and `recorded_at`, including contested ordering when they conflict. |
+| Action identity | Capability, operation, applicable schema, and target reference or digest. |
+| Control binding | Governance epoch, policy epoch, and runtime-profile references applicable to the event. |
+| Execution authority | Principal, authority scope, and delegation-chain reference applicable at event time. |
+| Lineage | Parent-event references and trace identifier. |
+| Integrity | Canonicalization profile, digest algorithm, and event digest. |
+| Evidence status | `verified`, `degraded`, `unverified`, or `unavailable`. |
+
+Event category, authorization decision, attempt state, outcome observation,
+and verification state MUST remain distinct typed states or distinct linked
+events. One combined disposition field MUST NOT collapse these meanings.
+
+Minimum linked event categories are:
+
+- `interaction_candidate`;
+- `authorization_decision`;
+- `effect_attempt`;
+- `outcome_observation`;
+- `verification_decision`.
+
+A later lifecycle fact MUST create a new linked event rather than mutate the
+historical meaning of a prior event. A retry or replay MUST create new lineage
+and reference the prior event. Successful authorization or transport MUST NOT
+be represented as proof of external outcome. Missing or contradictory outcome
+evidence remains explicit.
+
+A later policy, schema, profile, identity, or delegation change MUST NOT
+rewrite a prior event. Missing required references downgrade evidence according
+to the declared profile. Digests support identity and integrity only; they do
+not prove legitimacy, truth, authorization, or external outcome.
+
+This event model is action-inert. It is not a workflow engine, replay executor,
+authorization mechanism, or effect-release authority.
+
+### 5.6 Architectural Invariants
 
 A conformant IEM implementation must preserve these invariants:
 
@@ -254,7 +298,7 @@ A conformant IEM implementation must preserve these invariants:
 - event availability must not imply permission;
 - implementation transport must not determine semantic authority.
 
-### 5.6 Relationship to Behavior
+### 5.7 Relationship to Behavior
 
 Behavior creates stabilized trajectories and interaction candidates.
 
@@ -270,17 +314,33 @@ Behavior
   -> External Environment
 ```
 
-### 5.7 Relationship to Memory
+### 5.8 Relationship to Memory
 
 Memory may consume observation events and may be updated by authorized effect events according to memory-layer policy.
 
 IEM does not allow memory to bypass provenance, temporal validity, retrieval policy, or persistence authorization.
 
-### 5.8 Relationship to Governance
+### 5.9 Relationship to Governance
 
 Governance determines whether an effect event is authorized, contestable, auditable, reversible, blocked, or escalated.
 
 IEM records the semantic event surface. It does not decide legitimacy by itself.
+
+### 5.10 Conformance Review Scenarios
+
+| ID | Scenario | Required result |
+| --- | --- | --- |
+| `EC001-T01` | Policy changes after authorization | The prior event resolves against its historical policy reference. |
+| `EC001-T02` | Runtime profile changes after authorization | The prior event retains its historical runtime-profile interpretation. |
+| `EC001-T03` | Delegation is revoked after the event | Evidence can represent `valid_then` without treating the delegation as valid now. |
+| `EC001-T04` | Evidence establishes that delegation expired before the effect attempt | Delegation-based authority is invalid and release under that delegation is blocked. Evidence quality is recorded separately; uncertainty about expiry cannot establish valid authority. An already observed unauthorized attempt remains recorded. |
+| `EC001-T05` | Parent delegation reference is missing | The chain is not silently accepted as complete. |
+| `EC001-T06` | Tool schema changes argument semantics | The prior event resolves against its historical schema reference. |
+| `EC001-T07` | Transport succeeds without sufficient outcome evidence | External outcome remains unknown. Read-back is not mandatory when another admissible source, such as a target completion receipt with defined semantics, establishes the outcome. |
+| `EC001-T08` | Read-back contradicts the intended effect | Authorization, attempt, and contradictory observation remain preserved. |
+| `EC001-T09` | Epoch digest exists but its object cannot be resolved | Evidence becomes degraded, unverified, or unavailable. |
+| `EC001-T10` | Event time is backdated or conflicts with recording order | Temporal validity becomes contested rather than silently accepted. |
+| `EC001-T11` | Historical authorization was valid but current invocation authority is absent | The historical event remains valid for its time; the new invocation or effect is blocked. |
 
 ---
 
@@ -394,6 +454,8 @@ This draft does not deprecate or supersede existing SRIPs. It refines SRIP-24 EI
 - [SRIP Process](../../team/srip-process.md)
 - [SRS-SRD Interaction Requirements](../../team/srs-srd-interaction-requirements.md)
 - [Public-Proprietary Information Boundary Requirements](../../team/public-proprietary-information-boundary-requirements.md)
+- Eqbal, Alkama (2026). *Epoch-Bound Interaction Accountability*, external
+  contribution accepted with bounded attribution by SSRG.
 
 ---
 
@@ -403,3 +465,4 @@ This draft does not deprecate or supersede existing SRIPs. It refines SRIP-24 EI
 | --- | --- | --- | --- |
 | 0.1 | 2026-06-27 | SSRG | Formation draft. |
 | 0.2 | 2026-06-27 | SSRG | Public draft normalization with boundary, dependency, non-goal, conformance, and SRD synchronization fields. |
+| 0.3 | 2026-09-23 | SSRG; Alkama Eqbal (bounded contribution) | Added epoch-bound event anchors, distinct authorization/attempt/outcome/verification evidence, and append-only lineage. |

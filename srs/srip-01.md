@@ -19,9 +19,9 @@
 |---|---|
 | SRIP | SRIP-01 |
 | Title | Canonical Runtime Loop |
-| Version | Foundational Draft |
+| Version | Foundational Draft v0.2 |
 | Status | Draft |
-| Date | 2026-04-17 |
+| Date | 2026-09-23 |
 | Authors / Contributors | E. Tsaliev |
 | Owning Layer | Architectural / Runtime Semantics |
 | Parent Specs | SRIP-00 |
@@ -34,12 +34,12 @@
 | Independent Implementation | Permitted under the public specification terms |
 | Commercial Runtime Boundary | Relevant policy or explicit covenant for protected Sigma marks, official certification, managed deployment, white-label, resale, CC BY-NC commercial use, and patent commitments |
 | Information Class | Open |
-| Change Class | SRS-only |
+| Change Class | Mixed SRS+SRD |
 | Specification Class | Runtime Protocol |
 | Normative Status | Defines the public canonical runtime loop and ordered execution phases without mandating a provider-specific backend implementation. |
 | Conformance Level | Public Draft / Foundational |
-| SRD Synchronization Action | Deferred review |
-| Release Alignment Status | aligned with deferred SRD sync |
+| SRD Synchronization Action | Synchronized with `/srd/runtime-loop.md` for accepted-state and external-effect boundaries. |
+| Release Alignment Status | aligned for the accepted-state boundary |
 | Release Alignment Notes | Foundational draft; no production conformance claim is made by this document alone. |
 
 > **Public Note**
@@ -129,6 +129,27 @@ and **the model generation boundary** as the generative output anchor.
 4. **Attractor Integrity** — no untracked formation or collapse events.
 5. **Drift Boundaries** — DI ≤ 0.45 for nominal operation.
 
+### 7.1 Accepted-State And External-Effect Boundary
+
+The canonical runtime loop owns commitment of accepted runtime-local state. A
+successful local commit MUST NOT be represented as proof that a consequential
+external effect was released or observed.
+
+Where a cycle proposes an external effect:
+
+- accepted runtime-local state and external effect state MUST remain
+  separately identifiable;
+- the local commit MUST reference any staged effect intent without granting
+  release authority;
+- effect release, retry, compensation, and escalation remain governed by
+  SRIP-24;
+- the event evidence for authorization, attempt, outcome observation, and
+  verification remains governed by SRIP-25;
+- post-release failure MUST NOT be described as rollback of the already
+  committed local state or of an irreversible external effect.
+
+This boundary does not require one storage engine or one serialization format.
+
 ---
 
 ## 8 · Conformance Requirements
@@ -147,3 +168,12 @@ Later versions may extend the loop with adaptive control postures and semantic c
 
 > **References**
 > Tsaliev, E. (2025). *SIGMA Runtime Architecture v0.1* — DOI [10.5281/zenodo.17703667](https://doi.org/10.5281/zenodo.17703667)
+
+---
+
+## 10 · Change Log
+
+| Version | Date | Author | Description |
+|---|---|---|---|
+| Foundational Draft | 2026-04-17 | E. Tsaliev | Initial public canonical runtime loop. |
+| Foundational Draft v0.2 | 2026-09-23 | SSRG | Separated accepted runtime-state commitment from external effect release and synchronized the explanatory runtime-loop boundary. |

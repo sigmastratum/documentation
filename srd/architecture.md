@@ -180,6 +180,18 @@ This should be read as a public explanatory model, not as a claim that any
 particular event bus, schema, SDK, provider integration, or production action
 system is implemented.
 
+The boundary also separates three authorities that are easy to conflate:
+
+1. SRIP-01 commits accepted runtime-local state.
+2. SRIP-28 admits generated candidates for delivery and downstream influence.
+3. SRIP-24 validates and releases consequential external effects, while
+   SRIP-25 preserves their typed, append-only event evidence.
+
+Candidate admission therefore does not authorize a tool call or other external
+effect. Historical event validity does not provide current invocation
+authority. Authorization, attempt, outcome observation, and verification may
+share lineage, but remain distinct claims.
+
 For the reader-facing explanation, see
 [Environment Interaction and Events](/srd/environment-interaction-and-events).
 

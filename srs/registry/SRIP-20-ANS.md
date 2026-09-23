@@ -19,9 +19,9 @@
 | --- | --- |
 | SRIP | SRIP-20 |
 | Title | Autonomy Negotiation and Boundary Stabilization (ANS) |
-| Version | Public Draft v0.3 |
+| Version | Public Draft v0.4 |
 | Status | Public Draft |
-| Date | 2026-07-17 |
+| Date | 2026-09-23 |
 | Authors / Contributors | Vladimir Ryabinskiy; Sigma Stratum Research Group (SSRG) |
 | Owning Layer | Runtime Control / Identity Stability / Multi-Agent Boundary Governance |
 | Parent Specs | SRIP-06, SRIP-09, SRIP-13, SRIP-17, SRIP-19 |
@@ -299,6 +299,26 @@ Examples include:
 
 ANS must not automatically erase legacy identity material. It should preserve provenance, detect scope and freshness, compare legacy pressure with current authority, revalidate when needed, and hand unresolved incompatible states to SRIP-19-compatible buffering.
 
+### 6.8 Delegation Validity Across Time
+
+Delegation validity MUST be evaluated against the event time, declared scope,
+referenced policy or governance epoch, and delegation-chain state effective at
+that time. Current delegation state alone MUST NOT retroactively determine
+historical validity.
+
+Historical validity and current invocation authority are separate decisions:
+
+- a prior event may remain `valid_then` after delegation is revoked or expires;
+- that historical validity MUST NOT authorize a new invocation or effect;
+- a new invocation MUST revalidate actor, scope, delegation chain, time, and
+  current governing authority;
+- a missing or unresolved parent delegation MUST NOT be treated as a complete
+  chain.
+
+An implementation may represent delegation state by reference. This section
+does not make ANS an identity provider, credential issuer, or key-management
+contract.
+
 ---
 
 ## 7. Informative Runtime Model
@@ -524,7 +544,8 @@ Any implementation claim must separately document:
 | 0.1 | 2026-05-21 | Vladimir Ryabinskiy | Raw formation draft. |
 | 0.2 | 2026-05-26 | SSRG | Public draft normalization: lifecycle correction, public-boundary wording, Markdown repair, normative/informative separation, and release-alignment boundary. |
 | 0.3 | 2026-07-17 | SSRG | Classified as a Governance Architecture Draft; no implementation-readiness claim. |
+| 0.4 | 2026-09-23 | SSRG | Distinguished event-time delegation validity from current invocation authority and required scoped revalidation. |
 
 ---
 
-**End of SRIP-20 Public Draft v0.3**
+**End of SRIP-20 Public Draft v0.4**

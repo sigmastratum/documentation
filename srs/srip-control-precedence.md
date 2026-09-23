@@ -2,7 +2,7 @@
 title: SRIP Control Precedence Review
 description: Non-normative review model for resolving control conflicts across the SRIP architecture.
 published: true
-date: 2026-07-17T00:00:00.000Z
+date: 2026-09-23T00:00:00.000Z
 tags:
 editor: markdown
 dateCreated: 2026-07-17T00:00:00.000Z
@@ -103,7 +103,13 @@ For any proposed state transition or effect:
 10. Measure target membership without treating dynamic stability as membership.
 11. Apply the pre-persistence admission transaction and select at most one
     delivered candidate.
-12. Record the winning constraint, suppressed proposals, evidence quality, and
+12. Prepare any staged effect intent and commit accepted runtime-local state
+    with a recoverable binding to that intent, independently of effect release.
+13. For consequential effects, verify the committed intent binding, revalidate
+    current authority, and release only through the SRIP-24 boundary.
+14. Record authorization, attempt, outcome observation, and verification as
+    distinct SRIP-25 linked events or typed states.
+15. Record the winning constraint, suppressed proposals, evidence quality, and
     resulting event or no-op.
 
 Missing authority fails closed for effects. Missing evidence should produce an
@@ -150,9 +156,11 @@ deterministic authority over valid commerce transitions and rejection rules.
 
 ### External effect versus transport success
 
-`SRIP-24` and `SRIP-25` distinguish a proposed effect, authorized effect,
-executed effect, and observed result. A successful tool or transport call does
-not retroactively establish valid authority.
+`SRIP-24` owns effect staging, current-authority validation, release, retry,
+compensation, and escalation. `SRIP-25` separately represents authorization,
+attempt, outcome observation, and verification. A successful tool or transport
+call does not retroactively establish valid authority or prove external
+outcome. `SRIP-28` candidate admission does not authorize the effect.
 
 ## 6. Required Audit Fields
 

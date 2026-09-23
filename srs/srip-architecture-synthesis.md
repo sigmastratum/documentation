@@ -163,6 +163,22 @@ The central distinction is observation versus effect:
   semantics;
 - transport success does not by itself prove semantic success or legitimacy.
 
+Effect processing adds a second strict separation:
+
+```text
+accepted local-state commit
+!= candidate admission
+!= external effect release
+!= observed or verified external outcome
+```
+
+`SRIP-01` owns accepted local-state commitment. `SRIP-28` owns generated
+candidate admission only. `SRIP-24` owns effect staging, current-authority
+validation, release, retry, compensation, and escalation. `SRIP-25` owns the
+typed, append-only event anchors for authorization, attempt, outcome
+observation, and verification. Historical validity is preserved without
+granting current invocation authority.
+
 ### 4.7 Commerce specialization
 
 The commerce stack is a domain specialization of the general retrieval and

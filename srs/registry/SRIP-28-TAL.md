@@ -19,9 +19,9 @@
 | --- | --- |
 | SRIP | SRIP-28 |
 | Title | Trajectory Admission Loop (TAL) |
-| Version | Public Draft v0.1 |
+| Version | Public Draft v0.2 |
 | Status | Public Draft |
-| Date | 2026-07-17 |
+| Date | 2026-09-23 |
 | Authors / Contributors | Sigma Stratum Research Group (SSRG) |
 | Owning Layer | Runtime Control / Candidate Admission / Delivery Governance |
 | Parent Specs | SRIP-10, SRIP-15, SRIP-19, SRIP-27 |
@@ -84,6 +84,11 @@ What delivery and influence authority may this candidate receive?
 
 SRIP-28 is a separate single-writer admission transaction. It consumes bounded
 evidence from other layers without taking ownership of their metrics.
+
+TAL owns candidate delivery and admission only. It does not own authorization
+or release of an external effect. An admitted candidate that proposes a tool
+call, message, file mutation, provider attempt, or other consequential effect
+remains subject to SRIP-24 effect authority and SRIP-25 event evidence.
 
 ## 3. Candidate and Decision Model
 
@@ -222,3 +227,10 @@ A conforming implementation must:
 - expose content-safe decision evidence.
 
 Public draft publication alone does not establish implementation conformance.
+
+## 12. Change Log
+
+| Version | Date | Author | Description |
+| --- | --- | --- | --- |
+| 0.1 | 2026-07-17 | SSRG | Initial public trajectory-admission contract. |
+| 0.2 | 2026-09-23 | SSRG | Clarified that candidate admission does not authorize or release external effects. |
