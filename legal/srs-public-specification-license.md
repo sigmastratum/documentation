@@ -18,7 +18,7 @@ dateCreated: 2026-05-22T00:00:00.000Z
 
 | Field | Value |
 |---|---|
-| Version | 3 / 2026-05-23 |
+| Version | 4 / 2026-10-06 |
 | Scope | Sigma Runtime Standard and accepted SRIP public specification materials |
 | Maintainer | Sigma Stratum Research Group |
 
@@ -33,6 +33,20 @@ No Sigma commercial runtime license is required solely because an independent im
 The normative prose of the public SRS/SRIP specification layer is licensed under Creative Commons Attribution 4.0 International (`CC BY 4.0`) unless a specific document states otherwise.
 
 Attribution, document identity, version/date references, and modification notices should be preserved when citing, redistributing, or implementing public specification materials.
+
+## Public Navigation and Integration Documents
+
+Public standard navigation, registries, reading-order guides, architecture
+integration explanations, and public conformance guidance use CC BY 4.0 when
+explicitly marked. Their non-normative status does not require a NonCommercial
+restriction. Referenced artifacts retain their own licenses.
+
+The 2026-10-06 revision explicitly licenses `srs/active-srips.md` and
+`srs/architecture-reading-order.md` under CC BY 4.0. See the
+[migration record](navigation-license-migration-2026-10-06.md).
+This revision does not relicense archived specifications, SRD, research,
+historical software, or third-party material. Explicit per-file exceptions
+remain authoritative; new documents require an appropriate explicit notice.
 
 ## Machine-Readable Artifacts
 

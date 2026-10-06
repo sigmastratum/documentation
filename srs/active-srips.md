@@ -8,16 +8,16 @@ editor: markdown
 dateCreated: 2025-12-28T09:46:38.133Z
 ---
 
-> **Sigma Stratum Documentation – License Notice**
-> This document is part of the **Sigma Runtime Standard (SRS)** and the
-> **Sigma Runtime Documentation (SRD)**.
+> **Sigma Runtime Standard — Public Navigation License Notice**
 >
-> It is licensed under **Creative Commons Attribution–NonCommercial 4.0
-> (CC BY-NC 4.0)**.
+> This non-normative navigation document is licensed under
+> [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+> Referenced artifacts retain their own licenses. This notice does not grant
+> trademark, certification, or patent rights.
 >
-> The license for this specific document is authoritative.
-> For the full framework, see
-> [`/legal/IP-Policy`](https://github.com/sigmastratum/documentation/blob/main/legal/ip-policy.md).
+> License revision: 2026-10-06, from CC BY-NC 4.0 to CC BY 4.0.
+> See the [migration record](../legal/navigation-license-migration-2026-10-06.md)
+> and [public specification policy](../legal/srs-public-specification-license.md).
 
 # Active SRIPs — Sigma Runtime Standard
 

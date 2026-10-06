@@ -16,6 +16,11 @@ Two Creative Commons licenses are used across the corpus:
 2. CC BY 4.0 — Attribution  
    Applied to commercially-permissive publications.
 
+Public SRS navigation and architecture integration documents explicitly marked
+CC BY 4.0 are included in this class. The 2026-10-06 navigation migration is
+recorded in legal/navigation-license-migration-2026-10-06.md. It does not change
+the licenses of research, SRD, archives, source code, or referenced artifacts.
+
 Machine-readable SRS artifacts may use Apache License 2.0 when that authority
 is explicitly embedded in the artifact.
 

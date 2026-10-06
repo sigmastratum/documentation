@@ -79,7 +79,7 @@ Standard headers and reusable documentation templates.
 Materials are distributed under the **Sigma Stratum multi-license framework**:
 
 - **CC BY-NC 4.0** — Non-commercial license for conceptual and theoretical materials (SRD)  
-- **CC BY 4.0** — Attribution-only license for selected technical and educational materials  
+- **CC BY 4.0** — Public SRS/SRIP prose and explicitly marked standard navigation, architecture integration, and selected technical and educational materials
 - **Apache 2.0** — Machine-readable SRS artifacts only where explicitly marked
 
 Documents include their own license header. Immutable binary, structured-data,
@@ -88,6 +88,10 @@ publication manifest and path-and-hash inventory.
 See `/legal/license.md`, `/templates/LICENSE-HEADER.md`, and the
 [root asset publication manifest](PUBLICATION-ASSET-MANIFEST.md) for full
 details.
+
+The [2026-10-06 navigation migration](legal/navigation-license-migration-2026-10-06.md)
+changes the two named SRS index pages only. This README retains its own CC BY-NC
+4.0 license; linked documents retain their explicit licenses.
 
 ---
 

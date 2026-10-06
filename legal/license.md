@@ -38,6 +38,12 @@ The SRS/SRIP public specification layer is open for independent implementation u
 
 You may build, publish, and sell an independent implementation of public SRS/SRIP normative requirements under the public specification terms.
 
+Public standard navigation and architecture integration documents explicitly
+marked CC BY 4.0 may also be reused under that license, including commercially.
+See the [navigation license migration](navigation-license-migration-2026-10-06.md)
+for the two navigation pages changed in this revision. This does not relicense
+SRD, research, archives, referenced artifacts, or the repository README.
+
 ## Machine-Readable Artifacts
 
 Machine-readable SRS artifacts such as schemas, validators, examples, conformance fixtures, SDK examples, and reference test materials may be licensed under Apache License 2.0 where explicitly marked.

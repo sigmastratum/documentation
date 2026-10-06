@@ -54,6 +54,12 @@ No Sigma commercial runtime license is required solely because an implementation
 
 This safe harbor is about implementing public requirements. Product code, private modules, ALICE internals, runtime telemetry, private datasets, product UX, production memory/control mechanisms, deployment topology, support, SLA, certification badges, and Sigma marks follow their own policies or written terms.
 
+Public standard navigation and integration documents with an explicit CC BY 4.0
+notice share the specification layer's permissive document license. See the
+[navigation migration record](navigation-license-migration-2026-10-06.md).
+This document-text permission does not expand product, trademark, certification,
+or patent permissions and does not change licenses of referenced materials.
+
 ## 5. Protected Boundaries
 
 The following use their own policies or written terms:

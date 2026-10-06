@@ -34,6 +34,15 @@ Proprietary Runtime Assets: Not licensed by this document
 
 Independent implementations are welcome. You may implement, publish, and sell products based on this public specification. Sigma Runtime product assets, Sigma marks, official certification, and CC BY-NC commercial use use their own published policies or written terms.
 
+## Non-Normative Standard Navigation Header
+
+This non-normative navigation document for the Sigma Runtime Standard is licensed
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Referenced
+artifacts retain their own licenses. This notice does not grant trademark,
+certification, or patent rights.
+
+Use this header only with authorization from the relevant rights holders.
+
 ## Apache 2.0 Machine-Readable Artifact Header
 
 This machine-readable artifact is licensed under the Apache License 2.0 where explicitly marked.
